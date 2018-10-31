@@ -5,11 +5,11 @@
 }
 
 .appsBackgroundOne {
-    background-image: url('../-images/appsBackgroundOne.jpg');
+    background-image: url('../-images/apps_background_1.jpg');
 }
 
 .appsBackgroundTwo {
-    background-image: url('../-images/appsBackgroundTwo.jpg');
+    background-image: url('../-images/apps_background_2.jpg');
 }
 
 .appsWrapper:hover {
@@ -19,7 +19,7 @@
 .huhAppIcon {
     width: 200px;
     height: 200px;
-    background-image: url("../-images/huhAppIcon.png");
+    background-image: url("../-images/huh_app_icon.png");
 }
 
 .appsHeadlineOne {

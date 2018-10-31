@@ -59,11 +59,11 @@
 @media only screen and (max-width: 800px) {
     .appsBackgroundOne, .appsBackgroundTwo {
         width: 100%;
-        height: calc(50% - 22px);
+        height: calc(50% - 28px);
     }
 
     .appsBackgroundOne {
-        margin-top: 44px;
+        margin-top: 56px;
     }
 }
 
@@ -86,10 +86,10 @@
 
 @media only screen and (max-height: 300px) {
     .appsBackgroundOne, .appsBackgroundTwo {
-        height: calc(300px - 44px);;
+        height: calc(300px - 56px);;
     }
 
     .appsBackgroundOne {
-        margin-top: 44px;
+        margin-top: 56px;
     }
 }

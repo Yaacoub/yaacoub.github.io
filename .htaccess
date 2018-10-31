@@ -10,10 +10,5 @@ DirectoryIndex index.html
 </IfModule>
 
 RewriteEngine On
-RewriteCond %{HTTP_HOST} ^yaacoub.github.com
-RewriteRule (.*) https://yaacoub.com/$1 [R=301,L]
-
-Options +FollowSymLinks
-RewriteEngine On
-RewriteRule ^apps/index.html /apps [QSA,L]
-RewriteRule ^feedback/index.html /feedback [QSA,L]
+RewriteRule ^index\.html$ / [R=301,L]
+RewriteRule ^(.*)/index\.html$ /$1/ [R=301,L]

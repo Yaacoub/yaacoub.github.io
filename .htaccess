@@ -2,6 +2,8 @@ Options +FollowSymLinks -MultiViews
 
 DirectoryIndex index.html
 
+Test.
+
 ErrorDocument 404 https://yaaoub.github.io
 
 RewriteEngine On

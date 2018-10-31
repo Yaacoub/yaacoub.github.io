@@ -1,0 +1,23 @@
+.homeBackground {
+    width: 100%;
+    height: 100%;
+    background-image: url("../-images/homeBackground.jpg");
+    /*background-attachment: fixed;*/
+}
+
+.homeHeadline {
+    margin-left: 225px;
+}
+
+@media only screen and (max-width: 800px) {
+    .homeHeadline {
+        margin-left: 0px;
+        transition: 0.5s;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .homeHeadline {
+        font-size: 30px;
+    }
+}

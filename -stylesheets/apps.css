@@ -1,0 +1,95 @@
+.appsBackgroundOne, .appsBackgroundTwo {
+    width: calc(100% - 225px);
+    height: 50%;
+    float: right;
+}
+
+.appsBackgroundOne {
+    background-image: url('../-images/appsBackgroundOne.jpg');
+}
+
+.appsBackgroundTwo {
+    background-image: url('../-images/appsBackgroundTwo.jpg');
+}
+
+.appsWrapper:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.huhAppIcon {
+    width: 200px;
+    height: 200px;
+    background-image: url("../-images/huhAppIcon.png");
+}
+
+.appsHeadlineOne {
+    margin-left: 100px;
+}
+
+.tagline {
+    font-size: 25px !important;
+    font-weight: 700 !important;
+}
+
+@media only screen and (max-width: 1300px) {
+    .appsHeadlineOne, .appsHeadlineTwo {
+        font-size: 40px;
+    }
+
+    .appsHeadlineOne {
+        margin-left: 50px;
+    }
+
+    .tagline {
+        font-size: 20px !important;
+    }
+
+    .huhAppIcon {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .appsHeadlineOne {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .appsBackgroundOne, .appsBackgroundTwo {
+        width: 100%;
+        height: calc(50% - 22px);
+    }
+
+    .appsBackgroundOne {
+        margin-top: 44px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .appsHeadlineTwo {
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-height: 400px) {
+    .huhAppIcon {
+        width: 100px;
+        height: 100px;
+    }
+
+    .appsHeadlineTwo {
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-height: 300px) {
+    .appsBackgroundOne, .appsBackgroundTwo {
+        height: calc(300px - 44px);;
+    }
+
+    .appsBackgroundOne {
+        margin-top: 44px;
+    }
+}

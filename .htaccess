@@ -1,14 +1,9 @@
+Options +FollowSymLinks -MultiViews
+
 DirectoryIndex index.html
 
-<IfModule mod_rewrite.c>
-    RewriteEngine On
-    RewriteBase /
-    RewriteRule ^index\.php$ - [L]
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule . /index.html [L]
-</IfModule>
-
 RewriteEngine On
-RewriteRule ^index\.html$ / [R=301,L]
-RewriteRule ^(.*)/index\.html$ /$1/ [R=301,L]
+
+# Rewrite valid requests on .html files
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^ %{REQUEST_URI}.html?rw=1 [L,QSA]

@@ -2,6 +2,8 @@ Options +FollowSymLinks -MultiViews
 
 DirectoryIndex index.html
 
+ErrorDocument 404 https://yaaoub.github.io
+
 RewriteEngine On
 
 # Rewrite valid requests on .html files

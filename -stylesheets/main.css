@@ -21,17 +21,6 @@ a {
     display: none;
 }
 
-.sideMenu {
-    background: rgba(255, 255, 255, 0.25);
-    width: 225px;
-    height: 100%;
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-}
-
 .menu {
     list-style: none;
     text-transform: uppercase;
@@ -55,8 +44,23 @@ a {
     padding: 3px 7px 3px 7px;
 }
 
+.noScroll {
+    overflow: hidden;
+}
+
 .openMenu {
     display: none;
+}
+
+.sideMenu {
+    background: rgba(255, 255, 255, 0.25);
+    width: 225px;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
 }
 
 .siteName {
@@ -96,13 +100,6 @@ a {
 
 /* Classes (Home, Apps) */
 
-.image {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-}
-
 .headline {
     background: black;
     color: white;
@@ -113,6 +110,13 @@ a {
     padding: 6px 14px 6px 14px;
     box-decoration-break: clone;
     -webkit-box-decoration-break: clone;
+}
+
+.image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
 
 
@@ -157,6 +161,11 @@ a {
         font-size: 36px;
         text-shadow: 0px 0px 20px white;
     }
+
+    .openMenu {
+        left: 0px;
+        margin: 10px;
+    }
     
     .sideMenu {
         display: none;
@@ -168,10 +177,5 @@ a {
         position: fixed;
         z-index: 1;
         background: rgba(255, 255, 255, 0.25);
-    }
-
-    .openMenu {
-        left: 0px;
-        margin: 10px;
     }
 }

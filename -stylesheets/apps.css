@@ -1,3 +1,5 @@
+/* Classes */
+
 .appsBackgroundOne, .appsBackgroundTwo {
     width: calc(100% - 225px);
     height: 50%;
@@ -12,6 +14,10 @@
     background-image: url('../-images/apps_background_2.jpg');
 }
 
+.appsHeadlineOne {
+    margin-left: 100px;
+}
+
 .appsWrapper:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
@@ -22,14 +28,14 @@
     background-image: url("../-images/huh_app_icon.png");
 }
 
-.appsHeadlineOne {
-    margin-left: 100px;
-}
-
 .tagline {
     font-size: 25px !important;
     font-weight: 700 !important;
 }
+
+
+
+/* Responsive classes */
 
 @media only screen and (max-width: 1300px) {
     .appsHeadlineOne, .appsHeadlineTwo {
@@ -40,13 +46,13 @@
         margin-left: 50px;
     }
 
-    .tagline {
-        font-size: 20px !important;
-    }
-
     .huhAppIcon {
         width: 150px;
         height: 150px;
+    }
+
+    .tagline {
+        font-size: 20px !important;
     }
 }
 
@@ -74,13 +80,13 @@
 }
 
 @media only screen and (max-height: 400px) {
+    .appsHeadlineTwo {
+        font-size: 25px;
+    }
+    
     .huhAppIcon {
         width: 100px;
         height: 100px;
-    }
-
-    .appsHeadlineTwo {
-        font-size: 25px;
     }
 }
 

@@ -1,0 +1,23 @@
+/* Classes */
+
+.privacyPolicyBackground {
+    width: calc(100% - 225px);
+    float: right;
+}
+
+.privacyPolicyWrapper {
+    padding: 10px 50px 25px 50px;
+    text-align: justify;
+}
+
+
+
+/* Responsive classes */
+
+@media only screen and (max-width: 800px) {
+    .privacyPolicyBackground {
+        width: 100%;
+        height: calc(100% - 56px);
+        margin-top: 56px;
+    }
+}

@@ -1,0 +1,36 @@
+/* Classes */
+
+.homeBackground {
+    width: 100%;
+    height: 100%;
+    background-image: url("../-images/home_background.jpg");
+    /*background-attachment: fixed;*/
+}
+
+.redirect {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+    background: white;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 5px 0px 5px 0px;
+}
+
+.redirect:hover {
+    background: black;
+    color: white;
+}
+
+
+
+/* Responsive classes */
+
+@media only screen and (max-width: 800px) {
+    .homeHeadline {
+        font-size: 30px;
+    }
+}

@@ -14,10 +14,6 @@ a {
     transition: .5s;
 }
 
-a:active {
-    color: rgb(202, 102, 96) !important;
-}
-
 a:visited {
     color: rgb(96, 102, 202);
 }
@@ -119,7 +115,7 @@ li, p {
 
 .headline {
     background: black;
-    color: white;
+    color: white !important;
     font-family: 'Montserrat', sans-serif;
     font-size: 50px;
     font-weight: 800;
@@ -152,6 +148,7 @@ li, p {
 
 @media only screen and (max-width: 800px) {
     .closeMenu, .openMenu {
+        color: black;
         top: 0px;
         position: absolute;
         display: block;
@@ -159,13 +156,13 @@ li, p {
         cursor: pointer;
     }
 
+    .closeMenu:hover, .openMenu:hover {
+        opacity: 0.25;
+    }
+
     .closeMenu {
         right: 0px;
         margin: 10px;
-    }
-
-    .closeMenu:hover {
-        opacity: 0.25;
     }
     
     .fullscreenMenu {
@@ -176,14 +173,13 @@ li, p {
 
     .material-icons {
         font-size: 36px;
-        text-shadow: 0px 0px 20px white;
     }
 
     .openMenu {
         left: 0px;
         margin: 10px;
     }
-    
+
     .sideMenu {
         display: none;
     }

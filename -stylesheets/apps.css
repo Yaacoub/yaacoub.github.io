@@ -24,7 +24,7 @@
 
 .appsHeadlineThree:hover {
     background: white;
-    color: black;
+    color: black !important;
 }
 
 .appsWrapper:hover {

@@ -9,8 +9,17 @@ body {
 }
 
 a {
+    color: rgb(96, 102, 202);
     text-decoration: none;
     transition: .5s;
+}
+
+a:active {
+    color: rgb(202, 102, 96) !important;
+}
+
+a:visited {
+    color: rgb(96, 102, 202);
 }
 
 h1, h2, h3, h4, h5, h6 {

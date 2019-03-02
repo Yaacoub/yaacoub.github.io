@@ -39,6 +39,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="../-scripts/main.js"></script>
+    <script type="text/javascript" src="../-scripts/apps.js"></script>
 </head>
 
 <body>
@@ -52,18 +53,21 @@
             <li class="menuItem"><a href="../feedback/">Feedback</a></li>
         </ul>
     </div>
-    <div class="image appsBackgroundOne">
-        <a href="https://itunes.apple.com/app/id1330097506" target="_blank">
-            <div class="wrapper appsWrapper">
-                <div class="image huhAppIcon"></div>
-                <span class="headline appsHeadlineOne unselectable">Huh? Multidictionary<br><span class="tagline">Define.
-                        Search. Learn.</span></span>
-            </div>
-        </a>
+    <div id="appsBackgroundOneVisible" class="image appsBackgroundOne">
+        <div class="wrapper appsWrapper">
+            <div class="image huhAppIcon"></div>
+            <span class="headline appsHeadlineOne unselectable">Huh? Multidictionary<br><span class="tagline">Expand your lexicon.</span></span>
+        </div>
+    </div>
+    <div id="appsBackgroundOneHidden" class="image appsBackgroundOne">
+        <div class="wrapper appsWrapper appsWrapperTwo">
+            <p class="appsWrapperThree"><a href="https://itunes.apple.com/app/id1330097506" target="_blank" class="headline appsHeadlineThree unselectable">Download</a></p>
+            <p class="appsWrapperFour"><a href="../privacy/huh/" class="headline appsHeadlineThree unselectable">Privacy</a></p>
+        </div>
     </div>
     <div class="image appsBackgroundTwo">
         <div class="wrapper">
-            <span class="headline appsHeadlineTwo">More to come...</span>
+            <span class="headline appsHeadlineTwo unselectable">More to come...</span>
         </div>
     </div>
 </body>

@@ -18,8 +18,18 @@
     margin-left: 100px;
 }
 
+.appsHeadlineThree {
+    margin: 0px 50px 0px 50px;
+}
+
+.appsHeadlineThree:hover {
+    background: white;
+    color: black;
+}
+
 .appsWrapper:hover {
     background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
 }
 
 .huhAppIcon {
@@ -38,12 +48,16 @@
 /* Responsive classes */
 
 @media only screen and (max-width: 1300px) {
-    .appsHeadlineOne, .appsHeadlineTwo {
+    .appsHeadlineOne, .appsHeadlineTwo, .appsHeadlineThree {
         font-size: 40px;
     }
 
     .appsHeadlineOne {
         margin-left: 50px;
+    }
+
+    .appsHeadlineThree {
+        margin: 0px 25px 0px 25px;
     }
 
     .huhAppIcon {
@@ -70,6 +84,33 @@
 
     .appsBackgroundOne {
         margin-top: 56px;
+    }
+
+    .appsWrapperTwo {
+        position: relative;
+        display: block;
+    }
+
+    .appsWrapperThree {
+        width: 100%;
+        height: 50%;
+        margin: 0px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .appsWrapperFour {
+        width: 100%;
+        height: 50%;
+        margin: 0px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
     }
 }
 

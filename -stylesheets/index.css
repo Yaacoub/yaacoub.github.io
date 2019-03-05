@@ -1,29 +1,72 @@
 /* Classes */
 
-.homeBackground {
-    width: 100%;
-    height: 100%;
+.headline {
+    background-color: black;
+    color: white;
+    font-family: "Montserrat";
+    font-size: 50px;
+    font-weight: 800;
+    left: 50%;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transition: 0.5s;
+    white-space: nowrap;
+}
+
+.main {
     background-image: url("../-images/home_background.jpg");
-    /*background-attachment: fixed;*/
+    background-position: center;
+    background-size: cover;
+    position: fixed;
+    width: 100%;
 }
 
-.homeHeadline {
-    margin-left: 225px;
+.main-content {
+    height: 100%;
+    position: absolute;
+    right: 0;
+    width: calc(100% - 250px);
+}
+
+.menu {
+    background-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.menu-bar {
+    background-color: rgba(255, 255, 255, 0.5) !important;
 }
 
 
 
-/* Responsive classes */
+/* Global responsive classes */
 
-@media only screen and (max-width: 800px) {
-    .homeHeadline {
-        margin-left: 0px;
+@media only screen and (max-width: 1000px) {
+
+    .main {
+        top: 0 !important;
+        min-height: 100%;
+    }
+
+    .main-content {
+        height: 100%;
+        position: absolute;
+        width: 100%;
+    }
+
+    .menu {
+        background-color: white !important;
+    }
+
+}
+
+@media only screen and (max-width: 550px) {
+
+    .headline {
+        font-size: 40px;
         transition: 0.5s;
     }
-}
 
-@media only screen and (max-width: 500px) {
-    .homeHeadline {
-        font-size: 30px;
-    }
 }

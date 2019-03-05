@@ -1,142 +1,108 @@
 /* Classes */
 
-.appsBackgroundOne, .appsBackgroundTwo {
-    width: calc(100% - 225px);
-    height: 50%;
-    float: right;
+.app-huh {
+    background-image: url("../-images/apps_background_1.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 92.5%;
+    position: relative;
+    scroll-snap-align: center;
+    width: 100%;
 }
 
-.appsBackgroundOne {
-    background-image: url('../-images/apps_background_1.jpg');
+.app-huh-content-1, .app-huh-content-2, .app-huh-content-3 {
+    min-height: 33.33%;
+    height: calc(100% / 3);
+    position: relative;
+    transition: 0.5s;
 }
 
-.appsBackgroundTwo {
-    background-image: url('../-images/apps_background_2.jpg');
+.app-huh-content-2 div, .etcetera div {
+    background-color: black;
+    color: white;
+    font-family: "Montserrat";
+    font-size: 50px;
+    font-weight: 800;
+    left: 50%;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transition: 0.5s;
+    white-space: nowrap;
 }
 
-.appsHeadlineOne {
-    margin-left: 100px;
+.app-huh-content-2 span {
+    font-size: 35px;
 }
 
-.appsHeadlineThree {
-    margin: 0px 50px 0px 50px;
-}
-
-.appsHeadlineThree:hover {
-    background: white;
-    color: black !important;
-}
-
-.appsWrapper:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    cursor: pointer;
-}
-
-.huhAppIcon {
-    width: 200px;
-    height: 200px;
+.app-huh-icon {
     background-image: url("../-images/huh_app_icon.png");
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    width: 200px;
 }
 
-.tagline {
-    font-size: 25px !important;
-    font-weight: 700 !important;
+.app-huh-url-ios {
+    background-image: url("https://linkmaker.itunes.apple.com/en-us/badge-lrg.svg?releaseDate=2018-03-10&kind=iossoftware&bubble=ios_apps");
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+    height: calc(40px * 1.5);
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    width: calc(135px * 1.5);
+}
+
+.etcetera {
+    background-image: url("../-images/apps_background_2.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 92.5%;
+    position: relative;
+    scroll-snap-align: center;
+    width: 100%;
+}
+
+.main {
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
 }
 
 
 
 /* Responsive classes */
 
-@media only screen and (max-width: 1300px) {
-    .appsHeadlineOne, .appsHeadlineTwo, .appsHeadlineThree {
-        font-size: 40px;
+@media only screen and (max-width: 1000px) {
+
+    .app-huh-content-1 {
+        min-height: calc(100% * 2 / 3);
+        height: 66.66%;
+        transition: 0.5s;
     }
 
-    .appsHeadlineOne {
-        margin-left: 50px;
-    }
-
-    .appsHeadlineThree {
-        margin: 0px 25px 0px 25px;
-    }
-
-    .huhAppIcon {
-        width: 150px;
-        height: 150px;
-    }
-
-    .tagline {
-        font-size: 20px !important;
-    }
-}
-
-@media only screen and (max-width: 1100px) {
-    .appsHeadlineOne {
+    .app-huh-content-2 {
         display: none;
+        transition: 0.5s;
     }
+
 }
 
-@media only screen and (max-width: 800px) {
-    .appsBackgroundOne, .appsBackgroundTwo {
-        width: 100%;
-        height: calc(50% - 28px);
+@media only screen and (max-width: 550px) {
+
+    .etcetera div {
+        font-size: 40px;
+        transition: 0.5s;
     }
 
-    .appsBackgroundOne {
-        margin-top: 56px;
-    }
-
-    .appsWrapperTwo {
-        position: relative;
-        display: block;
-    }
-
-    .appsWrapperThree {
-        width: 100%;
-        height: 50%;
-        margin: 0px;
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-    }
-
-    .appsWrapperFour {
-        width: 100%;
-        height: 50%;
-        margin: 0px;
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-    }
-}
-
-@media only screen and (max-width: 500px) {
-    .appsHeadlineTwo {
-        font-size: 30px;
-    }
-}
-
-@media only screen and (max-height: 400px) {
-    .appsHeadlineTwo {
-        font-size: 25px;
-    }
-    
-    .huhAppIcon {
-        width: 100px;
-        height: 100px;
-    }
-}
-
-@media only screen and (max-height: 300px) {
-    .appsBackgroundOne, .appsBackgroundTwo {
-        height: calc(300px - 56px);;
-    }
-
-    .appsBackgroundOne {
-        margin-top: 56px;
-    }
 }

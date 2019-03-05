@@ -1,23 +1,32 @@
+/* Elements */
+
+a {
+    color: rgb(96, 102, 202);
+    transition: 0.5s;
+}
+
+a:hover {
+    color: rgb(202, 102, 96) !important;
+    transition: 0.5s;
+}
+
+a:visited {
+    color: rgb(96, 102, 202);
+}
+
+body {
+    font-family: Verdana, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
 /* Classes */
 
-.privacyPolicyBackground {
-    width: calc(100% - 225px);
-    float: right;
-}
-
-.privacyPolicyWrapper {
-    padding: 10px 50px 25px 50px;
+.main-content {
+    padding: 50px;
     text-align: justify;
-}
-
-
-
-/* Responsive classes */
-
-@media only screen and (max-width: 800px) {
-    .privacyPolicyBackground {
-        width: 100%;
-        height: calc(100% - 56px);
-        margin-top: 56px;
-    }
 }

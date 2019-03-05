@@ -1,0 +1,172 @@
+/* Elements */
+
+* {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+body, html {
+    height: 100%;
+}
+
+
+
+/* Classes */
+
+.main {
+    height: 100%;
+    position: absolute;
+    right: 0;
+    width: calc(100% - 250px);
+}
+
+.material-icons {
+    font-size: 36px;
+}
+
+.menu {
+    background-color: white;
+    font-family: "Montserrat";
+    height: 100%;
+    left: 0;
+    overflow-x: hidden;
+    position: fixed;
+    user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    -webkit-user-select: none;
+    width: 250px;
+    z-index: 1;
+}
+
+.menu a, .menu a:visited {
+    color: black;
+}
+
+.menu a:not(.menu-header):hover {
+    color: rgb(202, 102, 96);
+}
+
+.menu a:not(.menu-header):active {
+    color: rgb(96, 102, 202);
+}
+
+.menu-bar {
+    background-color: white;
+    display: none;
+    height: 50px;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    -webkit-user-select: none;
+    width: 100%;
+    z-index: 2;
+}
+
+.menu-close {
+    display: none;
+    right: 0px;
+    position: absolute;
+}
+
+.menu-close:hover, .menu-open:hover {
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+.menu-footer {
+    bottom: 0;
+    font-size: 13px;
+    position: absolute;
+}
+
+.menu-footer, .menu-main {
+    padding: 10px;
+}
+
+.menu-header {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 100px;
+}
+
+.menu-item {
+    font-size: 25px;
+    line-height: 50px;
+    transition: 0.5s;
+}
+
+.menu-item:hover {
+    padding-left: 10px;
+    transition: 0.5s;
+}
+
+.menu-item-selected {
+    color: rgb(202, 101, 96) !important;
+}
+
+.menu-open {
+    left: 0px;
+    position: absolute;
+}
+
+.menu-open, .menu-close {
+    cursor: pointer;
+    margin: 0 10px 0 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transition: 0.5s;
+}
+
+.menu-main {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.menu-main .menu-item-selected {
+    padding-left: 10px;
+}
+
+
+
+/* Global responsive classes */
+
+@media only screen and (max-width: 1000px) {
+
+    .main {
+        top: 50px;
+        min-height: calc(100% - 50px);
+        width: 100%;
+    }
+
+    .menu {
+        display: none;
+        position: fixed;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .menu-bar {
+        display: block;
+    }
+
+    .menu-hidden {
+        display: block;
+    }
+
+}

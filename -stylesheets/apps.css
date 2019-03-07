@@ -75,7 +75,7 @@
 
 .main {
     overflow-y: scroll;
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: none;
 }
 
 
@@ -93,10 +93,6 @@
     .app-huh-content-2 {
         display: none;
         transition: 0.5s;
-    }
-
-    .main {
-        scroll-snap-type: none;
     }
 
 }

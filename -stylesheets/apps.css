@@ -95,4 +95,8 @@
         transition: 0.5s;
     }
 
+    .main {
+        scroll-snap-type: none;
+    }
+
 }

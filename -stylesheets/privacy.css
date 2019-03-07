@@ -5,11 +5,6 @@ a {
     transition: 0.5s;
 }
 
-a:hover {
-    color: rgb(202, 102, 96) !important;
-    transition: 0.5s;
-}
-
 a:visited {
     color: rgb(96, 102, 202);
 }
@@ -25,6 +20,11 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /* Classes */
+
+.main a:hover {
+    color: rgb(202, 102, 96) !important;
+    transition: 0.5s;
+}
 
 .main-content {
     padding: 50px;

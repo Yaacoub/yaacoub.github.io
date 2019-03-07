@@ -21,7 +21,7 @@
     background-color: black;
     color: white;
     font-family: "Montserrat";
-    font-size: 50px;
+    font-size: calc(25px + 125vw / 96);
     font-weight: 800;
     left: 50%;
     padding: 20px;
@@ -29,12 +29,11 @@
     top: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    transition: 0.5s;
     white-space: nowrap;
 }
 
 .app-huh-content-2 span {
-    font-size: 35px;
+    font-size: calc(17.5px + 175vw / 192);
 }
 
 .app-huh-icon {
@@ -93,15 +92,6 @@
 
     .app-huh-content-2 {
         display: none;
-        transition: 0.5s;
-    }
-
-}
-
-@media only screen and (max-width: 550px) {
-
-    .etcetera div {
-        font-size: 40px;
         transition: 0.5s;
     }
 

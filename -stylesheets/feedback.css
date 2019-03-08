@@ -1,3 +1,11 @@
+/* Elements */
+
+body {
+    overflow: hidden;
+}
+
+
+
 /* Classes */
 
 .feedback {

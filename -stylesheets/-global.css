@@ -19,7 +19,7 @@ body, html {
 
 .main {
     height: 100%;
-    overflow-y: auto;
+    overflow-y: initial;
     position: absolute;
     right: 0;
     width: calc(100% - 250px);

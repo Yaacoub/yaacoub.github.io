@@ -46,6 +46,7 @@
     .feedback {
         bottom: 0;
         height: calc(100% - 50px);
+        z-index: 1;
     }
 
     .loader {

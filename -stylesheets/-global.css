@@ -155,6 +155,10 @@ body, html {
         width: 100%;
     }
 
+    .main-noscroll {
+        overflow: hidden;
+    }
+
     .menu {
         display: none;
         position: fixed;

@@ -152,7 +152,7 @@ body, html {
 
     .main {
         top: 50px;
-        min-height: calc(100% - 50px);
+        height: calc(100% - 50px);
         width: 100%;
     }
 

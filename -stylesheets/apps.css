@@ -6,7 +6,7 @@
     background-position: center;
     height: 92.5%;
     position: relative;
-    scroll-snap-align: center;
+
     width: 100%;
 }
 
@@ -69,13 +69,13 @@
     background-position: center;
     height: 92.5%;
     position: relative;
-    scroll-snap-align: center;
+
     width: 100%;
 }
 
 .main {
     overflow-y: scroll;
-    scroll-snap-type: none;
+    scroll-snap-type: mandatory;
 }
 
 

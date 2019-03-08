@@ -1,7 +1,7 @@
 /* Classes */
 
 .app-huh {
-    background-image: url("../-images/apps_background_1.jpg");
+    background-image: url("/-images/apps_background_1.jpg");
     background-size: cover;
     background-position: center;
     height: 92.5%;
@@ -37,7 +37,7 @@
 }
 
 .app-huh-icon {
-    background-image: url("../-images/huh_app_icon.png");
+    background-image: url("/-images/huh_app_icon.png");
     background-size: cover;
     background-position: center;
     height: calc(100px + 125vw / 48 + 125vh / 27);
@@ -64,7 +64,7 @@
 }
 
 .etcetera {
-    background-image: url("../-images/apps_background_2.jpg");
+    background-image: url("/-images/apps_background_2.jpg");
     background-size: cover;
     background-position: center;
     height: 92.5%;

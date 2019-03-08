@@ -5,7 +5,7 @@
     height: 100%;
     position: absolute;
     right: 0;
-    width: inherit;
+    width: 100%;
 }
 
 .loader {
@@ -15,9 +15,9 @@
     border-radius: 50%;
     border-top: 5px solid gray;
     height: 20px;
-    left: 50%;
+    left: calc(50% - 15px);
     position: absolute;
-    top: 50%;
+    top: calc(50% - 15px);
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     width: 20px;
@@ -35,27 +35,4 @@
 @-webkit-keyframes spin {
     0% { -webkit-transform: rotate(0deg); }
     100% { -webkit-transform: rotate(360deg); }
-}
-
-
-
-/* Responsive classes */
-
-@media only screen and (max-width: 1000px) {
-
-    .loader {
-        animation: spin 2s linear infinite;
-        -webkit-animation: spin 2s linear infinite;
-        border: 5px solid gainsboro;
-        border-radius: 50%;
-        border-top: 5px solid gray;
-        height: 20px;
-        left: 50%;
-        position: absolute;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        width: 20px;
-    }
-
 }

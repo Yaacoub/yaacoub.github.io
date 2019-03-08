@@ -1,0 +1,53 @@
+/* Elements */
+
+body {
+    background-color: rgb(202, 102, 96);
+}
+
+
+
+/* Classes */
+
+.headline {
+    background-color: black;
+    color: white;
+    font-family: "Montserrat";
+    font-size: calc(20px + 125vw / 96);
+    font-weight: 800;
+    left: 50%;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    white-space: nowrap;
+}
+
+.main {
+    background-image: url("/-images/home_background.jpg");
+    background-position: center;
+    background-size: cover;
+    position: fixed;
+    width: 100%;
+}
+
+.redirect {
+
+    background-color: white;
+    color: black;
+    bottom: 0px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: calc(10px + 25vw / 48);
+    font-weight: 700;
+    padding: 5px 0px 5px 0px;
+    position: absolute;
+    text-align: center;
+    transition: 0.5s;
+    width: 100%;
+}
+
+.redirect:hover {
+    background-color: black;
+    color: white;
+    transition: 0.5s;
+}

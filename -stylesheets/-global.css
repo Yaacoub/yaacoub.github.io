@@ -10,6 +10,7 @@ a {
 
 body, html {
     height: 100%;
+    overflow-y: hidden;
 }
 
 
@@ -18,7 +19,8 @@ body, html {
 
 .main {
     height: 100%;
-    position: absolute;
+    overflow-y: scroll;
+    position: fixed;
     right: 0;
     width: calc(100% - 250px);
 }

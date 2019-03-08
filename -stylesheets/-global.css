@@ -19,8 +19,8 @@ body, html {
 
 .main {
     height: 100%;
-    overflow-y: scroll;
-    position: fixed;
+    overflow-y: auto;
+    position: absolute;
     right: 0;
     width: calc(100% - 250px);
 }

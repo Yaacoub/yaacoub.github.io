@@ -40,13 +40,13 @@
     background-image: url("../-images/huh_app_icon.png");
     background-size: cover;
     background-position: center;
-    height: 200px;
+    height: calc(100px + 125vw / 48 + 125vh / 27);
     left: 50%;
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    width: 200px;
+    width: calc(100px + 125vw / 48 + 125vh / 27);
 }
 
 .app-huh-url-ios {
@@ -92,6 +92,11 @@
     .app-huh-content-2 {
         display: none;
         transition: 0.5s;
+    }
+
+    .app-huh-url-ios {
+        height: 40px;
+        width: 135px;
     }
 
 }

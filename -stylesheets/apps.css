@@ -1,7 +1,8 @@
-/* Classes */
+main {
+    scroll-snap-type: mandatory;
+}
 
-.app-huh {
-    background-image: url("/-images/apps-background-1.jpg");
+section {
     background-size: cover;
     background-position: center;
     height: 92.5%;
@@ -10,91 +11,53 @@
     width: 100%;
 }
 
-.app-huh-content-1, .app-huh-content-2, .app-huh-content-3 {
+.app-huh {
+    background-image: url("/-images/apps-background-1.jpg");
+}
+
+.app-huh-section-1, .app-huh-section-2, .app-huh-section-3 {
     min-height: 33.33%;
     height: calc(100% / 3);
     position: relative;
     transition: 0.5s;
 }
 
-.app-huh-content-2 div, .etcetera div {
-    background-color: black;
-    color: white;
-    font-family: "Montserrat";
-    font-size: calc(25px + 125vw / 96);
-    font-weight: 800;
-    left: 50%;
-    padding: 20px;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    white-space: nowrap;
-}
-
-.app-huh-content-2 span {
-    font-size: calc(17.5px + 175vw / 192);
+.app-huh-icon, .app-huh-appstore-ios {
+    background-size: cover;
+    background-position: center;
 }
 
 .app-huh-icon {
     background-image: url("/-images/apps-huh-icon.png");
-    background-size: cover;
-    background-position: center;
     height: calc(100px + 125vw / 48 + 125vh / 27);
-    left: 50%;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
     width: calc(100px + 125vw / 48 + 125vh / 27);
 }
 
-.app-huh-url-ios {
+.app-huh-appstore-ios {
     background-image: url("https://linkmaker.itunes.apple.com/en-us/badge-lrg.svg?releaseDate=2018-03-10&kind=iossoftware&bubble=ios_apps");
-    background-size: cover;
-    background-position: center;
     display: inline-block;
     height: calc(40px * 1.5);
-    left: 50%;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
     width: calc(135px * 1.5);
 }
 
 .etcetera {
     background-image: url("/-images/apps-background-2.jpg");
-    background-size: cover;
-    background-position: center;
-    height: 92.5%;
-    position: relative;
-    scroll-snap-align: center;
-    width: 100%;
 }
-
-.main {
-    scroll-snap-type: mandatory;
-}
-
-
-
-/* Responsive classes */
 
 @media only screen and (max-width: 1000px) {
 
-    .app-huh-content-1 {
+    .app-huh-section-1 {
         min-height: calc(100% * 2 / 3);
         height: 66.66%;
         transition: 0.5s;
     }
 
-    .app-huh-content-2 {
+    .app-huh-section-2 {
         display: none;
         transition: 0.5s;
     }
 
-    .app-huh-url-ios {
+    .app-huh-appstore-ios {
         height: 40px;
         width: 135px;
     }

@@ -1,11 +1,5 @@
-/* Elements */
-
 * {
     margin: 0;
-}
-
-a {
-    text-decoration: none;
 }
 
 body, html {
@@ -13,65 +7,146 @@ body, html {
     overflow-y: hidden;
 }
 
+a, a:visited {
+    color: rgb(96, 102, 202);
+    text-decoration: none;
+    transition: 0.5s;
+}
 
+a:hover {
+    color: rgb(202, 102, 96) !important;
+    transition: 0.5s;
+}
 
-/* Classes */
+article {
+    padding: 30px;
+}
 
-.main {
+article h1 {
+    width: 100%;
+}
+
+article section {
+    padding-top: 15px;
+}
+
+h1 {
+    font-size: 30px;
+    line-height: 80px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 22.5px;
+    line-height: 40px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Montserrat";
+    font-weight: 700;
+}
+
+hr {
+    align-content: center;
+    background-color: black;
+    border-style: none;
+    height: 2px;
+    margin: 0 47.5% 20px 47.5%;
+    width: 5%;
+}
+
+li, p, time {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 17.5px;
+    line-height: 30px;
+    text-align: justify;
+    width: 100%;
+}
+
+main {
     height: 100%;
-    overflow-y: visible;
     position: absolute;
     right: 0;
     width: calc(100% - 250px);
+}
+
+nav {
+    background-color: white;
+    font-family: "Montserrat";
+    font-weight: 400;
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: fixed;
+    width: 250px;
+    z-index: 1;
+}
+
+nav a, nav a:visited {
+    color: black;
+}
+
+nav h1 a:hover {
+    color: black !important;
+}
+
+nav h2 {
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+nav h2 a:hover {
+    padding-left: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 10px;
+}
+
+p {
+    margin: 30px 0 30px 0;
+}
+
+time {
+    color: grey;
+    display: block;
+    font-size: 15px;
+    text-align: center;
+}
+
+.centerXY {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.headline {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    white-space: nowrap;
+}
+
+.headline h1 {
+    font-size: calc(25px + 1vw);
+    font-weight: 800;
+    line-height: normal;
+    text-align: left;
 }
 
 .material-icons {
     font-size: 36px;
 }
 
-.menu {
-    background-color: white;
-    font-family: "Montserrat";
-    font-weight: 400;
-    height: 100%;
-    left: 0;
-    overflow-x: hidden;
-    position: fixed;
-    user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    -webkit-user-select: none;
-    width: 250px;
-    z-index: 1;
-}
-
-.menu a, .menu a:visited {
-    color: black;
-}
-
-.menu a:not(.menu-header):hover {
-    color: rgb(202, 102, 96);
-}
-
-.menu a:not(.menu-header):active {
-    color: rgb(96, 102, 202);
-}
-
 .menu-bar {
     background-color: white;
     display: none;
     height: 50px;
-    overflow: hidden;
     position: fixed;
     top: 0;
-    user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    -webkit-user-select: none;
     width: 100%;
     z-index: 2;
 }
@@ -83,39 +158,23 @@ body, html {
 }
 
 .menu-close:hover, .menu-open:hover {
-    opacity: 0.5;
+    color: rgb(202, 101, 96) !important;
     transition: 0.5s;
 }
 
 .menu-footer {
     bottom: 0;
-    font-size: 13px;
     position: absolute;
 }
 
-.menu-footer, .menu-main {
-    padding: 10px;
-}
-
-.menu-header {
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 100px;
-}
-
-.menu-item {
-    font-size: 25px;
-    line-height: 50px;
-    transition: 0.5s;
-}
-
-.menu-item:hover {
-    padding-left: 10px;
-    transition: 0.5s;
+.menu-footer li {
+    font-size: 12.5px;
+    line-height: normal;
 }
 
 .menu-item-selected {
     color: rgb(202, 101, 96) !important;
+    padding-left: 10px;
 }
 
 .menu-open {
@@ -133,46 +192,46 @@ body, html {
     transition: 0.5s;
 }
 
-.menu-main {
-    left: 50%;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
+.unselectable {
+    user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    -webkit-user-select: none;
 }
-
-.menu-main .menu-item-selected {
-    padding-left: 10px;
-}
-
-
-
-/* Global responsive classes */
 
 @media only screen and (max-width: 1000px) {
 
-    .main {
+    main {
         top: 50px;
         height: calc(100% - 50px);
         width: 100%;
     }
 
-    .main-hidden {
+    nav {
         display: none;
+        width: 100%;
     }
 
-    .menu {
+    .hide {
         display: none;
-        position: fixed;
-        width: 100%;
-        z-index: 1;
     }
 
     .menu-bar {
         display: block;
     }
 
-    .menu-hidden {
+    .menu-footer {
+        padding: 0 0 10px 0;
+        width: 100%;
+    }
+
+    .menu-footer li {
+        text-align: center;
+    }
+
+    .show {
         display: block;
     }
 

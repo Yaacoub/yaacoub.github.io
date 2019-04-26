@@ -1,37 +1,20 @@
-/* Classes */
-
-.headline {
-    background-color: black;
-    color: white;
-    font-family: "Montserrat";
-    font-size: calc(20px + 125vw / 96);
-    font-weight: 800;
-    left: 50%;
-    padding: 20px;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    white-space: nowrap;
-}
-
-.main {
+body {
+    background-attachment: fixed;
     background-image: url("/-images/home-background.jpg");
     background-position: center;
     background-size: cover;
-    height: 100% !important;
     position: fixed;
-    top: 0 !important;
+    width: 100%;
+}
+
+main {
     width: 100% !important;
 }
 
 .redirect {
     background-color: white;
     color: black;
-    bottom: 0px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: calc(10px + 25vw / 48);
-    font-weight: 700;
+    bottom: 0;
     padding: 5px 0px 5px 0px;
     position: absolute;
     text-align: center;

@@ -66,6 +66,7 @@ li, p, time {
 
 main {
     height: 100%;
+    overflow-x: hidden;
     position: absolute;
     right: 0;
     width: calc(100% - 250px);

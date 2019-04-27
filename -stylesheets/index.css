@@ -3,6 +3,7 @@ body {
     background-image: url("/-images/home-background.jpg");
     background-position: center;
     background-size: cover;
+    overflow: hidden;
     position: fixed;
     width: 100%;
 }

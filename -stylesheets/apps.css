@@ -1,4 +1,5 @@
 main {
+    overflow-x: hidden;
     scroll-snap-type: mandatory;
 }
 
@@ -47,6 +48,10 @@ section {
 }
 
 @media only screen and (max-width: 1000px) {
+
+    main {
+        overflow-x: visible;
+    }
 
     .app-huh-section-1 {
         min-height: calc(100% * 2 / 3);

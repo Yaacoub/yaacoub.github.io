@@ -19,6 +19,9 @@ article {
 
 article h1, nav h1 {
     margin-bottom: 25px;
+}
+
+article h1, nav h1, li, p, time {
     width: 100%;
 }
 
@@ -61,7 +64,6 @@ li, p, time {
     font-size: 15px;
     line-height: 30px;
     text-align: justify;
-    width: 100%;
 }
 
 main {

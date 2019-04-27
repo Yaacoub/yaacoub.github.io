@@ -3,8 +3,12 @@ body {
     background-image: url("/-images/home-background.jpg");
     background-position: center;
     background-size: cover;
-    position: fixed;
+    position: relative;
     width: 100%;
+}
+
+main {
+    position: fixed;
 }
 
 nav {

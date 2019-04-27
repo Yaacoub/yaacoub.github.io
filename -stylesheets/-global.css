@@ -2,11 +2,6 @@
     margin: 0;
 }
 
-body, html {
-    height: 100%;
-    overflow-y: hidden;
-}
-
 a, a:visited {
     color: rgb(96, 102, 202);
     text-decoration: none;
@@ -29,6 +24,11 @@ article h1, nav h1 {
 
 article section {
     padding-top: 15px;
+}
+
+body, html {
+    height: 100%;
+    overflow-y: hidden;
 }
 
 h1 {
@@ -57,7 +57,7 @@ hr {
 }
 
 li, p, time {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Verdana";
     font-size: 15px;
     line-height: 30px;
     text-align: justify;

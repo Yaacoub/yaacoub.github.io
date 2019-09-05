@@ -1,6 +1,19 @@
+html {
+    overflow: hidden;
+}
+
 main {
-    overflow-x: hidden;
+    overflow: scroll;
     scroll-snap-type: mandatory;
+}
+
+table {
+    height: 100%;
+    width: auto;
+}
+
+td {
+    padding: 25px;
 }
 
 section {
@@ -47,20 +60,33 @@ section {
     background-image: url("/-images/apps-background-2.jpg");
 }
 
+.headline h1, .headline h2 {
+    user-select: auto;
+    -khtml-user-select: auto;
+    -moz-user-select: auto;
+    -ms-user-select: auto;
+    -o-user-select: auto;
+    -webkit-user-select: auto;
+}
+
 @media only screen and (max-width: 1000px) {
 
     main {
         overflow-x: visible;
     }
 
-    .app-huh-section-1 {
-        min-height: calc(100% * 2 / 3);
-        height: 66.66%;
+    td {
+        padding: 0;
+    }
+
+    td .headline, .app-huh-section-1 {
+        display: none;
         transition: 0.5s;
     }
 
     .app-huh-section-2 {
-        display: none;
+        min-height: calc(100% * 2 / 3);
+        height: 66.66%;
         transition: 0.5s;
     }
 

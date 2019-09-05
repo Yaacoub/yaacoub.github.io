@@ -3,13 +3,13 @@
 }
 
 a, a:visited {
-    color: rgb(96, 102, 202);
+    color: #02A6A6;
     text-decoration: none;
     transition: 0.5s;
 }
 
 a:hover {
-    color: rgb(202, 102, 96) !important;
+    color: #DE5071 !important;
     transition: 0.5s;
 }
 
@@ -160,7 +160,7 @@ time {
 }
 
 .menu-close:hover, .menu-open:hover {
-    color: rgb(202, 101, 96) !important;
+    color: #DE5071 !important;
     transition: 0.5s;
 }
 
@@ -175,7 +175,7 @@ time {
 }
 
 .menu-item-selected {
-    color: rgb(202, 101, 96) !important;
+    color: #DE5071 !important;
     padding-left: 10px;
 }
 

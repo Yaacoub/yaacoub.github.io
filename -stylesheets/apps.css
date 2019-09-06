@@ -1,5 +1,5 @@
 main {
-    overflow: scroll;
+    overflow-x: hidden;
     scroll-snap-type: mandatory;
 }
 

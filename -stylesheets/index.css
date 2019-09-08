@@ -3,7 +3,7 @@ body, html {
 }
 
 main {
-    background-image: url("/-images/home-background.jpg");
+    background-image: url("/-images/background-home.png");
     background-position: center;
     background-size: cover;
     height: 100%;

@@ -24,7 +24,7 @@ section {
 }
 
 .app-huh {
-    background-image: url("/-images/apps-background-1.jpg");
+    background-image: url("/-images/background-huh-dictionary.png");
 }
 
 .app-huh-section-1, .app-huh-section-2, .app-huh-section-3 {
@@ -40,7 +40,7 @@ section {
 }
 
 .app-huh-icon {
-    background-image: url("/-images/apps-huh-icon.png");
+    background-image: url("/-images/icon-huh-dictionary.png");
     height: calc(100px + 125vw / 48 + 125vh / 27);
     width: calc(100px + 125vw / 48 + 125vh / 27);
 }
@@ -53,7 +53,7 @@ section {
 }
 
 .etcetera {
-    background-image: url("/-images/apps-background-2.jpg");
+    background-image: url("/-images/background-etcetera.png");
 }
 
 .headline h1, .headline h2 {

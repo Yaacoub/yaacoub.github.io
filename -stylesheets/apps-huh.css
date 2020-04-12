@@ -40,7 +40,7 @@ section p {
 }
 
 .image {
-    min-height: 100px;
+    min-height: 125px;
 }
 
 .image1 {
@@ -118,7 +118,6 @@ section p {
 @media only screen and (max-width: 800px) {
 
     section {
-        min-height: 500px;
         padding: 0;
     }
 

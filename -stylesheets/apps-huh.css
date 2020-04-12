@@ -96,7 +96,6 @@ section p {
 
     section {
         flex-flow: column wrap;
-        min-height: 500px;
     }
 
     .image {

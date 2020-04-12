@@ -1,0 +1,126 @@
+section {
+    display: flex;
+    margin: 100px 0 !important;
+    min-height: 250px;
+    padding: 0 50px;
+}
+
+section > *:not(.whitespace) {
+    flex: 1;
+}
+
+section p {
+    align-self: center;
+}
+
+.appstore {
+    background: transparent url("https://linkmaker.itunes.apple.com/en-us/badge-lrg.svg?releaseDate=2018-03-10&kind=iossoftware&bubble=ios_apps") center/cover no-repeat;
+    display: inline-block;
+    height: 40px;
+    margin-bottom: 20px;
+    width: 135px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header * {
+    align-self: center;
+}
+
+.header img {
+    filter: drop-shadow(0px 0 14px #00000042);
+    margin: 0 20px 20px 0;
+    min-width: 50px;
+    vertical-align: middle;
+    width: 10%;
+    -webkit-filter: drop-shadow(0px 0 14px #00000042);
+}
+
+.image1 {
+    background: transparent url('/-images/background-huh-dictionary.png') center/cover no-repeat;
+}
+
+.image2 {
+    background: transparent url('/-images/background-huh-dictionary-2.png') center/cover no-repeat;
+}
+
+.image3 {
+    background: transparent url('/-images/background-huh-dictionary-3.png') center/cover no-repeat;
+}
+
+.image4 {
+    background: transparent url('/-images/background-huh-dictionary-4.png') center/cover no-repeat;
+}
+
+.important {
+    box-shadow: 0 0 14px #00000042;
+    padding: 0;
+}
+
+.important .image {
+    box-shadow: 0 0 14px #00000042;
+}
+
+.important > * {
+    margin: 50px;
+}
+
+.title {
+    display: inline-block;
+    margin-bottom: 20px;
+    vertical-align: middle;
+}
+
+.title * {
+    margin: 0;
+}
+
+.title h2 {
+    color: #808080;
+    font-weight: normal;
+}
+
+.whitespace {
+    flex: 0.2625;
+}
+
+@media only screen and (max-width: 1280px) {
+
+    section {
+        flex-flow: column wrap;
+    }
+
+    .image {
+        height: 250px;
+        order: -2;
+    }
+
+    .important > * {
+        margin: 25px;
+    }
+
+    .whitespace {
+        height: 50px;
+        order: -1;
+    }
+
+}
+
+@media only screen and (max-width: 800px) {
+
+    section {
+        padding: 0;
+    }
+
+    .header {
+        flex-flow: column wrap;
+    }
+
+    .header * {
+        align-self: auto;
+    }
+
+}

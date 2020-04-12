@@ -1,38 +1,23 @@
-body, html {
-    overflow: hidden;
-}
-
-main {
-    background-image: url("/-images/background-home.png");
-    background-position: center;
-    background-size: cover;
-    height: 100%;
-    position: fixed;
-    top: 0;
+.background {
+    background: transparent url('/-images/background-home.png') center/cover no-repeat;
+    height: calc(100vh - 50px);
     width: 100%;
 }
 
-main .centerXY {
-    margin-left: 125px;
+.headline {
+    background-color: black;
+    box-shadow: 0 0 14px #00000042;
+    color: white;
+    font-size: 50px;
+    padding: 39.5px 22px;
 }
 
-nav {
-    background-color: rgba(255, 255, 255, 0.5) !important;
-}
+@media only screen and (max-width: 506px) {
 
-.menu-bar {
-    background-color: rgba(255, 255, 255, 0.5) !important;
-}
-
-@media only screen and (max-width: 1000px) {
-
-    main .centerXY {
-        margin-left: 0;
-        margin-top: 25px;
-    }
-
-    nav {
-        background-color: white !important;
+    .headline {
+        font-size: 30px;
+        line-height: 37px;
+        padding: 8.26% 5.46%;
     }
 
 }

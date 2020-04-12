@@ -1,94 +1,74 @@
-main {
-    overflow-x: hidden;
-    scroll-snap-type: mandatory;
-}
-
-table {
-    height: 100%;
-    width: auto;
-}
-
-td {
-    padding: 25px;
-}
-
 section {
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 92.5%;
-    position: relative;
-    scroll-snap-align: center;
-    width: 100%;
+    box-shadow: 0 0 14px #00000042;
+    display: flex;
+    margin: 5% 25%;
 }
 
-.app-huh {
-    background-image: url("/-images/background-huh-dictionary.png");
+section > * {
+    flex: 1;
 }
 
-.app-huh-section-1, .app-huh-section-2, .app-huh-section-3 {
-    min-height: 33.33%;
-    height: calc(100% / 3);
-    position: relative;
-    transition: 0.5s;
-}
-
-.app-huh-icon, .app-huh-appstore-ios {
-    background-size: cover;
-    background-position: center;
-}
-
-.app-huh-icon {
-    background-image: url("/-images/icon-huh-dictionary.png");
-    height: calc(100px + 125vw / 48 + 125vh / 27);
-    width: calc(100px + 125vw / 48 + 125vh / 27);
-}
-
-.app-huh-appstore-ios {
-    background-image: url("https://linkmaker.itunes.apple.com/en-us/badge-lrg.svg?releaseDate=2018-03-10&kind=iossoftware&bubble=ios_apps");
+.content-appstore {
+    background: transparent url("https://linkmaker.itunes.apple.com/en-us/badge-lrg.svg?releaseDate=2018-03-10&kind=iossoftware&bubble=ios_apps") center/cover no-repeat;
     display: inline-block;
-    height: calc(40px * 1.5);
-    width: calc(135px * 1.5);
+    height: 40px;
+    width: 135px;
 }
 
-.etcetera {
-    background-image: url("/-images/background-etcetera.png");
+.content-image-huh {
+    background: transparent url('/-images/background-huh-dictionary.png') center/cover no-repeat;
 }
 
-.headline h1, .headline h2 {
-    user-select: auto;
-    -khtml-user-select: auto;
-    -moz-user-select: auto;
-    -ms-user-select: auto;
-    -o-user-select: auto;
-    -webkit-user-select: auto;
+.content-information {
+    padding: 20px;
 }
 
-@media only screen and (max-width: 1000px) {
+.content-information img {
+    filter: drop-shadow(0px 0 14px #00000042);
+    min-width: 50px;
+    vertical-align: middle;
+    width: calc(25% - 20px);
+    -webkit-filter: drop-shadow(0px 0 14px #00000042);
+}
 
-    main {
-        overflow-x: visible;
+.content-information > * {
+    margin: 10px;
+}
+
+.content-title {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.content-title h2 {
+    color: #808080;
+    font-weight: normal;
+}
+
+@media only screen and (max-width: 1280px) {
+
+    section {
+        flex-flow: column wrap;
     }
 
-    td {
-        padding: 0;
+    .content-image-huh {
+        height: 250px;
     }
 
-    td .headline, .app-huh-section-1 {
-        display: none;
-        transition: 0.5s;
+}
+
+@media only screen and (max-width: 800px) {
+
+    section {
+        margin: 10% 12.5%;
     }
 
-    .app-huh-section-2 {
-        min-height: calc(100% * 2 / 3);
-        height: 66.66%;
-        transition: 0.5s;
-    }
+}
 
-    .app-huh-appstore-ios {
-        height: 40px;
-        width: 135px;
+@media only screen and (max-width: 414px) {
+
+    section {
+        margin: 10% 6.25%;
     }
 
 }

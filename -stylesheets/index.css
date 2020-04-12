@@ -1,5 +1,5 @@
 .background {
-    background: transparent url('/-images/background-home.png') center/cover no-repeat;
+    background: transparent url('/-images/background-home.jpg') center/cover no-repeat;
     height: calc(100vh - 50px);
     width: 100%;
 }

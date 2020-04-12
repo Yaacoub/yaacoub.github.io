@@ -6,7 +6,7 @@
 
 .headline {
     background-color: black;
-    box-shadow: 0 0 14px #00000042;
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.259);
     color: white;
     font-size: 50px;
     padding: 39.5px 22px;

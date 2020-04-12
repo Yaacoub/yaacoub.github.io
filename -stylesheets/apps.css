@@ -1,5 +1,5 @@
 section {
-    box-shadow: 0 0 14px #00000042;
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.259);
     display: flex;
     margin: 5% 25%;
 }
@@ -24,11 +24,11 @@ section > * {
 }
 
 .content-information img {
-    filter: drop-shadow(0px 0 14px #00000042);
+    filter: drop-shadow(0px 0 14px rgba(0, 0, 0, 0.259));
     min-width: 50px;
     vertical-align: middle;
     width: calc(25% - 20px);
-    -webkit-filter: drop-shadow(0px 0 14px #00000042);
+    -webkit-filter: drop-shadow(0px 0 14px rgba(0, 0, 0, 0.259));
 }
 
 .content-information > * {

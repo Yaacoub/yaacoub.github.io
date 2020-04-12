@@ -9,10 +9,6 @@ section > *:not(.whitespace) {
     flex: 1;
 }
 
-section p {
-    align-self: center;
-}
-
 .appstore {
     background: transparent url("https://linkmaker.itunes.apple.com/en-us/badge-lrg.svg?releaseDate=2018-03-10&kind=iossoftware&bubble=ios_apps") center/cover no-repeat;
     display: inline-block;
@@ -31,12 +27,16 @@ section p {
 }
 
 .header img {
-    filter: drop-shadow(0px 0 14px #00000042);
+    filter: drop-shadow(0px 0 14px rgba(0, 0, 0, 0.259));
     margin: 0 20px 20px 0;
     min-width: 50px;
     vertical-align: middle;
     width: 10%;
-    -webkit-filter: drop-shadow(0px 0 14px #00000042);
+    -webkit-filter: drop-shadow(0px 0 14px rgba(0, 0, 0, 0.259));
+}
+
+image, section p {
+    align-self: center;
 }
 
 .image1 {
@@ -56,12 +56,12 @@ section p {
 }
 
 .important {
-    box-shadow: 0 0 14px #00000042;
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.259);
     padding: 0;
 }
 
 .important .image {
-    box-shadow: 0 0 14px #00000042;
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.259);
 }
 
 .important > * {
@@ -91,6 +91,7 @@ section p {
 
     section {
         flex-flow: column wrap;
+        min-height: unset;
     }
 
     .image {
@@ -112,6 +113,7 @@ section p {
 @media only screen and (max-width: 800px) {
 
     section {
+        min-height: unset;
         padding: 0;
     }
 

@@ -52,7 +52,7 @@ h2 {
 
 footer {
     background-color: #000000;
-    box-shadow: 0 -7px 14px #00000042;
+    box-shadow: 0 -7px 14px rgba(0, 0, 0, 0.259);
     font: 12px "Montserrat";
     overflow: hidden;
     padding: 10px;
@@ -86,7 +86,7 @@ main {
 
 nav {
     background-color: #000000;
-    box-shadow: 0 7px 14px #00000042;
+    box-shadow: 0 7px 14px rgba(0, 0, 0, 0.259);
     font: 20px "Montserrat";
     top: 0;
 }

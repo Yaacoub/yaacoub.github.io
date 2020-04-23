@@ -14,25 +14,6 @@ a:hover {
     transition: 0.5s;
 }
 
-article {
-    padding: 5% 25%;
-}
-
-article h1, article h2, article h3, article h4, article h5, article h6 {
-    margin: 0 0 20px;
-}
-
-article section {
-    margin: 40px 0;
-}
-
-article ul {
-    font: 16px "Open Sans";
-    padding-bottom: 15px;
-    padding-top: 15px;
-    text-align: justify;
-}
-
 body {
     background-color: #000000;
 }
@@ -85,8 +66,10 @@ main {
 }
 
 nav {
+    align-items: center;
     background-color: #000000;
     box-shadow: 0 7px 14px rgba(0, 0, 0, 0.259);
+    display: flex;
     font: 20px "Montserrat";
     top: 0;
 }
@@ -103,25 +86,19 @@ nav ul {
     height: 24px;
     list-style-type: none;
     padding: 13px 20px;
-    word-spacing: 20px;
+    word-spacing: 30px;
 }
 
 p {
-    font: 16px "Open Sans";
+    font: 18px "Open Sans";
     padding: 0;
     text-align: justify;
 }
 
-time {
-    color: #808080;
-}
-
-.centerXY {
-    left: 50%;
-    position: relative;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
+.center-children {
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 
 .current-page {
@@ -179,10 +156,6 @@ time {
 
 @media only screen and (max-width: 800px) {
 
-    article {
-        padding: 10% 12.5%;
-    }
-
     .footer-links {
         float: left;
     }
@@ -191,8 +164,14 @@ time {
 
 @media only screen and (max-width: 414px) {
 
-    article {
-        padding: 10% 6.25%;
+    nav {
+        font-size: 15px;
+        justify-content: center;
+    }
+
+    nav ul {
+        height: 19px;
+        padding: 15.5px 13px;
     }
 
 }

@@ -1,0 +1,153 @@
+article {
+    width: 800px;
+    padding: 5% 15%;
+}
+
+article h1, article h2, article h3, article h4, article h5, article h6 {
+    margin: 0 0 20px;
+}
+
+article section:last-of-type {
+    margin-bottom: 0 !important;
+}
+
+article ul {
+    font: 16px "Open Sans";
+    padding-bottom: 15px;
+    padding-top: 15px;
+    text-align: justify;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+header * {
+    align-self: center;
+}
+
+header img {
+    filter: drop-shadow(0px 0 14px rgba(0, 0, 0, 0.259));
+    margin: 0 20px 20px 0;
+    min-width: 50px;
+    vertical-align: middle;
+    width: 6vw;
+    -webkit-filter: drop-shadow(0px 0 14px rgba(0, 0, 0, 0.259));
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+q {
+    color: #555555;
+    font-style: italic;
+}
+
+section {
+    display: flex;
+    margin: 50px 0 !important;
+    padding: 0 50px;
+}
+
+section > *:not(.whitespace) {
+    flex: 1;
+}
+
+section p {
+    align-self: center;
+}
+
+time {
+    color: #808080;
+}
+
+.image {
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.259);
+    min-height: 250px;
+}
+
+.important {
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.259);
+    padding: 0;
+}
+
+.important .image {
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.259);
+}
+
+.important > * {
+    margin: 50px;
+}
+
+.title {
+    display: inline-block;
+    margin-bottom: 20px;
+    vertical-align: middle;
+}
+
+.title * {
+    margin: 0;
+}
+
+.title h2 {
+    color: #808080;
+    font-weight: normal;
+}
+
+.whitespace {
+    min-height: 50px;
+    min-width: 50px;
+}
+
+@media only screen and (max-width: 1280px) {
+
+    section {
+        flex-flow: column wrap;
+    }
+
+    .image {
+        height: 250px;
+        order: -2;
+    }
+
+    .important > * {
+        margin: 25px;
+    }
+
+    .whitespace {
+        height: 50px;
+        order: -1;
+    }
+
+}
+
+@media only screen and (max-width: 800px) {
+
+    article {
+        padding: 10% 12.5%;
+    }
+
+    section {
+        padding: 0;
+    }
+
+    .header {
+        flex-flow: column wrap;
+    }
+
+    .header * {
+        align-self: auto;
+    }
+
+}
+
+@media only screen and (max-width: 414px) {
+
+    article {
+        padding: 10% 6.25%;
+    }
+
+}

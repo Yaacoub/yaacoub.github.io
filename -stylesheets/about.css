@@ -1,0 +1,68 @@
+mark {
+    background-image: linear-gradient(rgba(127, 127, 127, 0), rgba(127, 127, 127, 0.2));
+    border-radius: 20px;
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.259);
+    color: #ffffff;
+    cursor: default;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.5s;
+    white-space: nowrap;
+}
+
+mark:hover {
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+mark::after, mark::before {
+    content: "\00a0\00a0";
+}
+
+mark.admob {
+    background-color: #ea4335;
+}
+
+mark.cc {
+    background-color: #da1f26;
+}
+
+mark.cpp {
+    background-color: #004482;
+}
+
+mark.csharp {
+    background-color: #32007f;
+}
+
+mark.css {
+    background-color: #264de4;
+}
+
+mark.firebase {
+    background-color: #039be5;
+}
+
+mark.github {
+    background-color: #010101;
+}
+
+mark.html {
+    background-color: #e44d26;
+}
+
+mark.python {
+    background-color: #366d9a;
+}
+
+mark.swift {
+    background-color: #fd2722;
+}
+
+mark.vs {
+    background-color: #55208a;
+}
+
+mark.xcode {
+    background-color: #0a81fe;
+}

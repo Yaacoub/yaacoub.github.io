@@ -55,8 +55,8 @@
     <!-- Stylesheets & Scripts -->
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Round&display=swap">
     <link rel="stylesheet" type="text/css" href="/-stylesheets/-global.css">
     <!----><link rel="stylesheet" type="text/css" href="/-stylesheets/-article.css">
     <!----><link rel="stylesheet" type="text/css" href="/-stylesheets/apps-huh.css">
@@ -79,6 +79,7 @@
         <ul class="unselectable">
             <li><a class="homepage" href="/">YAACOUB</a></li>
             <li><a href="/apps/">APPS</a></li>
+            <li><a href="/blog/">BLOG</a></li>
             <li><a href="/about/">ABOUT</a></li>
         </ul>
     </nav>
@@ -87,7 +88,7 @@
         <article>
             <header>
                 <div><img src="/-images/icon-huh.png" alt="Huh? app icon"><div class="title"><h1>Huh?</h1><br><h2>Lexicon & Thesaurus</h2></div></div>
-                <div><a class="appstore" href="https://apps.apple.com/app/id1330097506" target="_blank"></a></div>
+                <div><a aria-label="App Store Link" class="appstore" href="https://apps.apple.com/app/id1330097506" target="_blank"></a></div>
             </header>
             <hr>
             <section>
@@ -105,8 +106,8 @@
                 <div class="image image2"></div>
             </section>
             <section class="important">
-                <div><p><b>5/5 • ⭐️⭐️⭐️⭐️⭐️</b><br><br><q>Huh? is a great app that offers the ability to switch [between] dictionaries, languages and themes for free [which] makes this app unique while keeping it simple[. It] is recommended for everyone who needs a free dictionary.</q><br><br>~ Lolabit</p></div>
-                <div><p><b>5/5 • ⭐️⭐️⭐️⭐️⭐️</b><br><br><q>I recently downloaded this app and I'm satisfied with the features it provides. I discovered new dictionaries and the design looks good. Keep up with the great work!</q><br><br>~ tny0407</p></div>
+                <div><p><span class="avatar material-icons-round">account_circle</span><b>tny0407</b><br><br><b>5/5 • <span class="material-icons-round stars">star_rate star_rate star_rate star_rate star_rate</span></b><br><q>[...] I discovered new dictionaries and the design looks good. Keep up with the great work!</q></p></div>
+                <div><p><span class="avatar material-icons-round">account_circle</span><b>Lolabit</b><br><br><b>5/5 • <span class="material-icons-round stars">star_rate star_rate star_rate star_rate star_rate</span></b><br><q>Great and helpful app !</q></p></div>
             </section>
             <section>
                 <div class="image image3"></div>
@@ -114,10 +115,29 @@
                 <p>Everyone can use « Huh? »! In addition to being free of charge, the app also provides you with high-quality accessibility features. Dynamic text sizing, voiceover and colour contrast have all been adequately set up to accommodate you with the best user experience. On the other side, power users can rapidly perform desired operations thanks to a simple widget and Quick Actions.</p>
             </section>
             <section class="important">
+                <div>
+                    <input class="collapsible-input" id="collapsible-input" type="checkbox">
+                    <label class="collapsible-label" for="collapsible-input"><p>Technologies used<span class="material-icons-round">chevron_right</span></p></label>
+                    <div class="collapsible">
+                        <br>
+                        <table class="technologies">
+                            <tr><td>CoreSpotlight</td><td>Foundation</td><td>GoogleMobileAds</td></tr>
+                            <tr><td>IntentsUI</td><td>MobileCoreServices</td><td>NotificationCenter</td></tr>
+                            <tr><td>PersonalizedAdConsent</td><td>SafariServices</td><td>StoreKit</td></tr>
+                            <tr><td>SystemConfiguration</td><td>UIKit</td><td>UserNotifications</td></tr>
+                            <tr><td>WebKit</td></tr>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <section class="important">
                 <p>Here are more links for you:<br>
+                    <a href="https://drive.google.com/drive/folders/1BN1-6KfYjxtXHerEFRuQhjeAwrpqVrvU?usp=sharing" target="_blank">PR Kit<span class="material-icons-round">chevron_right</span></a><br>
+                    <a href="/privacy/huh/">Privacy Policy<span class="material-icons-round">chevron_right</span></a>
                     <br>
-                    <a href="https://drive.google.com/drive/folders/1BN1-6KfYjxtXHerEFRuQhjeAwrpqVrvU?usp=sharing" target="_blank">PR Kit<span class="material-icons unselectable">chevron_right</span></a><br>
-                    <a href="/privacy/huh/">Privacy Policy<span class="material-icons unselectable">chevron_right</span></a>
+                    <br>
+                    Related blog posts:<br>
+                    <a href="https://medium.com/@yaacoub/im-a-teenager-the-story-of-my-app-4bc7ba5d2706" target="_blank">The story of my app<span class="material-icons-round">chevron_right</span></a><br>
                 </p>
                 <div class="image image4"></div>
             </section>

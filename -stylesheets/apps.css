@@ -1,74 +1,10 @@
-section {
-    box-shadow: 0 0 14px rgba(0, 0, 0, 0.259);
-    display: flex;
-    margin: 5% 25%;
-}
-
-section > * {
-    flex: 1;
-}
-
-.content-appstore {
+.appstore {
     background: transparent url("https://linkmaker.itunes.apple.com/en-us/badge-lrg.svg?releaseDate=2018-03-10&kind=iossoftware&bubble=ios_apps") center/cover no-repeat;
     display: inline-block;
     height: 40px;
     width: 135px;
 }
 
-.content-image-huh {
-    background: transparent url('/-images/background-huh-dictionary.jpg') center/cover no-repeat;
-}
-
-.content-information {
-    padding: 20px;
-}
-
-.content-information img {
-    filter: drop-shadow(0px 0 14px rgba(0, 0, 0, 0.259));
-    min-width: 50px;
-    vertical-align: middle;
-    width: calc(25% - 20px);
-    -webkit-filter: drop-shadow(0px 0 14px rgba(0, 0, 0, 0.259));
-}
-
-.content-information > * {
-    margin: 10px;
-}
-
-.content-title {
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.content-title h2 {
-    color: #808080;
-    font-weight: normal;
-}
-
-@media only screen and (max-width: 1280px) {
-
-    section {
-        flex-flow: column wrap;
-    }
-
-    .content-image-huh {
-        height: 250px;
-    }
-
-}
-
-@media only screen and (max-width: 800px) {
-
-    section {
-        margin: 10% 12.5%;
-    }
-
-}
-
-@media only screen and (max-width: 414px) {
-
-    section {
-        margin: 10% 6.25%;
-    }
-
+.huh-image {
+    background-image: url('/-images/background-huh-dictionary.jpg');
 }

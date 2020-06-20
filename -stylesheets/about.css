@@ -66,3 +66,10 @@ mark.vs {
 mark.xcode {
     background-color: #0a81fe;
 }
+
+.trophy {
+    color: sandybrown;
+    font-size: 30px;
+    margin-right: 5px;
+    padding-bottom: 5px;
+}

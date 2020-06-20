@@ -6,6 +6,12 @@
     width: 135px;
 }
 
+.avatar {
+    color: gray;
+    font-size: 50px;
+    padding: 0 12px 3px 0;
+}
+
 .image1 {
     background: transparent url('/-images/background-huh-dictionary.jpg') center/cover no-repeat;
 }
@@ -25,4 +31,12 @@
 .qr {
     background: transparent url('/-images/qr-huh.svg') center/contain no-repeat;
     min-height: 250px;
+}
+
+.stars {
+    color: sandybrown;
+    font-size: 30px;
+    margin-left: -5px;
+    padding-bottom: 5px;
+    word-spacing: -37px;
 }

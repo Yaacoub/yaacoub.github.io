@@ -72,6 +72,7 @@ nav {
     box-shadow: 0 7px 14px rgba(0, 0, 0, 0.259);
     display: flex;
     font: 20px "Montserrat", sans-serif;
+    position: relative;
     top: 0;
 }
 
@@ -80,7 +81,7 @@ nav a {
 }
 
 nav li {
-    display: inline;
+    display: inline-block;
 }
 
 nav ul {
@@ -90,16 +91,61 @@ nav ul {
     word-spacing: 30px;
 }
 
-p {
+p, table {
     font: 18px "Open Sans", sans-serif;
     padding: 0;
     text-align: justify;
+}
+
+table {
+    width: 100%;
+}
+
+time {
+    color: hsla(0, 0%, 0%, 0.5);
+    font: 18px "Open Sans", sans-serif !important;
+    padding: 0;
 }
 
 .center-children {
     align-items: center;
     display: flex;
     justify-content: center;
+}
+
+.collapsible {
+    display: none;
+}
+
+.collapsible-input:checked ~ .collapsible {
+  display: block;
+}
+
+.collapsible-input:checked ~ .collapsible-label p .material-icons-round {
+    transform: rotate(90deg);
+    transition: 0.5s;
+}
+
+.collapsible-input {
+    display: none;
+}
+
+.collapsible-label {
+    cursor: pointer !important;
+}
+
+.collapsible-label p .material-icons-round {
+    transition: 0.5s;
+}
+
+.collapsible-label, .material-icons-round, .unselectable {
+    cursor: default;
+    user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    -webkit-user-select: none;
 }
 
 .current-page {
@@ -138,24 +184,27 @@ p {
     color: #ffffff;
 }
 
-.material-icons {
+.material-icons-round {
     cursor: auto !important;
-    font-size: 20px;
+    font-size: 25px;
     padding-bottom: 1px;
     vertical-align: middle;
 }
 
-.material-icons, .unselectable {
-    cursor: default;
-    user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    -webkit-user-select: none;
+.no-justify {
+    text-align: initial;
+}
+
+.technologies {
+    color: grey;
+    line-height: 30px;
 }
 
 @media only screen and (max-width: 800px) {
+
+    table, td, tr {
+		display: block; 
+	}
 
     .footer-links {
         float: left;
@@ -163,7 +212,7 @@ p {
 
 }
 
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 450px) {
 
     nav {
         font-size: 15px;
@@ -172,7 +221,18 @@ p {
 
     nav ul {
         height: 19px;
+        overflow: scroll;
         padding: 15.5px 13px;
+        white-space: nowrap;
+        word-spacing: 15px;
+    }
+
+}
+
+@media only screen and (max-width: 290px) {
+
+    nav {
+        padding-right: 13px;
     }
 
 }

@@ -47,6 +47,7 @@ q {
 }
 
 section {
+    border-radius: 10px;
     display: flex;
     margin: 50px 0 !important;
     padding: 0 50px;

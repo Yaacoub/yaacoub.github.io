@@ -57,6 +57,10 @@ section > *:not(.whitespace) {
     flex: 1;
 }
 
+section div {
+    border-radius: 10px;
+}
+
 section p {
     align-self: center;
 }

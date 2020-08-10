@@ -1,5 +1,5 @@
 section {
-    border-radius: 10px;
+    border-radius: 20px;
     box-shadow: 0 0 14px rgba(0, 0, 0, 0.259);
     display: flex;
     margin: 5% 25%;
@@ -15,6 +15,9 @@ section > * {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    border-radius: 20px;
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.259);
+    margin: 20px;
 }
 
 .content-information {

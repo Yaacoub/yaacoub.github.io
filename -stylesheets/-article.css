@@ -47,7 +47,7 @@ q {
 }
 
 section {
-    border-radius: 10px;
+    border-radius: 20px;
     display: flex;
     margin: 50px 0 !important;
     padding: 0 50px;
@@ -58,7 +58,7 @@ section > *:not(.whitespace) {
 }
 
 section div {
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 section p {
@@ -66,17 +66,17 @@ section p {
 }
 
 .image {
-    box-shadow: 0 0 14px rgba(0, 0, 0, 0.259);
+    box-shadow: 0 0 14px rgba(25, 22, 20, 0.259);
     min-height: 250px;
 }
 
 .important {
-    box-shadow: 0 0 14px rgba(0, 0, 0, 0.259);
+    box-shadow: 0 0 14px rgba(25, 22, 20, 0.259);
     padding: 0;
 }
 
 .important .image {
-    box-shadow: 0 0 14px rgba(0, 0, 0, 0.259);
+    box-shadow: 0 0 14px rgba(25, 22, 20, 0.259);
 }
 
 .important > * {

@@ -1,0 +1,20 @@
+.image1 {
+    background: transparent url('---') center/cover no-repeat;
+}
+
+.image2 {
+    background: transparent url('---') center/cover no-repeat;
+}
+
+.image3 {
+    background: transparent url('---') center/cover no-repeat;
+}
+
+.image4 {
+    background: transparent url('---') center/cover no-repeat;
+}
+
+.qr {
+    background: transparent url('---') center/contain no-repeat;
+    min-height: 250px;
+}

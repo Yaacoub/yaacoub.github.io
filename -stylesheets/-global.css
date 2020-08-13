@@ -7,12 +7,12 @@ a {
     color: #02a6a6;
     display: inline-block;
     text-decoration: none;
-    transition: 0.5s;
+    transition: 0.25s;
 }
 
 a:hover {
     color: #de5071;
-    transition: 0.5s;
+    transition: 0.25s;
 }
 
 body {
@@ -107,6 +107,13 @@ time {
     padding: 0;
 }
 
+.appstore {
+    background: transparent url("https://linkmaker.itunes.apple.com/en-us/badge-lrg.svg?releaseDate=2018-03-10&kind=iossoftware&bubble=ios_apps") center/cover no-repeat;
+    display: inline-block;
+    height: 40px;
+    width: 135px;
+}
+
 .center-children {
     align-items: center;
     display: flex;
@@ -123,7 +130,7 @@ time {
 
 .collapsible-input:checked ~ .collapsible-label p .material-icons-round {
     transform: rotate(90deg);
-    transition: 0.5s;
+    transition: 0.25s;
 }
 
 .collapsible-input {
@@ -135,7 +142,7 @@ time {
 }
 
 .collapsible-label p .material-icons-round {
-    transition: 0.5s;
+    transition: 0.25s;
 }
 
 .collapsible-label, .material-icons-round, .unselectable {

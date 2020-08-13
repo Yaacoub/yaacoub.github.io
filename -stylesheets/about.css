@@ -6,13 +6,13 @@ mark {
     cursor: default;
     font-weight: bold;
     font-size: 16px;
-    transition: 0.5s;
+    transition: 0.25s;
     white-space: nowrap;
 }
 
 mark:hover {
     opacity: 0.5;
-    transition: 0.5s;
+    transition: 0.25s;
 }
 
 mark::after, mark::before {

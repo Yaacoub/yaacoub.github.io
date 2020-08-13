@@ -36,6 +36,10 @@ header img {
     -webkit-filter: drop-shadow(0px 0 14px rgba(0, 0, 0, 0.259));
 }
 
+header .appstore {
+    margin-bottom: 20px;
+}
+
 main {
     display: flex;
     justify-content: center;
@@ -65,6 +69,12 @@ section p {
     align-self: center;
 }
 
+.avatar {
+    color: gray;
+    font-size: 50px;
+    padding: 0 12px 3px 0;
+}
+
 .image {
     box-shadow: 0 0 14px rgba(25, 22, 20, 0.259);
     min-height: 250px;
@@ -81,6 +91,14 @@ section p {
 
 .important > * {
     margin: 50px;
+}
+
+.stars {
+    color: sandybrown;
+    font-size: 30px;
+    margin-left: -5px;
+    padding-bottom: 5px;
+    word-spacing: -37px;
 }
 
 .title {

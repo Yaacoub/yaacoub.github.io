@@ -1,10 +1,7 @@
-.appstore {
-    background: transparent url("https://linkmaker.itunes.apple.com/en-us/badge-lrg.svg?releaseDate=2018-03-10&kind=iossoftware&bubble=ios_apps") center/cover no-repeat;
-    display: inline-block;
-    height: 40px;
-    width: 135px;
+.airglider-image {
+    background-image: url('/-images/airglider/background-1.jpg');
 }
 
 .huh-image {
-    background-image: url('/-images/background-huh-dictionary.jpg');
+    background-image: url('/-images/huh-dictionary/background-1.jpg');
 }

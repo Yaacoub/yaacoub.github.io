@@ -49,7 +49,7 @@
 	<meta property="article:published_time"> <!-- ISO 8601 (YYYY-MM-DD) -->
 	<meta property="article:section"> <!-- Story | Swift | Swift Tip | Privacy Policy -->
 	<meta property="og:description" content="I'm Peter Yaacoub. I build, design and market my iOS, iPadOS and macOS apps. I also write Swift, SwiftUI, UIKit and Xcode-related articles. Learn more about me.">
-	<meta property="og:image" content="/-assets/images/about/social.png">
+	<meta property="og:image" content="https://yaacoub.github.io/-assets/images/about/social.png">
 	<meta property="og:site_name" content="Yaacoub">
 	<meta property="og:title" content="About">
 	<meta property="og:type" content="profile"> <!-- article | profile | website -->
@@ -116,7 +116,12 @@
 					<h1>Peter Yaacoub</h1>
 					<p class="style-subheading-1">iOS Developer</p>
 				</header>
-				<figure aria-label="Profile Picture"><img alt="" src="/-assets/images/profile.png"></figure>
+				<figure aria-label="Profile Picture">
+					<picture>
+						<source srcset="/-assets/images/profile.webp" type="image/webp">
+						<img alt="" src="/-assets/images/profile.png">
+					</picture>
+				</figure>
 			</div>
 		</section>
         <section class="awards">
@@ -201,11 +206,22 @@
                 <p class="style-subheading-1">Discover the applications I build with passion, their main goal and more valuable information.</p>
 				<div class="app-tiles">
 					<a class="animation-underline item plain" href="apps/huh/">
-						<figure aria-label="App icon"><img alt="" src="/-assets/images/apps/huh/icon.png"></figure>
+						<figure aria-label="App icon">
+							<picture>
+								<source srcset="/-assets/images/apps/huh/icon.webp" type="image/webp">
+								<img alt="" src="/-assets/images/apps/huh/icon.png">
+							</picture>
+							<hr>
+						</figure>
 						<h3>Huh?</h3>
 					</a>
 					<a class="animation-underline item plain" href="apps/who-am-i-christmas-edition/">
-						<figure aria-label="App icon"><img alt="" src="/-assets/images/apps/who-am-i-christmas-edition/icon.png"></figure>
+						<figure aria-label="App icon">
+							<picture>
+								<source srcset="/-assets/images/apps/who-am-i-christmas-edition/icon.webp" type="image/webp">
+								<img alt="" src="/-assets/images/apps/who-am-i-christmas-edition/icon.png">
+							</picture>
+						</figure>
 						<h3>Who Am I?<br>Christmas Edition</h3>
 					</a>
 				</div>

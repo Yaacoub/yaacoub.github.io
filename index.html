@@ -49,7 +49,7 @@
 	<meta property="article:published_time"> <!-- ISO 8601 (YYYY-MM-DD) -->
 	<meta property="article:section"> <!-- Story | Swift | Swift Tip | Privacy Policy -->
 	<meta property="og:description" content="Hi, I'm Peter Yaacoub! Discover who I am, the Swift articles I write, and the iOS, iPadOS and macOS apps I build, Huh? and Who Am I? Christmas Edition.">
-	<meta property="og:image" content="/-assets/images/social.png">
+	<meta property="og:image" content="https://yaacoub.github.io/-assets/images/social.png">
 	<meta property="og:site_name" content="Yaacoub">
 	<meta property="og:title" content="Yaacoub">
 	<meta property="og:type" content="website"> <!-- article | profile | website -->
@@ -108,7 +108,10 @@
 					</a>
 				</header>
 				<figure aria-label="Profile Picture">
-					<img alt="" src="/-assets/images/profile.png">
+					<picture>
+						<source srcset="/-assets/images/profile.webp" type="image/webp">
+						<img alt="" src="/-assets/images/profile.png">
+					</picture>
 					<hr>
 				</figure>
 			</div>
@@ -122,21 +125,36 @@
 				</header>
 				<div class="grid">
 					<a class="plain" href="articles/swift/shazamkit-a-first-look/">
-						<figure aria-label="Thumbnail"><img alt="" src="/-assets/images/articles/swift/shazamkit-a-first-look/hero.png"></figure>
+						<figure aria-label="Thumbnail">
+							<picture>
+								<source srcset="/-assets/images/articles/swift/shazamkit-a-first-look/hero.webp" type="image/webp">
+								<img alt="" src="/-assets/images/articles/swift/shazamkit-a-first-look/hero.png">
+							</picture>
+						</figure>
 						<header>
 							<p class="style-title-1">ShazamKit: A first look</p>
 							<p class="style-detail-1">Swift • <time datetime="2021-07-24">July 24, 2021</time></p>
 						</header>
 					</a>
 					<a class="plain" href="articles/story/huh-how-did-my-first-app-come-to-being/">
-						<figure aria-label="Thumbnail"><img alt="" src="/-assets/images/articles/story/huh-how-did-my-first-app-come-to-being/hero.png"></figure>
+						<figure aria-label="Thumbnail">
+							<picture>
+								<source srcset="/-assets/images/articles/story/huh-how-did-my-first-app-come-to-being/hero.webp" type="image/webp">
+								<img alt="" src="/-assets/images/articles/story/huh-how-did-my-first-app-come-to-being/hero.png">
+							</picture>
+						</figure>
 						<header>
 							<p class="style-title-1">Huh? How did my first app come to being?</p>
 							<p class="style-detail-1">Story • <time datetime="2021-07-24">July 24, 2021</time></p>
 						</header>
 					</a>
 					<a class="plain" href="articles/swift-tip/animate-uicollectionviewcell-highlight/">
-						<figure aria-label="Thumbnail"><img alt="" src="/-assets/images/articles/swift-tip/animate-uicollectionviewcell-highlight/hero.png"></figure>
+						<figure aria-label="Thumbnail">
+							<picture>
+								<source srcset="/-assets/images/articles/swift-tip/animate-uicollectionviewcell-highlight/hero.webp" type="image/webp">
+								<img alt="" src="/-assets/images/articles/swift-tip/animate-uicollectionviewcell-highlight/hero.png">
+							</picture>
+						</figure>
 						<header>
 							<p class="style-title-1">Animate UICollectionViewCell highlight</p>
 							<p class="style-detail-1">Swift Tip • <time datetime="2021-07-24">July 24, 2021</time></p>
@@ -156,14 +174,24 @@
 				</header>
 				<div class="grid">
 					<a class="plain" href="apps/huh/">
-						<figure aria-label="Thumbnail"><img alt="" src="/-assets/images/featured-apps/huh.png"></figure>
+						<figure aria-label="Thumbnail">
+							<picture>
+								<source srcset="/-assets/images/featured-apps/huh.webp" type="image/webp">
+								<img alt="" src="/-assets/images/featured-apps/huh.png">
+							</picture>
+						</figure>
 						<header>
 							<p class="style-title-1">Huh?</p>
 							<p class="style-detail-1">iOS • iPadOS • macOS</p>
 						</header>
 					</a>
 					<a class="plain" href="apps/who-am-i-christmas-edition/">
-						<figure aria-label="Thumbnail"><img alt="" src="/-assets/images/featured-apps/who-am-i-christmas-edition.png"></figure>
+						<figure aria-label="Thumbnail">
+							<picture>
+								<source srcset="/-assets/images/featured-apps/who-am-i-christmas-edition.webp" type="image/webp">
+								<img alt="" src="/-assets/images/featured-apps/who-am-i-christmas-edition.png">
+							</picture>
+						</figure>
 						<header>
 							<p class="style-title-1">Who Am I? Christmas Edition</p>
 							<p class="style-detail-1">iOS • iPadOS • macOS</p>

@@ -72,41 +72,48 @@
 /* Fonts */
 
 @font-face {
+	font-display: swap;
 	font-family: "Libre Baskerville";
-	src: url(/-assets/fonts/LibreBaskerville-Regular.ttf);
+	src: local("LibreBaskerville Regular"), local("LibreBaskerville-Regular"), url(/-assets/fonts/LibreBaskerville-Regular.ttf);
 }
 
 @font-face {
+	font-display: swap;
 	font-family: "Montserrat";
-	src: url(/-assets/fonts/Montserrat-Regular.ttf);
+	src: local("Montserrat Regular"), local("Montserrat-Regular"), url(/-assets/fonts/Montserrat-Regular.ttf);
 }
 
 @font-face {
+	font-display: swap;
 	font-family: "Montserrat";
 	font-weight: bold;
-	src: url(/-assets/fonts/Montserrat-Bold.ttf);
+	src: local("Montserrat Bold"), local("Montserrat-Bold"), url(/-assets/fonts/Montserrat-Bold.ttf);
 }
 
 @font-face {
+	font-display: swap;
 	font-family: "Open Sans";
-	src: url(/-assets/fonts/OpenSans-Regular.ttf);
+	src: local("OpenSans Regular"), local("OpenSans-Regular"), url(/-assets/fonts/OpenSans-Regular.ttf);
 }
 
 @font-face {
+	font-display: swap;
 	font-family: "Open Sans";
 	font-weight: bold;
-	src: url(/-assets/fonts/OpenSans-Bold.ttf);
+	src: local("OpenSans Bold"), local("OpenSans-Bold"), url(/-assets/fonts/OpenSans-Bold.ttf);
 }
 
 @font-face {
+	font-display: swap;
 	font-family: "Roboto Mono";
-	src: url(/-assets/fonts/RobotoMono-Regular.ttf);
+	src: local("RobotoMono Regular"), local("RobotoMono-Regular"), url(/-assets/fonts/RobotoMono-Regular.ttf);
 }
 
 @font-face {
+	font-display: swap;
 	font-family: "Roboto Mono";
 	font-weight: bold;
-	src: url(/-assets/fonts/RobotoMono-Bold.ttf);
+	src: local("RobotoMono Bold"), local("RobotoMono-Bold"), url(/-assets/fonts/RobotoMono-Bold.ttf);
 }
 
 
@@ -262,6 +269,13 @@ img {
 
 p code {
 	padding: var(--padding-xxs) var(--padding-xs) var(--padding-xxs) var(--padding-xs);
+}
+
+picture {
+	display: flex;
+	height: 100%;
+	justify-content: center;
+	width: 100%;
 }
 
 section {

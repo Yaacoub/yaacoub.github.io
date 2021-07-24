@@ -1,75 +1,160 @@
-mark {
-    background-image: linear-gradient(rgba(127, 127, 127, 0), rgba(127, 127, 127, 0.2));
-    border-radius: 20px;
-    box-shadow: 0 0 14px rgba(0, 0, 0, 0.259);
-    color: #ffffff;
-    cursor: default;
-    font-weight: bold;
-    font-size: 16px;
-    transition: 0.25s;
-    white-space: nowrap;
+/* App Tiles */
+
+.app-tiles {
+	padding-top: var(--padding-s);
 }
 
-mark:hover {
-    opacity: 0.5;
-    transition: 0.25s;
+
+
+/* Section Awards */
+
+section.awards > div {
+	column-gap: var(--padding-xl);
+	grid-template-columns: 1fr 1fr;
+	row-gap: var(--padding-xl);
+	text-align: center;
 }
 
-mark::after, mark::before {
-    content: "\00a0\00a0";
+section.awards figure {
+	height: var(--symbol-l);
+	width: var(--symbol-l);
 }
 
-mark.admob {
-    background-color: #ea4335;
+section.awards h2 {
+	grid-column: span 2;
 }
 
-mark.cc {
-    background-color: #da1f26;
+section.awards .award {
+	background-color: var(--color-element-background-secondary);
+	display: grid;
+	justify-items: center;
+	padding: var(--padding-l);
+	row-gap: var(--padding-s);
+	text-align: center;
 }
 
-mark.cpp {
-    background-color: #004482;
+section.awards figure img {
+	object-fit: contain;
 }
 
-mark.csharp {
-    background-color: #32007f;
+
+
+/* Section Bio */
+
+section.bio > div {
+	text-align: center;
+	row-gap: var(--padding-s);
 }
 
-mark.css {
-    background-color: #264de4;
+section.bio h2 {
+	margin-bottom: calc(var(--padding-xl) - var(--padding-s));
 }
 
-mark.firebase {
-    background-color: #039be5;
+section.bio .symbols {
+	column-gap: var(--padding-xl);
+	display: grid;
+	grid-auto-columns: 1fr;
+	grid-auto-flow: column;
+	padding-top: var(--padding-s);
 }
 
-mark.github {
-    background-color: #010101;
+section.bio .symbols a.item:hover figure img {
+	filter: initial;
+	transform: initial;
 }
 
-mark.html {
-    background-color: #e44d26;
+section.bio .symbols a.item:hover h3 {
+	text-decoration: underline;
 }
 
-mark.python {
-    background-color: #366d9a;
+section.bio .symbols figure {
+	height: var(--symbol-l);
+	width: var(--symbol-l);
 }
 
-mark.swift {
-    background-color: #fd2722;
+section.bio .symbols figure img {
+	object-fit: contain;
 }
 
-mark.vs {
-    background-color: #55208a;
+section.bio .symbols .item {
+	display: grid;
+	justify-items: center;
+	row-gap: var(--padding-s);
 }
 
-mark.xcode {
-    background-color: #0a81fe;
+
+
+/* Section Hero */
+
+section.hero {
+	background-color: var(--color-element-background-secondary);
+	padding-bottom: 0;
 }
 
-.trophy {
-    color: sandybrown;
-    font-size: 30px;
-    margin-right: 5px;
-    padding-bottom: 5px;
+section.hero > div {
+	column-gap: var(--padding-m);
+	grid-template-columns: 1fr 1fr;
+}
+
+section.hero figure img {
+	margin: 0;
+	min-height: initial;
+	object-fit: contain;
+	width: calc(100% - var(--padding-m));
+}
+
+section.hero h1 {
+	text-align: initial;
+}
+
+section.hero header {
+	align-content: center;
+	display: grid;
+	grid-auto-rows: 0fr;
+	justify-content: center;
+	row-gap: var(--padding-s);
+}
+
+
+
+/* Media Queries */
+
+@media only screen and (max-width: 1000px) {
+
+	section.awards > div {
+		grid-auto-rows: 0fr;
+		grid-template-columns: 1fr;
+		row-gap: var(--padding-xl);
+		text-align: center;
+	}
+
+	section.awards h2 {
+		grid-column: initial;
+	}
+
+}
+
+@media only screen and (max-width: 700px) {
+
+	section.awards .award {
+		padding: var(--padding-m);
+	}
+
+	section.bio .symbols {
+		grid-auto-columns: 1fr;
+		grid-auto-flow: row;
+		row-gap: var(--padding-m);
+	}
+
+	section.bio .symbols figure {
+		height: var(--symbol-m);
+		width: var(--symbol-m);
+	}
+
+	section.hero > div {
+		row-gap: var(--padding-m);
+		grid-template-columns: 1fr;
+		grid-template-rows: 0fr 1fr;
+	}
+
 }

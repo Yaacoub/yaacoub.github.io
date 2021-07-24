@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="250px" height="250px" viewBox="0 0 250 250" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Yaacoub Logo</title>
+    <g id="Yaacoub-Logo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Y" transform="translate(26.000000, 0.000000)" fill="#FAFEFD">
+            <polygon id="Slash" points="153 6.07153217e-15 209 6.07153217e-15 102 250 46 250"></polygon>
+            <g id="Quote">
+                <path d="M4.54747351e-13,42 C4.54747351e-13,100 26.3333333,129 79,129 C40.3333333,103 42,74 84,42 L4.54747351e-13,42 Z" id="Tail"></path>
+                <circle id="Head" cx="42" cy="42" r="42"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

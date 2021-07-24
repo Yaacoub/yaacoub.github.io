@@ -1,0 +1,17 @@
+/* Elements */
+
+h1, h2, h3, p {
+	text-align: center;
+}
+
+section > div {
+	row-gap: var(--padding-m);
+}
+
+section hr {
+	margin: calc(var(--padding-xl) - var(--padding-m)) 0  calc(var(--padding-xl) - var(--padding-m)) 0;
+}
+
+section p {
+	text-align: center;
+}

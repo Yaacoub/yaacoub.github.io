@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="250px" viewBox="0 0 200 250" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Download</title>
+    <g id="Download" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Arrow" transform="translate(59.000000, 73.000000)" stroke="#005E81" stroke-linecap="round" stroke-linejoin="round" stroke-width="15">
+            <line x1="40.862069" y1="0" x2="40.862069" y2="103.448276" id="Path-2"></line>
+            <polyline id="Path-3" points="81.7241379 62.4137931 40.862069 103.448276 0 62.4137931"></polyline>
+        </g>
+        <circle id="Oval" stroke="#005E81" stroke-width="15" cx="100" cy="125" r="92.5"></circle>
+    </g>
+</svg>

@@ -1,108 +1,222 @@
 <!DOCTYPE html>
-<html lang=en>
+<html lang="en">
+
+<!-- - 🎥 I offer you this wisdom, Aang. You must be decisive. -->
 
 <head>
 
-    <!-- Favicon -->
+	<!-- Charset -->
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/-images/favicons/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/-images/favicons/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/-images/favicons/favicons/favicon-16x16.png">
-    <link rel="manifest" href="/-images/favicons/favicons/site.webmanifest">
-    <link rel="mask-icon" href="/-images/favicons/favicons/safari-pinned-tab.svg" color="#de5071">
-    <link rel="shortcut icon" href="/-images/favicons/favicons/favicon.ico">
+	<meta charset="utf-8">
 
 
 
-    <!-- Facebook Open Graph & Twitter -->
+	<!-- Favicon -->
 
-    <meta property="og:description" content="The official Yaacoub website. Find out more about the latest applications here...">
-    <!----><meta property="og:image" content="/-images/favicons/icon.png">
-    <!----><meta property="og:title" content="Yaacoub">
-    <meta property="og:type" content="website">
-    <!----><meta property="og:url" content="https://yaacoub.github.io/">
-    <!-- <meta property="twitter:app:id:ipad" content="1330097506"> -->
-    <!-- <meta property="twitter:app:name:ipad" content="Huh?"> -->
-    <!-- <meta property="twitter:app:url:ipad" content="huh://"> -->
-    <!-- <meta property="twitter:app:id:iphone" content="1330097506"> -->
-    <!-- <meta property="twitter:app:name:iphone" content="Huh?"> -->
-    <!-- <meta property="twitter:app:url:iphone" content="huh://"> -->
-    <!----><meta property="twitter:card" content="summary">
-    <meta property="twitter:creator" content="@yaapete">
-    <meta property="twitter:description" content="The official Yaacoub website. Find out more about the latest applications here...">
-    <!----><meta property="twitter:image" content="/-images/favicons/icon.png">
-    <!----><meta property="twitter:title" content="Yaacoub">
-    <!----><meta property="twitter:url" content="https://yaacoub.github.io/">
+	<link rel="apple-touch-icon" sizes="180x180" href="/-assets/favicons/apple-touch-icon.png?v=2021.1">
+	<link rel="icon" type="image/png" sizes="16x16" href="/-assets/favicons/favicon-16x16.png?v=2021.1">
+	<link rel="icon" type="image/png" sizes="32x32" href="/-assets/favicons/favicon-32x32.png?v=2021.1">
+	<link rel="manifest" href="/-assets/favicons/site.webmanifest?v=2021.1">
+	<link rel="mask-icon" href="/-assets/favicons/safari-pinned-tab.svg?v=2021.1" color="#141414">
+	<link rel="shortcut icon" href="/-assets/favicons/favicon.ico?v=2021.1">
 
 
 
-    <!-- Metadata -->
+	<!-- Metadata -->
 
-    <meta charset="UTF-8">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Yaacoub">
-    <meta name="application-name" content="Yaacoub">
-    <meta name="keywords" content="peter, yaacoub, swift, xcode, ios, developer, html, css, appstore, app, store,
-        italian dictionary, general knowledge, french dictionary, german dictionary, arabic dictionary, essay, culture générale, dictionnaire espagnol, devoir, dictionnaire français, scrabble, test, devoirs, allemand, allgemeinwissen, hausaufgaben, wortsuche, arabisch, grammatik, deutsch wörterbuch, wissen, deutsche, schule, dizionario italiano, università, dizionario francese, cruciverba, tedesco, dizionario, francese, spagnolo, procura de palavras, escola, palavras, livro, italiano, crucigrama, diccionario, palabras, español, libro, colegio, palabra, idiomas">
-    <meta name="msapplication-config" content="/-images/favicons/favicons/browserconfig.xml">
-    <meta name="msapplication-TileColor" content="#000000">
-    <meta name="theme-color" content="#000000">
-    <meta name="viewport" content="width = device-width, initial-scale = 1, user-scalable = yes">
+	<meta name="apple-itunes-app"> <!-- app-id=xxx, app-argument=xxx -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-title" content="Yaacoub">
+	<meta name="application-name" content="Yaacoub">
+	<meta name="msapplication-config" content="/-assets/favicons/browserconfig.xml?v=2021.1">
+	<meta name="msapplication-TileColor" content="#fafefd">
+	<meta name="theme-color" content="#fafefd">
+	<meta name="viewport" content="width = device-width, initial-scale = 1, user-scalable = yes">
 
 
 
-    <!-- Stylesheets -->
+	<!-- Page Specific -->
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Round&display=swap">
-    <link rel="stylesheet" type="text/css" href="/-stylesheets/-global.css">
-    <!---->
-    <!----><link rel="stylesheet" type="text/css" href="/-stylesheets/index.css">
+	<meta name="description" content="Hi, I'm Peter Yaacoub! Discover who I am, the Swift articles I write, and the iOS, iPadOS and macOS apps I build, Huh? and Who Am I? Christmas Edition.">
+	<title>Yaacoub</title>
 
 
-    <!-- Page Specific -->
 
-    <link rel="canonical" href="https://yaacoub.github.io">
-    <meta name="description" content="Discover and explore the wondrous world of apps and projects of all kinds. Find out more about Peter Yaacoub's workings in the official Yaacoub website.">
-    <meta name="title" content="Yaacoub">
-    <title>Yaacoub</title>
+	<!-- Page Specific (Open Graph) -->
+
+	<meta property="article:author" content="https://yaacoub.github.io/about/">
+	<meta property="article:published_time"> <!-- ISO 8601 (YYYY-MM-DD) -->
+	<meta property="article:section"> <!-- Story | Swift | Swift Tip | Privacy Policy -->
+	<meta property="og:description" content="Hi, I'm Peter Yaacoub! Discover who I am, the Swift articles I write, and the iOS, iPadOS and macOS apps I build, Huh? and Who Am I? Christmas Edition.">
+	<meta property="og:image" content="/-assets/images/social.png">
+	<meta property="og:site_name" content="Yaacoub">
+	<meta property="og:title" content="Yaacoub">
+	<meta property="og:type" content="website"> <!-- article | profile | website -->
+	<meta property="profile:first_name" content="Peter">
+	<meta property="profile:last_name" content="Yaacoub">
+
+
+
+	<!-- Page Specific (Twitter) -->
+
+	<meta property="twitter:app:id:ipad">
+	<meta property="twitter:app:name:ipad">
+	<meta property="twitter:app:url:ipad">
+	<meta property="twitter:app:id:iphone">
+	<meta property="twitter:app:name:iphone">
+	<meta property="twitter:app:url:iphone">
+	<meta property="twitter:card" content="summary_large_image"> <!-- app | summary_large_image -->
+	<meta property="twitter:creator" content="@yaapete">
+	<meta property="twitter:site" content="@yaapete">
+
+
+
+	<!-- Stylesheets & Scripts -->
+
+	<link rel="stylesheet" href="/-stylesheets/-global.css">
+	<link rel="stylesheet" href="/-stylesheets/index.css">
 
 </head>
 
 <body>
 
-    <!-- wubba lubba dub dub! -->
+	<!-- Nav -->
 
-    <nav>
-        <ul class="unselectable">
-            <li><a class="homepage" href="/">YAACOUB</a></li>
-            <li><a href="/apps/">APPS</a></li>
-            <li><a href="/blog/">BLOG</a></li>
-            <li><a href="/about/">ABOUT</a></li>
-        </ul>
-    </nav>
+	<nav>
+		<div class="unselectable">
+			<div class="logo"><a class="animation-opacity style-navigation-link-1" href="/"><figure aria-label="Yaacoub" class="logo"><img alt="" src="/-assets/symbols/yaacoub-logo-dark.svg"></figure></a></div>
+			<a class="style-navigation-link-1" href="/about/">About</a>
+			<a class="style-navigation-link-1" href="/apps/">Apps</a>
+			<a class="style-navigation-link-1" href="/articles/">Articles</a>
+		</div>
+	</nav>
 
-    <main>
-        <section class="background center-children">
-            <h1 class="headline">YOUR POWER.<br>YOUR WISDOM.</h1>
-        </section>
-    </main>
 
-    <footer>
-        <ul class="footer-social unselectable">
-            <li><a href="https://github.com/yaacoub" target="_blank"><img src="/-images/icon-github.svg" alt="GitHub @yaacoub"></a></li>
-            <li><a href="https://twitter.com/yaapete" target="_blank"><img src="/-images/icon-twitter.svg" alt="Twitter @yaapete"></a></li>
-        </ul>
-        <ul class="footer-legal">
-            <li>Copyright © 2020 Peter Yaacoub. All rights reserved.</li>
-        </ul>
-        <ul class="footer-links unselectable">
-            <li><a href="mailto:yaapete.dev@gmail.com" target="_blank">Email</a></li>
-            <li><a href="/privacy/">Privacy</a></li>
-        </ul>
-    </footer>
+
+	<!-- Main -->
+
+	<main>
+		<section class="hero">
+			<div>
+				<header>
+					<h1><span class="not-bold">I'm </span>Peter Yaacoub</h1>
+					<p class="style-subheading-1">A proud iOS developer, sharing my passion and knowledge with you and the entire world.</p>
+					<a aria-label="Learn more about Peter Yaacoub" class="link-with-symbol style-link-1" href="about/">
+						<span>Learn more</span>
+						<img alt="" src="/-assets/symbols/chevron-right.svg">
+					</a>
+				</header>
+				<figure aria-label="Profile Picture">
+					<img alt="" src="/-assets/images/profile.png">
+					<hr>
+				</figure>
+			</div>
+		</section>
+		<section class="list">
+			<div>
+				<header>
+					<h2>Featured articles</h2>
+					<p class="style-subheading-2">About Swift, iOS, Xcode and my developer stories, all free</p>
+					<hr>
+				</header>
+				<div class="grid">
+					<a class="plain" href="articles/swift/shazamkit-a-first-look/">
+						<figure aria-label="Thumbnail"><img alt="" src="/-assets/images/articles/swift/shazamkit-a-first-look/hero.png"></figure>
+						<header>
+							<p class="style-title-1">ShazamKit: A first look</p>
+							<p class="style-detail-1">Swift • <time datetime="2021-07-24">July 24, 2021</time></p>
+						</header>
+					</a>
+					<a class="plain" href="articles/story/huh-how-did-my-first-app-come-to-being/">
+						<figure aria-label="Thumbnail"><img alt="" src="/-assets/images/articles/story/huh-how-did-my-first-app-come-to-being/hero.png"></figure>
+						<header>
+							<p class="style-title-1">Huh? How did my first app come to being?</p>
+							<p class="style-detail-1">Story • <time datetime="2021-07-24">July 24, 2021</time></p>
+						</header>
+					</a>
+					<a class="plain" href="articles/swift-tip/animate-uicollectionviewcell-highlight/">
+						<figure aria-label="Thumbnail"><img alt="" src="/-assets/images/articles/swift-tip/animate-uicollectionviewcell-highlight/hero.png"></figure>
+						<header>
+							<p class="style-title-1">Animate UICollectionViewCell highlight</p>
+							<p class="style-detail-1">Swift Tip • <time datetime="2021-07-24">July 24, 2021</time></p>
+						</header>
+					</a>
+				</div>
+				<a aria-label="View more articles" class="link-with-symbol style-link-1" href="articles/">
+					<span>View more</span>
+					<img alt="" src="/-assets/symbols/chevron-right.svg">
+				</a>
+			</div>
+			<div>
+				<header>
+					<h2>Featured apps</h2>
+					<p class="style-subheading-2">I build and continuously develop as a passion and to showcase my strengths</p>
+					<hr>
+				</header>
+				<div class="grid">
+					<a class="plain" href="apps/huh/">
+						<figure aria-label="Thumbnail"><img alt="" src="/-assets/images/featured-apps/huh.png"></figure>
+						<header>
+							<p class="style-title-1">Huh?</p>
+							<p class="style-detail-1">iOS • iPadOS • macOS</p>
+						</header>
+					</a>
+					<a class="plain" href="apps/who-am-i-christmas-edition/">
+						<figure aria-label="Thumbnail"><img alt="" src="/-assets/images/featured-apps/who-am-i-christmas-edition.png"></figure>
+						<header>
+							<p class="style-title-1">Who Am I? Christmas Edition</p>
+							<p class="style-detail-1">iOS • iPadOS • macOS</p>
+						</header>
+					</a>
+				</div>
+				<a aria-label="View more apps" class="link-with-symbol style-link-1" href="apps/">
+					<span>View more</span>
+					<img alt="" src="/-assets/symbols/chevron-right.svg">
+				</a>
+			</div>
+		</section>
+	</main>
+
+
+
+	<!-- Footer -->
+
+	<footer>
+		<div>
+			<div class="directory unselectable">
+                <div>
+                    <a class="style-navigation-link-2" href="/about/">About</a>
+					<a class="style-navigation-link-1" href="/about/mentions/">Mentions</a>
+                </div>
+				<div>
+					<a class="style-navigation-link-2" href="/apps/">Apps</a>
+					<a class="style-navigation-link-1" href="/apps/huh/">Huh?</a>
+					<a class="style-navigation-link-1" href="/apps/who-am-i-christmas-edition/">Who Am I? CE</a>
+				</div>
+				<div>
+					<a class="style-navigation-link-2" href="/articles/">Articles</a>
+					<a class="style-navigation-link-1" href="/articles/story/">Story</a>
+					<a class="style-navigation-link-1" href="/articles/swift/">Swift</a>
+                    <a class="style-navigation-link-1" href="/articles/swift-tip/">Swift Tip</a>
+				</div>
+				<div>
+					<a class="style-navigation-link-2" href="/about#contact">Contact</a>
+					<a class="style-navigation-link-1" href="mailto:yaapete.dev@gmail.com">Email</a>
+					<a class="style-navigation-link-1" href="https://github.com/yaacoub/" rel="external">GitHub</a>
+					<a class="style-navigation-link-1" href="https://twitter.com/yaapete/" rel="external">Twitter</a>
+				</div>
+			</div>
+			<div class="legal">
+				<p class="style-footer-1">Apple, the Apple logo, iPadOS, macOS, Swift, the Swift logo and Xcode are trademarks of Apple Inc. IOS is a trademark of Cisco and is used under license. The Python logo is a trademark of the Python Software Foundation. The HTML5 Logo is by the World Wide Web Consortium (W3C). The Git Logo is by Jason Long.</p>
+				<hr>
+				<div>
+					<p class="style-footer-1">Copyright © 2021 Peter Yaacoub. All rights reserved.</p>
+					<span class="unselectable"><a class="style-navigation-link-4" href="/privacy/">Privacy</a></span>
+                </div>
+			</div>
+		</div>
+	</footer>
 
 </body>
 

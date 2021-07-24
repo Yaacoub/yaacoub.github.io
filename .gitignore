@@ -1,2 +1,3 @@
+*.sketch
+*.command
 .DS_Store
-*.psd

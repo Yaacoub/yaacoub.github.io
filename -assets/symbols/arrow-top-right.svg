@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="110px" height="250px" viewBox="0 0 110 250" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Top-Right Arrow</title>
+    <g id="Top-Right-Arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Arrow" transform="translate(7.000000, 97.500000)" stroke="#005E81" stroke-width="15">
+            <line x1="0.431818182" y1="94.5681818" x2="95.4318182" y2="0.431818182" id="Path-2"></line>
+            <polyline id="Path-3" points="20.5545455 -1.42108547e-14 95.4368092 -1.42108547e-14 95.4368092 74.8822637"></polyline>
+        </g>
+    </g>
+</svg>

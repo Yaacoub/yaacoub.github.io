@@ -1,33 +1,104 @@
-.background {
-    background: transparent url('/-images/background-home.jpg') center/cover no-repeat;
-    height: calc(100vh - 50px);
-    width: 100%;
+/* Nav */
+
+nav {
+	background-color: var(--color-element-background-primary);
 }
 
-.headline {
-    background-color: black;
-    box-shadow: 0 0 14px rgba(0, 0, 0, 0.259);
-    color: white;
-    font-size: 50px;
-    padding: 39.5px 22px;
+nav .style-navigation-link-1, footer .style-navigation-link-2 {
+	color: var(--color-element-label-primary);
 }
 
-@media only screen and (max-width: 506px) {
 
-    .headline {
-        font-size: 30px;
-        line-height: 37px;
-        padding: 8.26% 5.46%;
-    }
 
+/* Section Hero */
+
+section.hero {
+	min-height: calc(100vh - var(--nav-height) - 2 * var(--padding-xl));
 }
 
-@media only screen and (max-width: 300px) {
+section.hero > div {
+	column-gap: var(--padding-m);
+	grid-template-columns: 1.5fr 1fr;
+}
 
-    .headline {
-        font-size: 20px;
-        line-height: 23px;
-        padding: 5.46% 3.60%;
-    }
+section.hero figure img {
+	align-self: center;
+	min-height: initial;
+	min-width: initial;
+	width: calc(100% - var(--padding-m));
+}
+
+section.hero h1 {
+	background-clip: text;
+	-webkit-background-clip: text;
+	background-image: linear-gradient(to bottom right, var(--color-system-blue-light), var(--color-system-blue-dark));
+	color: transparent;
+	text-align: initial;
+}
+
+section.hero header {
+	display: grid;
+	row-gap: var(--padding-s);
+}
+
+
+
+/* Section List */
+
+section.list {
+	column-gap: var(--padding-l);
+	grid-template-columns: auto auto;
+}
+
+section.list > div {
+	width: min(100vw - var(--padding-l), var(--content-width-normal) / 2 - var(--padding-l));
+}
+
+section.list .grid {
+	grid-template-columns: 1fr;
+}
+
+
+
+/* Classes */
+
+.not-bold {
+	font-weight: normal;
+}
+
+
+
+/* Media Queries */
+
+@media only screen and (max-width: 1000px) {
+
+	section.featured > div {
+		grid-template-columns: auto;
+		row-gap: var(--padding-l);
+	}
+
+	section.hero {
+		min-height: calc(100vh - var(--nav-height) - 2 * var(--padding-l));
+	}
+
+	section.hero > div {
+		grid-template-columns: auto;
+		grid-template-rows: 1fr auto;
+		row-gap: var(--padding-m);
+	}
+
+	section.hero figure {
+		grid-row: 1;
+	}
+
+	section.hero figure img {
+		max-width: var(--hero-image-max-width);
+	}
+
+	section.list {
+		grid-template-columns: 1fr;
+		justify-items: center;
+		row-gap: var(--padding-l);
+	}
 
 }

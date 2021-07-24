@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+
+	<!-- Charset -->
+
+	<meta charset="utf-8">
+
+
+
+	<!-- Favicon -->
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/-assets/favicons/apple-touch-icon.png?v=2021.1">
+	<link rel="icon" type="image/png" sizes="16x16" href="/-assets/favicons/favicon-16x16.png?v=2021.1">
+	<link rel="icon" type="image/png" sizes="32x32" href="/-assets/favicons/favicon-32x32.png?v=2021.1">
+	<link rel="manifest" href="/-assets/favicons/site.webmanifest?v=2021.1">
+	<link rel="mask-icon" href="/-assets/favicons/safari-pinned-tab.svg?v=2021.1" color="#141414">
+	<link rel="shortcut icon" href="/-assets/favicons/favicon.ico?v=2021.1">
+
+
+
+	<!-- Metadata -->
+
+	<meta name="apple-itunes-app"> <!-- app-id=xxx, app-argument=xxx -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-title" content="Yaacoub">
+	<meta name="application-name" content="Yaacoub">
+	<meta name="msapplication-config" content="/-assets/favicons/browserconfig.xml?v=2021.1">
+	<meta name="msapplication-TileColor" content="#fafefd">
+	<meta name="theme-color" content="#141414">
+	<meta name="viewport" content="width = device-width, initial-scale = 1, user-scalable = yes">
+
+
+
+	<!-- Page Specific -->
+
+	<meta name="description">
+	<title>ShazamKit: A first look - Yaacoub</title>
+
+
+
+	<!-- Page Specific (Open Graph) -->
+
+	<meta property="article:author" content="https://yaacoub.github.io/about/">
+	<meta property="article:published_time" content="2021-07-24"> <!-- ISO 8601 (YYYY-MM-DD) -->
+	<meta property="article:section" content="Swift"> <!-- Story | Swift | Swift Tip | Privacy Policy -->
+	<meta property="og:description" content="ShazamKit is a framework that enables apps to match recordings with songs and custom audio.">
+	<meta property="og:image" content="/-assets/images/articles/swift/shazamkit-a-first-look/hero.png">
+	<meta property="og:site_name" content="Yaacoub">
+	<meta property="og:title" content="ShazamKit: A first look">
+	<meta property="og:type" content="article"> <!-- article | profile | website -->
+	<meta property="profile:first_name" content="Peter">
+	<meta property="profile:last_name" content="Yaacoub">
+
+
+
+	<!-- Page Specific (Twitter) -->
+
+	<meta property="twitter:app:id:ipad">
+	<meta property="twitter:app:name:ipad">
+	<meta property="twitter:app:url:ipad">
+	<meta property="twitter:app:id:iphone">
+	<meta property="twitter:app:name:iphone">
+	<meta property="twitter:app:url:iphone">
+	<meta property="twitter:card" content="summary_large_image"> <!-- app | summary_large_image -->
+	<meta property="twitter:creator" content="@yaapete">
+	<meta property="twitter:site" content="@yaapete">
+
+
+
+	<!-- Stylesheets & Scripts -->
+
+	<link rel="stylesheet" href="/-stylesheets/-global.css">
+	<link rel="stylesheet" href="/-stylesheets/article.css">
+	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js"></script>
+	<script defer src="/-scripts/article.js"></script>
+
+</head>
+
+<body>
+
+	<!-- Nav -->
+
+	<nav>
+		<div class="unselectable">
+			<div class="logo"><a class="animation-opacity style-navigation-link-1" href="/"><figure aria-label="Yaacoub"><img alt="" src="/-assets/symbols/yaacoub-logo-light.svg"></figure></a></div>
+			<a class="style-navigation-link-1" href="/about/">About</a>
+			<a class="style-navigation-link-1" href="/apps/">Apps</a>
+			<a class="style-navigation-link-3" href="/articles/">Articles</a>
+		</div>
+	</nav>
+
+
+
+	<!-- Nav Secondary -->
+
+	<nav class="secondary">
+		<div>
+			<div>
+				<h3>Articles</h3>
+			</div>
+			<hr>
+		</div>
+	</nav>
+
+
+
+    <!-- Main -->
+
+	<main>
+		<section>
+			<article>
+				<header>
+					<p class="style-detail-1">Swift</p>
+					<p class="style-detail-1"><time datetime="2021-07-24">July 24, 2021</time></p>
+					<h1>ShazamKit: A first look</h1>
+					<p class="style-subheading-1">ShazamKit is a framework that enables apps to match recordings with songs and custom audio.</p>
+					<div class="social">
+						<a class="animation-opacity social-email"><figure aria-label="Send email"><img alt="" src="/-assets/symbols/social/email.svg"></figure></a>
+						<a class="animation-opacity social-facebook"><figure aria-label="Send Facebook post"><img alt="" src="/-assets/symbols/social/facebook.svg"></figure></a>
+						<a class="animation-opacity social-twitter"><figure aria-label="Send tweet"><img alt="" src="/-assets/symbols/social/twitter.svg"></figure></a>
+					</div>
+				</header>
+				<figure aria-label="Header image" class="hero wide">
+					<img alt="" src="/-assets/images/articles/swift/shazamkit-a-first-look/hero.png">
+				</figure>
+				<div class="body">
+					<p>To accompany your learning journey, I highly suggest that you take a look at the <a href="https://developer.apple.com/wwdc21/10044/">WWDC21 session 10044</a>: Explore ShazamKit, and <a href="https://developer.apple.com/wwdc21/10045/">WWDC21 session 10045</a>: Create Custom Audio Experiences with ShazamKit.</p>
+					<h2>Introduction</h2>
+					<p>When implemented in your app, <a href="https://developer.apple.com/documentation/shazamkit/">ShazamKit</a> can recognise audio from exact matches in the <em>Shazam Music catalog</em>. As soon as it identifies a song, it returns song metadata such as the title, artist and album art to the app that will, in turn, display it to the user.<br>You can also do the audio matching with arbitrary audio from a <em>custom catalog</em> you create yourself. This <em>custom catalog</em> recognition performs on-device matching.</p>
+					<p>Unlike <a href="https://developer.apple.com/documentation/soundanalysis/">Sound Analysis</a> that classifies and categorises sounds like speech, humming, applause and laughter, ShazamKit only matches audio with a preexisting <em>catalog</em> and somewhat manage the Shazam library.</p>
+					<h2>Use cases</h2>
+					<p>You might ask yourself why you would implement this framework in a new or preexisting app.</p>
+					<p>One use case might be that you want to customise the app content based on the currently playing music. For instance, you can modify a social media app to show distinct image filters or different post recommendations depending on the playing song or artist.</p>
+					<p>Another use case can be more focused on education. Indeed, the app could sync with external audio lessons so that kids or students can always follow along, never behind or ahead in the app.</p>
+					<h2>Terminology</h2>
+					<p><strong>Signature</strong>: A lossy representation of the audio sent from the device to the server. To preserve customer privacy, the reconstruction of the original audio is impossible. Besides, the <em>signature</em> sent to the network also uses a reduced amount of data.</p>
+					<p><strong>Reference signature</strong>: A <em>signature</em> constructed from the full audio of a tune and associated with metadata that references the original song.</p>
+					<p><strong>Query signature</strong>: A <em>signature</em> compared against a <em>reference signature</em>. It stems from the part of the recorded audio that includes the song most often.</p>
+					<p><strong>Catalog</strong>: A collection of <em>signatures</em>.</p>
+					<p><strong>Shazam Music catalog</strong>: A collection of <em>reference signatures</em> comprising much of the music in the world. It is hosted in the cloud, maintained and regularly updated by Apple.</p>
+					<p><strong>Custom catalog</strong>: A collection of <em>signatures</em> generated from arbitrary audio with custom associated metadata. It lives in the app and can be accessed offline.</p>
+					<h2>Recognising songs</h2>
+					<p>Before accessing the <em>Shazam Music catalog</em>, you should enable the ShazamKit app service for the app identifier.<br>
+					To do so, first, open the <a href="https://developer.apple.com/account/resources/identifiers/list/">identifiers list</a> through your developer portal and choose your preexisting app identifier or create a new one. Then, click the App Services tab below the Description field, select ShazamKit, and save your changes.</p>
+					<p>Access to the <em>Shazam Music catalog</em> does not work on the simulator and only on a physical device running iOS 15 or later.</p>
+					<p>Now let’s jump to code!</p>
+					<p>For the sake of simplicity and brevity, I will be using the MVVM design pattern in SwiftUI, but you can do the same with UIKit or AppKit and another pattern. I won’t touch on the user interface in this article, but you can find a complete demo project linked at the end of the article for more details.</p>
+					<p>First, let’s make a <code>SongMatch</code> model with all the needed properties. As you’ll see later, you can get a lot more metadata, but the below properties are the ones that I’ll focus on for now.</p>
+					<code>
+						import Foundation
+
+						struct SongMatch {
+							let appleMusicURL: URL?
+							let artist: String?
+							let artworkURL: URL?
+							let title: String?
+						}
+					</code>
+					<p>Having made the model, we can now focus on the view model. It conforms to the <a href="https://developer.apple.com/documentation/combine/observableobject/"><code>ObservableObject</code></a> protocol to allow the view presenting the interface to listen to changes from <a href="https://developer.apple.com/documentation/combine/published/"><code>@Published</code></a> properties. It’s also a subclass of the <a href="https://developer.apple.com/documentation/objectivec/nsobject/"><code>NSObject</code></a> class to make it capable of conforming to delegates.</p>
+					<code>
+						import ShazamKit
+
+						class ContentViewModel: NSObject, ObservableObject { }
+					</code>
+					<p>The session object <a href="https://developer.apple.com/documentation/shazamkit/shsession/"><code>SHSession</code></a> is the focal point. It takes as input either an audio or a <em>signature</em> and communicates results via its <a href="https://developer.apple.com/documentation/shazamkit/shsession/3747203-delegate/"><code>delegate</code></a>. I initialise it with the default initialiser to create a session object for matching songs in the <em>Shazam Music catalog</em>.</p>
+					<p>Speaking of initialisation, I also set up the <code>delegate</code> property in the view model’s <code>init</code> method to get notified of any found matches later.</p>
+					<code>
+						@Published private(set) var songMatch: SongMatch? = nil
+						private let session = SHSession()
+
+						init {
+							session.delegate = self
+						}
+					</code>
+					<p>Now, depending on the scenario, you have one of two options to get a match.</p>
+					<p>If you already have access to the complete audio, you should create a <a href="https://developer.apple.com/documentation/shazamkit/shsignaturegenerator/"><code>SHSignatureGenerator</code></a> and pass an instance of <a href="https://developer.apple.com/documentation/avfaudio/avaudiopcmbuffer/"><code>AVAudioPCMBuffer</code></a> through its <a href="https://developer.apple.com/documentation/shazamkit/shsignaturegenerator/3747218-append/"><code>append(_:at:)</code></a> method. To stay within the authorised <em>signature</em> range by ShazamKit, you’ll fill the PCM buffer with 3 to 12 seconds of audio.<br>Below’s the method to get the buffer in the view model.</p>
+					<code>
+						private func buffer() -> AVAudioPCMBuffer? {
+
+							// Initialise the audio file with the URL for "Audio.mp3".
+							guard let audioFileURL = Bundle.main.url(forResource: "Audio", withExtension: "mp3"),
+								  let audioFile = try? AVAudioFile(forReading: audioFileURL) else { return nil }
+							
+							// Initialise the PCM buffer with the audio file format and a capacity of 12 seconds.
+							let pcmFormat = audioFile.processingFormat
+							let frameCapacity = AVAudioFrameCount(12 * audioFile.fileFormat.sampleRate)
+							guard let buffer = AVAudioPCMBuffer(pcmFormat: pcmFormat, frameCapacity: frameCapacity) else { return nil }
+						
+							// Fill and return the buffer.
+							try? audioFile.read(into: buffer)
+							return buffer
+							
+						}
+					</code>
+					<p>Afterwards, you have to generate the <em>signature</em> and search for a match in the <em>catalog</em> using the <a href="https://developer.apple.com/documentation/shazamkit/shsignaturegenerator/3747219-signature/"><code>signature()</code></a> and <a href="https://developer.apple.com/documentation/shazamkit/shsession/3747207-match/"><code>match(_:)</code></a> instance methods on the <em>signature</em> generator and the session object respectively.<br>Here’s the other method in the view model to get the <em>signature</em> and search for a match.</p>
+					<code>
+						func generateSignatureAndMatch() {
+
+							// Get the buffer and add it to the generator.
+							guard let buffer = buffer() else { return }
+							let signatureGenerator = SHSignatureGenerator()
+							try? signatureGenerator.append(buffer, at: nil)
+						
+							// Generate the signature and searche for a match.
+							let signature = signatureGenerator.signature()
+							session.match(signature)
+							
+						}
+					</code>
+					<p>However, if you are matching against a continuous stream of audio, from a microphone, for example, you should use the <a href="https://developer.apple.com/documentation/shazamkit/shsession/3747208-matchstreamingbuffer/"><code>matchStreamingBuffer(_:at:)</code></a> instance method optimised for that situation.</p>
+					<code>session.matchStreamingBuffer(buffer, at: nil)</code>
+					<p>I will not detail this specific method, but I’m sure that others have already touched on it.<br>Nonetheless, whenever you are using the microphone, stop recording as soon as you have the result needed to avoid consuming unnecessary resources or launching the microphone for longer than customers intend.</p>
+					<p>Both the <code>match(_:)</code> and <code>matchStreamingBuffer(_:at:)</code> call the delegate’s <a href="https://developer.apple.com/documentation/shazamkit/shsessiondelegate/3747210-session/"><code>session(_:didFind:)</code></a> instance method when a match is found.<br>In the case a match isn’t found, they call the delegate’s <a href="https://developer.apple.com/documentation/shazamkit/shsessiondelegate/3747211-session/"><code>session(_:didNotFindMatchFor:error:)</code></a> instance method instead.</p>
+					<code>
+						extension ContentViewModel: SHSessionDelegate {
+
+							func session(_ session: SHSession, didFind match: SHMatch) {
+						
+								// Get the matched media item if it exists.
+								guard let matchedMediaItem = match.mediaItems.first else { return }
+						
+								// Set the songMatch property with the matched media's metadata.
+								DispatchQueue.main.async { [weak self] in
+									self?.songMatch = SongMatch(appleMusicURL: matchedMediaItem.appleMusicURL,
+																artist: matchedMediaItem.artist,
+																artworkURL: matchedMediaItem.artworkURL,
+																title: matchedMediaItem.title)
+								
+								}
+							}
+							
+						}
+					</code>
+					<p>The <code>matchedMediaItem</code> is of type <a href="https://developer.apple.com/documentation/shazamkit/shmatchedmediaitem/"><code>SHMatchedMediaItem</code></a>, a subclass of <a href="https://developer.apple.com/documentation/shazamkit/shmediaitem/"><code>SHMediaItem</code></a>.<br>The latter type provides properties to get general metadata such as the title, artist, artwork and genres. More properties are also available, specific to Apple Music and the <em>Shazam Music catalog</em>.<br>In addition, the former type provides more properties such as whereabouts in the audio the match occurred via the <a href="https://developer.apple.com/documentation/shazamkit/shmatchedmediaitem/3747163-matchoffset/"><code>matchOffset</code></a> instance property and any difference in frequency between the matched and original audio via the <a href="https://developer.apple.com/documentation/shazamkit/shmatchedmediaitem/3747162-frequencyskew"><code>frequencySkew</code></a> property.</p>
+					<p>When the song matched is available in Apple Music, and its details are displayed, you need to give attribution as set out in the <a href="https://www.apple.com/itunes/marketing-on-music/identity-guidelines.html">Apple Music Identity Guidelines</a>. You can add a button that launches the Apple Music URL returned by the media item through the <a href="https://developer.apple.com/documentation/shazamkit/shmediaitem/3747171-applemusicurl/"><code>appleMusicURL</code></a> instance property.</p>
+					<p>Finally, you may also allow the customer to save the matched audio to their Shazam library, if and only if it has a valid <a href="https://developer.apple.com/documentation/shazamkit/shmediaitem/3747180-shazamid/"><code>shazamID</code></a>.<br>The library is accessible from the Shazam app or through the Control Center and is in sync across all devices. It attributes every song to the app that added it.</p>		
+					<code>
+						SHMediaLibrary.default.add([matchedMediaItem]) { error in 
+							guard error != nil else { return }
+							// Error handling here.
+						}
+					</code>
+					<p>Here, I call the code in the <code>session(_:didFind:)</code> delegate method.<br>The <a href="https://developer.apple.com/documentation/shazamkit/shmedialibrary/"><code>SHMediaLibrary</code></a> offers a <a href="https://developer.apple.com/documentation/shazamkit/shmedialibrary/3747200-default/"><code>default</code></a> instance that corresponds to the user’s Shazam library.</p>
+					<p>Make sure that the user is aware of the song’s addition to the library. They should be able to opt-in or opt-out.</p>
+					<h2 id="conclusion">Conclusion</h2>
+					<p>We discovered what ShazamKit is and why it would be a good idea to implement it in your app. We also learned some new terminology before jumping into code to match audio with songs in the <em>Shazam Music catalog</em>.</p>						
+					<figure>
+						<img alt="" src="/-assets/images/articles/swift/shazamkit-a-first-look/diagram.svg">
+						<figcaption>A diagram that briefly resumes the article</figcaption>
+					</figure>
+				</div>
+				<div class="social">
+					<a class="animation-opacity social-email"><figure aria-label="Send email"><img alt="" src="/-assets/symbols/social/email.svg"></figure></a>
+					<a class="animation-opacity social-facebook"><figure aria-label="Send Facebook post"><img alt="" src="/-assets/symbols/social/facebook.svg"></figure></a>
+					<a class="animation-opacity social-twitter"><figure aria-label="Send tweet"><img alt="" src="/-assets/symbols/social/twitter.svg"></figure></a>
+				</div>
+			</article>
+		</section>
+		<section class="notice">
+			<div>
+				<figure aria-label="Code symbol"><img alt="" src="/-assets/symbols/code.svg"></figure>
+				<div>
+					<h3>Code files and snippets</h3>
+					<a aria-label="View all code files and snippets for this article" class="link-with-symbol style-link-1" href="https://github.com/Yaacoub-Organisation/shazamkit-a-first-look.git">
+						<span>View</span>
+						<img alt="" src="/-assets/symbols/arrow-top-right.svg">
+					</a>
+				</div>
+			</div>
+		</section>
+		<!-- <section class="featured-article">
+			<div>
+				<h1>Featured Article</h1>
+				<a class="plain" href="">
+					<figure aria-label="App screenshots" class="large"><img alt="" src=""></figure>
+					<header>
+						<h3>I’m a teenager — The story of my app</h3>
+						<p class="style-detail-1">Story • <time datetime="2020-06-20">June 20, 2020</time></p>
+					</header>
+				</a>
+			</div>
+		</section> -->
+	</main>
+
+
+
+	<!-- Footer -->
+
+	<footer>
+		<div>
+			<div class="directory unselectable">
+				<div>
+					<a class="style-navigation-link-2" href="/about/">About</a>
+					<a class="style-navigation-link-1" href="/about/mentions/">Mentions</a>
+				</div>
+				<div>
+					<a class="style-navigation-link-2" href="/apps/">Apps</a>
+					<a class="style-navigation-link-1" href="/apps/huh/">Huh?</a>
+					<a class="style-navigation-link-1" href="/apps/who-am-i-christmas-edition/">Who Am I? CE</a>
+				</div>
+				<div>
+					<a class="style-navigation-link-2" href="/articles/">Articles</a>
+					<a class="style-navigation-link-1" href="/articles/story/">Story</a>
+					<a class="style-navigation-link-1" href="/articles/swift/">Swift</a>
+					<a class="style-navigation-link-1" href="/articles/swift-tip/">Swift Tip</a>
+				</div>
+				<div>
+					<a class="style-navigation-link-2" href="/about#contact">Contact</a>
+					<a class="style-navigation-link-1" href="mailto:yaapete.dev@gmail.com">Email</a>
+					<a class="style-navigation-link-1" href="https://github.com/yaacoub/" rel="external">GitHub</a>
+					<a class="style-navigation-link-1" href="https://twitter.com/yaapete/" rel="external">Twitter</a>
+				</div>
+			</div>
+			<div class="legal">
+				<p class="style-footer-1">Apple, the Apple logo, iPadOS, macOS, Swift, the Swift logo and Xcode are trademarks of Apple Inc. IOS is a trademark of Cisco and is used under license. The Python logo is a trademark of the Python Software Foundation. The HTML5 Logo is by the World Wide Web Consortium (W3C). The Git Logo is by Jason Long.</p>
+				<hr>
+				<div>
+					<p class="style-footer-1">Copyright © 2021 Peter Yaacoub. All rights reserved.</p>
+					<span class="unselectable"><a class="style-navigation-link-4" href="/privacy/">Privacy</a></span>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+</body>
+
+</html>

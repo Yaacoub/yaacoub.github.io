@@ -1,7 +1,55 @@
-.airglider-image {
-    background-image: url('/-images/airglider/background-1.jpg');
+/* Nav Picker */
+
+nav.picker {
+	background-color: var(--color-element-background-secondary-alternate);
+	height: calc(var(--nav-height) * 2.5);
+	overflow: auto;
 }
 
-.huh-image {
-    background-image: url('/-images/huh-dictionary/background-1.jpg');
+nav.picker > div {
+	column-gap: var(--padding-m);
+	grid-auto-flow: column;
+	grid-template-columns: initial;
+}
+
+nav.picker figure {
+	border-radius: 25%;
+	height: var(--app-icon-size-s);
+	width: var(--app-icon-size-s);
+}
+
+nav.picker p {
+	text-align: center;
+}
+
+nav.picker .item {
+	display: grid;
+	justify-items: center;
+	row-gap: var(--padding-xxs);
+}
+
+
+
+/* Media Queries */
+
+@media only screen and (max-width: 700px) {
+
+	section.app header {
+		width: 100%;
+	}
+
+}
+
+@media only screen and (max-width: 300px) {
+
+	nav.secondary {
+		justify-content: initial;
+		padding: 0 var(--padding-s) 0 var(--padding-s);
+	}
+
+	nav.secondary > div {
+		justify-content: initial;
+		width: initial;
+	}
+
 }

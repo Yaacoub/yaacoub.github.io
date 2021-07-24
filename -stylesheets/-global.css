@@ -9,6 +9,7 @@
 	--color-element-background-primary-alternate: #141414;		/* Sombre Jet */
 	--color-element-background-secondary: #C2CDD140;			/* Pale Onix 25 */
 	--color-element-background-secondary-alternate: #141414F2;	/* Sombre Jet 95 */
+	--color-element-background-tertiary: #FAFEFDBF;				/* Luminous Alabaster 75 */
 	--color-element-label-primary: #141414;						/* Sombre Jet */
 	--color-element-label-primary-alternate: #FAFEFD; 			/* Luminous Alabaster */
 	--color-element-label-secondary: #141414BF;					/* Sombre Jet 75 */
@@ -1008,6 +1009,18 @@ what are you even doing? */
 
 	nav.secondary > div > div {
 		justify-content: center;
+	}
+
+}
+
+
+
+/* Support Queries */
+
+@supports (backdrop-filter: blur(0)) or (-webkit-backdrop-filter: blur(0)) {
+
+	nav.secondary {
+		background-color: var(--color-element-background-tertiary);
 	}
 
 }

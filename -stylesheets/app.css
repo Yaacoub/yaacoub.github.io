@@ -77,8 +77,8 @@ section.app-huh.highlights hr {
 	border-color: var(--color-app-huh);
 }
 
-section.app-who-am-i-christmas-edition.highlights hr {
-	border-color: var(--color-app-who-am-i-christmas-edition);
+section.app-christmas-guide.highlights hr {
+	border-color: var(--color-app-christmas-guide);
 }
 
 section.highlights > div {

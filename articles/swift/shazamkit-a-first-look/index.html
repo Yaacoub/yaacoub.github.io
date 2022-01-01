@@ -169,46 +169,85 @@
 						class ContentViewModel: NSObject, ObservableObject { }
 					</code>
 					<p>The session object <a href="https://developer.apple.com/documentation/shazamkit/shsession/"><code>SHSession</code></a> is the focal point. It takes as input either an audio or a <em>signature</em> and communicates results via its <a href="https://developer.apple.com/documentation/shazamkit/shsession/3747203-delegate/"><code>delegate</code></a>. I initialise it with the default initialiser to create a session object for matching songs in the <em>Shazam Music catalog</em>.</p>
-					<p>Speaking of initialisation, I also set up the <code>delegate</code> property in the view model’s <code>init</code> method to get notified of any found matches later.</p>
+					<p>Speaking of initialisation, I override the view model’s <code>init</code> method to set up the <code>delegate</code> property and get notified of any found matches later.</p>
 					<code>
 						@Published private(set) var songMatch: SongMatch? = nil
 						private let session = SHSession()
 
-						init {
+						override init() {
+							super.init()
 							session.delegate = self
 						}
 					</code>
 					<p>Now, depending on the scenario, you have one of two options to get a match.</p>
-					<p>If you already have access to the complete audio, you should create a <a href="https://developer.apple.com/documentation/shazamkit/shsignaturegenerator/"><code>SHSignatureGenerator</code></a> and pass an instance of <a href="https://developer.apple.com/documentation/avfaudio/avaudiopcmbuffer/"><code>AVAudioPCMBuffer</code></a> through its <a href="https://developer.apple.com/documentation/shazamkit/shsignaturegenerator/3747218-append/"><code>append(_:at:)</code></a> method. To stay within the authorised <em>signature</em> range by ShazamKit, you’ll fill the PCM buffer with 3 to 12 seconds of audio.<br>Below’s the method to get the buffer in the view model.</p>
+					<p>If you already have access to the complete audio, you should create a <a href="https://developer.apple.com/documentation/shazamkit/shsignaturegenerator/"><code>SHSignatureGenerator</code></a> and pass an instance of <a href="https://developer.apple.com/documentation/avfaudio/avaudiopcmbuffer/"><code>AVAudioPCMBuffer</code></a> through its <a href="https://developer.apple.com/documentation/shazamkit/shsignaturegenerator/3747218-append/"><code>append(_:at:)</code></a> method. To stay within the authorised <em>signature</em> range by ShazamKit, you’ll fill the PCM buffer with 3 to 12 seconds of audio.<br>Below’s the method to get the buffer from an audio file and output format.</p>
 					<code>
-						private func buffer() -> AVAudioPCMBuffer? {
-
-							// Initialise the audio file with the URL for "Audio.mp3".
-							guard let audioFileURL = Bundle.main.url(forResource: "Audio", withExtension: "mp3"),
-								  let audioFile = try? AVAudioFile(forReading: audioFileURL) else { return nil }
-							
-							// Initialise the PCM buffer with the audio file format and a capacity of 12 seconds.
-							let pcmFormat = audioFile.processingFormat
-							let frameCapacity = AVAudioFrameCount(12 * audioFile.fileFormat.sampleRate)
-							guard let buffer = AVAudioPCMBuffer(pcmFormat: pcmFormat, frameCapacity: frameCapacity) else { return nil }
+						private func buffer(audioFile: AVAudioFile, outputFormat: AVAudioFormat) -> AVAudioPCMBuffer? {
+	
+							let frameCount = AVAudioFrameCount((1024 * 64) / (audioFile.processingFormat.streamDescription.pointee.mBytesPerFrame))
+							let outputFrameCapacity = AVAudioFrameCount(12 * audioFile.fileFormat.sampleRate)
+								
+							guard let inputBuffer = AVAudioPCMBuffer(pcmFormat: audioFile.processingFormat, frameCapacity: frameCount),
+								let outputBuffer = AVAudioPCMBuffer(pcmFormat: outputFormat, frameCapacity: outputFrameCapacity),
+								let converter = AVAudioConverter(from: audioFile.processingFormat, to: outputFormat) else { return nil }
 						
-							// Fill and return the buffer.
-							try? audioFile.read(into: buffer)
-							return buffer
+							while true {
+								let status = converter.convert(to: outputBuffer, error: nil) { inNumPackets, outStatus in
+									do {
+										try audioFile.read(into: inputBuffer)
+										outStatus.pointee = .haveData
+										return inputBuffer
+									} catch {
+										if audioFile.framePosition >= audioFile.length {
+											outStatus.pointee = .endOfStream
+											return nil
+										} else {
+											outStatus.pointee = .noDataNow
+											return nil
+										}
+									}
+								}
+								switch status {
+								case .endOfStream, .error: return nil
+								default: return outputBuffer
+								}
+							}
 							
 						}
 					</code>
-					<p>Afterwards, you have to generate the <em>signature</em> and search for a match in the <em>catalog</em> using the <a href="https://developer.apple.com/documentation/shazamkit/shsignaturegenerator/3747219-signature/"><code>signature()</code></a> and <a href="https://developer.apple.com/documentation/shazamkit/shsession/3747207-match/"><code>match(_:)</code></a> instance methods on the <em>signature</em> generator and the session object respectively.<br>Here’s the other method in the view model to get the <em>signature</em> and search for a match.</p>
+					<p>Working with audio buffers is no easy task. If you want to better understand the above code, you can refer to the Apple Developer article <a href="https://developer.apple.com/documentation/accelerate/compressing_and_decompressing_data_with_input_and_output_filters/">Compressing and Decompressing Data with Input and Output Filters</a>.</p>
+					<p>Afterwards, you have to generate the <em>signature</em> and search for a match in the <em>catalog</em> using the <a href="https://developer.apple.com/documentation/shazamkit/shsignaturegenerator/3747219-signature/"><code>signature()</code></a> and <a href="https://developer.apple.com/documentation/shazamkit/shsession/3747207-match/"><code>match(_:)</code></a> instance methods on the <em>signature</em> generator and the session object respectively.<br>Here are the other methods in the view model to get the <em>signature</em> and search for a match.</p>
 					<code>
-						func generateSignatureAndMatch() {
+						private let audioFileURL = Bundle.main.url(forResource: "Audio", withExtension: "mp3")
 
-							// Get the buffer and add it to the generator.
-							guard let buffer = buffer() else { return }
+						private func signature() -> SHSignature? {
+							
+							// Create the buffer from the audio file.
+							guard let audioFileURL = audioFileURL,
+								let audioFile = try? AVAudioFile(forReading: audioFileURL),
+								let audioFormat = AVAudioFormat(standardFormatWithSampleRate: 44100, channels: 1),
+								let buffer = buffer(audioFile: audioFile, outputFormat: audioFormat) else { return nil }
+							
+							// Initialise the generator and append the buffer to it.
 							let signatureGenerator = SHSignatureGenerator()
 							try? signatureGenerator.append(buffer, at: nil)
+							
+							// Return the generated signature.
+							return signatureGenerator.signature()
+							
+						}
+					</code>
+					<code>
+						@Published private(set) var isMatching = false
+
+						func startMatching() {
 						
-							// Generate the signature and searche for a match.
-							let signature = signatureGenerator.signature()
+							// Verify if the signature is not nil,
+							// and if the session not already searching for a match.
+							guard let signature = signature(), isMatching == false else { return }
+							isMatching = true
+							
+							// Search for a match.
 							session.match(signature)
 							
 						}
@@ -219,14 +258,16 @@
 					<p>Both the <code>match(_:)</code> and <code>matchStreamingBuffer(_:at:)</code> call the delegate’s <a href="https://developer.apple.com/documentation/shazamkit/shsessiondelegate/3747210-session/"><code>session(_:didFind:)</code></a> instance method when a match is found.<br>In the case a match isn’t found, they call the delegate’s <a href="https://developer.apple.com/documentation/shazamkit/shsessiondelegate/3747211-session/"><code>session(_:didNotFindMatchFor:error:)</code></a> instance method instead.</p>
 					<code>
 						extension ContentViewModel: SHSessionDelegate {
-
+	
 							func session(_ session: SHSession, didFind match: SHMatch) {
-						
+								
 								// Get the matched media item if it exists.
 								guard let matchedMediaItem = match.mediaItems.first else { return }
-						
-								// Set the songMatch property with the matched media's metadata.
+								
+								// Set isMatching to false,
+								// and set the songMatch property with the matched media's metadata.
 								DispatchQueue.main.async { [weak self] in
+									self?.isMatching = false
 									self?.songMatch = SongMatch(appleMusicURL: matchedMediaItem.appleMusicURL,
 																artist: matchedMediaItem.artist,
 																artworkURL: matchedMediaItem.artworkURL,
@@ -252,7 +293,7 @@
 					<p>We discovered what ShazamKit is and why it would be a good idea to implement it in your app. We also learned some new terminology before jumping into code to match audio with songs in the <em>Shazam Music catalog</em>.</p>						
 					<figure>
 						<img alt="" src="/-assets/images/articles/swift/shazamkit-a-first-look/diagram.svg">
-						<figcaption>A diagram that briefly resumes the article</figcaption>
+						<figcaption>A diagram that briefly resumes the article.</figcaption>
 					</figure>
 				</div>
 				<div class="social">
@@ -321,7 +362,7 @@
 				<p class="style-footer-1">Apple, the Apple logo, iPadOS, macOS, Swift, the Swift logo and Xcode are trademarks of Apple Inc. IOS is a trademark of Cisco and is used under license. The Python logo is a trademark of the Python Software Foundation. The HTML5 Logo is by the World Wide Web Consortium (W3C). The Git Logo is by Jason Long.</p>
 				<hr>
 				<div>
-					<p class="style-footer-1">Copyright © 2021 Peter Yaacoub. All rights reserved.</p>
+					<p class="style-footer-1">Copyright © 2022 Peter Yaacoub. All rights reserved.</p>
 					<span class="unselectable"><a class="style-navigation-link-4" href="/privacy/">Privacy</a></span>
 				</div>
 			</div>

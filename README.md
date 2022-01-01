@@ -5,4 +5,4 @@ Discover more [about](https://yaacoub.github.io/about/) me, the [articles](https
 
 ## Website Copyright
 
-Copyright © 2021 Peter Yaacoub. All rights reserved.
+Copyright © 2022 Peter Yaacoub. All rights reserved.

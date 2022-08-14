@@ -1,0 +1,11 @@
+<!-- Nav -->
+
+	<nav class="{{ layout.nav_theme }}">
+		<div class="unselectable">
+			<div class="logo"><a class="animation-opacity style-navigation-link-1" href="/"><figure aria-label="{{ site.title }}"><img alt="" class="{%- if layout.nav_theme == 'blurred' -%}color-adjustable{%- endif -%}" src="/-assets/symbols/yaacoub-logo{%- if layout.nav_theme == 'blurred' -%}-dark{%- else -%}-light{%- endif -%}.svg"></figure></a></div>
+			{%- for path in site.paths_nav %}
+			{% assign nav_page = site.pages | where: "path", path | first -%}
+			<a class="style-navigation-link-{%- if page.url == nav_page.url -%}3{%- else -%}1{%- endif -%}" href="{{ nav_page.url }}">{{ nav_page.title | escape }}</a>
+			{%- endfor %}
+		</div>
+	</nav>

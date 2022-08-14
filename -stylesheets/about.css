@@ -9,26 +9,26 @@
 /* Section Awards */
 
 section.awards > div {
-	column-gap: var(--padding-xl);
-	grid-template-columns: 1fr 1fr;
-	row-gap: var(--padding-xl);
+	column-gap: var(--padding-m);
+	grid-template-columns: 1fr 1fr 1fr;
+	row-gap: var(--padding-m);
 	text-align: center;
 }
 
 section.awards figure {
-	height: var(--symbol-l);
-	width: var(--symbol-l);
+	height: var(--symbol-m);
+	width: var(--symbol-m);
 }
 
 section.awards h2 {
-	grid-column: span 2;
+	grid-column: span 3;
 }
 
 section.awards .award {
 	background-color: var(--color-element-background-secondary);
 	display: grid;
 	justify-items: center;
-	padding: var(--padding-l);
+	padding: var(--padding-m);
 	row-gap: var(--padding-s);
 	text-align: center;
 }
@@ -53,13 +53,13 @@ section.bio h2 {
 section.bio .symbols {
 	column-gap: var(--padding-xl);
 	display: grid;
-	grid-auto-columns: 1fr;
-	grid-auto-flow: column;
+	grid-template-columns: 1fr 1fr 1fr;
 	padding-top: var(--padding-s);
+	row-gap: var(--padding-m);
 }
 
 section.bio .symbols a.item:hover figure img {
-	filter: initial;
+	filter: invert(0.2);
 	transform: initial;
 }
 
@@ -93,7 +93,7 @@ section.hero {
 
 section.hero > div {
 	column-gap: var(--padding-m);
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr 0.5fr;
 }
 
 section.hero figure img {
@@ -124,12 +124,15 @@ section.hero header {
 	section.awards > div {
 		grid-auto-rows: 0fr;
 		grid-template-columns: 1fr;
-		row-gap: var(--padding-xl);
 		text-align: center;
 	}
 
 	section.awards h2 {
 		grid-column: initial;
+	}
+
+	section.hero {
+		padding-bottom: var(--padding-l);
 	}
 
 }
@@ -141,8 +144,7 @@ section.hero header {
 	}
 
 	section.bio .symbols {
-		grid-auto-columns: 1fr;
-		grid-auto-flow: row;
+		grid-template-columns: 1fr;
 		row-gap: var(--padding-m);
 	}
 
@@ -151,10 +153,19 @@ section.hero header {
 		width: var(--symbol-m);
 	}
 
+	section.hero {
+		padding-bottom: 0;
+	}
+
 	section.hero > div {
+		align-items: end;
 		row-gap: var(--padding-m);
 		grid-template-columns: 1fr;
 		grid-template-rows: 0fr 1fr;
+	}
+
+	section.hero figure img {
+		height: var(--hero-image-max-width);
 	}
 
 }

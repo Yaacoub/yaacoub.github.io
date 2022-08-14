@@ -1,0 +1,98 @@
+- christmas_guide:
+  name: "Christmas Guide"
+  mentions:
+    -
+      author: "iMore"
+      date: 2021-12-07
+      excerpt:
+        "If you're a big fan of Christmas and have always wondered which Christmas character you most look like,
+        you're in luck — I have the app for you! Christmas Guide is an app available for download in the App Store
+        right now and you should definitely download it."
+      title: "This fun app tells you which Christmas character you most look like"
+      url: "https://www.imore.com/fun-app-tells-you-which-christmas-character-you-most-look"
+    -
+      author: "Code Completion"
+      date: 2021-11-30
+      excerpt:
+        "We are checking out Christmas Guide by Peter Yaacoub, an iPhone app perfect for the holiday season.
+        Christmas Guide makes it easy to enjoy over 30 traditional Christmas carols and learn about more than
+        40 dates and events that occur during the season."
+      title: "Code Completion Episode 58: The Nintendo Ninjas, They Get Everyone"
+      url: "https://youtu.be/cLwkwaWQUrY?t=16"
+
+- huh:
+  name: "Huh?"
+  mentions:
+    -
+      author: "Code Completion"
+      date: 2021-11-02
+      excerpt:
+        "We are checking out Huh? by Peter Yaacoub, a dictionary app for your iPhone and iPad.
+        Huh? contains more than fifty dicitonaries, over seven different languages full of rich defintions,
+        audio, pictures and etymology."
+      title: "Code Completion Episode 54: You Are Such a DoIt"
+      url: "https://youtu.be/uP33haUMy-M?t=19"
+    -
+      author: "Mobile A11y"
+      date: 2020-06-28
+      excerpt:
+        "What makes this app stand out is its ability to look up words in various languages.
+        The app features services for Arabic, Spanish, Italian and several others.
+        Change the app's search language and to immerse you in the experience, the app's buttons also change."
+      title: "Accessibility Review: Huh? - International languages"
+      url: "https://mobilea11y.com/blog/huh-dictionary/"
+    -
+      author: "CodeItBro"
+      date: 2020-04-16
+      excerpt:
+        "Here comes « Huh? », a free application available on the App Store. It is not one, not two,
+        but a collection of no less than 50 dictionaries, and the best part is that it is also available in 7 different languages."
+      title: "Huh? Lexicon & Thesaurus iPhone App With 50 Dictionaries"
+      url: "https://www.codeitbro.com/huh-iphone-dictionary-app/"
+
+- wwdc20_ssc:
+  name: "WWDC20 Swift Student Challenge"
+  mentions:
+    -
+      author: "T3 Middle East"
+      date: 2020-06-17
+      excerpt:
+        "The other winners of the Swift Student Challenge include […] Peter Yaacoub from Lebanon."
+      title: "Six young coders from the Middle East win Apple's WWDC20 Swift Student Challenge"
+      url:
+        "https://t3me.com/en/features/events-and-expos/wwdc20-events-and-expos/
+        six-young-coders-from-the-middle-east-win-apples-wwdc20-swift-student-challenge/"
+    -
+      author: "CP Magazine"
+      date: 2020-06-17
+      excerpt:
+        "Peter Yaacoub, a Lebanese student who is also amongst this year's winners says
+        “I feel proud to be amongst the winners from all over the world. […]”"
+      title: "Apple's WWDC20 Swift Student Challenge winners determined to shape the future"
+      url: "http://citypages.today/2020/06/17/apples-wwdc20-swift-student-challenge-winners-determined-to-shape-the-future/"
+    -
+      author: "Al Bawaba"
+      date: 2020-06-17
+      excerpt:
+        "Apple on Tuesday announced the winners of its Swift Student Challenge,
+        and four of them were from the Middle East [including] Peter Yaacoub from Lebanon."
+      title: "4 Middle Eastern Rising Coders Among Apple's Swift's Winners"
+      url: "https://www.albawaba.com/business/4-middle-eastern-rising-coders-among-apples-swifts-winners-1362976/"
+    -
+      author: "Absolute Geeks"
+      date: 2020-06-17
+      excerpt:
+        "Peter Yaacoub, winner from Lebanon: “[…] I initially applied to Swift Student Challenge because
+        I believed I had enough experience to be at a level to compete with others and show my talent. […]”"
+      title: "Apple's WWDC20 Swift Student Challenge MENA winners determined to shape the future"
+      url:
+        "https://www.absolutegeeks.com/article/featured/
+        apples-wwdc20-swift-student-challenge-mena-winners-determined-to-shape-the-future/"
+    -
+      author: "AlKhaleej Today"
+      date: 2020-06-16
+      excerpt:
+        "Apple on Tuesday announced the winners of its Swift Student Challenge,
+        and four of them were from the Middle East [including] Peter Yaacoub from Lebanon."
+      title: "Mideast's rising stars of coding honoured by Apple"
+      url: "https://alkhaleejtoday.co/technology/5007374/Mideasts-rising-stars-of-coding-honoured-by-Apple.html"

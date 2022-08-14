@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="67px" height="250px" viewBox="0 0 67 250" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>Chevron Right (Dark)</title>
-    <g id="Chevron-Right-(Dark)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-        <polyline id="Path" stroke="#FAFEFD" stroke-width="15" points="8 97.5 60 145 8 192.5"></polyline>
+    <g id="Chevron-Right-(Dark)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M67,144.564968 C67,142.627844 66.2878429,140.947126 64.8635287,139.522811 L12.0497893,87.0510615 C10.682415,85.6836872 9.0302245,85 7.09321784,85 C5.04221469,85 3.34726093,85.6694522 2.00835656,87.0083566 C0.669452187,88.3471443 0,90.0135697 0,92.007633 C0,93.8876997 0.683687161,95.5684185 2.05106148,97.0497893 L49.8226445,144.564968 L2.05106148,192.080199 C0.683687161,193.561488 0,195.242183 0,197.122285 C0,199.116337 0.669452187,200.782791 2.00835656,202.121649 C3.34726093,203.460507 5.04221469,204.129936 7.09321784,204.129936 C9.0302245,204.129936 10.682415,203.44626 12.0497893,202.078909 L64.8635287,149.607124 C65.5471575,148.866439 66.0741433,148.083048 66.444486,147.256953 C66.8148287,146.430858 67,145.533529 67,144.564968 Z" id="Path" fill="#FAFEFD" fill-rule="nonzero"></path>
     </g>
 </svg>

@@ -1,0 +1,34 @@
+---
+layout: "default"
+stylesheet: "articles-list"
+type: "website"
+---
+
+{%- if site.data.mentions != nil -%}
+{%- for category in site.data.mentions %}
+		<section class="list">
+			<div>
+				<h1>{{ category.name }}</h1>
+				{%- if category.mentions != nil %}
+				<div class="grid">
+					{%- for mention in category.mentions %}
+					<a class="plain" href="{{ mention.url }}">
+						<figure aria-label="Thumbnail">
+							<picture>
+								<source srcset="/-assets/images/{{ page.dir }}/{{ category.name | slugify }}/{{ mention.date }}-{{ mention.author | slugify }}.webp" type="image/webp">
+								<img alt="" src="/-assets/images/{{ page.dir }}/{{ category.name | slugify }}/{{ mention.date }}-{{ mention.author | slugify }}.png">
+							</picture>
+						</figure>
+						<header>
+							<p class="style-title-1">{{ mention.title }}</p>
+							<p class="style-detail-1">{{ mention.author }} • <time datetime="{{ mention.date }}">{{ mention.date | date_to_long_string }}</time></p>
+							<p>{{ mention.excerpt }}</p>
+						</header>
+					</a>
+					{%- endfor %}
+				</div>
+				{%- endif %}
+			</div>
+		</section>
+{% endfor %}
+{%- endif -%}

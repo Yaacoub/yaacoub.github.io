@@ -1,0 +1,8 @@
+- name: "Swift"
+  symbol: "swift"
+
+- name: "HTML & CSS"
+  symbol: "html"
+  
+- name: "Python"
+  symbol: "python"

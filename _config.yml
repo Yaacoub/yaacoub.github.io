@@ -1,0 +1,56 @@
+# Build Settings
+
+highlighter: rouge
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+
+
+# Defaults
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      image: "social.png"
+
+
+
+# Site Settings
+
+lang: "en"
+permalink: /:categories/:title
+title: "Yaacoub"
+url: "https://yaacoub.github.io/"
+url_portfolio: "https://yaacoub.github.io/about/"
+
+name:
+  first: "Peter"
+  last: "Yaacoub"
+
+paths_footer:
+  -
+    - "about/index.md"
+    - "about/mentions/index.md"
+  -
+    - "apps/index.md"
+    - "apps/christmas-guide/index.md"
+    - "apps/huh/index.md"
+  -
+    - "articles/index.md"
+    - "articles/story/index.md"
+    - "articles/swift-tip/index.md"
+
+paths_nav:
+  - "about/index.md"
+  - "apps/index.md"
+  - "articles/index.md"
+
+social_links:
+  email: "yaapete.dev@gmail.com"
+  github: "yaacoub"
+  twitter: "yaapete"
+  youtube: "UCWdYPvZNi6i7Fq3eKhw1-qQ"

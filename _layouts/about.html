@@ -1,0 +1,113 @@
+---
+layout: "default"
+stylesheet: "about"
+type: "profile"
+---
+
+		<section class="hero">
+			<div>
+				<header>
+					<h1>{{ site.name.first }} {{ site.name.last }}</h1>
+					<p class="style-subheading-1">{{ site.data.copy_about.subheading }}</p>
+				</header>
+				<figure aria-label="Profile Picture">
+					<picture>
+						<source srcset="/-assets/images/profile.webp" type="image/webp">
+						<img alt="" src="/-assets/images/profile.png">
+					</picture>
+				</figure>
+			</div>
+		</section>
+		{% if site.data.awards != nil -%}
+		<section class="awards">
+			<div>
+				<h2>Awards</h2>
+				{%- for award in site.data.awards %}
+				<div class="award">
+					<figure aria-label="{{ award.symbol }} logo"><img alt="" class="color-adjustable" src="/-assets/symbols/{{ award.symbol }}.svg"></figure>
+					<h3>{{ award.name }}</h3>
+					<p class="style-subheading-2">{{ award.result }}</p>
+				</div>
+				{%- endfor %}
+			</div>
+		</section>
+		{%- endif -%}
+		{% if site.data.apps != nil %}
+		<section class="bio">
+			<div>
+				<h2>Apps</h2>
+				<p class="style-subheading-1">{{ site.data.copy_about.description_apps }}</p>
+				<div class="app-tiles">
+					{%- for app in site.data.apps %}
+					<a class="animation-underline item plain" href="/apps/{{ app.name | slugify }}">
+						<figure aria-label="App icon">
+							<picture>
+								<source srcset="/-assets/images/apps/{{ app.name | slugify }}/icon.webp" type="image/webp">
+								<img alt="" src="/-assets/images/apps/{{ app.name | slugify }}/icon.png">
+							</picture>
+						</figure>
+						<h3>{{ app.name }}</h3>
+					</a>
+					{%- endfor %}
+				</div>
+			</div>
+		</section>
+		{%- endif %}
+		<section class="bio">
+			<div>
+				<h2>Description</h2>
+				<p class="style-subheading-1">{{ site.data.copy_about.description }}</p>
+			</div>
+		</section>
+		{% if site.data.computer_languages != nil -%}
+		<section class="bio">
+			<div>
+				<h2>Computer Languages</h2>
+				<p class="style-subheading-1">{{ site.data.copy_about.description_computer_languages }}</p>
+				<div class="symbols">
+				{%- for language in site.data.computer_languages %}
+					<div class="item">
+						<figure aria-label="{{ language.symbol }} logo"><img alt="" class="color-adjustable" src="/-assets/symbols/computer-languages/{{ language.symbol }}.svg"></figure>
+						<h3>{{ language.name }}</h3>
+					</div>
+				{%- endfor %}
+				</div>
+			</div>
+		</section>
+		{%- endif -%}
+		{% if site.data.development_tools != nil %}
+		<section class="bio">
+			<div>
+				<h2>Development Tools</h2>
+				<p class="style-subheading-1">{{ site.data.copy_about.description_development_tools }}</p>
+				<div class="symbols">
+				{%- for language in site.data.development_tools %}
+					<div class="item">
+						<figure aria-label="{{ language.symbol }} logo"><img alt="" class="color-adjustable" src="/-assets/symbols/development-tools/{{ language.symbol }}.svg"></figure>
+						<h3>{{ language.name }}</h3>
+					</div>
+				{%- endfor %}
+				</div>
+			</div>
+		</section>
+		{%- endif %}
+		<section class="bio" id="contact">
+			<div>
+				<h2>Contact</h2>
+				<p class="style-subheading-1">{{ site.data.copy_about.description_contact }}</p>
+				<div class="symbols">
+					<a class="item plain" href="mailto:{{ site.social_links.email }}">
+						<figure aria-label="Email logo"><img alt="" class="color-adjustable" src="/-assets/symbols/social/email-large.svg"></figure>
+						<h3>Email</h3>
+					</a>
+					<a class="item plain" href="https://github.com/{{ site.social_links.github }}/">
+						<figure aria-label="GitHub logo"><img alt="" class="color-adjustable" src="/-assets/symbols/social/github-large.svg"></figure>
+						<h3>Github</h3>
+					</a>
+					<a class="item plain" href="https://twitter.com/{{ site.social_links.twitter }}/">
+						<figure aria-label="Twitter logo"><img alt="" class="color-adjustable" src="/-assets/symbols/social/twitter-large.svg"></figure>
+						<h3>Twitter</h3>
+					</a>
+				</div>
+			</div>
+		</section>

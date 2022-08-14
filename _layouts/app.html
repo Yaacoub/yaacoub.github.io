@@ -1,0 +1,104 @@
+---
+layout: "default"
+stylesheet: "app"
+type: "website"
+---
+
+		<section class="app-hero">
+			{%- assign app = site.data.apps | where: "name", page.app | first %}
+			<div>
+				<figure aria-label="App icon" class="icon">
+					<picture>
+						<source srcset="/-assets/images/apps/{{ app.name | slugify }}/icon.webp" type="image/webp">
+						<img alt="" src="/-assets/images/apps/{{ app.name | slugify }}/icon.png">
+					</picture>
+				</figure>
+				<header>
+					<h1>{{ app.slogan }}</h1>
+					<a class="animation-underline" href="https://apps.apple.com/app/id{{ app.id }}/"><figure aria-label="App link to the Apple App Store"><img alt="" class="color-adjustable" src="/-assets/symbols/app-store/download-black.svg"></figure></a>
+				</header>
+				<figure aria-label="App screenshots" class="screenshots">
+					<picture>
+						<source srcset="/-assets/images/apps/{{ app.name | slugify }}/hero.webp" type="image/webp">
+						<img alt="" src="/-assets/images/apps/{{ app.name | slugify }}/hero.png">
+					</picture>
+				</figure>
+			</div>
+		</section>
+		<section class="app-{{ app.name | slugify }} highlights">
+			<div>
+				{%- for highlight in app.highlights %}
+				<div>
+					<hr>
+					<h2>{{ highlight }}</h2>
+				</div>
+				{%- endfor %}
+				<p class="style-subheading-1">{{ app.description }}</p>
+			</div>
+		</section>
+		<section class="features-large">
+			{%- for feature in app.features_large %}
+			<div>
+				<figure aria-label="App screenshots">
+					<picture>
+						<source srcset="/-assets/images/apps/{{ app.name | slugify }}/features-large/{{ feature.name | slugify }}.webp" type="image/webp">
+						<img alt="" src="/-assets/images/apps/{{ app.name | slugify }}/features-large/{{ feature.name | slugify }}.png">
+					</picture>
+				</figure>
+				<header>
+					<h1>{{ feature.headline }}</h1>
+					<p class="style-subheading-1">{{ feature.body }}</p>
+				</header>
+			</div>
+			{%- endfor %}
+		</section>
+		<section class="features-medium">
+			<div>
+				{%- for feature in app.features_medium %}
+				<div>
+					<figure aria-label="App screenshots">
+						<picture>
+							<source srcset="/-assets/images/apps/{{ app.name | slugify }}/features-medium/{{ feature.name | slugify }}.webp" type="image/webp">
+							<img alt="" src="/-assets/images/apps/{{ app.name | slugify }}/features-medium/{{ feature.name | slugify }}.png">
+						</picture>
+					</figure>
+					<p class="style-subheading-2">{{ feature.body }}</p>
+				</div>
+				{%- endfor %}
+			</div>
+		</section>
+		<section class="important">
+			<div>
+				<figure aria-label="Padlock symbol"><img alt="" class="color-adjustable" src="/-assets/symbols/padlock.svg"></figure>
+				<h1>Privacy is important.</h1>
+				<p class="style-subheading-1">{{ app.privacy }}</p>
+				<a aria-label="Read the privacy policy for the app" class="link-with-symbol style-link-1" href="/privacy/{{ app.name | slugify }}/">
+					<span>Read the privacy policy</span>
+					<img alt="" src="/-assets/symbols/chevron-right.svg">
+				</a>
+			</div>
+		</section>
+		<section class="features-small">
+			<div>
+				<h1>Minor features. Sharp experience.</h1>
+				{%- for feature in app.features_small %}
+				<div>
+					<figure aria-label="{{ feature.name }} symbol"><img alt="" class="color-adjustable" src="/-assets/symbols/{{ feature.name | slugify }}.svg"></figure>
+					<h3>{{ feature.name }}</h3>
+					<p class="style-subheading-2">{{ feature.body }}</p>
+				</div>
+				{%- endfor %}
+			</div>
+		</section>
+		<section class="notice">
+			<div>
+				<figure aria-label="Camera symbol"><img alt="" class="color-adjustable" src="/-assets/symbols/camera.svg"></figure>
+				<div>
+					<h3>Images and screenshots</h3>
+					<a aria-label="Download all images and screenshots for {{ app.name }}" class="link-with-symbol style-link-1" href="/-assets/press-kits/{{ app.name | slugify }}-press-kit.zip">
+						<span>Download</span>
+						<img alt="" src="/-assets/symbols/download.svg">
+					</a>
+				</div>
+			</div>
+		</section>

@@ -1,0 +1,31 @@
+---
+layout: "default"
+stylesheet: "articles-list"
+type: "website"
+---
+
+		<section class="list">
+			{%- assign category = page.dir | split: "/" | last -%}
+			{%- assign posts = site.posts | where_exp: "post", "post.categories contains category" %}
+			<div>
+				<h1>{{ page.title }}</h1>
+				{%- if posts != nil %}
+				<div class="grid">
+					{%- for post in posts %}
+					<a class="plain" href="{{ post.url }}">
+						<figure aria-label="Thumbnail">
+							<picture>
+								<source srcset="/-assets/images/articles/{{ post.categories | last | slugify }}/{{ post.title | slugify }}/hero.webp" type="image/webp">
+								<img alt="" src="/-assets/images/articles/{{ post.categories | last | slugify }}/{{ post.title | slugify }}/hero.png">
+							</picture>
+						</figure>
+						<header>
+							<p class="style-title-1">{{ post.title }}</p>
+							<p class="style-detail-1">{{ post.categories | last | replace: "-", " " | capitalize }} • <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date_to_long_string }}</time></p>
+						</header>
+					</a>
+					{%- endfor %}
+				</div>
+				{%- endif %}
+			</div>
+		</section>

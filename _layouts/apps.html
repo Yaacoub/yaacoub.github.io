@@ -1,0 +1,110 @@
+---
+layout: "default"
+stylesheet: "apps"
+type: "website"
+---
+
+		<nav class="picker">
+			<div class="unselectable">
+				{%- for app in site.data.apps %}
+				<a class="item plain" href="{{ app.name | slugify }}/">
+					<figure aria-label="App icon">
+						<picture>
+							<source srcset="/-assets/images/apps/{{ app.name | slugify }}/icon.webp" type="image/webp">
+							<img alt="" src="/-assets/images/apps/{{ app.name | slugify }}/icon.png">
+						</picture>
+					</figure>
+					<p class="style-navigation-link-1">{{ app.name }}</p>
+					{%- if app.is_new %}<p class="style-notice-1">New</p>{%- endif %}
+				</a>
+				{%- endfor %}
+			</div>
+		</nav>
+		{%- for app in site.data.apps %}
+		<section class="app-hero">
+			<div>
+				<figure aria-label="App icon" class="icon">
+					<picture>
+						<source srcset="/-assets/images/apps/{{ app.name | slugify }}/icon.webp" type="image/webp">
+						<img alt="" src="/-assets/images/apps/{{ app.name | slugify }}/icon.png">
+					</picture>
+				</figure>
+				<header>
+					<h1>{{ app.name }}</h1>
+					<h2>{{ app.slogan }}</h2>
+					<p class="style-subheading-1">{{ app.description_short }}</p>
+					{%- if app.testflight != "" %}<a class="animation-underline" href="{{ app.testflight }}"><figure aria-label="App link to Testflight"><img alt="" src="/-assets/symbols/testflight/download-black.svg"></figure></a>{%- endif %}
+					<a class="animation-underline" href="https://apps.apple.com/app/id{{ app.id }}/"><figure aria-label="App link to the Apple App Store"><img alt="" src="/-assets/symbols/app-store/download-black.svg"></figure></a>
+					<a aria-label="Learn more about the app" class="link-with-symbol style-link-1" href="{{ app.name | slugify }}/">
+						<span>Learn more</span>
+						<img alt="" src="/-assets/symbols/chevron-right.svg">
+					</a>
+				</header>
+				<figure aria-label="App screenshots" class="screenshots">
+					<picture>
+						<source srcset="/-assets/images/apps/{{ app.name | slugify }}/hero.webp" type="image/webp">
+						<img alt="" src="/-assets/images/apps/{{ app.name | slugify }}/hero.png">
+					</picture>
+				</figure>
+			</div>
+		</section>
+		{%- endfor %}
+		<section class="tiles">
+			<div>
+				<h1>{{ site.data.copy_apps.section1_title }}</h1>
+				<div class="item-large-complex item">
+					<h2 class="preformatted-text">{{ site.data.copy_apps.section1_headline1 }}</h2>
+					<figure aria-label="App screenshots" class="large">
+						<picture>
+							<source srcset="/-assets/images/apps/nice-beautiful-gorgeous.webp" type="image/webp">
+							<img alt="" src="/-assets/images/apps/nice-beautiful-gorgeous.png">
+						</picture>
+					</figure>
+				</div>
+				<div class="item-small-complex item">
+					<header>
+						<h3>{{ site.data.copy_apps.section1_headline2 }}</h3>
+						<div>
+							<a aria-label="Open {{ site.name.first }} {{ site.name.last }}'s Twitter page" class="link-with-symbol style-link-1" href="https://twitter.com/{{ site.social_links.twitter }}/">
+								<span>Twitter</span>
+								<img alt="" src="/-assets/symbols/arrow-top-right.svg">
+							</a>
+							<a aria-label="Send an email to {{ site.name.first }} {{ site.name.last }}" class="link-with-symbol style-link-1" href="mailto:{{ site.social_links.email }}">
+								<span>Email</span>
+								<img alt="" src="/-assets/symbols/arrow-top-right.svg">
+							</a>
+						</div>
+					</header>
+					<figure aria-label="App screenshots" class="large">
+						<picture>
+							<source srcset="/-assets/images/apps/continuous-support.webp" type="image/webp">
+							<img alt="" src="/-assets/images/apps/continuous-support.png">
+						</picture>
+					</figure>
+				</div>
+				<div class="item">
+					<figure aria-label="Heart symbol"><img alt="" src="/-assets/symbols/heart.svg"></figure>
+					<h3>{{ site.data.copy_apps.section1_headline3 }}</h3>
+				</div>
+			</div>
+		</section>
+		<section class="tiles">
+			<div>
+				<h1>{{ site.data.copy_apps.section2_title }}</h1>
+				<div class="item-large-complex item padded">
+					<header>
+						<h2>{{ site.data.copy_apps.section2_headline1 }}</h2>
+						<a aria-label="Open Peter Yaacoub's GitHub page" class="link-with-symbol style-link-1" href="https://github.com/{{ site.social_links.github }}/">
+							<span>GitHub</span>
+							<img alt="" src="/-assets/symbols/arrow-top-right.svg">
+						</a>
+					</header>
+					<figure aria-label="App screenshots" class="medium">
+						<picture>
+							<source srcset="/-assets/images/apps/the-abyss-of-side-projects.webp" type="image/webp">
+							<img alt="" src="/-assets/images/apps/the-abyss-of-side-projects.png">
+						</picture>
+					</figure>
+				</div>
+			</div>
+		</section>

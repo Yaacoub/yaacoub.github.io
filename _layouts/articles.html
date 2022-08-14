@@ -1,0 +1,114 @@
+---
+layout: "default"
+stylesheet: "articles"
+type: "website"
+---
+
+{%- assign articles_featured_count = 3 -%}
+{%- assign articles_tiles_count = 5 -%}
+{%- assign articles_list_count = 6 -%}
+{%- assign articles_featured_and_tiles_count = articles_featured_count | plus: articles_tiles_count -%}
+{%- assign articles_featured_and_tiles_and_list_count = articles_featured_and_tiles_count | plus: articles_list_count -%}
+
+{%- assign posts = site.posts | where_exp: "post", "post.categories contains 'articles'" -%}
+
+{%- if posts.size >= articles_featured_count %}
+		<section class="featured-articles">
+			<div>
+				<h1>Featured articles</h1>
+				<div>
+					<a class="item item-large plain" href="{{ posts.first.url }}">
+						<figure aria-label="Hero image" class="large">
+							<picture>
+								<source srcset="/-assets/images/articles/{{ posts.first.categories | last | slugify }}/{{ posts.first.title | slugify }}/hero.webp" type="image/webp">
+								<img alt="" src="/-assets/images/articles/{{ posts.first.categories | last | slugify }}/{{ posts.first.title | slugify }}/hero.png">
+							</picture>
+						</figure>
+						<header>
+							<p class="style-detail-1">{{ posts.first.categories | last | replace: "-", " " | capitalize }} • <time datetime="{{ posts.first.date | date: '%Y-%m-%d' }}">{{ posts.first.date | date_to_long_string }}</time></p>
+							<h3>{{ posts.first.title }}</h3>
+							<p aria-label="Read the full article" class="link-with-symbol style-link-1">
+								<span>Read full article</span>
+								<img alt="" src="/-assets/symbols/chevron-right-white.svg">
+							</p>
+						</header>
+						<hr>
+					</a>
+					{%- assign limit = articles_featured_count | minus: 1 -%}
+					{%- for post in posts limit: limit offset: 1 %}
+					<a class="item item-small plain" href="{{ post.url }}">
+						<figure aria-label="Hero image" class="large">
+							<picture>
+								<source srcset="/-assets/images/articles/{{ post.categories | last | slugify }}/{{ post.title | slugify}}/hero.webp" type="image/webp">
+								<img alt="" src="/-assets/images/articles/{{ post.categories | last | slugify }}/{{ post.title | slugify}}/hero.png">
+							</picture>
+						</figure>
+						<header>
+							<p class="style-title-1">{{ post.title }}</p>
+							<p class="style-detail-1">{{ post.categories | last | replace: "-", " " | capitalize }} • <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date_to_long_string }}</time></p>
+						</header>
+					</a>
+					{%- endfor %}
+				</div>
+			</div>
+		</section>
+{% endif %}
+{%- if posts.size >= articles_featured_and_tiles_count %}
+		<section class="tiles">
+			<div>
+				<h1>Latest articles</h1>
+				{%- for post in posts limit: 1 offset: continue %}
+				<a class="item item-large-complex plain" href="{{ post.url }}">
+					<header>
+						<h2>{{ post.title }}</h2>
+						<p class="style-detail-1">{{ post.categories | last | replace: "-", " " | capitalize }} • <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date_to_long_string }}</time></p>
+					</header>
+					<figure aria-label="Hero image" class="large">
+						<picture>
+							<source srcset="/-assets/images/articles/{{ post.categories | last | slugify }}/{{ post.title | slugify}}/hero.webp" type="image/webp">
+							<img alt="" src="/-assets/images/articles/{{ post.categories | last | slugify }}/{{ post.title | slugify}}/hero.png">
+						</picture>
+					</figure>
+				</a>
+				{%- endfor %}
+				{%- assign limit = articles_tiles_count | minus: 1 -%}
+				{%- for post in posts limit: limit offset: continue %}
+				<a class="item item-small-complex plain" href="{{ post.url }}">
+					<figure aria-label="Hero image" class="large">
+						<picture>
+							<source srcset="/-assets/images/articles/{{ post.categories | last | slugify }}/{{ post.title | slugify}}/hero.webp" type="image/webp">
+							<img alt="" src="/-assets/images/articles/{{ post.categories | last | slugify }}/{{ post.title | slugify}}/hero.png">
+						</picture>
+					</figure>
+					<header>
+						<p class="style-title-1">{{ post.title }}</p>
+						<p class="style-detail-1">{{ post.categories | last | replace: "-", " " | capitalize }} • <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date_to_long_string }}</time></p>
+					</header>
+				</a>
+				{%- endfor %}
+			</div>
+		</section>
+{% endif %}
+{%- if posts.size > articles_featured_count and posts.size < articles_featured_and_tiles_count or posts.size >= articles_featured_and_tiles_and_list_count %}
+		<section class="list">
+			<div>
+				<h1>More articles</h1>
+				<div class="grid">
+					{%- for post in posts limit: articles_list_count offset: continue %}
+					<a class="item item-small plain" href="{{ post.url }}">
+						<figure aria-label="Hero image" class="large">
+							<picture>
+								<source srcset="/-assets/images/articles/{{ post.categories | last | slugify }}/{{ post.title | slugify}}/hero.webp" type="image/webp">
+								<img alt="" src="/-assets/images/articles/{{ post.categories | last | slugify }}/{{ post.title | slugify}}/hero.png">
+							</picture>
+						</figure>
+						<header>
+							<p class="style-title-1">{{ post.title }}</p>
+							<p class="style-detail-1">{{ post.categories | last | replace: "-", " " | capitalize }} • <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date_to_long_string }}</time></p>
+						</header>
+					</a>
+					{%- endfor %}
+				</div>
+			</div>
+		</section>
+{% endif %}

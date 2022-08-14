@@ -1,0 +1,94 @@
+- christmas_guide:
+
+  argument: ""
+  description_short: "Listen to carols, discover events and, most importantly, have a merry Christmas with Christmas Guide!"
+  id: "1546178842"
+  is_new: false
+  name: "Christmas Guide"
+  platforms: ["iOS", "iPadOS", "macOS"]
+  slogan: "Made in the North Pole."
+  testflight: ""
+
+  description:
+    "Is it hard to keep track of all the events taking place? Or find all the festive tunes playing on the radio?
+    Christmas Guide tries to solve all these problems in a single neatly tied application,
+    making you wonder if it didn't directly come from Santa's factory."
+
+  privacy:
+    "Christmas Guide does not collect any images or personally identifiable data.
+    The development and maintenance of the app only depend on the in-app purchases you choose to pay."
+
+  highlights:
+    - "Enjoy over 30 famous traditional Christmas carols."
+    - "Stay up-to-date with more than 40 dates and events."
+
+  features_large:
+    - body:
+        "Dynamic font, adaptive user interface, and contrasting colors;
+        Accessibility is an essential part of Christmas Guide. So there's no one excluded, everyone included."
+      headline: "Think BIGGER."
+      name: "Accessibility"
+
+  features_medium:
+    - body: "<strong>Event</strong> pages exist for every alternative date of the same event, based on the church or rite."
+      name: "Event"
+    - body: "<strong>Carol</strong> pages include a YouTube video, lyrics, and links to music services when available."
+      name: "Carol"
+    - body: "<strong>Character</strong> pages provide a glanceable illustration and description accompanied by alternative names."
+      name: "Character"
+
+  features_small:
+    - body: "Pick your favorite app icon and show it off."
+      name: "Alternate icons"
+    - body: "Choose between the light and the dark side, or both!"
+      name: "Dark mode"
+    - body: "Let machine learning match you to a Christmas character."
+      name: "Face detection"
+
+- huh:
+
+  argument: "huh://"
+  description_short: "Browse through all your favourite dictionaries to improve your communication skills and grades."
+  id: "1330097506"
+  is_new: false
+  name: "Huh?"
+  platforms: ["iOS", "iPadOS", "macOS"]
+  slogan: "Literally more than a dictionary."
+  testflight: ""
+
+  description:
+    "Are you learning a new language, studying for your next big exam, or preparing for that important interview?
+    Huh? is about improving yourself and your vocabulary. Show your knowledge to your friends, family, and the world.
+    Right from your device."
+
+  privacy:
+    "Huh? does not collect personally identifiable data. You allow or disallow the app from
+    accessing your device's IDFA to get personal advertisements within the app interface.
+    Advertisements are not the only revenue source; you can buy in-app purchases within the app."
+
+  highlights:
+    - "Find new words and definitions with 50 unique dictionaries."
+    - "Enhance your vocabulary with one of seven languages."
+
+  features_large:
+    - body:
+        "Dynamic font and user interface. Great VoiceOver experience. Vibrant and contrasting colors.
+        Accessibility is an essential part of Huh?. So there's no one excluded, everyone included."
+      headline: "No small talk."
+      name: "Accessibility"
+
+  features_medium:
+    - body: "The <strong>horizontal spinning wheel</strong> lets you choose the dictionary you want for the definition you need."
+      name: "Horizontal spinning wheel"
+    - body: "The <strong>history</strong> is here when you want to revisit a previously searched term."
+      name: "History"
+    - body: "The <strong>language indicator</strong> always prominently displays the currently selected language."
+      name: "Language indicator"
+  
+  features_small:
+    - body: "Choose between the light and the dark side."
+      name: "Dark mode"
+    - body: "Access your history by long-pressing the app icon."
+      name: "Quick actions"
+    - body: "Jump straight into the app with the legacy widget."
+      name: "Today extension"

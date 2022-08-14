@@ -1,0 +1,17 @@
+- name: "Xcode"
+  symbol: "xcode"
+
+- name: "Git & GitHub"
+  symbol: "git"
+
+- name: "VS Code"
+  symbol: "vs-code"
+
+- name: "Creative Cloud"
+  symbol: "creative-cloud"
+
+- name: "Firebase & Admob"
+  symbol: "firebase"
+
+- name: "Notion"
+  symbol: "Notion"

@@ -26,6 +26,7 @@ section.features-large header {
 section.features-medium > div {
 	column-gap: var(--padding-m);
 	grid-template-columns: repeat(3, 1fr);
+	row-gap: var(--padding-l);
 }
 
 section.features-medium > div div {
@@ -49,7 +50,7 @@ section.features-medium figure img {
 section.features-small > div {
 	column-gap: var(--padding-m);
 	grid-template-columns: repeat(3, 1fr);
-	row-gap: var(--padding-m);
+	row-gap: var(--padding-l);
 	text-align: center;
 }
 

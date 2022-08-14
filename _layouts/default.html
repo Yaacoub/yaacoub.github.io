@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+
+{% if page.secret_message != nil %}<!-- - 🎥 {{ page.secret_message }} -->{% endif %}
+
+{% include head.html %}
+
+<body>
+
+
+
+	<!-- Firefox FOUC Bug -->
+
+	<script>0</script>
+
+
+
+	{% include nav.html %}
+
+
+
+	<!-- Main -->
+
+	<main>
+{{ content }}
+	</main>
+
+
+
+	{% include footer.html %}
+
+</body>
+
+</html>

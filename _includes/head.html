@@ -1,0 +1,93 @@
+{%- assign page_app = page.app | default:  -%}
+{%- assign app = site.data.apps | where: "name", page_app | first -%}
+{%- assign theme_color_dark = "#141414" -%}
+{%- assign theme_color_light = "#fafefd" -%}
+
+<head>
+
+	<!-- Charset -->
+
+	<meta charset="utf-8">
+
+
+
+	<!-- Google Analytics -->
+
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-9VK8ESHQ7F"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag("js", new Date());
+		gtag("config", "G-9VK8ESHQ7F");
+	</script>
+
+
+
+	<!-- Favicon -->
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/-assets/favicons/apple-touch-icon.png?v=2021.1">
+	<link rel="icon" type="image/png" sizes="16x16" href="/-assets/favicons/favicon-16x16.png?v=2021.1">
+	<link rel="icon" type="image/png" sizes="32x32" href="/-assets/favicons/favicon-32x32.png?v=2021.1">
+	<link rel="manifest" href="/-assets/favicons/site.webmanifest?v=2021.1">
+	<link rel="mask-icon" href="/-assets/favicons/safari-pinned-tab.svg?v=2021.1" color="{{ theme_color_dark }}">
+	<link rel="shortcut icon" href="/-assets/favicons/favicon.ico?v=2021.1">
+
+
+
+	<!-- Metadata -->
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-title" content="{{ site.title }}">
+	<meta name="application-name" content="{{ site.title }}">
+	<meta name="msapplication-config" content="/-assets/favicons/browserconfig.xml?v=2021.1">
+	<meta name="msapplication-TileColor" content="{{ theme_color_light }}">
+	<meta name="theme-color" content="{{ theme_color_dark }}">
+	<meta name="viewport" content="width = device-width, initial-scale = 1, user-scalable = yes">
+	<meta property="article:author" content="{{ site.url_portfolio }}">
+
+
+
+	<!-- Page Specific -->
+
+	<meta name="apple-itunes-app" content="app-id={{ app.id }}, app-argument={{ app.argument }}">
+	<meta name="description" content="{{ page.description }}">
+	<title>{{ page.title | escape }}{% if page.title != site.title %} - {{ site.title | escape }}{%- endif -%}</title>
+
+
+
+	<!-- Page Specific (Open Graph) -->
+
+	<meta property="article:published_time" content="{{ page.date | date: '%Y-%m-%d' }}">
+	<meta property="article:section" content="{{ page.categories | last | replace: '-', ' ' | capitalize }}">
+	<meta property="og:description" content="{{ page.description }}">
+	<meta property="og:image" content="{{ site.url }}/-assets/images/{{ page.image }}">
+	<meta property="og:site_name" content="{{ site.title }}">
+	<meta property="og:title" content="{{ page.title }}">
+	<meta property="og:type" content="{{ layout.type }}">
+	<meta property="profile:first_name" content="{{ site.name.first }}">
+	<meta property="profile:last_name" content="{{ site.name.last }}">
+
+
+
+	<!-- Page Specific (Twitter) -->
+
+	<meta property="twitter:app:id:ipad" content="{{ app.id }}">
+	<meta property="twitter:app:name:ipad" content="{{ app.name }}">
+	<meta property="twitter:app:url:ipad" content="{{ app.argument }}">
+	<meta property="twitter:app:id:iphone" content="{{ app.id }}">
+	<meta property="twitter:app:name:iphone" content="{{ app.name }}">
+	<meta property="twitter:app:url:iphone" content="{{ app.argument }}">
+	<meta property="twitter:card" content="{%- if app.id != nil -%}app{%- else -%}summary_large_image{%- endif -%}">
+	<meta property="twitter:creator" content="@{{ site.social_links.twitter }}">
+	<meta property="twitter:site" content="@{{ site.social_links.twitter }}">
+
+
+
+	<!-- Stylesheets & Scripts -->
+
+	<link rel="stylesheet" href="/-stylesheets/-global.css">
+	{% if layout.stylesheet != nil %}<link rel="stylesheet" href="/-stylesheets/{{ layout.stylesheet }}.css">{% endif %}
+	<script defer="" src="/-scripts/-global.js"></script>
+
+</head>

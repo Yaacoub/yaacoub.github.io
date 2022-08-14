@@ -1,25 +1,16 @@
 /* Article */
 
-article figure.hero {
-	align-items: center;
-}
-
-article figure.hero figcaption {
-	width: min(100vw - var(--padding-l), var(--content-width-article));
-}
-
 article header .style-subheading-1 {
 	margin-bottom: calc(var(--padding-m) - var(--padding-s));
 }
 
-article .body figure img {
+article .body p img {
 	border-radius: var(--border-radius);
 }
 
 article .social {
 	column-gap: var(--padding-s);
-	display: none;
-	/* display: grid; */
+	display: grid;
 	grid-auto-columns: 0fr;
 	grid-auto-flow: column;
 }

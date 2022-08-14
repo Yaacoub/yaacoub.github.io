@@ -1,0 +1,59 @@
+---
+layout: "default"
+nav_theme: "blurred"
+stylesheet: "article"
+type: "article"
+---
+
+		<section>
+			<article>
+				<header>
+					<p class="style-detail-1">{{ page.categories | last | replace: "-", " " | capitalize }}</p>
+					<p class="style-detail-1"><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date_to_long_string }}</time></p>
+					<h1>{{ page.title }}</h1>
+					<div class="social">
+						{%- capture social-email -%}mailto:?subject={{ page.title }}&body={{ page.url | absolute_url }}{%- endcapture -%}
+						{%- capture social-facebook -%}https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url }}{%- endcapture -%}
+						{%- capture social-twitter -%}https://twitter.com/intent/tweet?text={{ page.title }}&url={{ page.url | absolute_url }}{%- endcapture -%}
+						<a class="animation-opacity social-email" href="{{ social-email }}"><figure aria-label="Send email"><img alt="" class="color-adjustable" src="/-assets/symbols/social/email.svg"></figure></a>
+						<a class="animation-opacity social-facebook" href="{{ social-facebook }}"><figure aria-label="Send Facebook post"><img alt="" class="color-adjustable" src="/-assets/symbols/social/facebook.svg"></figure></a>
+						<a class="animation-opacity social-twitter" href="{{ social-twitter }}"><figure aria-label="Send tweet"><img alt="" class="color-adjustable" src="/-assets/symbols/social/twitter.svg"></figure></a>
+					</div>
+				</header>
+				{%- capture path -%}/-assets/images/articles/{{ page.categories | last }}/{{ page.title | slugify }}/hero.webp{%- endcapture -%}
+				{%- assign file = site.static_files | where: "path", path | first -%}
+				{%- if file != nil %}
+				<figure aria-label="Header image" class="hero wide">
+					<picture>
+						<source srcset="/-assets/images/articles/{{ page.categories | last }}/{{ page.title | slugify }}/hero.webp" type="image/webp">
+						<img alt="" src="/-assets/images/articles/{{ page.categories | last }}/{{ page.title | slugify }}/hero.png">
+					</picture>
+				</figure>
+				{%- endif %}
+					<div class="body">
+{{ page.content }}
+				</div>
+				<div class="social">
+					{%- capture social-email -%}mailto:?subject={{ page.title }}&body={{ page.url | absolute_url }}{%- endcapture -%}
+					{%- capture social-facebook -%}https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url }}{%- endcapture -%}
+					{%- capture social-twitter -%}https://twitter.com/intent/tweet?text={{ page.title }}&url={{ page.url | absolute_url }}{%- endcapture -%}
+					<a class="animation-opacity social-email" href="{{ social-email }}"><figure aria-label="Send email"><img alt="" class="color-adjustable" src="/-assets/symbols/social/email.svg"></figure></a>
+					<a class="animation-opacity social-facebook" href="{{ social-facebook }}"><figure aria-label="Send Facebook post"><img alt="" class="color-adjustable" src="/-assets/symbols/social/facebook.svg"></figure></a>
+					<a class="animation-opacity social-twitter" href="{{ social-twitter }}"><figure aria-label="Send tweet"><img alt="" class="color-adjustable" src="/-assets/symbols/social/twitter.svg"></figure></a>
+				</div>
+			</article>
+		</section>
+		{%- if page.has_repo %}
+		<section class="notice">
+			<div>
+				<figure aria-label="Code symbol"><img alt="" class="color-adjustable" src="/-assets/symbols/code.svg"></figure>
+				<div>
+					<h3>Code files and snippets</h3>
+					<a aria-label="View all code files and snippets for this article" class="link-with-symbol style-link-1" href="https://github.com/Yaacoub-Organisation/{{ page.title | slugify }}.git">
+						<span>View</span>
+						<img alt="" src="/-assets/symbols/arrow-top-right.svg">
+					</a>
+				</div>
+			</div>
+		</section>
+		{%- endif %}

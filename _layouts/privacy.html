@@ -12,7 +12,7 @@ type: "website"
 				{%- if site.data.apps != nil %}
 				<div class="app-tiles">
 					{%- for app in site.data.apps %}
-					<a class="animation-underline item plain" href="{{ app.name | slugify }}/">
+					<a class="animation-underline item plain" href="{{ app.name | slugify }}">
 						<figure aria-label="App icon">
 							<picture>
 								<source srcset="/-assets/images/apps/{{ app.name | slugify }}/icon.webp" type="image/webp">

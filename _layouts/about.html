@@ -67,7 +67,7 @@ type: "profile"
 				<div class="symbols">
 				{%- for language in site.data.computer_languages %}
 					<div class="item">
-						<figure aria-label="{{ language.symbol }} logo"><img alt="" class="color-adjustable" src="/-assets/symbols/computer-languages/{{ language.symbol }}.svg"></figure>
+						<figure aria-label="{{ language.symbol }} logo"><img alt="" class="color-adjustable" src="/-assets/symbols/computer-languages/{{ language.symbol | slugify }}.svg"></figure>
 						<h3>{{ language.name }}</h3>
 					</div>
 				{%- endfor %}
@@ -83,7 +83,7 @@ type: "profile"
 				<div class="symbols">
 				{%- for language in site.data.development_tools %}
 					<div class="item">
-						<figure aria-label="{{ language.symbol }} logo"><img alt="" class="color-adjustable" src="/-assets/symbols/development-tools/{{ language.symbol }}.svg"></figure>
+						<figure aria-label="{{ language.symbol }} logo"><img alt="" class="color-adjustable" src="/-assets/symbols/development-tools/{{ language.symbol | slugify }}.svg"></figure>
 						<h3>{{ language.name }}</h3>
 					</div>
 				{%- endfor %}

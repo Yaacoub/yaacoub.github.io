@@ -24,7 +24,7 @@ defaults:
 lang: "en"
 permalink: /:categories/:title
 title: "Yaacoub"
-url: "https://yaacoub.github.io/"
+url: "https://yaacoub.github.io"
 url_portfolio: "https://yaacoub.github.io/about/"
 
 name:

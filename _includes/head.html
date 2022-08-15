@@ -58,7 +58,7 @@
 
 	<!-- Page Specific (Open Graph) -->
 
-	{%- capture image -%}-assets/images/{{ page.image }}{% endcapture %}
+	{%- capture image -%}/-assets/images/{{ page.image }}{% endcapture %}
 	<meta property="article:published_time" content="{{ page.date | date: '%Y-%m-%d' }}">
 	<meta property="article:section" content="{{ page.categories | last | replace: '-', ' ' | capitalize }}">
 	<meta property="og:description" content="{{ page.description }}">

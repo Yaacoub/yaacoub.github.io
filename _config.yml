@@ -1,5 +1,6 @@
 # Build Settings
 
+future: false
 highlighter: rouge
 markdown: kramdown
 plugins:

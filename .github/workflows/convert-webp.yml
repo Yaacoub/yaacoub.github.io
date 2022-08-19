@@ -19,6 +19,6 @@ jobs:
         run: |
           git config --global user.name "Yaacoub"
           git config --global user.email "yaapete.dev@gmail.com"
-          git add *.webp
+          git add -A
           git commit -m "⚙️ Auto-generate WebP images"
           git push

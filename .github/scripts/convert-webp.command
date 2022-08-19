@@ -9,4 +9,4 @@ for image in $images
 do "./-executables/cwebp" "$image" -metadata all -o "${image%.png}.webp"
 done
 
-ls -R *
+ls -R -- *

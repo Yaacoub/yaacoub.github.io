@@ -12,16 +12,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-          ref: ${{ github.event.pull_request.head.ref }}
       - name: Run script
         run: "./.github/scripts/convert-webp.command"
         shell: bash
       - name: Commit
         run: |
-          git config --global user.name "Yaacoub"
-          git config --global user.email "yaapete.dev@gmail.com"
+          git config user.name "Yaacoub"
+          git config user.email "yaapete.dev@gmail.com"
           git add -A
           git commit -m "⚙️ Auto-generate WebP images"
       - name: Push

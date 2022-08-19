@@ -1,9 +1,10 @@
 #!/bin/bash
 
-parent_path=$(dirname "${BASH_SOURCE[0]}")
+cd "$(dirname "${BASH_SOURCE[0]}")"
+cd ../../
 
-cd $parent_path/../../-assets/images
+images=$(find "./-assets/images" -name "*.png")
 
-for file in $(find . -name "*.png")
-do "$parent_path/../../-executables/cwebp" "$file" -metadata all -o "${file%.png}.webp"
+for image in $images
+do "./-executables/cwebp" "$image" -metadata all -o "${image%.png}.webp"
 done

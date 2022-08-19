@@ -17,4 +17,5 @@ _site/
 # Ignore others
 
 *.sketch
+*.webp
 .DS_Store

@@ -7,6 +7,7 @@ on:
 jobs:
 
   convert:
+    runs-on: ubuntu-latest
     steps:
       - name: Run script
         run: ./.github/scripts/convert-webp.command

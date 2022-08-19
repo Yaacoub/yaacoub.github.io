@@ -61,7 +61,7 @@ GEM
     thread_safe (0.3.6)
     tzinfo (1.2.10)
       thread_safe (~> 0.1)
-    tzinfo-data (1.2022.2)
+    tzinfo-data (1.2022.3)
       tzinfo (>= 1.0.0)
     wdm (0.1.1)
     webrick (1.7.0)

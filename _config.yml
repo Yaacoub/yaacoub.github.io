@@ -42,6 +42,7 @@ paths_footer:
     - "apps/huh/index.md"
   -
     - "articles/index.md"
+    - "articles/loud-letters/index.md"
     - "articles/story/index.md"
     - "articles/swift-tip/index.md"
 

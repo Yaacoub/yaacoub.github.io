@@ -225,7 +225,7 @@ article .body {
 	row-gap: var(--padding-m);
 }
 
-article .body a, article .body p {
+article .body a, article .body p, article .body ul {
 	font-family: var(--font-nunito-sans);
 	font-size: 1.5rem;
 }

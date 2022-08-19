@@ -1,0 +1,13 @@
+name: Convert PNG images to WebP
+
+on:
+  push
+  workflow_dispatch:
+
+jobs:
+
+  convert:
+    steps:
+      - name: Run script
+        run: ./.github/scripts/convert-webp.command
+        shell: bash

@@ -10,14 +10,16 @@ jobs:
   convert:
     runs-on: macos-12
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
       - name: Run script
         run: "./.github/scripts/convert-webp.command"
         shell: bash
       - name: Commit
         run: |
-          git config user.name "Yaacoub"
-          git config user.email "yaapete.dev@gmail.com"
-          git add -A
+          git config --global user.name "Yaacoub"
+          git config --global user.email "yaapete.dev@gmail.com"
+          git add -f .
           git commit -m "⚙️ Auto-generate WebP images"
       - name: Push
         run: |

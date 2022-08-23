@@ -225,9 +225,26 @@ article .body {
 	row-gap: var(--padding-m);
 }
 
-article .body a, article .body p, article .body ul {
+article .body a, article .body p, article .body ol, article .body ul {
 	font-family: var(--font-nunito-sans);
 	font-size: 1.5rem;
+}
+
+blockquote p {
+	color: var(--color-element-label-secondary);
+	border-color: var(--color-element-separator);
+	border-left-style: solid;
+	border-width: var(--padding-xxs);
+	font-family: var(--font-libre-baskerville) !important;
+	padding: var(--padding-xs) var(--padding-s);
+}
+
+blockquote p::after {
+	content: "”";
+}
+
+blockquote p::before {
+	content: "“";
 }
 
 body {
@@ -311,11 +328,16 @@ img {
 	pointer-events: none;
 }
 
+iframe.youtube {
+	aspect-ratio: 560 / 315;
+	width: 100%;
+}
+
 main {
 	animation: fadein calc(var(--transition-time) * 2);
 }
 
-p code {
+p code, ol code, ul code {
 	padding: var(--padding-xxs) var(--padding-xs) var(--padding-xxs) var(--padding-xs);
 }
 
@@ -383,7 +405,7 @@ footer .directory {
 
 footer .directory div {
 	display: grid;
-	grid-template-rows: repeat(4, 1fr);
+	grid-template-rows: repeat(4, 2rem);
 	row-gap: var(--padding-xs);
 }
 
@@ -581,7 +603,7 @@ section.list .grid a header {
 	row-gap: var(--padding-xs);
 }
 
-section.list .grid a header .style-title-1 {
+section a header .style-title-1 {
 	-webkit-box-orient: vertical;
 	display: -webkit-box;
 	-webkit-line-clamp: 2;
@@ -793,16 +815,6 @@ section.tiles .item-small-complex header {
 	font-size: 0.75rem;
 	font-weight: bold;
 	text-transform: uppercase;
-}
-
-.style-quote {
-	border-color: var(--color-element-separator);
-	border-left-style: solid;
-	border-width: var(--padding-xxs);
-	font-family: var(--font-libre-baskerville);
-	font-size: 2rem;
-	margin: var(--padding-s) 0 var(--padding-s) 0;
-	padding-left: var(--padding-m);
 }
 
 .style-subheading-1 {

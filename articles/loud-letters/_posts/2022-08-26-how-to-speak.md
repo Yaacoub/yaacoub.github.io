@@ -1,5 +1,5 @@
 ---
-image: "/articles/loud-letters/how-to-speak/hero.png"
+image: "articles/loud-letters/how-to-speak/hero.png"
 layout: "article"
 title: "How To Speak"
 ---

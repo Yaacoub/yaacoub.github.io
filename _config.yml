@@ -23,7 +23,7 @@ defaults:
 # Site Settings
 
 lang: "en"
-permalink: /:categories/:title
+permalink: /:categories/:title/
 title: "Yaacoub"
 url: "https://yaacoub.github.io"
 url_portfolio: "https://yaacoub.github.io/about/"

@@ -93,3 +93,14 @@
         and four of them were from the Middle East [including] Peter Yaacoub from Lebanon."
       title: "Mideast's rising stars of coding honoured by Apple"
       url: "https://alkhaleejtoday.co/technology/5007374/Mideasts-rising-stars-of-coding-honoured-by-Apple.html"
+
+- other:
+  name: "Other"
+  mentions:
+    -
+      author: "Antoine van der Lee"
+      date: 2023-01-03
+      excerpt:
+        "Peter Yaacoub demonstrates a new change coming up in Swift 5.8. Another opportunity for us to remove self in our code!"
+      title: "SwiftLee Weekly - Issue 148"
+      url: "https://www.avanderlee.com/swiftlee-weekly/issues/148/"

@@ -1,3 +1,20 @@
+/* Section Form */
+
+section.form {
+	text-align: center;
+}
+
+section.form h1, section.form p.style-subheading-1 {
+	margin-bottom: var(--padding-m);
+}
+
+section.form iframe {
+	border-style: none;
+	height: var(--media-height-xs);
+	width: 100%;
+}
+
+
 /* Section Hero */
 
 section.hero {

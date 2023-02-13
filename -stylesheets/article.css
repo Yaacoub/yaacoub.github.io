@@ -8,6 +8,15 @@ article .body p img {
 	border-radius: var(--border-radius);
 }
 
+article .form {
+	border-color: var(--color-element-separator);
+	border-radius: var(--border-radius);
+	border-style: solid;
+	border-width: 1px;
+	height: calc(var(--media-height-m) / 2);
+	width: 100%;
+}
+
 article .social {
 	column-gap: var(--padding-s);
 	display: grid;

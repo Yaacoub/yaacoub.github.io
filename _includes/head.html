@@ -1,4 +1,5 @@
 {%- assign page_app = page.app | default:  -%}
+{%- assign page_url_last = page.url | slice: -1 -%}
 {%- assign app = site.data.apps | where: "name", page_app | first -%}
 {%- assign theme_color_dark = "#141414" -%}
 {%- assign theme_color_light = "#fafefd" -%}
@@ -9,6 +10,12 @@
 	<!-- Charset -->
 
 	<meta charset="utf-8">
+
+
+
+	<!-- Google AdSense -->
+
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5375363978468645" crossorigin="anonymous"></script>
 
 
 
@@ -53,6 +60,7 @@
 
 	<meta name="apple-itunes-app" content="app-id={{ app.id }}, app-argument={{ app.argument }}">
 	<meta name="description" content="{{ page.description }}">
+	<link rel="canonical" href="{{ site.url }}{{ page.url }}{% if page_url_last != '/' %}/{%- endif -%}">
 	<title>{{ page.title | escape }}{% if page.title != site.title %} - {{ site.title | escape }}{%- endif -%}</title>
 
 

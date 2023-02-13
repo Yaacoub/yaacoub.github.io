@@ -5,6 +5,10 @@ stylesheet: "article"
 type: "article"
 ---
 
+{%- assign seperator = "<h2" -%}
+{%- assign content = page.content | split: seperator -%}
+{%- assign form = '<iframe class="form" src="https://yaacoub.substack.com/embed"></iframe>' -%}
+
 		<section>
 			<article>
 				<header>
@@ -30,8 +34,17 @@ type: "article"
 					</picture>
 				</figure>
 				{%- endif %}
-					<div class="body">
-{{ page.content }}
+				<div class="body">
+{%- for element in content -%}
+{% if forloop.index0 == 1 %}
+{{ element }}
+{{ form }}
+{{ seperator }}
+{% else %}
+{{ element }}
+{{ seperator }}
+{% endif %}
+{% endfor %}
 				</div>
 				<div class="social">
 					{%- capture social-email -%}mailto:?subject={{ page.title }}&body={{ page.url | absolute_url }}{%- endcapture -%}

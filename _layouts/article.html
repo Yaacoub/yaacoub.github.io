@@ -38,7 +38,9 @@ type: "article"
 {%- for element in content -%}
 {% if forloop.index0 == 1 %}
 {{ element }}
+{% if page.categories.last != "privacy" %}
 {{ form }}
+{% endif %}
 {{ seperator }}
 {% else %}
 {{ element }}

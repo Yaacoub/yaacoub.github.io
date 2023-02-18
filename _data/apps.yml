@@ -3,7 +3,7 @@
   argument: ""
   description_short: "Listen to carols, discover events and, most importantly, have a merry Christmas with Christmas Guide!"
   id: "1546178842"
-  is_new: false
+  is_new: true
   name: "Christmas Guide"
   platforms: ["iOS", "iPadOS", "macOS"]
   slogan: "Made in the North Pole."
@@ -50,7 +50,7 @@
   argument: "huh://"
   description_short: "Browse through all your favourite dictionaries to improve your communication skills and grades."
   id: "1330097506"
-  is_new: false
+  is_new: true
   name: "Huh?"
   platforms: ["iOS", "iPadOS", "macOS"]
   slogan: "Literally more than a dictionary."

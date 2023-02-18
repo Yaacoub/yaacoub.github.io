@@ -17,4 +17,3 @@ RUN apk add --no-cache build-base gcc cmake git
 RUN gem update --system
 RUN gem update bundler
 RUN gem install bundler jekyll
-RUN gem bundle install

@@ -500,6 +500,10 @@ section.app-hero header {
 	width: 80%;
 }
 
+section.app-hero figure img {
+	object-fit: contain;
+}
+
 section.app-hero figure.icon {
 	border-radius: 25%;
 	height: var(--app-icon-size-m);

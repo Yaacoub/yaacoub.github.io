@@ -7,7 +7,8 @@ type: "article"
 
 {%- assign seperator = "<h2" -%}
 {%- assign content = page.content | split: seperator -%}
-{%- assign form = '<iframe class="form" src="https://yaacoub.substack.com/embed"></iframe>' -%}
+{%- assign ad = '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5375363978468645" crossorigin="anonymous"></script><ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-5375363978468645" data-ad-slot="3280205501"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>' -%}
+{%- assign form = '<iframe class="form unselectable" src="https://yaacoub.substack.com/embed"></iframe>' -%}
 
 		<section>
 			<article>
@@ -40,6 +41,12 @@ type: "article"
 {{ element }}
 {% if page.categories.last != "privacy" %}
 {{ form }}
+{% endif %}
+{{ seperator }}
+{% elsif forloop.last %}
+{{ element }}
+{% if page.categories.last != "privacy" %}
+{{ ad }}
 {% endif %}
 {{ seperator }}
 {% else %}

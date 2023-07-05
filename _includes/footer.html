@@ -1,8 +1,8 @@
 <!-- Footer -->
 
 	<footer>
-		<div>
-			<div class="directory unselectable">
+		<div class="unselectable">
+			<div class="directory">
 				{%- for paths in site.paths_footer %}
 				<div>
 					{% assign page = site.pages | where: "path", paths.first | first -%}
@@ -26,8 +26,8 @@
 				<hr>
 				<div>
 					<p class="style-footer-1">Copyright © {{ site.time | date: "%Y" }} Peter Yaacoub. All rights reserved.</p>
-					<span class="unselectable"><a class="style-navigation-link-4" href="/feed.xml">Feed</a></span>
-					<span class="unselectable"><a class="style-navigation-link-4" href="/privacy/">Privacy</a></span>
+					<span><a class="style-navigation-link-4" href="/feed.xml">Feed</a></span>
+					<span><a class="style-navigation-link-4" href="/privacy/">Privacy</a></span>
 				</div>
 			</div>
 		</div>

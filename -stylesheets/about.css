@@ -10,7 +10,7 @@
 
 section.awards > div {
 	column-gap: var(--padding-m);
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
 	row-gap: var(--padding-m);
 	text-align: center;
 }
@@ -21,14 +21,14 @@ section.awards figure {
 }
 
 section.awards h2 {
-	grid-column: span 3;
+	grid-column: span 4;
 }
 
 section.awards .award {
-	background-color: var(--color-element-background-secondary);
 	display: grid;
+	height: max-content;
 	justify-items: center;
-	padding: var(--padding-m);
+	padding: var(--padding-s);
 	row-gap: var(--padding-s);
 	text-align: center;
 }
@@ -44,10 +44,6 @@ section.awards figure img {
 section.bio > div {
 	text-align: center;
 	row-gap: var(--padding-s);
-}
-
-section.bio h2 {
-	margin-bottom: calc(var(--padding-xl) - var(--padding-s));
 }
 
 section.bio .symbols {
@@ -123,12 +119,17 @@ section.hero header {
 
 	section.awards > div {
 		grid-auto-rows: 0fr;
-		grid-template-columns: 1fr;
+		grid-template-columns: 1fr 1fr;
+		row-gap: var(--padding-m);
 		text-align: center;
 	}
 
 	section.awards h2 {
-		grid-column: initial;
+		grid-column: span 2;
+	}
+
+	section.awards .award {
+		padding: 0;
 	}
 
 	section.hero {
@@ -138,10 +139,6 @@ section.hero header {
 }
 
 @media only screen and (max-width: 700px) {
-
-	section.awards .award {
-		padding: var(--padding-m);
-	}
 
 	section.bio .symbols {
 		grid-template-columns: 1fr;

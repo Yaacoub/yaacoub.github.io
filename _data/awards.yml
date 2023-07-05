@@ -1,11 +1,15 @@
-- name: "WWDC22 Swift Student Challenge"
+- name: "WWDC23<br>Swift Student Challenge"
   result: "Winner"
   symbol: "apple"
 
-- name: "WWDC21 Swift Student Challenge"
+- name: "WWDC22<br>Swift Student Challenge"
   result: "Winner"
   symbol: "apple"
 
-- name: "WWDC20 Swift Student Challenge"
+- name: "WWDC21<br>Swift Student Challenge"
+  result: "Winner"
+  symbol: "apple"
+
+- name: "WWDC20<br>Swift Student Challenge"
   result: "Winner"
   symbol: "apple"

@@ -74,12 +74,16 @@ section.features-small h1 {
 
 /* Section Highlights */
 
-section.app-huh.highlights hr {
-	border-color: var(--color-app-huh);
-}
-
 section.app-christmas-guide.highlights hr {
 	border-color: var(--color-app-christmas-guide);
+}
+
+section.app-huh-dictionary.highlights hr {
+	border-color: var(--color-app-huh-dictionary);
+}
+
+section.app-modulart-studio.highlights hr {
+	border-color: var(--color-app-modulart-studio);
 }
 
 section.highlights > div {

@@ -3,7 +3,7 @@
   argument: ""
   description_short: "Listen to carols, discover events and, most importantly, have a merry Christmas with Christmas Guide!"
   id: "1546178842"
-  is_new: true
+  is_new: false
   name: "Christmas Guide"
   platforms: ["iOS", "iPadOS", "macOS"]
   slogan: "Made in the North Pole."
@@ -47,24 +47,23 @@
 
 - huh:
 
-  argument: "huh://"
+  argument: ""
   description_short: "Browse through all your favourite dictionaries to improve your communication skills and grades."
   id: "1330097506"
-  is_new: true
-  name: "Huh?"
+  is_new: false
+  name: "Huh? Dictionary"
   platforms: ["iOS", "iPadOS", "macOS"]
   slogan: "Literally more than a dictionary."
   testflight: ""
 
   description:
     "Are you learning a new language, studying for your next big exam, or preparing for that important interview?
-    Huh? is about improving yourself and your vocabulary. Show your knowledge to your friends, family, and the world.
+    Huh? Dictionary is about improving yourself and your vocabulary. Show your knowledge to your friends, family, and the world.
     Right from your device."
 
   privacy:
-    "Huh? does not collect personally identifiable data. You allow or disallow the app from
-    accessing your device's IDFA to get personal advertisements within the app interface.
-    Advertisements are not the only revenue source; you can buy in-app purchases within the app."
+    "Huh? Dictionary does not collect personally identifiable data.
+    The development and maintenance of the app only depend on the in-app purchases you choose to pay."
 
   highlights:
     - "Find new words and definitions with 50 unique dictionaries."
@@ -84,11 +83,27 @@
       name: "History"
     - body: "The <strong>language indicator</strong> always prominently displays the currently selected language."
       name: "Language indicator"
-  
-  features_small:
-    - body: "Choose between the light and the dark side."
-      name: "Dark mode"
-    - body: "Access your history by long-pressing the app icon."
-      name: "Quick actions"
-    - body: "Jump straight into the app with the legacy widget."
-      name: "Today extension"
+
+- modulart_studio:
+
+  argument: ""
+  description_short: "Ignite creativity, create and personalize math-inspired shapes with Modulart Studio."
+  id: "6451383807"
+  is_new: true
+  name: "Modulart Studio"
+  platforms: ["iOS", "iPadOS", "macOS"]
+  slogan: "Art and math crossing paths."
+  testflight: ""
+
+  description:
+    "Are you ready to explore the captivating world of modular arithmetic while unleashing your inner artist?
+    Modulart Studio offers a playful solution that combines the beauty of math with limitless creativity.
+    Immerse yourself in mesmerizing circles and intricate paths, and witness the magic of art powered by math."
+
+  privacy:
+    "Modulart Studio does not collect any images or personally identifiable data.
+    The development and maintenance of the app only depend on the in-app purchases you choose to pay."
+
+  highlights:
+    - "Control math with 10+ customization options."
+    - "Create 20,000+ shapes with the power of arithmetic."

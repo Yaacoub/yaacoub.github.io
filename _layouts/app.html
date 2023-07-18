@@ -15,15 +15,22 @@ type: "website"
 				</figure>
 				<header>
 					<h1>{{ app.name }}</h1>
-					<h1>{{ app.slogan }}</h1>
+					<h2>{{ app.slogan }}</h2>
 					<a class="animation-underline" href="https://apps.apple.com/app/id{{ app.id }}/"><figure aria-label="App link to the Apple App Store"><img alt="" class="color-adjustable" src="/-assets/symbols/app-store/download-black.svg"></figure></a>
 				</header>
+				{% assign appName = app.name | slugify %}
+				{% assign pathPNG = "/-assets/images/apps/" | append: appName | append: "/hero.png" %}
+				{% assign pathWEBP = "/-assets/images/apps/" | append: appName | append: "/hero.webp" %}
+				{% assign png = site.static_files | where: "path", pathPNG %}
+				{% assign webp = site.static_files | where: "path", pathWEBP %}
+				{% if png.size != 0 or webp.size != 0 %}
 				<figure aria-label="App screenshots" class="screenshots">
 					<picture>
-						<source srcset="/-assets/images/apps/{{ app.name | slugify }}/hero.webp" type="image/webp">
-						<img alt="" src="/-assets/images/apps/{{ app.name | slugify }}/hero.png">
+						<source srcset="{{ pathWEBP }}" type="image/webp">
+						<img alt="" src="{{ pathPNG }}">
 					</picture>
 				</figure>
+				{% endif %}
 			</div>
 		</section>
 		<section class="app-{{ app.name | slugify }} highlights">
@@ -37,6 +44,7 @@ type: "website"
 				<p class="style-subheading-1">{{ app.description }}</p>
 			</div>
 		</section>
+		{% if app.features_large.size > 0 %}
 		<section class="features-large">
 			{%- for feature in app.features_large %}
 			<div>
@@ -53,6 +61,8 @@ type: "website"
 			</div>
 			{%- endfor %}
 		</section>
+		{% endif %}
+		{% if app.features_medium.size > 0 %}
 		<section class="features-medium">
 			<div>
 				{%- for feature in app.features_medium %}
@@ -68,6 +78,7 @@ type: "website"
 				{%- endfor %}
 			</div>
 		</section>
+		{% endif %}
 		<section class="important">
 			<div>
 				<figure aria-label="Padlock symbol"><img alt="" class="color-adjustable" src="/-assets/symbols/padlock.svg"></figure>
@@ -79,6 +90,7 @@ type: "website"
 				</a>
 			</div>
 		</section>
+		{% if app.features_small.size > 0 %}
 		<section class="features-small">
 			<div>
 				<h1>Minor features. Sharp experience.</h1>
@@ -91,6 +103,7 @@ type: "website"
 				{%- endfor %}
 			</div>
 		</section>
+		{% endif %}
 		<section class="notice">
 			<div>
 				<figure aria-label="Camera symbol"><img alt="" class="color-adjustable" src="/-assets/symbols/camera.svg"></figure>

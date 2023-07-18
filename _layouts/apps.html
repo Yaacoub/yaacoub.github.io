@@ -40,12 +40,19 @@ type: "website"
 						<img alt="" src="/-assets/symbols/chevron-right.svg">
 					</a>
 				</header>
+				{% assign appName = app.name | slugify %}
+				{% assign pathPNG = "/-assets/images/apps/" | append: appName | append: "/hero.png" %}
+				{% assign pathWEBP = "/-assets/images/apps/" | append: appName | append: "/hero.webp" %}
+				{% assign png = site.static_files | where: "path", pathPNG %}
+				{% assign webp = site.static_files | where: "path", pathWEBP %}
+				{% if png.size != 0 or webp.size != 0 %}
 				<figure aria-label="App screenshots" class="screenshots">
 					<picture>
 						<source srcset="/-assets/images/apps/{{ app.name | slugify }}/hero.webp" type="image/webp">
 						<img alt="" src="/-assets/images/apps/{{ app.name | slugify }}/hero.png">
 					</picture>
 				</figure>
+				{% endif %}
 			</div>
 		</section>
 		{%- endfor %}

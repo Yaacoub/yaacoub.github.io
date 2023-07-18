@@ -39,7 +39,8 @@ paths_footer:
   -
     - "apps/index.md"
     - "apps/christmas-guide/index.md"
-    - "apps/huh/index.md"
+    - "apps/huh-dictionary/index.md"
+    - "apps/modulart-studio/index.md"
   -
     - "articles/index.md"
     - "articles/loud-letters/index.md"

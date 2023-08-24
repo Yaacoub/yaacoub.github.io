@@ -20,7 +20,7 @@ jobs:
           git config --global user.name "Yaacoub"
           git config --global user.email "yaapete.dev@gmail.com"
           git add -f .
-          git diff-index --quiet HEAD || git commit -m "⚙️ Auto-generate WebP images"
+          git diff-index --quiet HEAD || git commit -m "Auto-generate WebP images"
       - name: Push
         run: |
           git push

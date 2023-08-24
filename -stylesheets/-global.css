@@ -237,15 +237,11 @@ blockquote p {
 	border-left-style: solid;
 	border-width: var(--padding-xxs);
 	font-family: var(--font-libre-baskerville) !important;
+	font-size: 2rem !important;
+	font-weight: bold;
+	font-style: italic;
+	letter-spacing: -1px;
 	padding: var(--padding-xs) var(--padding-s);
-}
-
-blockquote p::after {
-	content: "”";
-}
-
-blockquote p::before {
-	content: "“";
 }
 
 body {

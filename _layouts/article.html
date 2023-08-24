@@ -41,11 +41,6 @@ type: "article"
 {{ element }}
 {% if page.categories.last != "privacy" %}
 {{ form }}
-{% endif %}
-{{ seperator }}
-{% elsif forloop.last %}
-{{ element }}
-{% if page.categories.last != "privacy" %}
 {{ ad }}
 {% endif %}
 {{ seperator }}

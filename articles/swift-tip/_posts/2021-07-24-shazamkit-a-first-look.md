@@ -1,4 +1,5 @@
 ---
+author: "Peter Yaacoub"
 has_repo: true
 image: "articles/swift-tip/shazamkit-a-first-look/hero.png"
 layout: "article"

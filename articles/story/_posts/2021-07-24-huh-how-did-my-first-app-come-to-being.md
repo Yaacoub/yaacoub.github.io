@@ -1,4 +1,5 @@
 ---
+author: "Peter Yaacoub"
 image: "articles/story/huh-how-did-my-first-app-come-to-being/hero.png"
 layout: "article"
 title: "Huh? How did my first app come to being?"

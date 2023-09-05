@@ -1,4 +1,5 @@
 ---
+author: "Peter Yaacoub"
 image: "articles/swift-tip/what-s-new-in-appkit-wwdc-2022/hero.png"
 layout: "article"
 title: "What's new in AppKit - WWDC 2022"

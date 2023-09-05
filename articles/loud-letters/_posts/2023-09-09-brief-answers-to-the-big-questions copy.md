@@ -1,4 +1,5 @@
 ---
+author: "Peter Yaacoub"
 image: "articles/loud-letters/brief-answers-to-the-big-questions/hero.png"
 layout: "article"
 title: "Brief Answers to the Big Questions"

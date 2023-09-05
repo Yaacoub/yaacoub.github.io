@@ -1,4 +1,5 @@
 ---
+author: "Peter Yaacoub"
 has_repo: true
 image: "articles/swift-tip/hello-swift-charts-wwdc-2022/hero.png"
 layout: "article"

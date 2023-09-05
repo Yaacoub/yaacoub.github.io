@@ -1,4 +1,5 @@
 ---
+author: "Peter Yaacoub"
 has_repo: true
 image: "articles/swift/animate-uicollectionviewcell-highlight/hero.png"
 layout: "article"

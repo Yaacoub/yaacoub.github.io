@@ -1,4 +1,5 @@
 ---
+author: "Peter Yaacoub"
 image: "articles/swift-tip/meet-desktop-class-ipad-wwdc-2022/hero.png"
 layout: "article"
 title: "Meet desktop-class iPad - WWDC 2022"

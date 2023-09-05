@@ -1,4 +1,5 @@
 ---
+author: "Peter Yaacoub"
 image: "articles/loud-letters/factfulness/hero.png"
 layout: "article"
 title: "Factfulness"

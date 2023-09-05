@@ -1,4 +1,5 @@
 ---
+author: "Peter Yaacoub"
 has_repo: true
 image: "articles/swift-tip/blur-uiviewcontroller-background/hero.png"
 layout: "article"

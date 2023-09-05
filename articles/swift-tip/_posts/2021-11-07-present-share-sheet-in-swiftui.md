@@ -1,4 +1,5 @@
 ---
+author: "Peter Yaacoub"
 has_repo: true
 image: "articles/swift-tip/present-share-sheet-in-swiftui/hero.png"
 layout: "article"

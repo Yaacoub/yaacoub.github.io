@@ -8,7 +8,6 @@ type: "article"
 {%- assign seperator = "<h2" -%}
 {%- assign content = page.content | split: seperator -%}
 {%- assign ad = '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5375363978468645" crossorigin="anonymous"></script><ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-5375363978468645" data-ad-slot="3280205501"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>' -%}
-{%- assign form = '<iframe class="form unselectable" src="https://yaacoub.substack.com/embed"></iframe>' -%}
 
 		<section>
 			<article>
@@ -27,19 +26,20 @@ type: "article"
 						<a class="animation-opacity social-twitter" href="{{ social-twitter }}"><figure aria-label="Send tweet"><img alt="" class="color-adjustable" src="/-assets/symbols/social/twitter.svg"></figure></a>
 					</div>
 				</header>
+				{% if page.categories.last != "privacy" %}
 				<figure aria-label="Header image" class="hero wide">
 					<picture>
 						<source srcset="/-assets/images/articles/{{ page.categories | last | slugify }}/{{ page.title | slugify }}/hero.webp" type="image/webp">
 						<img alt="" src="/-assets/images/articles/{{ page.categories | last | slugify }}/{{ page.title | slugify }}/hero.png">
 					</picture>
 				</figure>
+				{% endif %}
 				<div class="body">
 {%- for element in content -%}
 {% if forloop.index0 == 1 %}
 {{ element }}
 {% if page.categories.last != "privacy" %}
-{{ form }}
-<!-- {{ ad }} -->
+{{ ad }}
 {% endif %}
 {{ seperator }}
 {% else %}

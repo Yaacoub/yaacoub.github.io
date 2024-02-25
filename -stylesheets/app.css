@@ -70,22 +70,6 @@ section.features-small h1 {
 	margin-bottom: calc(var(--padding-xl) - var(--padding-m));
 }
 
-
-
-/* Section Highlights */
-
-section.app-christmas-guide.highlights hr {
-	border-color: var(--color-app-christmas-guide);
-}
-
-section.app-huh-dictionary.highlights hr {
-	border-color: var(--color-app-huh-dictionary);
-}
-
-section.app-modulart-studio.highlights hr {
-	border-color: var(--color-app-modulart-studio);
-}
-
 section.highlights > div {
 	column-gap: var(--padding-m);
 	grid-template-columns: repeat(2, 1fr);

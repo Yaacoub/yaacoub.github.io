@@ -1,11 +1,13 @@
 - christmas_guide:
 
   argument: ""
+  color: "#50C878"
   description_short: "Listen to carols, discover events and, most importantly, have a merry Christmas with Christmas Guide!"
   id: "1546178842"
   is_new: false
   name: "Christmas Guide"
   platforms: ["iOS", "iPadOS", "macOS"]
+  press_kit: "https://drive.google.com/drive/folders/1RwYyxsqImuhxgnvtGNIjT3VweoSctLz3"
   slogan: "Made in the North Pole."
   testflight: ""
 
@@ -38,21 +40,18 @@
       name: "Character"
 
   features_small:
-    - body: "Pick your favorite app icon and show it off."
-      name: "Alternate icons"
-    - body: "Choose between the light and the dark side, or both!"
-      name: "Dark mode"
-    - body: "Let machine learning match you to a Christmas character."
-      name: "Face detection"
+    
 
 - huh:
 
   argument: ""
+  color: "#9B111E"
   description_short: "Browse through all your favourite dictionaries to improve your communication skills and grades."
   id: "1330097506"
   is_new: false
   name: "Huh? Dictionary"
   platforms: ["iOS", "iPadOS", "macOS"]
+  press_kit: "https://drive.google.com/drive/folders/1hVsg_ZWnLKTxw2a1U08ahdYdE_mMBsP4"
   slogan: "Literally more than a dictionary."
   testflight: ""
 
@@ -67,7 +66,7 @@
 
   highlights:
     - "Find new words and definitions with 50 unique dictionaries."
-    - "Enhance your vocabulary with one of seven languages."
+    - "Enhance your vocabulary with seven languages."
 
   features_large:
     - body:
@@ -77,22 +76,22 @@
       name: "Accessibility"
 
   features_medium:
-    - body: "The <strong>horizontal spinning wheel</strong> lets you choose the dictionary you want for the definition you need."
-      name: "Horizontal spinning wheel"
-    - body: "The <strong>history</strong> is here when you want to revisit a previously searched term."
-      name: "History"
-    - body: "The <strong>language indicator</strong> always prominently displays the currently selected language."
-      name: "Language indicator"
+    
+
+  features_small:
+    
 
 - modulart_studio:
 
   argument: ""
+  color: "#66023C"
   description_short: "Ignite creativity, create and personalize math-inspired shapes with Modulart Studio."
   id: "6451383807"
   is_new: true
   name: "Modulart Studio"
   platforms: ["iOS", "iPadOS", "macOS"]
-  slogan: "Art and math crossing paths."
+  press_kit: "https://drive.google.com/drive/folders/1CMijv-6YyvlN4A0Kcb8mDqj5XDZmqGo-"
+  slogan: "Arts and maths crossing paths."
   testflight: ""
 
   description:
@@ -107,3 +106,12 @@
   highlights:
     - "Control math with 10+ customization options."
     - "Create 20,000+ shapes with the power of arithmetic."
+
+  features_large:
+    
+  
+  features_medium:
+    
+  
+  features_small:
+    

@@ -33,11 +33,11 @@ type: "website"
 				{% endif %}
 			</div>
 		</section>
-		<section class="app-{{ app.name | slugify }} highlights">
+		<section class="highlights">
 			<div>
 				{%- for highlight in app.highlights %}
 				<div>
-					<hr>
+					<hr style="border-color: {{ app.color }};">
 					<h2>{{ highlight }}</h2>
 				</div>
 				{%- endfor %}
@@ -109,9 +109,9 @@ type: "website"
 				<figure aria-label="Camera symbol"><img alt="" class="color-adjustable" src="/-assets/symbols/camera.svg"></figure>
 				<div>
 					<h3>Images and screenshots</h3>
-					<a aria-label="Download all images and screenshots for {{ app.name }}" class="link-with-symbol style-link-1" href="/-assets/press-kits/{{ app.name | slugify }}-press-kit.zip">
-						<span>Download</span>
-						<img alt="" src="/-assets/symbols/download.svg">
+					<a aria-label="Download all images and screenshots for {{ app.name }}" class="link-with-symbol style-link-1" href="{{ app.press_kit }}">
+						<span>Press Kit</span>
+						<img alt="" src="/-assets/symbols/arrow-top-right.svg">
 					</a>
 				</div>
 			</div>

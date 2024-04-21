@@ -47,7 +47,7 @@ section.bio > div {
 }
 
 section.bio .symbols {
-	column-gap: var(--padding-l);
+	column-gap: var(--padding-xl);
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	padding-top: var(--padding-s);

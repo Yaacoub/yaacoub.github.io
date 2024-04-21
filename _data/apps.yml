@@ -2,13 +2,13 @@
 
   argument: ""
   color: "#50C878"
-  description_short: "From Christmas carols to cherished holidays, save time and focus on what truly matters—spending it with your loved ones."
+  description_short: "Listen to carols, discover events and, most importantly, have a merry Christmas with Christmas Guide!"
   id: "1546178842"
   is_new: false
   name: "Christmas Guide"
   platforms: ["iOS", "iPadOS", "macOS"]
   press_kit: "https://drive.google.com/drive/folders/1RwYyxsqImuhxgnvtGNIjT3VweoSctLz3"
-  slogan: "Stop searching and start finding everything Christmas-related right here!"
+  slogan: "Made in the North Pole."
   testflight: ""
 
   description:
@@ -17,8 +17,8 @@
     making you wonder if it didn't directly come from Santa's factory."
 
   privacy:
-    "Christmas Guide does not collect images or personally identifiable data.
-    The development and maintenance only depend on the in-app purchases you choose to pay."
+    "Christmas Guide does not collect any images or personally identifiable data.
+    The development and maintenance of the app only depend on the in-app purchases you choose to pay."
 
   highlights:
     - "Enjoy over 30 famous traditional Christmas carols."
@@ -46,13 +46,13 @@
 
   argument: ""
   color: "#9B111E"
-  description_short: "Search for a word's definition using any dictionary you prefer, so you can learn more and waste less time."
+  description_short: "Browse through all your favourite dictionaries to improve your communication skills and grades."
   id: "1330097506"
   is_new: false
   name: "Huh? Dictionary"
   platforms: ["iOS", "iPadOS", "macOS"]
   press_kit: "https://drive.google.com/drive/folders/1hVsg_ZWnLKTxw2a1U08ahdYdE_mMBsP4"
-  slogan: "Literally, more than a dictionary."
+  slogan: "Literally more than a dictionary."
   testflight: ""
 
   description:
@@ -61,8 +61,8 @@
     Right from your device."
 
   privacy:
-    "Huh? Dictionary does not collect images or personally identifiable data.
-    The development and maintenance only depend on the in-app purchases you choose to pay."
+    "Huh? Dictionary does not collect personally identifiable data.
+    The development and maintenance of the app only depend on the in-app purchases you choose to pay."
 
   highlights:
     - "Find new words and definitions with 50 unique dictionaries."
@@ -85,27 +85,23 @@
 
   argument: ""
   color: "#66023C"
-  description_short: "Modular arithmetic crafted to enhance your designs or stand out on its own, allowing you to impress others."
+  description_short: "Ignite creativity, create and personalize math-inspired shapes with Modulart Studio."
   id: "6451383807"
-  is_new: false
+  is_new: true
   name: "Modulart Studio"
   platforms: ["iOS", "iPadOS", "macOS"]
   press_kit: "https://drive.google.com/drive/folders/1CMijv-6YyvlN4A0Kcb8mDqj5XDZmqGo-"
-  slogan: "Create beautiful art that captivates both the math teacher and their students."
+  slogan: "Arts and maths crossing paths."
   testflight: ""
 
   description:
-    "Unlock the profound relationship between math and art with Modulart Studio.
-    Immerse yourself in the world of modular arithmetic through visually stunning circles and intricate patterns,
-    transforming math into an exhilarating adventure for visual learners and those who may not typically enjoy numbers.
-    <br><br>
-    Modulart Studio offers a sophisticated and engaging approach to learning and exploring modular arithmetic.
-    It's not just an educational tool—it's a creative sanctuary where your imagination knows no bounds.
-    Like an artist's studio, harness the power of math to create awe-inspiring designs and unlock endless possibilities."
+    "Are you ready to explore the captivating world of modular arithmetic while unleashing your inner artist?
+    Modulart Studio offers a playful solution that combines the beauty of math with limitless creativity.
+    Immerse yourself in mesmerizing circles and intricate paths, and witness the magic of art powered by math."
 
   privacy:
-    "Modulart Studio does not collect images or personally identifiable data.
-    The development and maintenance only depend on the in-app purchases you choose to pay."
+    "Modulart Studio does not collect any images or personally identifiable data.
+    The development and maintenance of the app only depend on the in-app purchases you choose to pay."
 
   highlights:
     - "Control math with 10+ customization options."

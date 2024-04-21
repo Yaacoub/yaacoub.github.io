@@ -7,26 +7,23 @@ type: "article"
 
 {%- assign seperator = "<h2" -%}
 {%- assign content = page.content | split: seperator -%}
-{%- assign ad1 = '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6933910775315856"crossorigin="anonymous"></script><ins class="adsbygoogle"style="display:block; text-align:center;"data-ad-layout="in-article"data-ad-format="fluid"data-ad-client="ca-pub-6933910775315856"data-ad-slot="9684866716"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>' -%}
-{%- assign ad2 = '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6933910775315856"crossorigin="anonymous"></script><ins class="adsbygoogle"style="display:block; text-align:center;"data-ad-layout="in-article"data-ad-format="fluid"data-ad-client="ca-pub-6933910775315856"data-ad-slot="4405621895"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>' -%}
+{%- assign ad = '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2906240455657854" crossorigin="anonymous"></script><ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-2906240455657854" data-ad-slot="9446024804"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>' -%}
 
 		<section>
 			<article>
 				<header>
-					<h1>{{ page.title }}</h1>
-					{% if page.author %}
-					<p class="style-detail-1">{{ page.author }} • <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date_to_long_string }}</time></p>
-					{% else %}
+					<p class="style-detail-1">{{ page.categories | last | replace: "-", " " | capitalize }}</p>
 					<p class="style-detail-1"><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date_to_long_string }}</time></p>
-					{% endif %}
+					<h1>{{ page.title }}</h1>
+					<p class="style-detail-1">{{ page.author }}</p>
 					<hr>
 					<div class="social">
 						{%- capture social-email -%}mailto:?subject={{ page.title }}&body={{ page.url | absolute_url }}{%- endcapture -%}
 						{%- capture social-facebook -%}https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url }}{%- endcapture -%}
-						{%- capture social-x -%}https://x.com/intent/tweet?text={{ page.title }}&url={{ page.url | absolute_url }}{%- endcapture -%}
-						<a class="animation-opacity social-email" href="{{ social-email }}" target=”_blank”><figure aria-label="Send email"><img alt="" class="color-adjustable" src="/-assets/symbols/social/email.svg"></figure></a>
-						<a class="animation-opacity social-facebook" href="{{ social-facebook }}" target=”_blank”><figure aria-label="Send Facebook post"><img alt="" class="color-adjustable" src="/-assets/symbols/social/facebook.svg"></figure></a>
-						<a class="animation-opacity social-x" href="{{ social-x }}" target=”_blank”><figure aria-label="Send tweet"><img alt="" class="color-adjustable" src="/-assets/symbols/social/x.svg"></figure></a>
+						{%- capture social-twitter -%}https://twitter.com/intent/tweet?text={{ page.title }}&url={{ page.url | absolute_url }}{%- endcapture -%}
+						<a class="animation-opacity social-email" href="{{ social-email }}"><figure aria-label="Send email"><img alt="" class="color-adjustable" src="/-assets/symbols/social/email.svg"></figure></a>
+						<a class="animation-opacity social-facebook" href="{{ social-facebook }}"><figure aria-label="Send Facebook post"><img alt="" class="color-adjustable" src="/-assets/symbols/social/facebook.svg"></figure></a>
+						<a class="animation-opacity social-twitter" href="{{ social-twitter }}"><figure aria-label="Send tweet"><img alt="" class="color-adjustable" src="/-assets/symbols/social/twitter.svg"></figure></a>
 					</div>
 				</header>
 				{% if page.categories.last != "privacy" %}
@@ -39,35 +36,25 @@ type: "article"
 				{% endif %}
 				<div class="body">
 {%- for element in content -%}
-
 {% if forloop.index0 == 1 %}
 {{ element }}
 {% if page.categories.last != "privacy" %}
-{{ ad1 }}
+{{ ad }}
 {% endif %}
 {{ seperator }}
-
-{% elsif forloop.last == true %}
-{{ element }}
-{% if page.categories.last != "privacy" %}
-{{ ad2 }}
-{% endif %}
-{{ seperator }}
-
 {% else %}
 {{ element }}
 {{ seperator }}
 {% endif %}
-
 {% endfor %}
 				</div>
 				<div class="social">
 					{%- capture social-email -%}mailto:?subject={{ page.title }}&body={{ page.url | absolute_url }}{%- endcapture -%}
 					{%- capture social-facebook -%}https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url }}{%- endcapture -%}
-					{%- capture social-x -%}https://x.com/intent/tweet?text={{ page.title }}&url={{ page.url | absolute_url }}{%- endcapture -%}
+					{%- capture social-twitter -%}https://twitter.com/intent/tweet?text={{ page.title }}&url={{ page.url | absolute_url }}{%- endcapture -%}
 					<a class="animation-opacity social-email" href="{{ social-email }}"><figure aria-label="Send email"><img alt="" class="color-adjustable" src="/-assets/symbols/social/email.svg"></figure></a>
 					<a class="animation-opacity social-facebook" href="{{ social-facebook }}"><figure aria-label="Send Facebook post"><img alt="" class="color-adjustable" src="/-assets/symbols/social/facebook.svg"></figure></a>
-					<a class="animation-opacity social-x" href="{{ social-x }}"><figure aria-label="Send tweet"><img alt="" class="color-adjustable" src="/-assets/symbols/social/x.svg"></figure></a>
+					<a class="animation-opacity social-twitter" href="{{ social-twitter }}"><figure aria-label="Send tweet"><img alt="" class="color-adjustable" src="/-assets/symbols/social/twitter.svg"></figure></a>
 				</div>
 			</article>
 		</section>

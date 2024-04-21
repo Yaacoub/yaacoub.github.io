@@ -1,17 +1,17 @@
-- name: "Docker"
-  symbol: "docker"
+- name: "Xcode"
+  symbol: "xcode"
 
-- name: "Git"
+- name: "Git & GitHub"
   symbol: "git"
-
-- name: "GitHub"
-  symbol: "github"
-
-- name: "Google Analytics"
-  symbol: "google-analytics"
 
 - name: "VS Code"
   symbol: "vs-code"
 
-- name: "Xcode"
-  symbol: "xcode"
+- name: "Creative Cloud"
+  symbol: "creative-cloud"
+
+- name: "Firebase & Admob"
+  symbol: "firebase"
+
+- name: "Notion"
+  symbol: "notion"

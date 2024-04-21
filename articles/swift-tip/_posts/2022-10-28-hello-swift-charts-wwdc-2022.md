@@ -12,6 +12,8 @@ Swift Charts is Apple's newest Swift framework for building beautiful charts wit
 
 Swift Charts is built with accessibility in mind to describe charts for visually impaired users. Besides, you can effortlessly use them with animations, localization, and on all Apple platforms.
 
+<iframe allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" class="youtube" frameborder="0" src="https://www.youtube-nocookie.com/embed/meswwcr1R0E" title="YouTube video player"></iframe>
+
 ## Bar Chart
 
 ```swift

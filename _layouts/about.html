@@ -32,16 +32,11 @@ type: "profile"
 			</div>
 		</section>
 		{%- endif -%}
-		<section class="bio">
-			<div>
-				<h2>Description</h2>
-				<p class="style-subheading-1">{{ site.data.copy_about.description }}</p>
-			</div>
-		</section>
 		{% if site.data.apps != nil %}
 		<section class="bio">
 			<div>
 				<h2>Apps</h2>
+				<p class="style-subheading-1">{{ site.data.copy_about.description_apps }}</p>
 				<div class="app-tiles">
 					{%- for app in site.data.apps %}
 					<a class="animation-underline item plain" href="/apps/{{ app.name | slugify }}">
@@ -58,14 +53,21 @@ type: "profile"
 			</div>
 		</section>
 		{%- endif %}
+		<section class="bio">
+			<div>
+				<h2>Description</h2>
+				<p class="style-subheading-1">{{ site.data.copy_about.description }}</p>
+			</div>
+		</section>
 		{% if site.data.computer_languages != nil -%}
 		<section class="bio">
 			<div>
 				<h2>Computer Languages</h2>
+				<p class="style-subheading-1">{{ site.data.copy_about.description_computer_languages }}</p>
 				<div class="symbols">
 				{%- for language in site.data.computer_languages %}
 					<div class="item">
-						<figure aria-label="{{ language.symbol }} logo"><img alt="" src="/-assets/symbols/computer-languages/{{ language.symbol | slugify }}.svg"></figure>
+						<figure aria-label="{{ language.symbol }} logo"><img alt="" class="color-adjustable" src="/-assets/symbols/computer-languages/{{ language.symbol | slugify }}.svg"></figure>
 						<h3>{{ language.name }}</h3>
 					</div>
 				{%- endfor %}
@@ -77,26 +79,12 @@ type: "profile"
 		<section class="bio">
 			<div>
 				<h2>Development Tools</h2>
+				<p class="style-subheading-1">{{ site.data.copy_about.description_development_tools }}</p>
 				<div class="symbols">
-				{%- for item in site.data.development_tools %}
+				{%- for language in site.data.development_tools %}
 					<div class="item">
-						<figure aria-label="{{ item.symbol }} logo"><img alt="" src="/-assets/symbols/development-tools/{{ item.symbol | slugify }}.svg"></figure>
-						<h3>{{ item.name }}</h3>
-					</div>
-				{%- endfor %}
-				</div>
-			</div>
-		</section>
-		{%- endif %}
-		{% if site.data.productivity_tools != nil %}
-		<section class="bio">
-			<div>
-				<h2>Productivity Tools</h2>
-				<div class="symbols">
-				{%- for item in site.data.productivity_tools %}
-					<div class="item">
-						<figure aria-label="{{ item.symbol }} logo"><img alt="" src="/-assets/symbols/productivity-tools/{{ item.symbol | slugify }}.svg"></figure>
-						<h3>{{ item.name }}</h3>
+						<figure aria-label="{{ language.symbol }} logo"><img alt="" class="color-adjustable" src="/-assets/symbols/development-tools/{{ language.symbol | slugify }}.svg"></figure>
+						<h3>{{ language.name }}</h3>
 					</div>
 				{%- endfor %}
 				</div>
@@ -106,6 +94,7 @@ type: "profile"
 		<section class="bio" id="contact">
 			<div>
 				<h2>Contact</h2>
+				<p class="style-subheading-1">{{ site.data.copy_about.description_contact }}</p>
 				<div class="symbols">
 					<a class="item plain" href="mailto:{{ site.social_links.email }}">
 						<figure aria-label="Email logo"><img alt="" class="color-adjustable" src="/-assets/symbols/social/email-large.svg"></figure>
@@ -115,9 +104,9 @@ type: "profile"
 						<figure aria-label="GitHub logo"><img alt="" class="color-adjustable" src="/-assets/symbols/social/github-large.svg"></figure>
 						<h3>Github</h3>
 					</a>
-					<a class="item plain" href="https://x.com/{{ site.social_links.x }}/">
-						<figure aria-label="X logo"><img alt="" class="color-adjustable" src="/-assets/symbols/social/x-large.svg"></figure>
-						<h3>X</h3>
+					<a class="item plain" href="https://twitter.com/{{ site.social_links.twitter }}/">
+						<figure aria-label="Twitter logo"><img alt="" class="color-adjustable" src="/-assets/symbols/social/twitter-large.svg"></figure>
+						<h3>Twitter</h3>
 					</a>
 				</div>
 			</div>

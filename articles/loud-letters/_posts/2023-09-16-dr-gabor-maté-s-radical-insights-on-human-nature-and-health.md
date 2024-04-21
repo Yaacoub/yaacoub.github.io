@@ -75,4 +75,4 @@ What I like about this man's philosophy is his belief that the mind and the body
 
 At the beginning of this article, I wrote that I didn't regret spending more than an hour on his talk. Indeed, it's a fascinating dive into a stranger's philosophy of the world, particularly his vision of society misaligning with our human needs and his conviction that illnesses stem from those misalignments. In conclusion, I highly suggest thinking back on what he says with both a critical and an open mind, and if you have the time, watch his full talk:
 
-<iframe allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" class="youtube" frameborder="0" src="https://www.youtube-nocookie.com/embed/X0cODqqYyi8?si=gS92oSeSsKjmDojR" title="YouTube video player"></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/X0cODqqYyi8?si=gS92oSeSsKjmDojR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

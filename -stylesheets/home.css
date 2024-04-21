@@ -1,29 +1,7 @@
-/* Cursor */
-
-#cursor {
-	animation-direction: normal;
-	animation-duration: 30s;
-	animation-iteration-count: infinite;
-	animation-name: cursor;
-	animation-timing-function: ease-in-out;
-	background-color: #ff0000;
-	border-radius: 50%;
-	display: inline-block;
-	height: 1000px;
-	opacity: 0%;
-	overflow: visible;
-	position: fixed;
-	transition: opacity 0.5s ease-in-out;
-	width: 1000px;
-	z-index: -1000;
-}
-
-
-
 /* Section Hero */
 
 section.hero {
-	min-height: calc(100dvh - var(--nav-height) - 2 * var(--padding-l));
+	min-height: calc(100dvh - var(--nav-height) - 2 * var(--padding-xl));
 }
 
 section.hero > div {
@@ -35,15 +13,10 @@ section.hero figure img {
 	align-self: center;
 	min-height: initial;
 	min-width: initial;
-	width: calc(100%);
+	width: calc(100% - var(--padding-m));
 }
 
 section.hero h1 {
-	animation-direction: alternate-reverse;
-	animation-duration: 10s;
-	animation-iteration-count: infinite;
-	animation-name: gradient;
-	animation-timing-function: ease-in-out;
 	background-clip: text;
 	-webkit-background-clip: text;
 	background-image: linear-gradient(
@@ -55,7 +28,6 @@ section.hero h1 {
 		var(--color-system-purple),
 		var(--color-system-blue)
 	);
-	background-size: 200% 200%;
 	color: transparent;
 	font-size: 8rem;
 	line-height: 100px;
@@ -63,9 +35,7 @@ section.hero h1 {
 }
 
 section.hero header {
-	align-self: center;
 	display: grid;
-	grid-template-rows: repeat(3, min-content);
 	row-gap: var(--padding-s);
 }
 
@@ -89,38 +59,6 @@ section.list .grid {
 
 
 /* Media Queries */
-
-@media(prefers-reduced-motion: no-preference) {
-
-	body:hover #cursor:not(.no-js) {
-		opacity: 10%;
-	}
-
-	@keyframes cursor {
-
-		0% {
-			filter: blur(200px) hue-rotate(0deg);
-		}
-	
-		100% {
-			filter: blur(200px) hue-rotate(360deg);
-		}
-	
-	}
-	
-	@keyframes gradient {
-	
-		0% {
-			background-position: 0% 0%;
-		}
-	
-		100% {
-			background-position: 100% 100%;
-		}
-	
-	}
-
-}
 
 @media only screen and (max-width: 1000px) {
 

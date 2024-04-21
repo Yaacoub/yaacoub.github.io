@@ -7,21 +7,17 @@ type: "website"
 		<section class="app-hero">
 			{%- assign app = site.data.apps | where: "name", page.app | first %}
 			<div>
-				<div>
-					<figure aria-label="App icon" class="icon">
-						<picture>
-							<source srcset="/-assets/images/apps/{{ app.name | slugify }}/icon.webp" type="image/webp">
-							<img alt="" src="/-assets/images/apps/{{ app.name | slugify }}/icon.png">
-						</picture>
-					</figure>
-					<header>
-						<h1>{{ app.name }}</h1>
-						<h2>{{ app.slogan }}</h2>
-						<p class="style-subheading-1">{{ app.description_short }}</p>
-						{%- if app.testflight != "" %}<a class="animation-underline" href="{{ app.testflight }}"><figure aria-label="App link to Testflight"><img alt="" src="/-assets/symbols/testflight/download-black.svg"></figure></a>{%- endif %}
-						<a class="animation-underline" href="https://apps.apple.com/app/id{{ app.id }}/"><figure aria-label="App link to the Apple App Store"><img alt="" src="/-assets/symbols/app-store/download-black.svg"></figure></a>
-					</header>
-				</div>
+				<figure aria-label="App icon" class="icon">
+					<picture>
+						<source srcset="/-assets/images/apps/{{ app.name | slugify }}/icon.webp" type="image/webp">
+						<img alt="" src="/-assets/images/apps/{{ app.name | slugify }}/icon.png">
+					</picture>
+				</figure>
+				<header>
+					<h1>{{ app.name }}</h1>
+					<h2>{{ app.slogan }}</h2>
+					<a class="animation-underline" href="https://apps.apple.com/app/id{{ app.id }}/"><figure aria-label="App link to the Apple App Store"><img alt="" class="color-adjustable" src="/-assets/symbols/app-store/download-black.svg"></figure></a>
+				</header>
 				{% assign appName = app.name | slugify %}
 				{% assign pathPNG = "/-assets/images/apps/" | append: appName | append: "/hero.png" %}
 				{% assign pathWEBP = "/-assets/images/apps/" | append: appName | append: "/hero.webp" %}

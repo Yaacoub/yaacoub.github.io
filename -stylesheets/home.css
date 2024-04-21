@@ -1,7 +1,7 @@
 /* Section Hero */
 
 section.hero {
-	min-height: calc(100vh - var(--nav-height) - 2 * var(--padding-xl));
+	min-height: calc(100dvh - var(--nav-height) - 2 * var(--padding-xl));
 }
 
 section.hero > div {
@@ -49,7 +49,7 @@ section.list {
 }
 
 section.list > div {
-	width: min(100vw - var(--padding-l), var(--content-width-normal) / 2 - var(--padding-l));
+	width: min(100dvw - var(--padding-l), var(--content-width-normal) / 2 - var(--padding-l));
 }
 
 section.list .grid {
@@ -83,7 +83,7 @@ section.list .grid {
 	}
 
 	section.hero {
-		min-height: calc(100vh - var(--nav-height) - 2 * var(--padding-l));
+		min-height: calc(100dvh - var(--nav-height) - 2 * var(--padding-l));
 	}
 
 	section.hero > div {

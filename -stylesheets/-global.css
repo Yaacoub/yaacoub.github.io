@@ -245,7 +245,7 @@ body {
 	font-family: var(--font-montserrat);
 	flex-direction: column;
 	justify-content: space-between;
-	min-height: 100vh;
+	min-height: 100dvh;
 }
 
 code {
@@ -348,17 +348,17 @@ section {
 }
 
 section > article > *:not(.wide) {
-	width: min(100vw - var(--padding-l), var(--content-width-article));
+	width: min(100dvw - var(--padding-l), var(--content-width-article));
 }
 
 section > article > .wide {
-	width: min(100vw, var(--content-width-normal));
+	width: min(100dvw, var(--content-width-normal));
 }
 
 section > div {
 	display: grid;
 	height: auto;
-	width: min(100vw - var(--padding-l), var(--content-width-normal));
+	width: min(100dvw - var(--padding-l), var(--content-width-normal));
 }
 
 section > div h1 {
@@ -380,7 +380,7 @@ footer {
 }
 
 footer > div {
-	width: min(100vw - var(--padding-l), var(--content-width-normal));
+	width: min(100dvw - var(--padding-l), var(--content-width-normal));
 }
 
 footer hr {
@@ -443,7 +443,7 @@ nav > div {
 	display: grid;
 	grid-template-columns: 100fr repeat(3, 0fr) 100fr;
 	justify-content: center;
-	width: min(100vw - var(--padding-l), var(--content-width-normal));
+	width: min(100dvw - var(--padding-l), var(--content-width-normal));
 }
 
 nav div.logo {
@@ -816,6 +816,13 @@ section.tiles .item-small-complex header {
 	text-transform: uppercase;
 }
 
+.style-notice-2 {
+	color: var(--color-system-yellow);
+	font-size: 1.5rem;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
 .style-subheading-1 {
 	font-size: 2rem;
 }
@@ -946,11 +953,11 @@ what are you even doing? */
 
 	p code {
 		display: inline-block;
-		max-width: min(100vw - var(--padding-xl), var(--content-width-article));
+		max-width: min(100dvw - var(--padding-xl), var(--content-width-article));
 	}
 
 	section > div {
-		width: min(100vw - var(--padding-m), var(--content-width-normal));
+		width: min(100dvw - var(--padding-m), var(--content-width-normal));
 	}
 
 	section.app-hero header {
@@ -1085,6 +1092,35 @@ what are you even doing? */
 	}
 
 }
+
+
+
+/* Media Queries (Print) */
+
+@media print {
+
+	div.body {
+		break-after: avoid;
+		break-before: avoid;
+		break-inside: avoid;
+	}
+
+	footer .directory, footer .legal span, nav, section.notice {
+		display: none;
+	}
+	
+	nav {
+		display: none;
+	}
+
+	.highlighter-rouge, .highlighter-rouge * {
+		print-color-adjust: exact;
+		-webkit-print-color-adjust: exact;
+		text-wrap: wrap;
+		word-break: break-all;
+	}
+
+ }
 
 
 

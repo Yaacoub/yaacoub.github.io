@@ -28,3 +28,15 @@ article .social figure {
 	height: var(--symbol-s);
 	width: var(--symbol-s);
 }
+
+@media print {
+	
+	article .social figure {
+		display: none;
+	}
+
+	article .adsbygoogle {
+		display: none !important;
+	}
+
+ }

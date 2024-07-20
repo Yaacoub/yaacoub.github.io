@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="250px" height="250px" viewBox="0 0 250 250" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>sketch</title>
+    <g id="sketch" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="sketch-svgrepo-com" transform="translate(0, 18)">
+            <polygon id="Path" fill="#FDB300" points="54.5453571 7.07866634 125 0 195.454464 7.07866634 249.999107 76.6650972 125 214.998208 0 76.6650972"></polygon>
+            <path d="M50.630625,76.6659931 L124.999107,215 L0,76.6659931 L50.630625,76.6659931 Z M199.369643,76.6659931 L125.000893,215 L250,76.6659931" id="Shape" fill="#EA6C00" fill-rule="nonzero"></path>
+            <polyline id="Path" fill="#FDAD00" points="50.6330357 76.6659931 199.369643 76.6659931 125.001786 215"></polyline>
+            <path d="M125.001786,0 L54.5471429,7.07741218 L50.6330357,76.6642014 L125.001786,0 Z M125.002679,0 L195.457143,7.07741218 L199.371429,76.6642014" id="Shape" fill="#FDD231" fill-rule="nonzero"></path>
+            <path d="M250,76.6642014 L195.455357,7.07741218 L199.369643,76.6642014 L250,76.6642014 Z M0,76.6642014 L54.5447321,7.07741218 L50.630625,76.6642014" id="Shape" fill="#FDAD00" fill-rule="nonzero"></path>
+            <polyline id="Path" fill="#FEEEB7" points="125.001786 0 50.6330357 76.6642014 199.369643 76.6642014"></polyline>
+        </g>
+    </g>
+</svg>

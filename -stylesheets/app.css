@@ -67,7 +67,7 @@ section.features-small figure {
 
 section.features-small h1 {
 	grid-column: span 3;
-	margin-bottom: calc(var(--padding-xl) - var(--padding-m));
+	margin-bottom: calc(var(--padding-l) - var(--padding-m));
 }
 
 section.highlights > div {

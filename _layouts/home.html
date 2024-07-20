@@ -7,6 +7,8 @@ type: "website"
 
 {%- assign posts = site.posts | where_exp: "post", "post.categories contains 'articles'" -%}
 
+		<script defer="" src="/-scripts/home.js"></script>
+		<div class="no-js" id="cursor"></div>
 		<section class="hero">
 			<div>
 				<header>

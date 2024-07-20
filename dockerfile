@@ -1,7 +1,7 @@
 # Ruby
 # https://jekyllrb.com/docs/installation/#requirements
 
-FROM ruby:2.7-alpine
+FROM ruby:3.2.4-alpine
 
 
 

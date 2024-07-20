@@ -12,18 +12,20 @@ type: "article"
 		<section>
 			<article>
 				<header>
-					<p class="style-detail-1">{{ page.categories | last | replace: "-", " " | capitalize }}</p>
-					<p class="style-detail-1"><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date_to_long_string }}</time></p>
 					<h1>{{ page.title }}</h1>
-					<p class="style-detail-1">{{ page.author }}</p>
+					{% if page.author %}
+					<p class="style-detail-1">{{ page.author }} • <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date_to_long_string }}</time></p>
+					{% else %}
+					<p class="style-detail-1"><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date_to_long_string }}</time></p>
+					{% endif %}
 					<hr>
 					<div class="social">
 						{%- capture social-email -%}mailto:?subject={{ page.title }}&body={{ page.url | absolute_url }}{%- endcapture -%}
 						{%- capture social-facebook -%}https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url }}{%- endcapture -%}
-						{%- capture social-twitter -%}https://twitter.com/intent/tweet?text={{ page.title }}&url={{ page.url | absolute_url }}{%- endcapture -%}
-						<a class="animation-opacity social-email" href="{{ social-email }}"><figure aria-label="Send email"><img alt="" class="color-adjustable" src="/-assets/symbols/social/email.svg"></figure></a>
-						<a class="animation-opacity social-facebook" href="{{ social-facebook }}"><figure aria-label="Send Facebook post"><img alt="" class="color-adjustable" src="/-assets/symbols/social/facebook.svg"></figure></a>
-						<a class="animation-opacity social-twitter" href="{{ social-twitter }}"><figure aria-label="Send tweet"><img alt="" class="color-adjustable" src="/-assets/symbols/social/twitter.svg"></figure></a>
+						{%- capture social-x -%}https://x.com/intent/tweet?text={{ page.title }}&url={{ page.url | absolute_url }}{%- endcapture -%}
+						<a class="animation-opacity social-email" href="{{ social-email }}" target=”_blank”><figure aria-label="Send email"><img alt="" class="color-adjustable" src="/-assets/symbols/social/email.svg"></figure></a>
+						<a class="animation-opacity social-facebook" href="{{ social-facebook }}" target=”_blank”><figure aria-label="Send Facebook post"><img alt="" class="color-adjustable" src="/-assets/symbols/social/facebook.svg"></figure></a>
+						<a class="animation-opacity social-x" href="{{ social-x }}" target=”_blank”><figure aria-label="Send tweet"><img alt="" class="color-adjustable" src="/-assets/symbols/social/x.svg"></figure></a>
 					</div>
 				</header>
 				{% if page.categories.last != "privacy" %}
@@ -51,10 +53,10 @@ type: "article"
 				<div class="social">
 					{%- capture social-email -%}mailto:?subject={{ page.title }}&body={{ page.url | absolute_url }}{%- endcapture -%}
 					{%- capture social-facebook -%}https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url }}{%- endcapture -%}
-					{%- capture social-twitter -%}https://twitter.com/intent/tweet?text={{ page.title }}&url={{ page.url | absolute_url }}{%- endcapture -%}
+					{%- capture social-x -%}https://x.com/intent/tweet?text={{ page.title }}&url={{ page.url | absolute_url }}{%- endcapture -%}
 					<a class="animation-opacity social-email" href="{{ social-email }}"><figure aria-label="Send email"><img alt="" class="color-adjustable" src="/-assets/symbols/social/email.svg"></figure></a>
 					<a class="animation-opacity social-facebook" href="{{ social-facebook }}"><figure aria-label="Send Facebook post"><img alt="" class="color-adjustable" src="/-assets/symbols/social/facebook.svg"></figure></a>
-					<a class="animation-opacity social-twitter" href="{{ social-twitter }}"><figure aria-label="Send tweet"><img alt="" class="color-adjustable" src="/-assets/symbols/social/twitter.svg"></figure></a>
+					<a class="animation-opacity social-x" href="{{ social-x }}"><figure aria-label="Send tweet"><img alt="" class="color-adjustable" src="/-assets/symbols/social/x.svg"></figure></a>
 				</div>
 			</article>
 		</section>

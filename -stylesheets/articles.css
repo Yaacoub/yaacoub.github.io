@@ -12,7 +12,7 @@ section.featured-articles > div > div {
 }
 
 section.featured-articles h1 {
-	margin-bottom: var(--padding-xl);
+	margin-bottom: var(--padding-l);
 }
 
 section.featured-articles header {

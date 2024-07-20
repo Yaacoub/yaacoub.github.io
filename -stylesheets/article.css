@@ -1,5 +1,13 @@
 /* Article */
 
+article header h1 {
+	text-align: center;
+}
+
+article header .style-detail-1 {
+	text-align: center;
+}
+
 article header .style-subheading-1 {
 	margin-bottom: calc(var(--padding-m) - var(--padding-s));
 }
@@ -22,6 +30,7 @@ article .social {
 	display: grid;
 	grid-auto-columns: 0fr;
 	grid-auto-flow: column;
+	justify-content: center;
 }
 
 article .social figure {

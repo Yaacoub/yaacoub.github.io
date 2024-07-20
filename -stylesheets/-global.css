@@ -44,10 +44,8 @@
 	--padding-s: 20px;
 	--padding-m: 40px;
 	--padding-l: 80px;
-	--padding-xl: 100px;
 
-	--symbol-xs: 20px;
-	--symbol-s: 25px;
+	--symbol-s: 20px;
 	--symbol-m: 75px;
 	--symbol-l: 100px;
 
@@ -55,7 +53,7 @@
 	--content-width-normal: 1000px;
 	
 	--blur-radius: 25px;
-	--border-radius: 25px;
+	--border-radius: 10px;
 	--grid-item-height: 480px;
 	--hero-image-max-width: 200px;
 	--nav-height: 50px;
@@ -199,7 +197,7 @@ article h1 {
 }
 
 article h2 {
-	margin-top: calc(var(--padding-xl) - var(--padding-m));
+	margin-top: calc(var(--padding-l) - var(--padding-m));
 }
 
 article header {
@@ -219,12 +217,13 @@ article p img {
 
 article .body {
 	display: grid;
-	row-gap: var(--padding-m);
+	row-gap: var(--padding-s);
 }
 
 article .body a, article .body p, article .body ol, article .body ul {
 	font-family: var(--font-nunito-sans);
-	font-size: 1.5rem;
+	font-size: 1.2rem;
+	text-align: justify;
 }
 
 blockquote p {
@@ -343,7 +342,7 @@ section {
 	align-content: center;
 	display: grid;
 	justify-content: center;
-	padding: var(--padding-xl) 0 var(--padding-xl) 0;
+	padding: var(--padding-l) 0 var(--padding-l) 0;
 	row-gap: var(--padding-m);
 }
 
@@ -366,7 +365,7 @@ section > div h1 {
 }
 
 section.error-404 {
-	padding: calc(2 * var(--padding-xl)) 0 calc(2 * var(--padding-xl)) 0;
+	padding: calc(2 * var(--padding-l)) 0 calc(2 * var(--padding-l)) 0;
 }
 
 
@@ -475,24 +474,35 @@ nav.blurred .style-navigation-link-1 {
 /* Section App Hero */
 
 section.app-hero > div {
-	justify-items: center;
+	column-gap: var(--padding-m);
+	grid-template-columns: 1.5fr 1fr;
+}
+
+section.app-hero > div > div {
+	display: grid;
 	row-gap: var(--padding-m);
 }
 
-section.app-hero > div h1 {
-	text-align: center;
+section.app-hero > div > figure {
+	align-self: center;
 }
 
 section.app-hero header {
 	display: grid;
-	justify-items: center;
+	justify-items: left;
 	row-gap: var(--padding-s);
-	text-align: center;
-	width: 80%;
+}
+
+section.app-hero header * {
+	text-align: left;
 }
 
 section.app-hero header a {
 	display: flex;
+}
+
+section.app-hero header h2 {
+	font-size: 2rem;
 }
 
 section.app-hero figure img {
@@ -534,7 +544,7 @@ section.featured-article figure img {
 }
 
 section.featured-article h1 {
-	margin-bottom: var(--padding-xl);
+	margin-bottom: var(--padding-l);
 }
 
 section.featured-article header {
@@ -548,7 +558,7 @@ section.featured-article header {
 /* Section List */
 
 section.list > div {
-	column-gap: var(--padding-xl);
+	column-gap: var(--padding-l);
 	grid-auto-rows: 0fr;
 	grid-template-columns: 1fr;
 	row-gap: var(--padding-m);
@@ -573,7 +583,7 @@ section.list figure {
 }
 
 section.list h1 {
-	margin-bottom: calc(var(--padding-xl) - var(--padding-m));
+	margin-bottom: calc(var(--padding-l) - var(--padding-m));
 }
 
 section.list h2 {
@@ -581,7 +591,7 @@ section.list h2 {
 }
 
 section.list .grid {
-	column-gap: var(--padding-xl);
+	column-gap: var(--padding-l);
 	display: grid;
 	grid-row: 2;
 	grid-template-columns: 1fr 1fr;
@@ -678,7 +688,7 @@ section.tiles figure img {
 
 section.tiles h1 {
 	grid-column: span 2;
-	margin-bottom: calc(var(--padding-xl) - var(--padding-m));
+	margin-bottom: calc(var(--padding-l) - var(--padding-m));
 }
 
 section.tiles .item {
@@ -775,8 +785,6 @@ section.tiles .item-small-complex header {
 
 .style-detail-1 {
 	color: var(--color-sombre-jet-75);
-	font-weight: bold;
-	text-transform: uppercase;
 }
 
 .style-footer-1 {
@@ -787,7 +795,7 @@ section.tiles .item-small-complex header {
 }
 
 .style-link-1 {
-	font-size: 1.5rem;
+	font-size: 1.2rem;
 }
 
 .style-navigation-link-1 {
@@ -818,21 +826,21 @@ section.tiles .item-small-complex header {
 
 .style-notice-2 {
 	color: var(--color-system-yellow);
-	font-size: 1.5rem;
+	font-size: 1.2rem;
 	font-weight: bold;
 	text-transform: uppercase;
 }
 
 .style-subheading-1 {
-	font-size: 2rem;
+	font-size: 1.6rem;
 }
 
 .style-subheading-2 {
-	font-size: 1.5rem;
+	font-size: 1.2rem;
 }
 
 .style-title-1 {
-	font-size: 1.5rem;
+	font-size: 1.2rem;
 	font-weight: bold;
 }
 
@@ -898,6 +906,22 @@ what are you even doing? */
 		padding: var(--padding-l) 0 var(--padding-l) 0;
 	}
 
+	section.app-hero > div {
+		grid-template-columns: auto;
+	}
+
+	section.app-hero > div > div {
+		justify-items: center;
+	}
+
+	section.app-hero header {
+		justify-items: center;
+	}
+
+	section.app-hero header * {
+		text-align: center;
+	}
+
 	section.list > div {
 		grid-template-columns: 1fr;
 	}
@@ -953,15 +977,11 @@ what are you even doing? */
 
 	p code {
 		display: inline-block;
-		max-width: min(100dvw - var(--padding-xl), var(--content-width-article));
+		max-width: min(100dvw - var(--padding-l), var(--content-width-article));
 	}
 
 	section > div {
 		width: min(100dvw - var(--padding-m), var(--content-width-normal));
-	}
-
-	section.app-hero header {
-		width: 100%;
 	}
 
 	section.featured-article figure {
@@ -1049,11 +1069,6 @@ what are you even doing? */
 		grid-template-columns: repeat(2, auto);
 		grid-template-rows: repeat(2, calc(var(--nav-height)) / 2);
 		padding: var(--padding-xs) 0 var(--padding-xs) 0;
-	}
-
-	nav div.logo figure {
-		height: var(--symbol-xs);
-		width: var(--symbol-xs);
 	}
 
 }

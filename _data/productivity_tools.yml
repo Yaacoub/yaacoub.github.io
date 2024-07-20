@@ -1,0 +1,17 @@
+- name: "Creative Cloud"
+  symbol: "creative-cloud"
+
+- name: "Final Cut Pro"
+  symbol: "final-cut-pro"
+
+- name: "Logic Pro"
+  symbol: "logic-pro"
+
+- name: "Notion"
+  symbol: "notion"
+
+- name: "Office"
+  symbol: "office"
+
+- name: "Sketch"
+  symbol: "sketch"

@@ -9,7 +9,7 @@ section > div {
 }
 
 section hr {
-	margin: calc(var(--padding-xl) - var(--padding-m)) 0  calc(var(--padding-xl) - var(--padding-m)) 0;
+	margin: calc(var(--padding-l) - var(--padding-m)) 0  calc(var(--padding-l) - var(--padding-m)) 0;
 }
 
 section p {

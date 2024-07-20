@@ -1,8 +1,17 @@
-- name: "Swift"
-  symbol: "swift"
+- name: "C++"
+  symbol: "cpp"
 
-- name: "HTML & CSS"
+- name: "CSS"
+  symbol: "css"
+
+- name: "HTML"
   symbol: "html"
-  
+
+- name: "JavaScript"
+  symbol: "javascript"
+
 - name: "Python"
   symbol: "python"
+
+- name: "Swift"
+  symbol: "swift"

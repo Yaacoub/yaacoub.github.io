@@ -73,4 +73,4 @@ If you also present a slideshow, your last slide shouldn't prompt your audience 
 
 I am a big fan of MIT's OpenCourseWare, which offers video lectures on fascinating topics. Patrick Winston's How to Speak talk is so good that watching it inspired me to take notes of the valuable information he gives his audience.
 
-Learning about his advice is something but applying it requires more effort. I'll do my best to follow his guidance whenever I communicate. You can read my other [articles](/articles) or follow me on [Twitter](https://twitter.com/{{ site.social_links.twitter }}) to know if I'm following his advice or not! ~~Thank you!~~
+Learning about his advice is something but applying it requires more effort. I'll do my best to follow his guidance whenever I communicate. You can read my other [articles](/articles) or follow me on [X](https://x.com/{{ site.social_links.x }}) to know if I'm following his advice or not! ~~Thank you!~~

@@ -72,6 +72,7 @@
 	<meta property="article:section" content="{{ page.categories | last | replace: '-', ' ' | capitalize }}">
 	<meta property="og:description" content="{{ page.description }}">
 	<meta property="og:image" content="{{ image | absolute_url }}">
+	<meta property="og:locale" content="en-US">
 	<meta property="og:site_name" content="{{ site.title }}">
 	<meta property="og:title" content="{{ page.title }}">
 	<meta property="og:type" content="{{ layout.type }}">
@@ -89,9 +90,9 @@
 	<meta property="twitter:app:name:iphone" content="{{ app.name }}">
 	<meta property="twitter:app:url:iphone" content="{{ app.argument }}">
 	<meta property="twitter:card" content="{%- if app.id != nil -%}app{%- else -%}summary_large_image{%- endif -%}">
-	<meta property="twitter:creator" content="@{{ site.social_links.twitter }}">
+	<meta property="twitter:creator" content="@{{ site.social_links.x }}">
 	<meta property="twitter:image:src" content="{{ image | absolute_url }}">
-	<meta property="twitter:site" content="@{{ site.social_links.twitter }}">
+	<meta property="twitter:site" content="@{{ site.social_links.x }}">
 
 
 

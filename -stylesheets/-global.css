@@ -232,8 +232,6 @@ blockquote p {
 	border-left-style: solid;
 	border-width: var(--padding-xxs);
 	font-family: var(--font-libre-baskerville) !important;
-	font-weight: bold;
-	letter-spacing: -1px;
 	padding: var(--padding-xs) 0 var(--padding-xs) var(--padding-s);
 }
 
@@ -323,6 +321,10 @@ iframe.youtube {
 	width: 100%;
 }
 
+li {
+	padding: var(--padding-xxs) 0;
+}
+
 main {
 	animation: fadein calc(var(--transition-time) * 2);
 }
@@ -366,6 +368,22 @@ section > div h1 {
 
 section.error-404 {
 	padding: calc(2 * var(--padding-l)) 0 calc(2 * var(--padding-l)) 0;
+}
+
+table, td, th {
+	border-collapse: collapse;
+	border-color: var(--color-element-separator);
+	border-style: solid;
+	border-width: 1px;
+}
+
+td, th {
+	padding: var(--padding-xs);
+}
+
+thead {
+	background-color: var(--color-element-background-secondary);
+	text-align: left;
 }
 
 
@@ -785,6 +803,7 @@ section.tiles .item-small-complex header {
 
 .style-detail-1 {
 	color: var(--color-sombre-jet-75);
+	text-transform: capitalize;
 }
 
 .style-footer-1 {
@@ -862,7 +881,7 @@ div.highlighter-rouge {
 	background: var(--color-element-background-primary-alternate);
 	border-radius: var(--border-radius);
 	color: var(--color-element-label-primary-alternate);
-	font-size: 1rem;
+	font-size: 0.9rem;
 	overflow: auto;
 	tab-size: 4;
 	-moz-tab-size: 4;

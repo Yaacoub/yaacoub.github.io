@@ -40,9 +40,9 @@ type: "article"
 {%- for element in content -%}
 {% if forloop.index0 == 1 %}
 {{ element }}
-{% if page.categories.last != "privacy" %}
+<!-- {% if page.categories.last != "privacy" %}
 {{ ad }}
-{% endif %}
+{% endif %} -->
 {{ seperator }}
 {% else %}
 {{ element }}

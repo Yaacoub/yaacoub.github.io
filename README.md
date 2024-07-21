@@ -4,7 +4,7 @@
 
 ## Authors
 
-- Peter Yaacoub - [@Yaacoub](https://github.com/Yaacoub)
+Peter Yaacoub - [@Yaacoub](https://github.com/Yaacoub)
 
 ## Website Copyright
 

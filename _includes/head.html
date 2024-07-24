@@ -5,6 +5,11 @@
 {%- assign theme_color_light = "#fafefd" -%}
 {%- capture image -%}/-assets/images/{{ page.image }}{% endcapture %}
 
+{% assign category = page.categories | last | slugify %}
+{% assign title = page.title | slugify %}
+{% assign pathPNG = "/-assets/images/articles/" | append: category | append: "/" | append: title | append: "/hero.png" %}
+{% assign png = site.static_files | where: "path", pathPNG %}
+
 <head>
 
 	<!-- Charset -->
@@ -71,10 +76,6 @@
 	<meta property="article:published_time" content="{{ page.date | date: '%Y-%m-%d' }}">
 	<meta property="article:section" content="{{ page.categories | last | replace: '-', ' ' | capitalize }}">
 	<meta property="og:description" content="{{ page.description }}">
-	{% assign category = page.categories | last | slugify %}
-	{% assign title = page.title | slugify %}
-	{% assign pathPNG = "/-assets/images/articles/" | append: category | append: "/" | append: title | append: "/hero.png" %}
-	{% assign png = site.static_files | where: "path", pathPNG %}
 	{% if png.size != 0 %}
 	<meta property="og:image" content="{{ pathPNG | absolute_url }}">
 	{% else %}
@@ -99,7 +100,11 @@
 	<meta property="twitter:app:url:iphone" content="{{ app.argument }}">
 	<meta property="twitter:card" content="{%- if app.id != nil -%}app{%- else -%}summary_large_image{%- endif -%}">
 	<meta property="twitter:creator" content="@{{ site.social_links.x }}">
+	{% if png.size != 0 %}
+	<meta property="twitter:image:src" content="{{ pathPNG | absolute_url }}">
+	{% else %}
 	<meta property="twitter:image:src" content="{{ image | absolute_url }}">
+	{% endif %}
 	<meta property="twitter:site" content="@{{ site.social_links.x }}">
 
 

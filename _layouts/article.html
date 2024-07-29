@@ -7,7 +7,7 @@ type: "article"
 
 {%- assign seperator = "<h2" -%}
 {%- assign content = page.content | split: seperator -%}
-{%- assign ad = '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2906240455657854" crossorigin="anonymous"></script><ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-2906240455657854" data-ad-slot="9446024804"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>' -%}
+{%- assign ad = '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6933910775315856"crossorigin="anonymous"></script><!-- Article Ad 1 --><ins class="adsbygoogle"style="display:block"data-ad-client="ca-pub-6933910775315856"data-ad-slot="2211467730"data-ad-format="auto"data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>' -%}
 
 		<section>
 			<article>
@@ -40,9 +40,9 @@ type: "article"
 {%- for element in content -%}
 {% if forloop.index0 == 1 %}
 {{ element }}
-<!-- {% if page.categories.last != "privacy" %}
+{% if page.categories.last != "privacy" %}
 {{ ad }}
-{% endif %} -->
+{% endif %}
 {{ seperator }}
 {% else %}
 {{ element }}

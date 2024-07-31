@@ -634,6 +634,7 @@ section.list .grid a header {
 section a header .style-title-1 {
 	-webkit-box-orient: vertical;
 	display: -webkit-box;
+	line-clamp: 2;
 	-webkit-line-clamp: 2;
 	overflow: hidden;
 	text-overflow: ellipsis;

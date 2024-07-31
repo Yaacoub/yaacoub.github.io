@@ -223,6 +223,7 @@ article .body {
 article .body a, article .body p, article .body ol, article .body ul {
 	font-family: var(--font-nunito-sans);
 	font-size: 1.2rem;
+	line-height: 1.5;
 	text-align: justify;
 }
 

@@ -7,7 +7,8 @@ type: "article"
 
 {%- assign seperator = "<h2" -%}
 {%- assign content = page.content | split: seperator -%}
-{%- assign ad = '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6933910775315856"crossorigin="anonymous"></script><ins class="adsbygoogle"style="display:block; text-align:center;"data-ad-layout="in-article"data-ad-format="fluid"data-ad-client="ca-pub-6933910775315856"data-ad-slot="9684866716"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>' -%}
+{%- assign ad1 = '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6933910775315856"crossorigin="anonymous"></script><ins class="adsbygoogle"style="display:block; text-align:center;"data-ad-layout="in-article"data-ad-format="fluid"data-ad-client="ca-pub-6933910775315856"data-ad-slot="9684866716"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>' -%}
+{%- assign ad2 = '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6933910775315856"crossorigin="anonymous"></script><ins class="adsbygoogle"style="display:block; text-align:center;"data-ad-layout="in-article"data-ad-format="fluid"data-ad-client="ca-pub-6933910775315856"data-ad-slot="4405621895"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>' -%}
 
 		<section>
 			<article>
@@ -38,16 +39,26 @@ type: "article"
 				{% endif %}
 				<div class="body">
 {%- for element in content -%}
+
 {% if forloop.index0 == 1 %}
 {{ element }}
 {% if page.categories.last != "privacy" %}
-{{ ad }}
+{{ ad1 }}
 {% endif %}
 {{ seperator }}
+
+{% elsif forloop.last == true %}
+{{ element }}
+{% if page.categories.last != "privacy" %}
+{{ ad2 }}
+{% endif %}
+{{ seperator }}
+
 {% else %}
 {{ element }}
 {{ seperator }}
 {% endif %}
+
 {% endfor %}
 				</div>
 				<div class="social">

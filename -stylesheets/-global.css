@@ -155,11 +155,6 @@ a:hover {
 	text-decoration: underline;
 }
 
-a code {
-	color: var(--color-element-label-primary-alternate);
-	text-decoration: underline;
-}
-
 a:hover code {
 	text-decoration: none;
 }
@@ -225,6 +220,7 @@ article .body a, article .body p, article .body ol, article .body ul {
 	font-size: 1.2rem;
 	line-height: 1.5;
 	text-align: justify;
+	word-break: break-word;
 }
 
 blockquote p {
@@ -331,7 +327,7 @@ main {
 }
 
 p code, ol code, ul code {
-	padding: var(--padding-xxs) var(--padding-xs) var(--padding-xxs) var(--padding-xs);
+	font-weight: bold;
 }
 
 picture {
@@ -612,8 +608,6 @@ section.list h2 {
 section.list .grid {
 	column-gap: var(--padding-l);
 	display: grid;
-	grid-row: 2;
-	grid-template-columns: 1fr 1fr;
 	row-gap: var(--padding-m);
 }
 
@@ -876,15 +870,12 @@ section.tiles .item-small-complex header {
 /* Rouge Highlighter Classes */
 
 div.highlighter-rouge {
-	padding: var(--padding-m);
-}
-
-.highlighter-rouge {
 	background: var(--color-element-background-primary-alternate);
 	border-radius: var(--border-radius);
 	color: var(--color-element-label-primary-alternate);
 	font-size: 0.9rem;
 	overflow: auto;
+	padding: var(--padding-m);
 	tab-size: 4;
 	-moz-tab-size: 4;
 }
@@ -947,14 +938,6 @@ what are you even doing? */
 		grid-template-columns: 1fr;
 	}
 
-	section.list > div > header, section.list .grid {
-		grid-row: initial;
-	}
-
-	section.list .grid {
-		grid-template-columns: 1fr;
-	}
-
 }
 
 @media only screen and (max-width: 700px) {
@@ -994,11 +977,6 @@ what are you even doing? */
 	nav > div {
 		column-gap: var(--padding-s);
 		grid-template-columns: repeat(4, auto);
-	}
-
-	p code {
-		display: inline-block;
-		max-width: min(100dvw - var(--padding-l), var(--content-width-article));
 	}
 
 	section > div {

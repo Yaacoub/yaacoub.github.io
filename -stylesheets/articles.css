@@ -25,6 +25,7 @@ section.featured-articles header {
 section.featured-articles header .style-title-1 {
 	-webkit-box-orient: vertical;
 	display: -webkit-box;
+	line-clamp: 2;
 	-webkit-line-clamp: 2;
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -107,6 +108,16 @@ section.tiles .item-small-complex header {
 }
 
 
+
+/* Section List */
+
+section.list .grid {
+	grid-auto-flow: column;
+	grid-template-rows: 1fr 1fr 1fr;
+}
+
+
+
 /* Media Queries */
 
 @media only screen and (max-width: 1000px) {
@@ -117,6 +128,10 @@ section.tiles .item-small-complex header {
 
 	section.featured-articles .item-large {
 		grid-column: initial;
+	}
+
+	section.list .grid {
+		grid-auto-flow: row;
 	}
 
 }

@@ -14,7 +14,6 @@ Creating multilingual ready apps ensures a broader reach and a better user exper
 
 To remember the keyboard language and layout, override [`UIResponder`](https://developer.apple.com/documentation/uikit/uiresponder)’s [`textInputContextIdentifier`](https://developer.apple.com/documentation/uikit/uiresponder/1621091-textinputcontextidentifier) property. This approach is primarily applicable in UIKit and not directly achievable in SwiftUI without subclassing.
 
-**Example Code Snippet (UIKit):**
 ```swift
 override var textInputContextIdentifier: String? {
     return "YourIdentifier"
@@ -45,7 +44,6 @@ if let range = textInput.markedTextRange, !range.isEmpty {
 
 Ensure searches are locale-aware, case, and diacritic insensitive by using a [`String`](https://developer.apple.com/documentation/swift/string)’s [`localizedStandardRange(of:)`](https://developer.apple.com/documentation/foundation/nsstring/1413574-localizedstandardrange) method.
 
-**Example Code Snippet:**
 ```swift
 let text = "This is an Example"
 let range = text.localizedStandardRange(of: "example")
@@ -64,7 +62,6 @@ Use the system’s default fonts for proper spacing and sizing across different 
 
 For consistent typesetting in SwiftUI, use the [`typesettingLanguage(_:isEnabled:)`](https://developer.apple.com/documentation/swiftui/view/typesettinglanguage(_:isenabled:)-4ldzm) method.
 
-**Example Code Snippet (SwiftUI):**
 ```swift
 Text(verbatim: "Hi!")
     .typesettingLanguage(.init(languageCode: .english))
@@ -74,7 +71,6 @@ Text(verbatim: "Hi!")
 
 Use a formatter to ensure names are used correctly across different cultures and languages.
 
-**Example Code Snippet:**
 ```swift
 let personName = PersonNameComponents(givenName: "John", familyName: "Doe")
 let formattedName = personNameFormatter.string(from: personName)
@@ -84,7 +80,6 @@ let formattedName = personNameFormatter.string(from: personName)
 
 Utilize [`AttributedString`](https://developer.apple.com/documentation/foundation/attributedstring) with the [`localized`](https://developer.apple.com/documentation/foundation/attributedstring/3867590-init) parameter for automatic number localization.
 
-**Example Code Snippet:**
 ```swift
 let localizedNumber = AttributedString("1234", locale: Locale.current)
 ```
@@ -93,7 +88,6 @@ let localizedNumber = AttributedString("1234", locale: Locale.current)
 
 To allow users to change the app’s language within the app settings, set the `UIPrefersShowingLanguageSettings` value to `true` in the Info.plist file. You can also create a button that opens the app’s settings page using [`UIApplication`](https://developer.apple.com/documentation/uikit/uiapplication/)’s [`openSettingsURLString`](https://developer.apple.com/documentation/uikit/uiapplication/1623042-opensettingsurlstring/) property.
 
-**Example Code Snippet:**
 ```swift
 if let url = URL(string: UIApplication.openSettingsURLString) {
     await UIApplication.shared.open(url)
@@ -102,7 +96,6 @@ if let url = URL(string: UIApplication.openSettingsURLString) {
 
 For opening the notification settings page, use [`openNotificationSettingsURLString`](https://developer.apple.com/documentation/uikit/uiapplication/4013180-opennotificationsettingsurlstrin).
 
-**Example Code Snippet:**
 ```swift
 if let url = URL(string: UIApplication.openNotificationSettingsURLString) {
     await UIApplication.shared.open(url)

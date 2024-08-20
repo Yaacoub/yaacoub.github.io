@@ -98,6 +98,14 @@
   name: "Articles"
   mentions:
     -
+      author: "Majid Jabrayilov"
+      date: 2024-08-12
+      excerpt:
+        "This article outlines key concepts and best practices from the WWDC24 session on building multilingual ready apps,
+        focusing on handling keyboard interactions, text rendering, and localization"
+      title: "SwiftUI Weekly - Issue #196"
+      url: "https://weekly.swiftwithmajid.com/p/swiftui-weekly-issue-196"
+    -
       author: "Antoine van der Lee"
       date: 2024-07-23
       excerpt:

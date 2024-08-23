@@ -37,7 +37,6 @@ To remove the window's toolbar, use the following modifiers:
 
 Create a new window with the “about” identifier to customize your app’s about window. You can then apply various modifiers:
 
-**Example Code Snippet (Custom About Window):**
 ```swift
 Window("About", id: "about") {
     AboutView()

@@ -99,6 +99,15 @@
   mentions:
     -
       author: "Majid Jabrayilov"
+      date: 2024-08-19
+      excerpt:
+        "SwiftUI continues to evolve, bringing a host of new features and improvements in 2024.
+        This year, there are significant updates across various aspects of the framework,
+        enhancing the development experience and enabling the creation of more powerful and engaging apps."
+      title: "SwiftUI Weekly - Issue #197"
+      url: "https://weekly.swiftwithmajid.com/p/swiftui-weekly-issue-197"
+    -
+      author: "Majid Jabrayilov"
       date: 2024-08-12
       excerpt:
         "This article outlines key concepts and best practices from the WWDC24 session on building multilingual ready apps,

@@ -98,6 +98,14 @@
   name: "Articles"
   mentions:
     -
+      author: "Those Who Swift"
+      date: 2024-08-22
+      excerpt:
+        "This post summarizes key takeaways from a WWDC24 session on building apps that function well
+        for users across different languages."
+      title: "Those Who Swift - Issue 177"
+      url: "https://swiftnews.curated.co/issues/177#start"
+    -
       author: "Majid Jabrayilov"
       date: 2024-08-19
       excerpt:

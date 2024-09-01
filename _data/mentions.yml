@@ -99,6 +99,15 @@
   mentions:
     -
       author: "Those Who Swift"
+      date: 2024-08-29
+      excerpt:
+        "Explore the latest updates in SwiftUI and UIKit for UI animations and transitions, introduced at WWDC24. 
+        Discover the new zoom transition, master transition cycles for seamless navigation, and seamlessly integrate 
+        SwiftUI animations into UIKit for consistent user experiences."
+      title: "Those Who Swift - Issue 178"
+      url: "https://swiftnews.curated.co/issues/178#start"
+    -
+      author: "Those Who Swift"
       date: 2024-08-22
       excerpt:
         "This post summarizes key takeaways from a WWDC24 session on building apps that function well
@@ -130,6 +139,13 @@
         covered in a WWDC session and now summarized in this article."
       title: "SwiftLee Weekly - Issue 229"
       url: "https://www.avanderlee.com/swiftlee-weekly/issues/229"
+    -
+      author: "Sangkon Han"
+      date: 2022-11-06
+      excerpt:
+        "SwiftUI를 사용해서 Charts를 그리는 방법을 간략하게 소개하는 기사 입니다."
+      title: "내 맘대로 위클리 뉴스 - 2022년 44주"
+      url: "https://www.sangkon.com/sigmadream_weekly_2022_44/"
 
 - other:
   name: "Other"

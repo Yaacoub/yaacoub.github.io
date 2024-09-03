@@ -9,6 +9,7 @@ nav.picker {
 nav.picker > div {
 	align-items: start;
 	column-gap: var(--padding-m);
+	grid-auto-columns: calc(var(--app-icon-size-s) * 3);
 	grid-auto-flow: column;
 	grid-template-columns: initial;
 }
@@ -37,6 +38,14 @@ nav.picker .item {
 
 	section.app header {
 		width: 100%;
+	}
+
+}
+
+@media only screen and (max-width: 500px) {
+
+	nav.picker {
+		display: none;
 	}
 
 }

@@ -4,6 +4,6 @@ description:
     I also write various articles. Learn more about me."
 layout: "about"
 image: "about/social.png"
-secret_message: "Korra's gonna airbend! Korra's gonna airbend!"
+secret_message: "The Legend of Korra: Korra's gonna airbend! Korra's gonna airbend!"
 title: "About"
 ---

@@ -1,3 +1,38 @@
+- catzumi:
+
+  argument: ""
+  color: "#000000"
+  description_short: "Go from 0 to 18,000 steps, all while caring for the cutest virtual cat around, and get ready to paw-sitively transform your health!"
+  id: "6642671240"
+  is_new: true
+  name: "Catzumi"
+  platforms: ["iOS"]
+  press_kit: "https://drive.google.com/drive/folders/18F3br57dCm2_6Q4r6zC3-auIUTK7JKDW"
+  slogan: "Walk in real life – Keep your virtual cat alive."
+  testflight: ""
+
+  description:
+    "Meet Catzumi, the world's first virtual walking pet companion app! Catzumi helps you go from 0 to 18,000 steps, all while caring for the cutest virtual cat around. Get ready to paw-sitively transform your health!</br></br>
+    Dreamed up by a passionate walker and adored by step enthusiasts everywhere, Catzumi makes the great outdoors feel like your second home. Whether you're aiming for 1,000, 2,000, or even 18,000 steps a day, your feline friend will be there every step of the way!</br></br>
+    No prior experience needed – just lace up those shoes and let Catzumi guide you towards a purr-fect walking habit. You'll be feline fine in no time as you boost your fitness and discover your unique walking style.</br></br>
+    Whether you're strolling for fun or fitness, you'll fall head over paws for walking with Catzumi!"
+
+  privacy:
+    "Catzumi does not collect images or personally identifiable data.
+    The development and maintenance only depend on the in-app purchases you choose to pay."
+
+  highlights:
+    
+
+  features_large:
+    
+
+  features_medium:
+    
+
+  features_small:
+
+
 - christmas_guide:
 
   argument: ""

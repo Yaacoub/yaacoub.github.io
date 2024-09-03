@@ -4,25 +4,21 @@ stylesheet: "privacy"
 type: "website"
 ---
 
-		<section>
+		<section class="collection collection4">
 			<div>
 				<h1>{{ page.title }}</h1>
 				<p class="style-subheading-1">{{ site.data.copy_privacy.description }}</p>
 				<hr>
-				{%- if site.data.apps != nil %}
-				<div class="app-tiles">
-					{%- for app in site.data.apps %}
-					<a class="animation-underline item plain" href="{{ app.name | slugify }}">
-						<figure aria-label="App icon">
-							<picture>
-								<source srcset="/-assets/images/apps/{{ app.name | slugify }}/icon.webp" type="image/webp">
-								<img alt="" src="/-assets/images/apps/{{ app.name | slugify }}/icon.png">
-							</picture>
-						</figure>
-						<h3>{{ app.name }}</h3>
-					</a>
-					{%- endfor %}
-				</div>
-				{%- endif %}
+				{%- for app in site.data.apps %}
+				<a class="animation-underline app-tiles item plain" href="{{ app.name | slugify }}">
+					<figure aria-label="App icon">
+						<picture>
+							<source srcset="/-assets/images/apps/{{ app.name | slugify }}/icon.webp" type="image/webp">
+							<img alt="" src="/-assets/images/apps/{{ app.name | slugify }}/icon.png">
+						</picture>
+					</figure>
+					<h3>{{ app.name }}</h3>
+				</a>
+				{%- endfor %}
 			</div>
 		</section>

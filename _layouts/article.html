@@ -20,6 +20,7 @@ type: "article"
 					<p class="style-detail-1"><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date_to_long_string }}</time></p>
 					{% endif %}
 					<hr>
+					{% if page.categories.last != "privacy" %}
 					<div class="social">
 						{%- capture social-email -%}mailto:?subject={{ page.title }}&body={{ page.url | absolute_url }}{%- endcapture -%}
 						{%- capture social-facebook -%}https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url }}{%- endcapture -%}
@@ -28,6 +29,7 @@ type: "article"
 						<a class="animation-opacity social-facebook" href="{{ social-facebook }}" target=”_blank”><figure aria-label="Send Facebook post"><img alt="" class="color-adjustable" src="/-assets/symbols/social/facebook.svg"></figure></a>
 						<a class="animation-opacity social-x" href="{{ social-x }}" target=”_blank”><figure aria-label="Send tweet"><img alt="" class="color-adjustable" src="/-assets/symbols/social/x.svg"></figure></a>
 					</div>
+					{% endif %}
 				</header>
 				{% if page.categories.last != "privacy" %}
 				<figure aria-label="Header image" class="hero wide">
@@ -61,6 +63,7 @@ type: "article"
 
 {% endfor %}
 				</div>
+				{% if page.categories.last != "privacy" %}
 				<div class="social">
 					{%- capture social-email -%}mailto:?subject={{ page.title }}&body={{ page.url | absolute_url }}{%- endcapture -%}
 					{%- capture social-facebook -%}https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url }}{%- endcapture -%}
@@ -69,6 +72,7 @@ type: "article"
 					<a class="animation-opacity social-facebook" href="{{ social-facebook }}"><figure aria-label="Send Facebook post"><img alt="" class="color-adjustable" src="/-assets/symbols/social/facebook.svg"></figure></a>
 					<a class="animation-opacity social-x" href="{{ social-x }}"><figure aria-label="Send tweet"><img alt="" class="color-adjustable" src="/-assets/symbols/social/x.svg"></figure></a>
 				</div>
+				{% endif %}
 			</article>
 		</section>
 		{%- if page.has_repo %}

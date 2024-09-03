@@ -1,10 +1,8 @@
 ---
 app: "Huh? Dictionary"
-description:
-    "Huh? is a reference app available on iOS, iPadOS and macOS.
-    Browse through all your favourite dictionaries to improve your communication skills and grades."
+description: "Search for a word's definition using any dictionary you prefer, so you can learn more and waste less time."
 layout: "app"
 image: "apps/huh-dictionary/social.png"
-secret_message: "Roger, tu es mieux qu'un fils!"
+secret_message: "Roger et ses humains: Roger, tu es mieux qu'un fils!"
 title: "Huh? Dictionary"
 ---

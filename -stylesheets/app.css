@@ -109,23 +109,27 @@ section.important figure {
 /* Media Queries */
 
 @media only screen and (max-width: 1000px) {
-
+	
 	section.features-large > div {
 		row-gap: var(--padding-m);
 		grid-template-columns: 1fr;
 	}
-
+	
 	section.features-medium > div {
 		grid-template-columns: 1fr;
 		row-gap: var(--padding-m);
 	}
-
+	
 	section.features-medium > div div {
 		align-items: center;
 		column-gap: var(--padding-m);
 		grid-template-columns: 1fr 1fr;
 	}
 
+	section.features-large figure {
+		height: initial;
+	}
+	
 	section.features-medium figure {
 		height: var(--media-height-s);
 	}

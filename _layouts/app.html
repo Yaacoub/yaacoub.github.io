@@ -39,12 +39,14 @@ type: "website"
 		</section>
 		<section class="highlights">
 			<div>
+				{% if app.highlights.size > 0 %}
 				{%- for highlight in app.highlights %}
 				<div>
 					<hr style="border-color: {{ app.color }};">
 					<h2>{{ highlight }}</h2>
 				</div>
 				{%- endfor %}
+				{% endif %}
 				<p class="style-subheading-1">{{ app.description }}</p>
 			</div>
 		</section>

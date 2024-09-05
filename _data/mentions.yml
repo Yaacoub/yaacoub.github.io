@@ -98,6 +98,13 @@
   name: "Articles"
   mentions:
     -
+      author: "Antoine van der Lee"
+      date: 2024-09-03
+      excerpt:
+        "If you're using SwiftData, make sure to check out these two new properties introduced during WWDC24."
+      title: "SwiftLee Weekly - Issue 235"
+      url: "https://www.avanderlee.com/swiftlee-weekly/issues/235"
+    -
       author: "Those Who Swift"
       date: 2024-08-29
       excerpt:

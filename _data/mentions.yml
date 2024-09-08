@@ -98,6 +98,14 @@
   name: "Articles"
   mentions:
     -
+      author: "Those Who Swift"
+      date: 2024-09-05
+      excerpt:
+        "There are two new features in SwiftData, a framework for managing data models inside SwiftUI applications […]
+        It enhances SwiftData's capabilities, making it a powerful and user-friendly tool for building data-driven applications."
+      title: "SwiftLee Weekly - Issue 235"
+      url: "https://swiftnews.curated.co/issues/179"
+    -
       author: "Antoine van der Lee"
       date: 2024-09-03
       excerpt:
@@ -112,7 +120,7 @@
         Discover the new zoom transition, master transition cycles for seamless navigation, and seamlessly integrate 
         SwiftUI animations into UIKit for consistent user experiences."
       title: "Those Who Swift - Issue 178"
-      url: "https://swiftnews.curated.co/issues/178#start"
+      url: "https://swiftnews.curated.co/issues/178"
     -
       author: "Those Who Swift"
       date: 2024-08-22
@@ -120,7 +128,7 @@
         "This post summarizes key takeaways from a WWDC24 session on building apps that function well
         for users across different languages."
       title: "Those Who Swift - Issue 177"
-      url: "https://swiftnews.curated.co/issues/177#start"
+      url: "https://swiftnews.curated.co/issues/177"
     -
       author: "Majid Jabrayilov"
       date: 2024-08-19

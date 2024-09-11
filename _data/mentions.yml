@@ -98,6 +98,13 @@
   name: "Articles"
   mentions:
     -
+      author: "Amisha I"
+      date: 2024-09-09
+      excerpt:
+        "This post has notes taken during the WWDC24 session: What's new in SwiftData."
+      title: "iOS Stack Weekly — Issue#141"
+      url: "https://blog.canopas.com/ios-stack-weekly-issue-141-4062145c5c65"
+    -
       author: "Those Who Swift"
       date: 2024-09-05
       excerpt:

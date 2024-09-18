@@ -98,6 +98,15 @@
   name: "Articles"
   mentions:
     -
+      author: "Majid Jabrayilov"
+      date: 2024-09-09
+      excerpt:
+        "At WWDC24, Apple introduced exciting updates for creating custom visual effects with SwiftUI.
+        This article summarizes the “Create Custom Visual Effects with SwiftUI” session, highlighting new
+        capabilities for enhancing your app's visual experience."
+      title: "SwiftUI Weekly - Issue #199"
+      url: "https://weekly.swiftwithmajid.com/p/swiftui-weekly-issue-199"
+    -
       author: "Amisha I"
       date: 2024-09-09
       excerpt:

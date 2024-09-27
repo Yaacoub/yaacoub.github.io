@@ -1,15 +1,29 @@
-- name: "Apple Swift Student Challenge 2023"
-  result: "Winner"
-  symbol: "apple"
+- name: "RevenueCat Ship-a-ton"
+  detail: ""
+  result: "Top 500"
+  symbol: "revenuecat"
+  year: 2024
 
-- name: "Apple Swift Student Challenge 2022"
+- name: "Apple Swift Student Challenge"
+  detail: ""
   result: "Winner"
   symbol: "apple"
+  year: 2023
 
-- name: "Apple Swift Student Challenge 2021"
+- name: "Apple Swift Student Challenge"
+  detail: ""
   result: "Winner"
   symbol: "apple"
+  year: 2022
 
-- name: "Apple Swift Student Challenge 2020"
+- name: "Apple Swift Student Challenge"
+  detail: ""
   result: "Winner"
   symbol: "apple"
+  year: 2021
+
+- name: "Apple Swift Student Challenge"
+  detail: ""
+  result: "Winner"
+  symbol: "apple"
+  year: 2020

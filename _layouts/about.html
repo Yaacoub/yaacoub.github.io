@@ -19,14 +19,20 @@ type: "profile"
 			</div>
 		</section>
 		{% if site.data.awards != nil -%}
-		<section class="collection collection4">
+		<section class="collection">
 			<div>
 				<h2>Awards</h2>
 				{%- for award in site.data.awards %}
 				<div class="item">
-					<figure aria-label="{{ award.symbol }} logo"><img alt="" class="color-adjustable" src="/-assets/symbols/{{ award.symbol }}.svg"></figure>
-					<p class="style-subheading-2">{{ award.name }}</p>
-					<p class="style-notice-2">{{ award.result }}</p>
+					<figure aria-label="{{ award.symbol }} logo"><img alt="" class="color-adjustable" src="/-assets/symbols/award-{{ award.symbol }}.svg"></figure>
+					<div>
+						<p class="style-subheading-2">{{ award.name }}</p>
+						<p class="style-subheading-2">{{ award.year }}</p>
+					</div>
+					<div>
+						<p class="style-notice-2">{{ award.result }}</p>
+						<p class="style-detail-1">{{ award.detail }}</p>
+					</div>
 				</div>
 				{%- endfor %}
 			</div>

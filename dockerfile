@@ -18,4 +18,5 @@ RUN gem update --system
 RUN gem update bundler
 RUN gem install bundler jekyll
 # RUN bundle install
+# RUN bundle update
 # RUN bundle exec jekyll serve

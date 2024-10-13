@@ -98,6 +98,15 @@
   name: "Articles"
   mentions:
     -
+      author: "Those Who Swift"
+      date: 2024-10-10
+      excerpt:
+        "Learn how to use Swift and HealthKit to get a user's daily step count from the Health app using Swift.
+        It covers steps like turning on the feature in Xcode, setting up permissions, and writing the code. […]
+        Explore how to make text appear letter by letter in SwiftUI, like a typewriter."
+      title: "Those Who Swift - Issue 184"
+      url: "https://swiftnews.curated.co/issues/184"
+    -
       author: "Majid Jabrayilov"
       date: 2024-09-09
       excerpt:
@@ -119,7 +128,7 @@
       excerpt:
         "There are two new features in SwiftData, a framework for managing data models inside SwiftUI applications […]
         It enhances SwiftData's capabilities, making it a powerful and user-friendly tool for building data-driven applications."
-      title: "SwiftLee Weekly - Issue 235"
+      title: "Those Who Swift - Issue 179"
       url: "https://swiftnews.curated.co/issues/179"
     -
       author: "Antoine van der Lee"

@@ -99,6 +99,16 @@
   mentions:
     -
       author: "Those Who Swift"
+      date: 2024-10-17
+      excerpt:
+        "The article provides an example of implementing this custom navigation bar within a SwiftUI view, 
+        helping developers craft a more unique and branded appearance for their app's user interface. […]
+        Another excellent article by Peter Yaacoub guides you through building a custom progress bar in SwiftUI,
+        ideal for mobile apps."
+      title: "Those Who Swift - Issue 185"
+      url: "https://swiftnews.curated.co/issues/185"
+    -
+      author: "Those Who Swift"
       date: 2024-10-10
       excerpt:
         "Learn how to use Swift and HealthKit to get a user's daily step count from the Health app using Swift.

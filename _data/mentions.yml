@@ -99,6 +99,15 @@
   mentions:
     -
       author: "Those Who Swift"
+      date: 2024-10-24
+      excerpt:
+        "Create a custom SegmentedControl in SwiftUI for more flexibility and control over design and functionality.
+        This guide demonstrates how to implement a segmented control with dynamic options, theme integration,
+        and interactive feedback."
+      title: "Those Who Swift - Issue 186"
+      url: "https://swiftnews.curated.co/issues/186"
+    -
+      author: "Those Who Swift"
       date: 2024-10-17
       excerpt:
         "The article provides an example of implementing this custom navigation bar within a SwiftUI view, 

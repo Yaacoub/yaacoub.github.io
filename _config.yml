@@ -38,6 +38,7 @@ paths_footer:
     - "about/mentions/index.md"
   -
     - "apps/index.md"
+    - "apps/catzumi/index.md"
     - "apps/christmas-guide/index.md"
     - "apps/huh-dictionary/index.md"
     - "apps/modulart-studio/index.md"

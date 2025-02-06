@@ -8,4 +8,4 @@ Peter Yaacoub - [@Yaacoub](https://github.com/Yaacoub)
 
 ## Website Copyright
 
-Copyright © 2024 Peter Yaacoub. All rights reserved.
+Copyright © 2025 Peter Yaacoub. All rights reserved.

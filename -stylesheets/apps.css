@@ -34,18 +34,18 @@ nav.picker .item {
 
 /* Media Queries */
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 1000px) {
 
-	section.app header {
-		width: 100%;
+	nav.picker {
+		display: none;
 	}
 
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 700px) {
 
-	nav.picker {
-		display: none;
+	section.app header {
+		width: 100%;
 	}
 
 }

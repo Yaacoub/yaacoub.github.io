@@ -7,8 +7,8 @@ type: "article"
 
 {%- assign seperator = "<h2" -%}
 {%- assign content = page.content | split: seperator -%}
-{%- assign ad1 = '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6933910775315856"crossorigin="anonymous"></script><ins class="adsbygoogle"style="display:block; text-align:center;"data-ad-layout="in-article"data-ad-format="fluid"data-ad-client="ca-pub-6933910775315856"data-ad-slot="9684866716"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>' -%}
-{%- assign ad2 = '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6933910775315856"crossorigin="anonymous"></script><ins class="adsbygoogle"style="display:block; text-align:center;"data-ad-layout="in-article"data-ad-format="fluid"data-ad-client="ca-pub-6933910775315856"data-ad-slot="4405621895"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>' -%}
+{%- assign ad1 = '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6933910775315856"crossorigin="anonymous"></script><!-- Article Ad 3 --><ins class="adsbygoogle"style="display:block"data-ad-client="ca-pub-6933910775315856"data-ad-slot="6741612712"data-ad-format="auto"data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>' -%}
+{%- assign ad2 = '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6933910775315856"crossorigin="anonymous"></script><ins class="adsbygoogle"style="display:block"data-ad-format="autorelaxed"data-ad-client="ca-pub-6933910775315856"data-ad-slot="5716644963"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>' -%}
 
 		<section>
 			<article>
@@ -49,13 +49,6 @@ type: "article"
 {% endif %}
 {{ seperator }}
 
-{% elsif forloop.last == true %}
-{{ element }}
-{% if page.categories.last != "privacy" %}
-{{ ad2 }}
-{% endif %}
-{{ seperator }}
-
 {% else %}
 {{ element }}
 {{ seperator }}
@@ -72,6 +65,9 @@ type: "article"
 					<a class="animation-opacity social-facebook" href="{{ social-facebook }}"><figure aria-label="Send Facebook post"><img alt="" class="color-adjustable" src="/-assets/symbols/social/facebook.svg"></figure></a>
 					<a class="animation-opacity social-x" href="{{ social-x }}"><figure aria-label="Send tweet"><img alt="" class="color-adjustable" src="/-assets/symbols/social/x.svg"></figure></a>
 				</div>
+				{% if page.categories.last != "privacy" %}
+				{{ ad2 }}
+				{% endif %}
 				{% endif %}
 			</article>
 		</section>

@@ -1,3 +1,6 @@
+- name: "C"
+  symbol: "c"
+
 - name: "C++"
   symbol: "cpp"
 
@@ -10,8 +13,17 @@
 - name: "JavaScript"
   symbol: "javascript"
 
+- name: "Matlab"
+  symbol: "matlab"
+
+- name: "PL/SQL"
+  symbol: "plsql"
+
 - name: "Python"
   symbol: "python"
+
+- name: "Shell"
+  symbol: "shell"
 
 - name: "Swift"
   symbol: "swift"

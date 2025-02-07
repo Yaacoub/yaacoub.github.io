@@ -547,14 +547,14 @@ section.app-hero figure.screenshots img {
 
 section.collection > div {
 	column-gap: var(--padding-l);
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: repeat(6, 1fr);
 	row-gap: var(--padding-m);
 	text-align: center;
 }
 
 section.collection figure {
-	height: var(--symbol-l);
-	width: var(--symbol-l);
+	height: var(--symbol-m);
+	width: var(--symbol-m);
 }
 
 section.collection figure img {
@@ -562,7 +562,7 @@ section.collection figure img {
 }
 
 section.collection *:not(.item) {
-	grid-column: span 3;
+	grid-column: span 6;
 }
 
 section.collection .item {
@@ -956,6 +956,15 @@ what are you even doing? */
 
 	section.app-hero header * {
 		text-align: center;
+	}
+
+	section.collection > div {
+		column-gap: var(--padding-l);
+		grid-template-columns: repeat(3, 1fr);
+	}
+	
+	section.collection *:not(.item) {
+		grid-column: span 3;
 	}
 
 	section.collection.collection4 > div {

@@ -4,7 +4,7 @@
   color: "#000000"
   description_short: "Go from 0 to 18,000 steps, all while caring for the cutest virtual cat around, and get ready to paw-sitively transform your health!"
   id: "6642671240"
-  is_new: true
+  is_new: false
   name: "Catzumi"
   platforms: ["iOS"]
   press_kit: "https://drive.google.com/drive/folders/18F3br57dCm2_6Q4r6zC3-auIUTK7JKDW"
@@ -83,7 +83,7 @@
   color: "#9B111E"
   description_short: "Search for a word's definition using any dictionary you prefer, so you can learn more and waste less time."
   id: "1330097506"
-  is_new: false
+  is_new: true
   name: "Huh? Dictionary"
   platforms: ["iOS", "iPadOS", "macOS"]
   press_kit: "https://drive.google.com/drive/folders/1hVsg_ZWnLKTxw2a1U08ahdYdE_mMBsP4"

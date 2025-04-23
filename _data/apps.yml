@@ -83,7 +83,7 @@
   color: "#9B111E"
   description_short: "Search for a word's definition using any dictionary you prefer, so you can learn more and waste less time."
   id: "1330097506"
-  is_new: true
+  is_new: false
   name: "Huh? Dictionary"
   platforms: ["iOS", "iPadOS", "macOS"]
   press_kit: "https://drive.google.com/drive/folders/1hVsg_ZWnLKTxw2a1U08ahdYdE_mMBsP4"
@@ -122,7 +122,7 @@
   color: "#66023C"
   description_short: "Modular arithmetic crafted to enhance your designs or stand out on its own, allowing you to impress others."
   id: "6451383807"
-  is_new: false
+  is_new: true
   name: "Modulart Studio"
   platforms: ["iOS", "iPadOS", "macOS"]
   press_kit: "https://drive.google.com/drive/folders/1CMijv-6YyvlN4A0Kcb8mDqj5XDZmqGo-"

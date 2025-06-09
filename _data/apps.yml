@@ -4,18 +4,18 @@
   color: "#000000"
   description_short: "Go from 0 to 18,000 steps, all while caring for the cutest virtual cat around, and get ready to paw-sitively transform your health!"
   id: "6642671240"
-  is_new: false
+  is_new: true
   name: "Catzumi"
   platforms: ["iOS"]
   press_kit: "https://drive.google.com/drive/folders/18F3br57dCm2_6Q4r6zC3-auIUTK7JKDW"
-  slogan: "Walk in real life – Keep your virtual cat alive."
+  slogan: "Walk. Track. Feed your cat."
   testflight: "https://testflight.apple.com/join/JRfY1cH2"
 
   description:
-    "Meet Catzumi, the world's first virtual walking pet companion app! Catzumi helps you go from 0 to 18,000 steps, all while caring for the cutest virtual cat around. Get ready to paw-sitively transform your health!</br></br>
-    Dreamed up by a passionate walker and adored by step enthusiasts everywhere, Catzumi makes the great outdoors feel like your second home. Whether you're aiming for 1,000, 2,000, or even 18,000 steps a day, your feline friend will be there every step of the way!</br></br>
-    No prior experience needed – just lace up those shoes and let Catzumi guide you towards a purr-fect walking habit. You'll be feline fine in no time as you boost your fitness and discover your unique walking style.</br></br>
-    Whether you're strolling for fun or fitness, you'll fall head over paws for walking with Catzumi!"
+    "Catzumi is the world's first pixel pet that turns walking into a game! Every step you take helps care for your virtual cat — feed it, evolve it, and unlock new looks as you walk your way to better health.<br><br>
+    Whether you're taking 1,000 or 18,000 steps a day, your adorable feline companion is with you every step of the way. No experience needed — just lace up and start walking!<br><br>
+    Catzumi is 100% free to start. Optional in-app purchases support development and unlock cosmetic items. Download now and start your paw-some journey!<br><br>
+    Keep walking!"
 
   privacy:
     "Catzumi does not collect images or personally identifiable data.
@@ -122,7 +122,7 @@
   color: "#66023C"
   description_short: "Modular arithmetic crafted to enhance your designs or stand out on its own, allowing you to impress others."
   id: "6451383807"
-  is_new: true
+  is_new: false
   name: "Modulart Studio"
   platforms: ["iOS", "iPadOS", "macOS"]
   press_kit: "https://drive.google.com/drive/folders/1CMijv-6YyvlN4A0Kcb8mDqj5XDZmqGo-"

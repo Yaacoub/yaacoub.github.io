@@ -246,12 +246,12 @@ code {
 	font-family: var(--font-roboto-mono);
 }
 
-code::selection, code > *::selection {
+code:not(p code)::selection, code > *:not(p code)::selection {
 	color: var(--color-element-label-primary);
 	background: var(--color-element-background-primary);
 }
 
-code::-moz-selection, code > *::-moz-selection {
+code:not(p code)::-moz-selection, code > *:not(p code)::-moz-selection {
 	color: var(--color-element-label-primary);
 	background: var(--color-element-background-primary);
 }

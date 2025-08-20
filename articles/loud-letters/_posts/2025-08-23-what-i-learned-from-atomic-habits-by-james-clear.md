@@ -7,7 +7,14 @@ title: "What I Learned from Atomic Habits by James Clear"
 ## Understanding Habits  
   
 A habit is a behavior that has been repeated enough times to become automatic. It’s not something you think through every time; it runs on autopilot. This is both the power and the danger of habits: they free up your mind for other tasks, but they can also quietly shape your life in ways you don’t always notice.  
-  
+
+The habit is composed of four successive parts:  
+
+* The cue is the trigger that initiates the habit. It’s a signal from your environment or your internal state that tells your brain to start a behavior (e.g., your alarm ringing in the morning).
+* The routine is the actual behavior you perform after the cue. This is the habit itself (e.g., checking your phone).
+* The reward is the benefit you get from completing the routine. Rewards satisfy cravings, teach your brain that the routine is worth remembering, and reinforce the habit loop (e.g., feeling in the loop after scrolling social media).
+* The belief is the layer that makes the habit stick in the long run. Belief is about identity and mindset; the conviction that repeating the habit is part of who you are (e.g., “I am someone who stays connected”).
+
 The first step to having a clearer view of your habits is to use a habit scorecard. It’s a simple list of your daily habits that you mark as positive (e.g., eating a healthy breakfast after waking up), negative (e.g., checking my phone after waking up), or neutral (e.g., going to the toilet after waking up). The goal is awareness: you can’t change and improve yourself if you don’t already notice your actions.  
   
 ## Building Good Habits  

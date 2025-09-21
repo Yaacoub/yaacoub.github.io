@@ -20,7 +20,7 @@ This year, Apple introduced Liquid Glass, a new universal design for all their p
 
 The glass is dynamic, reflects the background colors, adapts to light and dark content, and follows the curvature of the display. Besides, elements are now larger, bolder and left-aligned, as can be seen with the new alert dialogs.
 
-![Liquid Glass](/-assets/images/articles/swift-tip/state-of-the-union-what-i-took-away/liquid_glass.png)
+![Liquid Glass](/-assets/images/articles/swift-tip/state-of-the-union-what-i-took-away/liquid_glass.webp)
 
 ### Updating
 
@@ -32,7 +32,7 @@ Xcode now includes a new tool called Icon Composer to create and export icons fo
 
 As a rule of thumb, an app icon should have between 2 to 4 layers as stated by Apple.
 
-![Icon Composer](/-assets/images/articles/swift-tip/state-of-the-union-what-i-took-away/icons.png)
+![Icon Composer](/-assets/images/articles/swift-tip/state-of-the-union-what-i-took-away/icons.webp)
 
 ## Better intelligence
 

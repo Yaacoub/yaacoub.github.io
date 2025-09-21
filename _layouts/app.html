@@ -8,12 +8,7 @@ type: "website"
 			{%- assign app = site.data.apps | where: "name", page.app | first %}
 			<div>
 				<div>
-					<figure aria-label="App icon" class="icon">
-						<picture>
-							<source srcset="/-assets/images/apps/{{ app.name | slugify }}/icon.webp" type="image/webp">
-							<img alt="" src="/-assets/images/apps/{{ app.name | slugify }}/icon.png">
-						</picture>
-					</figure>
+					<figure aria-label="App icon" class="icon"><img alt="" src="/-assets/images/apps/{{ app.name | slugify }}/icon.webp"></figure>
 					<header>
 						<h1>{{ app.name }}</h1>
 						<h2>{{ app.slogan }}</h2>
@@ -23,17 +18,10 @@ type: "website"
 					</header>
 				</div>
 				{% assign appName = app.name | slugify %}
-				{% assign pathPNG = "/-assets/images/apps/" | append: appName | append: "/hero.png" %}
 				{% assign pathWEBP = "/-assets/images/apps/" | append: appName | append: "/hero.webp" %}
-				{% assign png = site.static_files | where: "path", pathPNG %}
 				{% assign webp = site.static_files | where: "path", pathWEBP %}
-				{% if png.size != 0 or webp.size != 0 %}
-				<figure aria-label="App screenshots" class="screenshots">
-					<picture>
-						<source srcset="{{ pathWEBP }}" type="image/webp">
-						<img alt="" src="{{ pathPNG }}">
-					</picture>
-				</figure>
+				{% if webp.size != 0 %}
+				<figure aria-label="App screenshots" class="screenshots"><img alt="" src="{{ pathWEBP }}"></figure>
 				{% endif %}
 			</div>
 		</section>
@@ -54,12 +42,7 @@ type: "website"
 		<section class="features-large">
 			{%- for feature in app.features_large %}
 			<div>
-				<figure aria-label="App screenshots">
-					<picture>
-						<source srcset="/-assets/images/apps/{{ app.name | slugify }}/features-large/{{ feature.name | slugify }}.webp" type="image/webp">
-						<img alt="" src="/-assets/images/apps/{{ app.name | slugify }}/features-large/{{ feature.name | slugify }}.png">
-					</picture>
-				</figure>
+				<figure aria-label="App screenshots"><img alt="" src="/-assets/images/apps/{{ app.name | slugify }}/features-large/{{ feature.name | slugify }}.webp"></figure>
 				<header>
 					<h1>{{ feature.headline }}</h1>
 					<p class="style-subheading-1">{{ feature.body }}</p>
@@ -73,12 +56,7 @@ type: "website"
 			<div>
 				{%- for feature in app.features_medium %}
 				<div>
-					<figure aria-label="App screenshots">
-						<picture>
-							<source srcset="/-assets/images/apps/{{ app.name | slugify }}/features-medium/{{ feature.name | slugify }}.webp" type="image/webp">
-							<img alt="" src="/-assets/images/apps/{{ app.name | slugify }}/features-medium/{{ feature.name | slugify }}.png">
-						</picture>
-					</figure>
+					<figure aria-label="App screenshots"><img alt="" src="/-assets/images/apps/{{ app.name | slugify }}/features-medium/{{ feature.name | slugify }}.webp"></figure>
 					<p class="style-subheading-2">{{ feature.body }}</p>
 				</div>
 				{%- endfor %}

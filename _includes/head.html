@@ -7,8 +7,8 @@
 
 {% assign category = page.categories | last | slugify %}
 {% assign title = page.title | slugify %}
-{% assign pathPNG = "/-assets/images/articles/" | append: category | append: "/" | append: title | append: "/hero.png" %}
-{% assign png = site.static_files | where: "path", pathPNG %}
+{% assign pathWEBP = "/-assets/images/articles/" | append: category | append: "/" | append: title | append: "/hero.webp" %}
+{% assign webp = site.static_files | where: "path", pathWEBP %}
 
 <head>
 
@@ -70,8 +70,8 @@
 	<meta property="article:published_time" content="{{ page.date | date: '%Y-%m-%d' }}">
 	<meta property="article:section" content="{{ page.categories | last | replace: '-', ' ' | capitalize }}">
 	<meta property="og:description" content="{{ page.description }}">
-	{% if png.size != 0 %}
-	<meta property="og:image" content="{{ pathPNG | absolute_url }}">
+	{% if image.size != 0 %}
+	<meta property="og:image" content="{{ pathImage | absolute_url }}">
 	{% else %}
 	<meta property="og:image" content="{{ image | absolute_url }}">
 	{% endif %}
@@ -94,8 +94,8 @@
 	<meta property="twitter:app:url:iphone" content="{{ app.argument }}">
 	<meta property="twitter:card" content="{%- if app.id != nil -%}app{%- else -%}summary_large_image{%- endif -%}">
 	<meta property="twitter:creator" content="@{{ site.social_links.x }}">
-	{% if png.size != 0 %}
-	<meta property="twitter:image:src" content="{{ pathPNG | absolute_url }}">
+	{% if webp.size != 0 %}
+	<meta property="twitter:image:src" content="{{ pathWEBP | absolute_url }}">
 	{% else %}
 	<meta property="twitter:image:src" content="{{ image | absolute_url }}">
 	{% endif %}

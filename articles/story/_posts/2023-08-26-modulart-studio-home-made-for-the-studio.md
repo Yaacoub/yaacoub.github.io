@@ -1,6 +1,6 @@
 ---
 author: "Peter Yaacoub"
-image: "articles/story/modulart-studio-home-made-for-the-studio/hero.png"
+image: "articles/story/modulart-studio-home-made-for-the-studio/hero.webp"
 layout: "article"
 title: "Modulart Studio: Home-made for the studio"
 ---

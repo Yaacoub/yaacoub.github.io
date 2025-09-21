@@ -1,7 +1,7 @@
 ---
 author: "Peter Yaacoub"
 has_repo: true
-image: "articles/swift-tip/present-mfmailcomposeviewcontroller/hero.png"
+image: "articles/swift-tip/present-mfmailcomposeviewcontroller/hero.webp"
 layout: "article"
 title: "Present MFMailComposeViewController"
 ---

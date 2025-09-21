@@ -1,6 +1,6 @@
 ---
 author: "Peter Yaacoub"
-image: "articles/loud-letters/factfulness/hero.png"
+image: "articles/loud-letters/factfulness/hero.webp"
 layout: "article"
 title: "Factfulness"
 ---
@@ -35,9 +35,9 @@ Look for the majority.
 
 **Chasm** = Deep fissure in the earth's surface.
 
-![The gap instinct 1](/-assets/images/articles/loud-letters/factfulness/the-gap-instinct-1.png)
+![The gap instinct 1](/-assets/images/articles/loud-letters/factfulness/the-gap-instinct-1.webp)
 
-![The gap instinct 2](/-assets/images/articles/loud-letters/factfulness/the-gap-instinct-2.png)
+![The gap instinct 2](/-assets/images/articles/loud-letters/factfulness/the-gap-instinct-2.webp)
 
 ## The Negativity Instinct
 
@@ -47,9 +47,9 @@ Expect bad news.
 
 > Things can be both bad and better.
 
-![The negativity instinct 1](/-assets/images/articles/loud-letters/factfulness/the-negativity-instinct-1.png)
+![The negativity instinct 1](/-assets/images/articles/loud-letters/factfulness/the-negativity-instinct-1.webp)
 
-![The negativity instinct 2](/-assets/images/articles/loud-letters/factfulness/the-negativity-instinct-2.png)
+![The negativity instinct 2](/-assets/images/articles/loud-letters/factfulness/the-negativity-instinct-2.webp)
 
 ## The Straight Line Instinct
 
@@ -59,9 +59,9 @@ Lines might bend.
 
 **Rose-tinted glasses** = The cheerful or optimistic view of things, usually without a valid basis.
 
-![The straight line instinct 1](/-assets/images/articles/loud-letters/factfulness/the-straight-line-instinct-1.png)
+![The straight line instinct 1](/-assets/images/articles/loud-letters/factfulness/the-straight-line-instinct-1.webp)
 
-![The straight line instinct 2](/-assets/images/articles/loud-letters/factfulness/the-straight-line-instinct-2.png)
+![The straight line instinct 2](/-assets/images/articles/loud-letters/factfulness/the-straight-line-instinct-2.webp)
 
 ## The Fear Instinct
 
@@ -75,9 +75,9 @@ Calculate the risks.
 
 **Chemophobia** = The fear of chemicals.
 
-![The fear instinct 1](/-assets/images/articles/loud-letters/factfulness/the-fear-instinct-1.png)
+![The fear instinct 1](/-assets/images/articles/loud-letters/factfulness/the-fear-instinct-1.webp)
 
-![The fear instinct 2](/-assets/images/articles/loud-letters/factfulness/the-fear-instinct-2.png)
+![The fear instinct 2](/-assets/images/articles/loud-letters/factfulness/the-fear-instinct-2.webp)
 
 ## The Size Instinct
 
@@ -91,9 +91,9 @@ Get things in proportion.
 
 **Pagoda** = Hindu/Buddhist temple.
 
-![The size instinct 1](/-assets/images/articles/loud-letters/factfulness/the-size-instinct-1.png)
+![The size instinct 1](/-assets/images/articles/loud-letters/factfulness/the-size-instinct-1.webp)
 
-![The size instinct 2](/-assets/images/articles/loud-letters/factfulness/the-size-instinct-2.png)
+![The size instinct 2](/-assets/images/articles/loud-letters/factfulness/the-size-instinct-2.webp)
 
 ## The Generalization Instinct
 
@@ -101,17 +101,17 @@ Question your categories.
 
 > Your country has become so safe that when you go abroad the world is dangerous for you.
 
-![The generalization instinct 1](/-assets/images/articles/loud-letters/factfulness/the-generalization-instinct-1.png)
+![The generalization instinct 1](/-assets/images/articles/loud-letters/factfulness/the-generalization-instinct-1.webp)
 
-![The generalization instinct 2](/-assets/images/articles/loud-letters/factfulness/the-generalization-instinct-2.png)
+![The generalization instinct 2](/-assets/images/articles/loud-letters/factfulness/the-generalization-instinct-2.webp)
 
 ## The Destiny Instinct
 
 Slow change is still change.
 
-![The destiny instinct 1](/-assets/images/articles/loud-letters/factfulness/the-destiny-instinct-1.png)
+![The destiny instinct 1](/-assets/images/articles/loud-letters/factfulness/the-destiny-instinct-1.webp)
 
-![The destiny instinct 2](/-assets/images/articles/loud-letters/factfulness/the-destiny-instinct-2.png)
+![The destiny instinct 2](/-assets/images/articles/loud-letters/factfulness/the-destiny-instinct-2.webp)
 
 ## The Single Perspective Instinct
 
@@ -121,9 +121,9 @@ Get a toolbox.
 
 > It’s better to argue for democracy as a goal in itself instead of as a superior means to other goals we like.
 
-![The single perspective instinct 1](/-assets/images/articles/loud-letters/factfulness/the-single-perspective-instinct-1.png)
+![The single perspective instinct 1](/-assets/images/articles/loud-letters/factfulness/the-single-perspective-instinct-1.webp)
 
-![The single perspective instinct 2](/-assets/images/articles/loud-letters/factfulness/the-single-perspective-instinct-2.png)
+![The single perspective instinct 2](/-assets/images/articles/loud-letters/factfulness/the-single-perspective-instinct-2.webp)
 
 ## The Blame Instinct
 
@@ -135,9 +135,9 @@ Resist pointing your finger.
 
 **Prosaic** = That lacks imaginativeness or originality.
 
-![The blame instinct 1](/-assets/images/articles/loud-letters/factfulness/the-blame-instinct-1.png)
+![The blame instinct 1](/-assets/images/articles/loud-letters/factfulness/the-blame-instinct-1.webp)
 
-![The blame instinct 2](/-assets/images/articles/loud-letters/factfulness/the-blame-instinct-2.png)
+![The blame instinct 2](/-assets/images/articles/loud-letters/factfulness/the-blame-instinct-2.webp)
 
 ## The Urgency Instinct
 
@@ -147,9 +147,9 @@ Take small steps.
 
 **Galvanize** = Shock or stimulate into taking action.
 
-![The urgency instinct 1](/-assets/images/articles/loud-letters/factfulness/the-urgency-instinct-1.png)
+![The urgency instinct 1](/-assets/images/articles/loud-letters/factfulness/the-urgency-instinct-1.webp)
 
-![The urgency instinct 2](/-assets/images/articles/loud-letters/factfulness/the-urgency-instinct-2.png)
+![The urgency instinct 2](/-assets/images/articles/loud-letters/factfulness/the-urgency-instinct-2.webp)
 
 ## Conclusion
 

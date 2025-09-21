@@ -1,6 +1,6 @@
 ---
 author: "Peter Yaacoub"
-image: "articles/swift-tip/what-s-new-in-appkit-wwdc-2022/hero.png"
+image: "articles/swift-tip/what-s-new-in-appkit-wwdc-2022/hero.webp"
 layout: "article"
 title: "What's new in AppKit - WWDC 2022"
 ---
@@ -22,7 +22,7 @@ Many [collection behaviors](https://developer.apple.com/documentation/appkit/nsw
 - `collectionBehavior = .stationary`
 - `collectionBehavior = .transient`
 
-![Stage Manager](/-assets/images/articles/swift-tip/what-s-new-in-appkit-wwdc-2022/stage-manager.png)
+![Stage Manager](/-assets/images/articles/swift-tip/what-s-new-in-appkit-wwdc-2022/stage-manager.webp)
 
 ## Preferences
 
@@ -30,7 +30,7 @@ Apple has renamed Preferences to Settings throughout their mac operating system.
 
 If using SwiftUI, the setting's view preferred layout is a Form with its [form style](https://developer.apple.com/documentation/swiftui/form/formstyle(_:)) set to `.insetGrouped`.
 
-![Stage Manager](/-assets/images/articles/swift-tip/what-s-new-in-appkit-wwdc-2022/preferences.png)
+![Stage Manager](/-assets/images/articles/swift-tip/what-s-new-in-appkit-wwdc-2022/preferences.webp)
 
 ## Controls
 
@@ -38,13 +38,13 @@ If using SwiftUI, the setting's view preferred layout is a Form with its [form s
 
 There are new and updated controls this year. The [NSComboButton](https://developer.apple.com/documentation/appkit/nscombobutton) is the combination of a button and a drop-down menu. When you set its [style](https://developer.apple.com/documentation/appkit/nscombobutton/3943292-style) to `.split`, it looks like a button with a drop-down arrow on its trailing side. With `.unified`, it behaves like a button but shows more options when the user clicks and holds.
 
-![Stage Manager](/-assets/images/articles/swift-tip/what-s-new-in-appkit-wwdc-2022/nscombobutton.png)
+![Stage Manager](/-assets/images/articles/swift-tip/what-s-new-in-appkit-wwdc-2022/nscombobutton.webp)
 
 ### NSColorWell
 
 Another long-awaited change is concerning the [NSColorWell](https://developer.apple.com/documentation/appkit/nscolorwell). You can further customize its appearance with the [color well style](https://developer.apple.com/documentation/appkit/nscolorwell/3955203-colorwellstyle) property. It can either be set to `.default`, `.minimal` or `.expanded`. Either has a consistent look with their iOS and iPadOS counterparts. Besides, you can customize the color selection behavior with the [pulldown target](https://developer.apple.com/documentation/appkit/nscolorwell/3955207-pulldowntarget) and [action](https://developer.apple.com/documentation/appkit/nscolorwell/3955206-pulldownaction) instance properties.
 
-![Stage Manager](/-assets/images/articles/swift-tip/what-s-new-in-appkit-wwdc-2022/nscolorwell.png)
+![Stage Manager](/-assets/images/articles/swift-tip/what-s-new-in-appkit-wwdc-2022/nscolorwell.webp)
 
 ### NSToolbar
 
@@ -58,7 +58,7 @@ The former returns the identifier of items that should have a fixed position in 
 
 [NSAlert](https://developer.apple.com/documentation/appkit/nsalert) comes with a new layout to complement the existing one. If the alert message is too long, the control switches from a compact appearance where the text is under the icon to an expanded appearance where it is on its trailing side.
 
-![Stage Manager](/-assets/images/articles/swift-tip/what-s-new-in-appkit-wwdc-2022/nsalert.png)
+![Stage Manager](/-assets/images/articles/swift-tip/what-s-new-in-appkit-wwdc-2022/nsalert.webp)
 
 ### NSTableView
 
@@ -74,13 +74,13 @@ There are four types of rendering modes for SF Symbols:
 
 Configure the symbols using [NSImage](https://developer.apple.com/documentation/appkit/nsimage)'s `withSymbolConfiguration(:_)` method. Then, you can choose the preferred rendering mode. Also, you can use the new variable ones directly with the NSImage initializers containing the `variableValue` parameter.
 
-![Stage Manager](/-assets/images/articles/swift-tip/what-s-new-in-appkit-wwdc-2022/sf-symbols.png)
+![Stage Manager](/-assets/images/articles/swift-tip/what-s-new-in-appkit-wwdc-2022/sf-symbols.webp)
 
 ## Sharing
 
 The macOS Ventura share sheet presents richer information than ever, in the same fashion as iOS and iPadOS. It automatically generates the metadata, but you can set it up yourself if using an [NSPreviewRepresentingActivityItem](https://developer.apple.com/documentation/appkit/nspreviewrepresentingactivityitem). In whatever context, using an [NSSharingServicePicker](https://developer.apple.com/documentation/appkit/nssharingservicepicker) or not, the share sheet now shows up as a popover view.
 
-![Stage Manager](/-assets/images/articles/swift-tip/what-s-new-in-appkit-wwdc-2022/sharing.png)
+![Stage Manager](/-assets/images/articles/swift-tip/what-s-new-in-appkit-wwdc-2022/sharing.webp)
 
 ## Conclusion
 

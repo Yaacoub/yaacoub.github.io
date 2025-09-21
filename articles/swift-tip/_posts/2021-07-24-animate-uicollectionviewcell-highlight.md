@@ -1,7 +1,7 @@
 ---
 author: "Peter Yaacoub"
 has_repo: true
-image: "articles/swift/animate-uicollectionviewcell-highlight/hero.png"
+image: "articles/swift/animate-uicollectionviewcell-highlight/hero.webp"
 layout: "article"
 title: "Animate UICollectionViewCell highlight"
 ---

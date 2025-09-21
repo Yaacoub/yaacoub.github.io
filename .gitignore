@@ -16,5 +16,4 @@ _site/
 
 # Ignore others
 
-*.webp
 .DS_Store

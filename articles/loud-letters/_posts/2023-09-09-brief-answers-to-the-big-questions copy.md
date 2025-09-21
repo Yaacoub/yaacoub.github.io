@@ -1,6 +1,6 @@
 ---
 author: "Peter Yaacoub"
-image: "articles/loud-letters/brief-answers-to-the-big-questions/hero.png"
+image: "articles/loud-letters/brief-answers-to-the-big-questions/hero.webp"
 layout: "article"
 title: "Brief Answers to the Big Questions"
 ---

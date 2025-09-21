@@ -18,12 +18,7 @@ type: "website"
 				<h1>Featured articles</h1>
 				<div>
 					<a class="item item-large plain" href="{{ posts.first.url }}">
-						<figure aria-label="Hero image" class="large">
-							<picture>
-								<source srcset="/-assets/images/articles/{{ posts.first.categories | last | slugify }}/{{ posts.first.title | slugify }}/hero.webp" type="image/webp">
-								<img alt="" src="/-assets/images/articles/{{ posts.first.categories | last | slugify }}/{{ posts.first.title | slugify }}/hero.png">
-							</picture>
-						</figure>
+						<figure aria-label="Hero image" class="large"><img alt="" src="/-assets/images/articles/{{ posts.first.categories | last | slugify }}/{{ posts.first.title | slugify }}/hero.webp"></figure>
 						<header>
 							<p class="style-detail-1">{{ posts.first.categories | last | replace: "-", " " | capitalize }} • <time datetime="{{ posts.first.date | date: '%Y-%m-%d' }}">{{ posts.first.date | date_to_long_string }}</time></p>
 							<h3>{{ posts.first.title }}</h3>
@@ -37,12 +32,7 @@ type: "website"
 					{%- assign limit = articles_featured_count | minus: 1 -%}
 					{%- for post in posts limit: limit offset: 1 %}
 					<a class="item item-small plain" href="{{ post.url }}">
-						<figure aria-label="Hero image" class="large">
-							<picture>
-								<source srcset="/-assets/images/articles/{{ post.categories | last | slugify }}/{{ post.title | slugify}}/hero.webp" type="image/webp">
-								<img alt="" src="/-assets/images/articles/{{ post.categories | last | slugify }}/{{ post.title | slugify}}/hero.png">
-							</picture>
-						</figure>
+						<figure aria-label="Hero image" class="large"><img alt="" src="/-assets/images/articles/{{ post.categories | last | slugify }}/{{ post.title | slugify}}/hero.webp"></figure>
 						<header>
 							<p class="style-title-1">{{ post.title }}</p>
 							<p class="style-detail-1">{{ post.categories | last | replace: "-", " " | capitalize }} • <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date_to_long_string }}</time></p>
@@ -63,23 +53,13 @@ type: "website"
 						<h2>{{ post.title }}</h2>
 						<p class="style-detail-1">{{ post.categories | last | replace: "-", " " | capitalize }} • <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date_to_long_string }}</time></p>
 					</header>
-					<figure aria-label="Hero image" class="large">
-						<picture>
-							<source srcset="/-assets/images/articles/{{ post.categories | last | slugify }}/{{ post.title | slugify}}/hero.webp" type="image/webp">
-							<img alt="" src="/-assets/images/articles/{{ post.categories | last | slugify }}/{{ post.title | slugify}}/hero.png">
-						</picture>
-					</figure>
+					<figure aria-label="Hero image" class="large"><img alt="" src="/-assets/images/articles/{{ post.categories | last | slugify }}/{{ post.title | slugify}}/hero.webp"></figure>
 				</a>
 				{%- endfor %}
 				{%- assign limit = articles_tiles_count | minus: 1 -%}
 				{%- for post in posts limit: limit offset: continue %}
 				<a class="item item-small-complex plain" href="{{ post.url }}">
-					<figure aria-label="Hero image" class="large">
-						<picture>
-							<source srcset="/-assets/images/articles/{{ post.categories | last | slugify }}/{{ post.title | slugify}}/hero.webp" type="image/webp">
-							<img alt="" src="/-assets/images/articles/{{ post.categories | last | slugify }}/{{ post.title | slugify}}/hero.png">
-						</picture>
-					</figure>
+					<figure aria-label="Hero image" class="large"><img alt="" src="/-assets/images/articles/{{ post.categories | last | slugify }}/{{ post.title | slugify}}/hero.webp"></figure>
 					<header>
 						<p class="style-title-1">{{ post.title }}</p>
 						<p class="style-detail-1">{{ post.categories | last | replace: "-", " " | capitalize }} • <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date_to_long_string }}</time></p>
@@ -96,12 +76,7 @@ type: "website"
 				<div class="grid">
 					{%- for post in posts limit: articles_list_count offset: continue %}
 					<a class="item item-small plain" href="{{ post.url }}">
-						<figure aria-label="Hero image" class="large">
-							<picture>
-								<source srcset="/-assets/images/articles/{{ post.categories | last | slugify }}/{{ post.title | slugify}}/hero.webp" type="image/webp">
-								<img alt="" src="/-assets/images/articles/{{ post.categories | last | slugify }}/{{ post.title | slugify}}/hero.png">
-							</picture>
-						</figure>
+						<figure aria-label="Hero image" class="large"><img alt="" src="/-assets/images/articles/{{ post.categories | last | slugify }}/{{ post.title | slugify}}/hero.webp"></figure>
 						<header>
 							<p class="style-title-1">{{ post.title }}</p>
 							<p class="style-detail-1">{{ post.categories | last | replace: "-", " " | capitalize }} • <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date_to_long_string }}</time></p>

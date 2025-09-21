@@ -1,7 +1,7 @@
 ---
 author: "Peter Yaacoub"
 has_repo: true
-image: "articles/swift-tip/shazamkit-a-first-look/hero.png"
+image: "articles/swift-tip/shazamkit-a-first-look/hero.webp"
 layout: "article"
 title: "ShazamKit: A first look"
 ---

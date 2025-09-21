@@ -1,7 +1,7 @@
 ---
 author: "Peter Yaacoub"
 has_repo: true
-image: "articles/swift-tip/present-share-sheet-in-swiftui/hero.png"
+image: "articles/swift-tip/present-share-sheet-in-swiftui/hero.webp"
 layout: "article"
 title: "Present share sheet in SwiftUI"
 ---

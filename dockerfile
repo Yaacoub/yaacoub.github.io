@@ -17,6 +17,10 @@ RUN apk add --no-cache build-base gcc cmake git
 RUN gem update --system
 RUN gem update bundler
 RUN gem install bundler jekyll
-# RUN bundle install
-# RUN bundle update
-# RUN bundle exec jekyll serve
+
+
+
+# Git Config
+
+RUN git config --global user.email "yaapete.dev@gmail.com"
+RUN git config --global user.name "Peter Yaacoub"

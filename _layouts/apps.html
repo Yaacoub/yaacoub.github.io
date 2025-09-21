@@ -8,12 +8,7 @@ type: "website"
 			<div class="unselectable">
 				{%- for app in site.data.apps %}
 				<a class="item plain" href="{{ app.name | slugify }}/">
-					<figure aria-label="App icon">
-						<picture>
-							<source srcset="/-assets/images/apps/{{ app.name | slugify }}/icon.webp" type="image/webp">
-							<img alt="" src="/-assets/images/apps/{{ app.name | slugify }}/icon.png">
-						</picture>
-					</figure>
+					<figure aria-label="App icon"><img alt="" src="/-assets/images/apps/{{ app.name | slugify }}/icon.webp"></figure>
 					<p class="style-navigation-link-1">{{ app.name }}</p>
 					{%- if app.is_new %}<p class="style-notice-1">New</p>{%- endif %}
 				</a>
@@ -24,12 +19,7 @@ type: "website"
 		<section class="app-hero">
 			<div>
 				<div>
-					<figure aria-label="App icon" class="icon">
-						<picture>
-							<source srcset="/-assets/images/apps/{{ app.name | slugify }}/icon.webp" type="image/webp">
-							<img alt="" src="/-assets/images/apps/{{ app.name | slugify }}/icon.png">
-						</picture>
-					</figure>
+					<figure aria-label="App icon" class="icon"><img alt="" src="/-assets/images/apps/{{ app.name | slugify }}/icon.webp"></figure>
 					<header>
 						<h1>{{ app.name }}</h1>
 						<h2>{{ app.slogan }}</h2>
@@ -43,17 +33,10 @@ type: "website"
 					</header>
 				</div>
 				{% assign appName = app.name | slugify %}
-				{% assign pathPNG = "/-assets/images/apps/" | append: appName | append: "/hero.png" %}
 				{% assign pathWEBP = "/-assets/images/apps/" | append: appName | append: "/hero.webp" %}
-				{% assign png = site.static_files | where: "path", pathPNG %}
 				{% assign webp = site.static_files | where: "path", pathWEBP %}
-				{% if png.size != 0 or webp.size != 0 %}
-				<figure aria-label="App screenshots" class="screenshots">
-					<picture>
-						<source srcset="/-assets/images/apps/{{ app.name | slugify }}/hero.webp" type="image/webp">
-						<img alt="" src="/-assets/images/apps/{{ app.name | slugify }}/hero.png">
-					</picture>
-				</figure>
+				{% if webp.size != 0 %}
+				<figure aria-label="App screenshots" class="screenshots"><img alt="" src="/-assets/images/apps/{{ app.name | slugify }}/hero.webp"></figure>
 				{% endif %}
 			</div>
 		</section>
@@ -63,12 +46,7 @@ type: "website"
 				<h1>{{ site.data.copy_apps.section1_title }}</h1>
 				<div class="item-large-complex item">
 					<h2 class="preformatted-text">{{ site.data.copy_apps.section1_headline1 }}</h2>
-					<figure aria-label="App screenshots" class="large">
-						<picture>
-							<source srcset="/-assets/images/apps/nice-beautiful-gorgeous.webp" type="image/webp">
-							<img alt="" src="/-assets/images/apps/nice-beautiful-gorgeous.png">
-						</picture>
-					</figure>
+					<figure aria-label="App screenshots" class="large"><img alt="" src="/-assets/images/apps/nice-beautiful-gorgeous.webp"></figure>
 				</div>
 				<div class="item-small-complex item">
 					<header>
@@ -84,12 +62,7 @@ type: "website"
 							</a>
 						</div>
 					</header>
-					<figure aria-label="App screenshots" class="large">
-						<picture>
-							<source srcset="/-assets/images/apps/continuous-support.webp" type="image/webp">
-							<img alt="" src="/-assets/images/apps/continuous-support.png">
-						</picture>
-					</figure>
+					<figure aria-label="App screenshots" class="large"><img alt="" src="/-assets/images/apps/continuous-support.webp"></figure>
 				</div>
 				<div class="item">
 					<figure aria-label="Heart symbol"><img alt="" src="/-assets/symbols/heart.svg"></figure>
@@ -108,12 +81,7 @@ type: "website"
 							<img alt="" src="/-assets/symbols/arrow-top-right.svg">
 						</a>
 					</header>
-					<figure aria-label="App screenshots" class="medium">
-						<picture>
-							<source srcset="/-assets/images/apps/the-abyss-of-side-projects.webp" type="image/webp">
-							<img alt="" src="/-assets/images/apps/the-abyss-of-side-projects.png">
-						</picture>
-					</figure>
+					<figure aria-label="App screenshots" class="medium"><img alt="" src="/-assets/images/apps/the-abyss-of-side-projects.webp"></figure>
 				</div>
 			</div>
 		</section>

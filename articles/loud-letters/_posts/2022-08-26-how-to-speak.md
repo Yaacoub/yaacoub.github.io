@@ -1,6 +1,6 @@
 ---
 author: "Peter Yaacoub"
-image: "articles/loud-letters/how-to-speak/hero.png"
+image: "articles/loud-letters/how-to-speak/hero.webp"
 layout: "article"
 title: "How To Speak"
 ---

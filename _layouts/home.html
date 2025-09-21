@@ -19,12 +19,7 @@ type: "website"
 						<img alt="" src="/-assets/symbols/chevron-right.svg">
 					</a>
 				</header>
-				<figure aria-label="Profile Picture">
-					<picture>
-						<source srcset="/-assets/images/profile.webp" type="image/webp">
-						<img alt="" src="/-assets/images/profile.png">
-					</picture>
-				</figure>
+				<figure aria-label="Profile Picture"><img alt="" src="/-assets/images/profile.webp"></figure>
 			</div>
 		</section>
 		<section class="list">
@@ -37,12 +32,7 @@ type: "website"
 				<div class="grid">
 				{%- for post in posts limit: 3 %}
 					<a class="plain" href="{{ post.url }}">
-						<figure aria-label="Thumbnail">
-							<picture>
-								<source srcset="/-assets/images/articles/{{ post.categories | last | slugify }}/{{ post.title | slugify }}/hero.webp" type="image/webp">
-								<img alt="" src="/-assets/images/articles/{{ post.categories | last | slugify }}/{{ post.title | slugify }}/hero.png">
-							</picture>
-						</figure>
+						<figure aria-label="Thumbnail"><img alt="" src="/-assets/images/articles/{{ post.categories | last | slugify }}/{{ post.title | slugify }}/hero.webp"></figure>
 						<header>
 							<p class="style-title-1">{{ post.title }}</p>
 							<p class="style-detail-1">{{ post.categories | last | replace: "-", " " | capitalize }} • <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date_to_long_string }}</time></p>
@@ -65,12 +55,7 @@ type: "website"
 				<div class="grid">
 				{%- for app in site.data.apps limit: 3 %}
 					<a class="plain" href="/apps/{{ app.name | slugify }}/">
-						<figure aria-label="Thumbnail">
-							<picture>
-								<source srcset="/-assets/images/apps/{{ app.name | slugify }}/thumbnail.webp" type="image/webp">
-								<img alt="" src="/-assets/images/apps/{{ app.name | slugify }}/thumbnail.png">
-							</picture>
-						</figure>
+						<figure aria-label="Thumbnail"><img alt="" src="/-assets/images/apps/{{ app.name | slugify }}/thumbnail.webp"></figure>
 						<header>
 							<p class="style-title-1">{{ app.name }}</p>
 							<p class="style-detail-1">{{ app.platforms | join: " • " }}</p>

@@ -1,7 +1,7 @@
 ---
 author: "Peter Yaacoub"
 has_repo: true
-image: "articles/swift-tip/blur-uiviewcontroller-background/hero.png"
+image: "articles/swift-tip/blur-uiviewcontroller-background/hero.webp"
 layout: "article"
 title: "Blur UIViewController background"
 ---

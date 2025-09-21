@@ -32,12 +32,7 @@ type: "article"
 					{% endif %}
 				</header>
 				{% if page.categories.last != "privacy" %}
-				<figure aria-label="Header image" class="hero wide">
-					<picture>
-						<source srcset="/-assets/images/articles/{{ page.categories | last | slugify }}/{{ page.title | slugify }}/hero.webp" type="image/webp">
-						<img alt="" src="/-assets/images/articles/{{ page.categories | last | slugify }}/{{ page.title | slugify }}/hero.png">
-					</picture>
-				</figure>
+				<figure aria-label="Header image" class="hero wide"><img alt="" src="/-assets/images/articles/{{ page.categories | last | slugify }}/{{ page.title | slugify }}/hero.webp"></figure>
 				{% endif %}
 				<div class="body">
 {%- for element in content -%}

@@ -16,7 +16,7 @@ defaults:
     scope:
       path: ""
     values:
-      image: "social.png"
+      image: "social.webp"
 
 
 

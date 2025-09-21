@@ -1,6 +1,6 @@
 ---
 author: "Sophie Yaacoub"
-image: "articles/loud-letters/dr-gabor-maté-s-radical-insights-on-human-nature-and-health/hero.png"
+image: "articles/loud-letters/dr-gabor-maté-s-radical-insights-on-human-nature-and-health/hero.webp"
 layout: "article"
 title: "Dr. Gabor Maté's Radical Insights on Human Nature and Health"
 ---

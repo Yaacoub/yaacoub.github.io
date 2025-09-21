@@ -1,6 +1,6 @@
 ---
 author: "Peter Yaacoub"
-image: "articles/story/catzumi-a-month-long-journey-from-concept-to-launch/hero.png"
+image: "articles/story/catzumi-a-month-long-journey-from-concept-to-launch/hero.webp"
 layout: "article"
 title: "Catzumi: A Month-Long Journey from Concept to Launch"
 ---

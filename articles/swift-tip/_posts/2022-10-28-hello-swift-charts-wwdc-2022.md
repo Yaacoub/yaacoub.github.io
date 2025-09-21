@@ -1,7 +1,7 @@
 ---
 author: "Peter Yaacoub"
 has_repo: true
-image: "articles/swift-tip/hello-swift-charts-wwdc-2022/hero.png"
+image: "articles/swift-tip/hello-swift-charts-wwdc-2022/hero.webp"
 layout: "article"
 title: "Hello Swift Charts - WWDC 2022"
 ---
@@ -34,7 +34,7 @@ struct ChartView: View {
 }
 ```
 
-![Bar chart](/-assets/images/articles/swift-tip/hello-swift-charts-wwdc-2022/bar-chart.png)
+![Bar chart](/-assets/images/articles/swift-tip/hello-swift-charts-wwdc-2022/bar-chart.webp)
 
 ## Multi-Series Line Chart
 
@@ -62,7 +62,7 @@ struct ChartView: View {
 }
 ```
 
-![Multi-series line chart](/-assets/images/articles/swift-tip/hello-swift-charts-wwdc-2022/multi-series-line-chart.png)
+![Multi-series line chart](/-assets/images/articles/swift-tip/hello-swift-charts-wwdc-2022/multi-series-line-chart.webp)
 
 ## Other Charts
 
@@ -76,9 +76,9 @@ There are six types of marks that you can use individually or together to create
 
 You can also customize their appearance with the `.foregroundStyle(by:)` and `.symbol(by:)` instance methods. Other methods also allow you to modify the symbol size and the line style.
 
-![Other charts 1](/-assets/images/articles/swift-tip/hello-swift-charts-wwdc-2022/other-charts-1.png)
+![Other charts 1](/-assets/images/articles/swift-tip/hello-swift-charts-wwdc-2022/other-charts-1.webp)
 
-![Other charts 2](/-assets/images/articles/swift-tip/hello-swift-charts-wwdc-2022/other-charts-2.png)
+![Other charts 2](/-assets/images/articles/swift-tip/hello-swift-charts-wwdc-2022/other-charts-2.webp)
 
 ## Conclusion
 

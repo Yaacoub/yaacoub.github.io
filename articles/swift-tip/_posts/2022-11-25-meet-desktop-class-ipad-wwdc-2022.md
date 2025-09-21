@@ -1,6 +1,6 @@
 ---
 author: "Peter Yaacoub"
-image: "articles/swift-tip/meet-desktop-class-ipad-wwdc-2022/hero.png"
+image: "articles/swift-tip/meet-desktop-class-ipad-wwdc-2022/hero.webp"
 layout: "article"
 title: "Meet desktop-class iPad - WWDC 2022"
 ---
@@ -13,7 +13,7 @@ The iPad was a desktop-class machine without desktop-class applications. However
 
 New in iOS, iPadOS, and macCatalyst 16, the [`style`](https://developer.apple.com/documentation/uikit/uinavigationitem/3987969-style) instance property on the view controller's navigation item lets you determine how the navigation bar lays out its content. The default is the `navigator` style for traditional navigation. Use the `browser` style if history and location matter in the app's current context. Use the `editor` style if you're focused on document editing and destination.
 
-![Navigation styles](/-assets/images/articles/swift-tip/meet-desktop-class-ipad-wwdc-2022/navigation-style.png)
+![Navigation styles](/-assets/images/articles/swift-tip/meet-desktop-class-ipad-wwdc-2022/navigation-style.webp)
 
 ## Center Items
 
@@ -33,7 +33,7 @@ After creating your item groups, you can add them to the navigation item's [`cen
 
 However, it's important to note that to support the customization of the navigation bar's layout, you have to set the navigation item's [`customizationIdentifier`](https://developer.apple.com/documentation/uikit/uinavigationitem/3987968-customizationidentifier) instance property. The app will then save and restore the user's custom layout across app launches.
 
-![Center items](/-assets/images/articles/swift-tip/meet-desktop-class-ipad-wwdc-2022/center-items.png)
+![Center items](/-assets/images/articles/swift-tip/meet-desktop-class-ipad-wwdc-2022/center-items.webp)
 
 ## Title Menu & Document Properties
 
@@ -43,19 +43,19 @@ You can optionally assign a [`titleMenuProvider`](https://developer.apple.com/do
 
 The title menu shows the document properties in its header. You can assign a `UIDocumentProperties` item to the navigation item's [`documentProperties`](https://developer.apple.com/documentation/uikit/uinavigationitem/3967521-documentproperties) instance property. Initialize the document properties object with a URL to gather a document's metadata and set its [`dragItemsProvider`](https://developer.apple.com/documentation/uikit/uidocumentproperties/3967514-dragitemsprovider) and [`activityViewControllerProvider`](https://developer.apple.com/documentation/uikit/uidocumentproperties/3967513-activityviewcontrollerprovider) to provide drag-and-drop and sharing support, respectively.
 
-![Title menu with document properties](/-assets/images/articles/swift-tip/meet-desktop-class-ipad-wwdc-2022/title-menu--document-properties.png)
+![Title menu with document properties](/-assets/images/articles/swift-tip/meet-desktop-class-ipad-wwdc-2022/title-menu--document-properties.webp)
 
 ## Inline Rename
 
 I may have lied about the default title menu elements. Indeed the rename action isn't available unless you assign a [`renameDelegate`](https://developer.apple.com/documentation/uikit/uinavigationitem/3967522-renamedelegate) to the navigation Item. You can customize the rename experience by calling `UIResponderStandardEditActions`'s [`rename(_:)`](https://developer.apple.com/documentation/uikit/uiresponderstandardeditactions/3967532-rename) instance method.
 
-![Inline rename](/-assets/images/articles/swift-tip/meet-desktop-class-ipad-wwdc-2022/inline-rename.png)
+![Inline rename](/-assets/images/articles/swift-tip/meet-desktop-class-ipad-wwdc-2022/inline-rename.webp)
 
 ## Inline Search
 
 Search bars are easy to implement and add to your navigation item: assign the latter's [`searchController`](https://developer.apple.com/documentation/uikit/uinavigationitem/2897305-searchcontroller) instance property with a search controller object you create. With the newest versions of iPadOS and macCatalyst, the navigation bar shows the search bar inline, next to other items. However, you can change its placement with the navigation item's [`searchBarPlacement`](https://developer.apple.com/documentation/uikit/uinavigationitem/3975871-searchbarplacement) instance property. Besides, when implementing the search controller, don't forget to set its [`searchResultsUpdater`](https://developer.apple.com/documentation/uikit/uisearchcontroller/1618661-searchresultsupdater) property to `self` for methods used to update your search results.
 
-![Inline rename](/-assets/images/articles/swift-tip/meet-desktop-class-ipad-wwdc-2022/inline-search.png)
+![Inline rename](/-assets/images/articles/swift-tip/meet-desktop-class-ipad-wwdc-2022/inline-search.webp)
 
 ## Conclusion
 

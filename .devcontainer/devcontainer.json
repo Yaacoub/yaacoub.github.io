@@ -10,7 +10,7 @@
 	"dockerFile": "../dockerfile",
 
 	// Run bundle install after the workspace is mounted
-	"postCreateCommand": "bundle install && bundle update && bundle exec jekyll serve",
+	"postAttachCommand": "bundle install && bundle update && bundle exec jekyll serve"
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],

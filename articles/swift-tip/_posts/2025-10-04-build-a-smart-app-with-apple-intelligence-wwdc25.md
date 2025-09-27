@@ -1,0 +1,31 @@
+---
+author: "Peter Yaacoub"
+layout: "article"
+title: "Build a Smart App with Apple Intelligence"
+---
+
+At WWDC25, Apple introduced new tools and frameworks that enable the design of intelligent, privacy-preserving, and on-device experiences without requiring access to massive cloud-based models. The central idea is to provide developers with flexible yet secure ways to integrate generative features directly into their applications. This article follows the structure of the sessions presented at WWDC25 to explore how to build smarter apps by leveraging on-device foundation models, prompt engineering strategies, and the latest advances in computer vision.
+
+## Meet the Foundation Models Framework
+
+The Foundation Models framework provides the building blocks for integrating Apple Intelligence into applications. Unlike large cloud-hosted models with hundreds of billions of parameters, Apple’s on-device model is around 3 billion parameters, making it efficient enough to run locally while preserving user privacy. This model is not designed for fact retrieval, code generation, or complex mathematical calculations. Instead, its strength lies in natural language processing tasks where style, tone, and adaptability matter.
+
+Developers can define **instructions** (static developer-provided guidance) and combine them with user **prompts** (dynamic input) to generate tailored responses. Prompt engineering is central here, and Apple provides tools like Playgrounds to experiment with different prompt designs and safety mechanisms. The framework supports guided generation using annotations such as [`Generable`](https://developer.apple.com/documentation/foundationmodels/generable) for data structures and [`GenerationGuide`](https://developer.apple.com/documentation/foundationmodels/generationguide) with a [`maximumCount(_:)`](https://developer.apple.com/documentation/foundationmodels/generationguide/maximumcount(_:)) parameter to control response scope and reliability. Partial results can be handled with [`streamResponse(to:options:)`](https://developer.apple.com/documentation/foundationmodels/languagemodelsession/streamresponse(to:options:)), while snapshots such as [`PartiallyGenerated`](https://developer.apple.com/documentation/foundationmodels/generable/partiallygenerated) help developers capture intermediate output.
+
+The [`Tool`](https://developer.apple.com/documentation/foundationmodels/tool) protocol defines how apps can extend a model’s capabilities with external logic. Each tool specifies a name, description, arguments, and a [`call(arguments:)`](https://developer.apple.com/documentation/foundationmodels/tool/call(arguments:)) method. Tools can even be created dynamically, enabling developers to adapt models to context-specific workflows. Sessions are managed with [`LanguageModelSession`](https://developer.apple.com/documentation/foundationmodels/languagemodelsession), which can be paused or disabled while the model is actively responding. This level of orchestration helps prevent resource conflicts and improves responsiveness.
+
+Availability checks are essential. The [`availability`](https://developer.apple.com/documentation/foundationmodels/systemlanguagemodel/availability-swift.property) property lets developers ensure the required model is present and handle errors gracefully. Since large language models are inherently slower than classic ML tasks, developers must also account for performance trade-offs and provide clear feedback when responses are delayed.
+
+## Explore Prompt Design and Safety for On-Device Foundation Models
+
+Apple emphasizes that on-device intelligence must be designed with safety, quality, and clarity in mind. Developers are encouraged to combine pre-written instructions with user-generated prompts, while recognizing that these measures are not bulletproof. Commands expressed in all caps (e.g., MUST, DO NOT) help guide the model’s behavior, especially when precision is required.
+
+Error handling is tightly integrated: if a generation violates guardrails, developers receive a [`guardrailViolation(_:)`](https://developer.apple.com/documentation/foundationmodels/languagemodelsession/generationerror/guardrailviolation(_:)) result. This ensures apps can gracefully recover without exposing users to unintended or unsafe outputs. For safety and effectiveness, Apple recommends extensive testing with varied inputs, followed by systematic feedback collection and sending.
+
+## Read Documents Using the Vision Framework
+
+Beyond text generation, Apple has expanded the Vision framework to include new APIs that allow apps to understand and process structured content directly from images. The new [`RecognizeDocumentsRequest`](https://developer.apple.com/documentation/vision/recognizedocumentsrequest) API supports more than twenty languages and can identify hierarchical document structures, including headers, paragraphs, tables, and lists. The resulting [`DocumentObservation`](https://developer.apple.com/documentation/vision/documentobservation) objects break content down into transcripts, lines, words, and paragraphs, enabling precise extraction and downstream processing.
+
+Additional vision-based requests extend the range of on-device intelligence. For example, the new [`DetectLensSmudgeRequest`](https://developer.apple.com/documentation/vision/detectlenssmudgerequest) analyzes images for lens contamination, returning an observation with a confidence value from 0 to 1. Developers can use this information to provide real-time user feedback on camera quality. Similarly, [`DetectHumanHandPoseRequest`](https://developer.apple.com/documentation/vision/detecthumanhandposerequest) introduces a new model with refined joint position detection, improving the accuracy of gesture-based interfaces and assistive technologies.
+
+These vision APIs integrate seamlessly with Apple Intelligence, allowing developers to combine natural language understanding with perceptual features for richer multimodal apps. Together, the Foundation Models framework and the Vision framework empower developers to build apps that are not only intelligent but also deeply integrated with the user’s environment, while keeping computation and privacy on-device.

@@ -200,7 +200,7 @@ article header {
 	row-gap: var(--padding-s);
 }
 
-article img, article iframe, .app-hero, .collection .item, .features-large, .features-medium, .features-small, .grid > *, .highlights, .tiles .item {
+article img, article .body > iframe, .app-hero, .collection .item, .features-large, .features-medium, .features-small, .grid > *, .highlights, .tiles .item {
 	animation: section-animation linear;
 	animation-timeline: view();
 	animation-range: entry 0% cover 40%;

@@ -411,8 +411,9 @@ footer hr {
 footer .directory {
 	column-gap: var(--padding-l);
 	display: grid;
-	grid-template-columns: repeat(4, auto) 1fr;
+	grid-template-columns: repeat(auto-fit , minmax(120px, 1fr));
 	padding: var(--padding-m) 0 var(--padding-s) 0;
+	row-gap: var(--padding-s);
 }
 
 footer .directory div {
@@ -457,19 +458,23 @@ nav {
 	justify-content: center;
 }
 
+nav a {
+	flex: 0 0 auto;
+	white-space: nowrap;
+}
+
 nav > div {
 	align-content: center;
 	align-items: center;
 	column-gap: var(--padding-m);
-	display: grid;
-	grid-template-columns: 100fr repeat(3, 0fr) 100fr;
+	display: flex;
 	justify-content: center;
 	width: min(100dvw - var(--padding-l), var(--content-width-normal));
 }
 
-nav div.logo {
+nav div.logo, nav div.spacer {
 	display: flex;
-	justify-content: left;
+	flex: 1 1 0;
 }
 
 nav div.logo figure {
@@ -1001,9 +1006,6 @@ what are you even doing? */
 
 	footer .directory {
 		column-gap: var(--padding-s);
-		grid-template-columns: repeat(2, auto);
-		grid-template-rows: repeat(2, auto);
-		row-gap: var(--padding-s);
 	}
 
 	footer .legal > div {
@@ -1028,7 +1030,12 @@ what are you even doing? */
 
 	nav > div {
 		column-gap: var(--padding-s);
-		grid-template-columns: repeat(4, auto);
+		flex-wrap: wrap;
+		row-gap: var(--padding-xs);
+	}
+
+	nav div.logo, nav div.spacer {
+		flex: none;
 	}
 
 	section > div {
@@ -1125,12 +1132,6 @@ what are you even doing? */
 	footer .directory div {
 		grid-template-rows: auto;
 		row-gap: 0;
-	}
-
-	nav > div {
-		grid-template-columns: repeat(2, auto);
-		grid-template-rows: repeat(2, calc(var(--nav-height)) / 2);
-		padding: var(--padding-xs) 0 var(--padding-xs) 0;
 	}
 
 	section.collection > div {

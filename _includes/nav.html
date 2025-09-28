@@ -7,5 +7,6 @@
 			{% assign nav_page = site.pages | where: "path", path | first -%}
 			<a class="style-navigation-link-{%- if page.url == nav_page.url -%}3{%- else -%}1{%- endif -%}" href="{{ nav_page.url }}">{{ nav_page.title | escape }}</a>
 			{%- endfor %}
+			<div class="spacer"></div>
 		</div>
 	</nav>

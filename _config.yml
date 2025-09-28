@@ -47,11 +47,14 @@ paths_footer:
     - "articles/loud-letters/index.md"
     - "articles/story/index.md"
     - "articles/swift-tip/index.md"
+  - 
+    - "photography/index.md"
 
 paths_nav:
   - "about/index.md"
   - "apps/index.md"
   - "articles/index.md"
+  - "photography/index.md"
 
 social_links:
   email: "yaapete.dev@gmail.com"

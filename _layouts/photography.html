@@ -4,4 +4,36 @@ stylesheet: "photography"
 type: "website"
 ---
 
-<!-- https://www.fotografiska.com/?ref=httpster.net -->
+{%- assign collections = site.data.photography_repos | reverse -%}
+{%- assign collections_count = collections.size -%}
+
+<script defer="" src="/-scripts/photography.js"></script>
+
+<section class="tiles">
+    <div>
+        <h1>Collections</h1>
+        {%- for collection in collections limit: 1 offset: continue %}
+        {%- assign date = collection.date | strip | append: '-01' -%}
+        {%- assign list_url = collection.url | append: '/blob/webp/list.txt?raw=true' -%}
+        <a class="item item-large-complex plain" href="{{ collection.url }}" data-index="{{ collection.id }}">
+            <header>
+                <h2>{{ collection.name }}</h2>
+                <p class="style-detail-1"><time datetime="{{ date | date: '%Y-%m' }}">{{ date | date: '%B %Y' }}</time></p>
+            </header>
+            <figure aria-label="Hero image" class="large"><img alt="" src=""></figure>
+        </a>
+        {%- endfor %}
+        {%- assign limit = collections_count | minus: 1 -%}
+        {%- for collection in collections limit: limit offset: continue %}
+        {%- assign date = collection.date | strip | append: '-01' -%}
+        {%- assign list_url = collection.url | append: '/blob/webp/list.txt?raw=true' -%}
+        <a class="item item-small-complex plain" href="{{ collection.url }}" data-index="{{ collection.id }}">
+            <figure aria-label="Hero image" class="large"><img alt="" src=""></figure>
+            <header>
+                <p class="style-title-1">{{ collection.name }}</p>
+                <p class="style-detail-1"><time datetime="{{ date | date: '%Y-%m' }}">{{ date | date: '%B %Y' }}</time></p>
+            </header>
+        </a>
+        {%- endfor %}
+    </div>
+</section>

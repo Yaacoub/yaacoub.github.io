@@ -1,0 +1,24 @@
+- id: 1
+  name: "Prague"
+  date: "2025-04"
+  url: "https://github.com/Yaacoub-Organisation/photography-prague"
+
+- id: 2
+  name: "Miribel"
+  date: "2025-08"
+  url: "https://github.com/Yaacoub-Organisation/photography-miribel"
+
+- id: 3
+  name: "Lyon"
+  date: "2025-08"
+  url: "https://github.com/Yaacoub-Organisation/photography-lyon"
+
+- id: 4
+  name: "Bucharest"
+  date: "2025-08"
+  url: "https://github.com/Yaacoub-Organisation/photography-bucharest"
+
+- id: 5
+  name: "Peleş Castle"
+  date: "2025-08"
+  url: "https://github.com/Yaacoub-Organisation/photography-peles-castle"

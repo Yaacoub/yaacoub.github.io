@@ -1,0 +1,18 @@
+/* Section Tiles */
+
+section.tiles .item header {
+	justify-items: left;
+	text-align: left;
+}
+
+section.tiles .item-small-complex {
+	grid-template-rows: 1fr 0fr;
+	justify-items: left;
+	min-width: 0;
+	row-gap: var(--padding-m);
+}
+
+section.tiles .item-small-complex header {
+	padding-bottom: var(--padding-m);
+	padding-top: 0;
+}

@@ -28,7 +28,7 @@ type: "website"
         {%- assign date = collection.date | strip | append: '-01' -%}
         {%- assign list_url = collection.url | append: '/blob/webp/list.txt?raw=true' -%}
         <a class="item item-small-complex plain" href="{{ collection.url }}" data-index="{{ collection.id }}">
-            <figure aria-label="Hero image" class="large"><img alt="" src=""></figure>
+            <figure aria-label="Hero image" class="large"><img alt="" src="" loading="lazy"></figure>
             <header>
                 <p class="style-title-1">{{ collection.name }}</p>
                 <p class="style-detail-1"><time datetime="{{ date | date: '%Y-%m' }}">{{ date | date: '%B %Y' }}</time></p>

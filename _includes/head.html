@@ -71,7 +71,7 @@
 	<meta property="article:section" content="{{ page.categories | last | replace: '-', ' ' | capitalize }}">
 	<meta property="og:description" content="{{ page.description }}">
 	{% if image.size != 0 %}
-	<meta property="og:image" content="{{ pathImage | absolute_url }}">
+	<meta property="og:image" content="{{ pathWEBP | absolute_url }}">
 	{% else %}
 	<meta property="og:image" content="{{ image | absolute_url }}">
 	{% endif %}

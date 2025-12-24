@@ -44,6 +44,7 @@ paths_footer:
     - "apps/modulart-studio/index.md"
   -
     - "articles/index.md"
+    - "articles/code-dome/index.md"
     - "articles/loud-letters/index.md"
     - "articles/story/index.md"
     - "articles/swift-tip/index.md"

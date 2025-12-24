@@ -42,7 +42,6 @@ struct NavigationBar<Title: View, Leading: View, Trailing: View>: View {
     
     var body: some View {
         ZStack {
-            Color.white
             HStack(spacing: 0) {
                 leading.padding()
                 Spacer()
@@ -54,6 +53,10 @@ struct NavigationBar<Title: View, Leading: View, Trailing: View>: View {
         }
         .foregroundStyle(Color.black)
         .frame(height: 50)
+        .background(
+            Color.white
+                .ignoresSafeArea(edges: .top)
+        )
     }
     
 }

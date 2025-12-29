@@ -547,7 +547,7 @@ I believe that my only and earliest developer experiences were with C# on Unity 
 
 One particularity that stands out to me is namespaces: containers that are used to organize classes and other related code. They're interesting, but I didn't find them useful for this example.
 
-C# is also strict with classes, like Java. However, it does offer the possibility of top-level statements in one unique file. Behind the scenes, it still wraps the code in a class, though. I think C# has trust issues and needs counseling.
+C# is also strict with classes, like Java. However, it does offer the possibility of making top-level statements in a single, unique file. Behind the scenes, it still wraps the code in a class, though. I think C# has trust issues and needs counseling.
 
 And like TypeScript, the setup was tedious, and I needed external files for my use case: Calculator.csproj and Tests.csproj.
 
@@ -1205,7 +1205,7 @@ int main(void) {
 
 ## PHP
 
-`<?php`, what a weird thing to put at the beginning of a file. That's the opening tag used to denote the beginning of PHP code. `?>` is the closing tag, but I didn't use it. All code outside these tags is typically regarded as HTML code in web servers.
+`<?php`, what a weird thing to put at the beginning of a file. That's the opening tag used to denote the beginning of PHP code. `?>` is the closing tag, but I didn't use it and probably shouldn't, since omitting the closing tag is just one solution for avoiding blanks and other characters at the end of the file. All code outside these tags is typically regarded as HTML code in web servers, so any character accidentally added after the closing tag could trigger an error.
 
 I’m quite surprised that PHP is still as popular. In my mind, it was wrongfully like COBOL. I’m exaggerating, don’t take it too seriously. I could’ve compared it to even older: Fortran!
 

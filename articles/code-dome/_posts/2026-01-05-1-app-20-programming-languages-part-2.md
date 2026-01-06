@@ -688,10 +688,10 @@ func sanitizeCalculation(_ calculation: String) -> String {
         .replacing(#/\++/#, with: "+")                                    // ++ -> +
         .replacing(#/-+/#, with: "-")                                     // -- -> -
         .replacing(#/\*\+/#, with: "*")                                   // *+ -> *
-        .replacing(#/\/\+/#, with: "/")                                   // /+ -> /
+        .replacing(#//\+/#, with: "/")                                   // /+ -> /
         .replacing(#/\+-/#, with: "-")                                    // +- -> -
         .replacing(#/(\d)-(\d)/#) { match in "\(match.1)+-\(match.2)" }   // a-b -> a+-b
-        .replacing(#/\//#, with: "*1/")                                   // a/b -> a*1/b
+        .replacing(#///#, with: "*1/")                                   // a/b -> a*1/b
 }
 
 // MAIN

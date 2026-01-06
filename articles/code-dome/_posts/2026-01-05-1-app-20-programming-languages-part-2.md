@@ -13,7 +13,7 @@ If you haven’t read the first part of this challenge, go check it out! ([1 App
 
 Go, like Golang, and not to be confused with the Go game, is a relatively new programming language released in 2009. That’s the first programming language younger than me. It’s funny how the older languages have an oligopoly (a market dominated by a small number of actors), reminds me of real-world politics (oh, part 2 already punches hard!).
 
-To focus back on the code, Go looks clean, like other modern languages, and the differentiation between a definition `:=`  and redefinition is interesting `=`. However, I found two major inconveniences. First, not unique to Go is the necessity to create other files. In this case, a mod file and an individual main file that would have the code common to both files. Second, Go is the only language in this challenge where I chose to abandon floating-point arithmetic because I would never get the same precision as Test 7’s result. So I had to come out with the big guns, and by that I mean the `math/big` library. Hence, coding took a little more time than I would’ve expected from that newer language.
+To focus back on the code, Go looks clean, like other modern languages, and the differentiation between a definition `:=`  and redefinition is interesting `=`. However, I found two major inconveniences. First, not unique to Go is the necessity to create other files. In this case, a mod file and an individual main file that would have the code common to both files. Second, Go is the only language in this challenge where I chose to abandon floating-point arithmetic for this implementation, because I couldn’t reliably match Test 7’s precision. So I had to come out with the big guns, and by that I mean the `math/big` library. Hence, coding took a little more time than I would’ve expected from that newer language.
 
 calculator.go:
 ```go
@@ -152,7 +152,7 @@ I was wondering if Rust was much older than Go. Surprisingly, it’s even more r
 
 This time, I only had one new file to add, a Cargo.toml. Also, it was more conventional to use folders to separate the files, so I did so. Also-also, I used true tests this time instead of printing the results to the console, because why not? It was easy. One interesting discovery that relates to the mentioned arithmetic problem is the strict, and I mean very strict, difference between a string and a static string. In practice, this means that I should convert a string literal, which is static, to a string type in order to return it from a function that only returns string types and not static strings, which include string literals. Clear? In short, it seems to me that this is always the case: string ≠ static string.
 
-Rust actually stems from performance and security issues with C and C++, and today it is heavily used in parts of Firefox and many other systems projects.
+Rust originated at Mozilla to address performance and memory-safety issues common in C and C++, and today it is used in parts of Firefox and many other systems projects.
 
 calculator.rs:
 ```rust
@@ -350,7 +350,7 @@ This, I think, is the first time I have ever heard or been exposed to the Lua pr
 
 In some ways, the language seems modern, like a blend of JavaScript and Python. In other ways, it has unique quirks. Lua doesn’t use regular expressions, but its own pattern-matching system, which is somewhat annoying. In fact, I lost half an hour to find out that `-` is also a special character that should be escaped, not using a backslash but a percentage symbol. It also stems from the rare breed that allows the execution of code outside of any block, essentially meaning that the entire file is the main function.
 
-Also interesting how Lua uses the colon, like other languages use the dot for chaining. Makes me wonder why some like to have a unique syntax from “the norm”. What gives? Well, I looked up the answer, so let me explain. In Lua, the dot is the table-access operator, which allows us to write this: obj.func(obj, arg1, arg2); similarly to other languages. On the other hand, the column is syntactic sugar that passes the object as the first argument, making the code shorter: obj:func(arg1, arg2); where other languages would implicitly pass self to the function.
+Also interesting how Lua uses the colon, like other languages use the dot for chaining. Makes me wonder why some like to have a unique syntax from “the norm”. What gives? Well, I looked up the answer, so let me explain. In Lua, the dot is the table-access operator, which allows us to write this: obj.func(obj, arg1, arg2); similarly to other languages. On the other hand, the colon is syntactic sugar that passes the object as the first argument, making the code shorter: obj:func(arg1, arg2); where other languages would implicitly pass self to the function.
 
 calculator.lua:
 ```lua
@@ -635,9 +635,9 @@ void main(List<String> args) {
 
 ## Swift
 
-Swift is a language released by Apple in 2014 to rival Taylor Swift’s music. I use it to develop my applications on Apple devices. Usually, I develop with Xcode and not the command line. I quickly realized that it was painful. Compilation times are always as long, but compiling multiple files at once is tedious (I used the cat command to combine my two files because it didn’t work otherwise).
+Swift is a language released by Apple in 2014 to rival Taylor Swift’s music. I use it to develop my applications on Apple devices. Usually, I develop with Xcode and not the command line. I quickly realized that it was painful. Compilation times are always as long, but compiling multiple files at once is tedious. Now, yes, I use the cat command to combine my two files so that I can run my tests, and I use ugly if-statements to conditionally execute the main functions. Instead, I could use the Swift Package Manager, and it can be more elegant, but I'm doing scripting here, and there's nothing less tedious than having to create more folders and files for simple code. The Swift developer community also builds tools like swift-sh, which can make scripting easier.
 
-Overall, this is not the best experience, so I understand why it’s not higher ranked in some popularity indexes. I really wish it were, though.
+Concerning input sanitization, there are multiple ways to work with regular expressions. This comes after enlightenment from a more experienced member of the Swift community. One way of preventing the redundancy of escaping characters with a backslash is by using raw string literals `#"..."#` with the `replacingOccurrences` function.  Another newer solution is to let go of the string and use regex literals. So, instead of this: `"(\\d)-(\\d)"`, I'd simply write `/(\d)-(\d)/` with the `replacing` function (the slash still needs to be escaped though!). Finally, there is also the [RegexBuilder](https://developer.apple.com/documentation/regexbuilder), more verbose but more readable. Regex literals didn’t work for me, even with the latest Swift 6.2 version, and it seems that they have to be explicitly enabled somewhere. Hence, I opted for one last solution: extended regex literals `#/.../#`!
 
 calculator.swift:
 ```swift
@@ -684,14 +684,14 @@ func getResult(_ calculation: String) -> String {
 
 func sanitizeCalculation(_ calculation: String) -> String {
     return calculation
-        .replacingOccurrences(of: "\\s+", with: "", options: .regularExpression)
-        .replacingOccurrences(of: "\\++", with: "+", options: .regularExpression)
-        .replacingOccurrences(of: "-+", with: "-", options: .regularExpression)
-        .replacingOccurrences(of: "\\*\\+", with: "*", options: .regularExpression)
-        .replacingOccurrences(of: "/\\+", with: "/", options: .regularExpression)
-        .replacingOccurrences(of: "\\+-", with: "-", options: .regularExpression)
-        .replacingOccurrences(of: "(\\d)-(\\d)", with: "$1+-$2", options: .regularExpression)
-        .replacingOccurrences(of: "/", with: "*1/")
+        .replacing(#/\s+/#, with: "")                                     // Remove all spaces
+        .replacing(#/\++/#, with: "+")                                    // ++ -> +
+        .replacing(#/-+/#, with: "-")                                     // -- -> -
+        .replacing(#/\*\+/#, with: "*")                                   // *+ -> *
+        .replacing(#/\/\+/#, with: "/")                                   // /+ -> /
+        .replacing(#/\+-/#, with: "-")                                    // +- -> -
+        .replacing(#/(\d)-(\d)/#) { match in "\(match.1)+-\(match.2)" }   // a-b -> a+-b
+        .replacing(#/\//#, with: "*1/")                                   // a/b -> a*1/b
 }
 
 // MAIN
@@ -933,6 +933,8 @@ if (this.class.name == 'tests') {
 
 ## Conclusion
 
-I don’t really have a conclusion. I just did the challenge for what it is. I did learn, though, that the most popular languages are the more established ones, and that newer languages are starting to take over the lower half of the top 20. The web is also at full force, and even if I skipped HTML and CSS, it is undeniable that the rise of technologies like PWAs, Electron, and React Native, each in different ways—are, are becoming powerhouses for big corporations.
+I don’t really have a conclusion. I just did the challenge for what it is. I did learn, though, that the most popular languages are the more established ones, and that newer languages are starting to take over the lower half of the top 20. The web is also at full force, and even if I skipped HTML and CSS, it is undeniable that the rise of PWA (Progressive Web Apps) and technologies like Electron or React Native are becoming powerhouses for big corporations.
 
-All in all, choose the language that you want because it can probably do what you want it to do. If not, there’s a similar language that can probably do what you want it to do. If not, there’ll be a similar language that will do what you want it to do.
+I shall also add that not all my tests are created equal. I’m comparing my calculator script to each language’s behavior, including floating precision and integer-decimal compatibility. There might also be some errors throughout the files, or things I missed, such as adding a `+` after `/d` in regular expressions.
+
+All in all, coding is fun, you learn, and make mistakes. Choose the language that you want because it can probably do what you want it to do. If not, there’s a similar language that can probably do what you want it to do. If not, there’ll be a similar language that will do what you want it to do.

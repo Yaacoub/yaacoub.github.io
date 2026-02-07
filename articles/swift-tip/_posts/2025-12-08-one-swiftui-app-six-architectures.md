@@ -33,7 +33,7 @@ So, is MVC still compatible with SwiftUI? You'll get the answer to that question
   
 ### File structure  
   
-```swift
+```
 MVC/
 ├── MVCApp.swift
 ├── 1 - Models/
@@ -63,7 +63,7 @@ MVVM gained serious traction in the iOS community around 2015 with the rise of S
 
 Almost identical to MVC's structure, here the ViewModel replaces the Controller.  
   
-```swift
+```
 MVVM/
 ├── MVVMApp.swift
 ├── 1 - Models/
@@ -172,7 +172,7 @@ Introduced in 2023, SwiftUI's @Observable macro has reduced the need for Combine
 
 Identical structure to standard MVVM. The difference stands entirely on how the ViewModel publishes changes.  
   
-```swift
+```
 MVVM/
 ├── MVVMApp.swift
 ├── 1 - Models/
@@ -222,7 +222,7 @@ TCA's completeness comes with a steep learning curve. Its implementation require
 
 TCA organizes code by features rather than technical layers. Each feature is self-contained with its State, Action, Reducer, and View bundled together. The `Domain` folder holds shared models used across features.  
   
-```swift
+```
 TCA/
 ├── TCAApp.swift
 ├── Domain/
@@ -361,7 +361,7 @@ Another popular but similar alternative is **Clean Swift** or **VIP** (View-Inte
 
 VIPER organizes by modules (features), with each module containing all five VIPER components. The `TaskListModule.swift` file acts as an assembly point, wiring all components together. `TaskListInterface.swift` contains the protocols that define how components communicate.  
   
-```swift
+```
 VIPER/
 ├── VIPERApp.swift
 └── Modules/
@@ -586,7 +586,7 @@ Clean Architecture's structure reflects its concentric layers:
   
 The `CleanAppFactory.swift` handles dependency injection, wiring concrete implementations to interfaces.  
   
-```swift
+```
 Clean/
 ├── CleanApp.swift
 ├── CleanAppFactory.swift

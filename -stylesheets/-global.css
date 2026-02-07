@@ -1,3 +1,5 @@
+@import "-syntax-github-dark.css";
+
 /* Root */
 
 :root {
@@ -207,9 +209,8 @@ article img, article .body > iframe, .app-hero, .collection .item, .features-lar
 }
 
 article p img {
-	height: 100%;
 	min-height: 0;
-	object-fit: cover;
+	object-fit: contain;
 	transition: var(--transition-time);
 	user-select: none;
 	-webkit-user-select: none;
@@ -909,35 +910,14 @@ div.highlighter-rouge {
 	border-radius: var(--border-radius);
 	color: var(--color-element-label-primary-alternate);
 	font-size: 0.9rem;
-	overflow: auto;
-	padding: var(--padding-m);
+	overflow: hidden;
 	tab-size: 4;
 	-moz-tab-size: 4;
 }
 
-code > .c1, code > .cm {
-	color: #A2E474;
-}
-
-code > .k, code > .kc, code > .kd {
-	color: #FC5FA3;
-	font-weight: bold;
-}
-
-code > .kt {
-	color: #D0A8FF;
-}
-
-code > .mf, code > .mi {
-	color: #D0BF69;
-}
-
-code > .nf, code > .nv {
-	color: #5DD8FF;
-}
-
-code > .s {
-	color: #FC6A5D;
+div.highlighter-rouge pre {
+	overflow: auto;
+	padding: var(--padding-m);
 }
 
 

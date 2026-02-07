@@ -6,15 +6,15 @@
       date: 2020-06-17
       excerpt:
         "The other winners of the Swift Student Challenge include […] Peter Yaacoub from Lebanon."
-      title: "Six young coders from the Middle East win Apple's WWDC20 Swift Student Challenge"
-      url: "https://t3me.com/en/features/events-and-expos/wwdc20-events-and-expos/six-young-coders-from-the-middle-east-win-apples-wwdc20-swift-student-challenge/"
+      title: "[Archived] Six young coders from the Middle East win Apple's WWDC20 Swift Student Challenge"
+      url: "https://web.archive.org/web/20221201072021/https://t3me.com/en/features/events-and-expos/wwdc20-events-and-expos/six-young-coders-from-the-middle-east-win-apples-wwdc20-swift-student-challenge/"
     -
       author: "CP Magazine"
       date: 2020-06-17
       excerpt:
         "Peter Yaacoub, a Lebanese student who is also amongst this year's winners says
         “I feel proud to be amongst the winners from all over the world. […]”"
-      title: "Apple's WWDC20 Swift Student Challenge winners determined to shape the future"
+      title: "[Dead Link] Apple's WWDC20 Swift Student Challenge winners determined to shape the future"
       url: "http://citypages.today/2020/06/17/apples-wwdc20-swift-student-challenge-winners-determined-to-shape-the-future/"
     -
       author: "Al Bawaba"
@@ -91,8 +91,8 @@
       excerpt:
         "Here comes « Huh? », a free application available on the App Store. It is not one, not two,
         but a collection of no less than 50 dictionaries, and the best part is that it is also available in 7 different languages."
-      title: "Huh? Lexicon & Thesaurus iPhone App With 50 Dictionaries"
-      url: "https://www.codeitbro.com/huh-iphone-dictionary-app/"
+      title: "[Archived] Huh? Lexicon & Thesaurus iPhone App With 50 Dictionaries"
+      url: "https://web.archive.org/web/20230325210517/https://www.codeitbro.com/huh-iphone-dictionary-app/"
 
 - articles:
   name: "Articles"
@@ -104,8 +104,8 @@
         "Create a custom SegmentedControl in SwiftUI for more flexibility and control over design and functionality.
         This guide demonstrates how to implement a segmented control with dynamic options, theme integration,
         and interactive feedback."
-      title: "Those Who Swift - Issue 186"
-      url: "https://swiftnews.curated.co/issues/186"
+      title: "[Archived] Those Who Swift - Issue 186"
+      url: "https://web.archive.org/web/20241109142923/https://swiftnews.curated.co/issues/186"
     -
       author: "Those Who Swift"
       date: 2024-10-17
@@ -114,8 +114,8 @@
         helping developers craft a more unique and branded appearance for their app's user interface. […]
         Another excellent article by Peter Yaacoub guides you through building a custom progress bar in SwiftUI,
         ideal for mobile apps."
-      title: "Those Who Swift - Issue 185"
-      url: "https://swiftnews.curated.co/issues/185"
+      title: "[Archived] Those Who Swift - Issue 185"
+      url: "https://web.archive.org/web/20241109123430/https://swiftnews.curated.co/issues/185"
     -
       author: "Those Who Swift"
       date: 2024-10-10
@@ -123,8 +123,8 @@
         "Learn how to use Swift and HealthKit to get a user's daily step count from the Health app using Swift.
         It covers steps like turning on the feature in Xcode, setting up permissions, and writing the code. […]
         Explore how to make text appear letter by letter in SwiftUI, like a typewriter."
-      title: "Those Who Swift - Issue 184"
-      url: "https://swiftnews.curated.co/issues/184"
+      title: "[Archived] Those Who Swift - Issue 184"
+      url: "https://web.archive.org/web/20241109131114/https://swiftnews.curated.co/issues/184"
     -
       author: "Majid Jabrayilov"
       date: 2024-09-09
@@ -140,15 +140,15 @@
       excerpt:
         "This post has notes taken during the WWDC24 session: What's new in SwiftData."
       title: "iOS Stack Weekly — Issue#141"
-      url: "https://blog.canopas.com/ios-stack-weekly-issue-141-4062145c5c65"
+      url: "https://medium.com/canopas/ios-stack-weekly-issue-141-4062145c5c65"
     -
       author: "Those Who Swift"
       date: 2024-09-05
       excerpt:
         "There are two new features in SwiftData, a framework for managing data models inside SwiftUI applications […]
         It enhances SwiftData's capabilities, making it a powerful and user-friendly tool for building data-driven applications."
-      title: "Those Who Swift - Issue 179"
-      url: "https://swiftnews.curated.co/issues/179"
+      title: "[Archived] Those Who Swift - Issue 179"
+      url: "https://web.archive.org/web/20241012042103/https://swiftnews.curated.co/issues/179"
     -
       author: "Antoine van der Lee"
       date: 2024-09-03
@@ -163,16 +163,16 @@
         "Explore the latest updates in SwiftUI and UIKit for UI animations and transitions, introduced at WWDC24. 
         Discover the new zoom transition, master transition cycles for seamless navigation, and seamlessly integrate 
         SwiftUI animations into UIKit for consistent user experiences."
-      title: "Those Who Swift - Issue 178"
-      url: "https://swiftnews.curated.co/issues/178"
+      title: "[Archived] Those Who Swift - Issue 178"
+      url: "https://web.archive.org/web/20241012022935/https://swiftnews.curated.co/issues/178"
     -
       author: "Those Who Swift"
       date: 2024-08-22
       excerpt:
         "This post summarizes key takeaways from a WWDC24 session on building apps that function well
         for users across different languages."
-      title: "Those Who Swift - Issue 177"
-      url: "https://swiftnews.curated.co/issues/177"
+      title: "[Archived] Those Who Swift - Issue 177"
+      url: "https://web.archive.org/web/20241202194937/https://swiftnews.curated.co/issues/177"
     -
       author: "Majid Jabrayilov"
       date: 2024-08-19
@@ -203,8 +203,8 @@
       date: 2022-11-06
       excerpt:
         "SwiftUI를 사용해서 Charts를 그리는 방법을 간략하게 소개하는 기사 입니다."
-      title: "내 맘대로 위클리 뉴스 - 2022년 44주"
-      url: "https://www.sangkon.com/sigmadream_weekly_2022_44/"
+      title: "[Archived] 내 맘대로 위클리 뉴스 - 2022년 44주"
+      url: "https://web.archive.org/web/20250709183259/https://sangkon.com/sigmadream_weekly_2022_44/"
 
 - other:
   name: "Other"

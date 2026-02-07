@@ -5,8 +5,8 @@ stylesheet: "article"
 type: "article"
 ---
 
-{%- assign seperator = "<h2" -%}
-{%- assign content = page.content | split: seperator -%}
+{%- assign separator = "<h2" -%}
+{%- assign content = page.content | split: separator -%}
 {%- assign ad1 = '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6933910775315856"crossorigin="anonymous"></script><!-- Article Ad 3 --><ins class="adsbygoogle"style="display:block"data-ad-client="ca-pub-6933910775315856"data-ad-slot="6741612712"data-ad-format="auto"data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>' -%}
 {%- assign ad2 = '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6933910775315856"crossorigin="anonymous"></script><ins class="adsbygoogle"style="display:block"data-ad-format="autorelaxed"data-ad-client="ca-pub-6933910775315856"data-ad-slot="5716644963"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>' -%}
 
@@ -36,20 +36,17 @@ type: "article"
 				{% endif %}
 				<div class="body">
 {%- for element in content -%}
-
-{% if forloop.index0 == 1 %}
+{% if forloop.first %}
 {{ element }}
+{% else %}
+{{ separator }}{{ element }}
+{% if forloop.index0 == 1 %}
 {% if page.categories.last != "privacy" %}
 {{ ad1 }}
 {% endif %}
-{{ seperator }}
-
-{% else %}
-{{ element }}
-{{ seperator }}
 {% endif %}
-
-{% endfor %}
+{% endif %}
+{%- endfor -%}
 				</div>
 				{% if page.categories.last != "privacy" %}
 				<div class="social">

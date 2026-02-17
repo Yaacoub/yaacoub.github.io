@@ -205,7 +205,7 @@ article header {
 article img, article .body > iframe, .app-hero, .collection .item, .features-large, .features-medium, .features-small, .grid > *, .highlights, .tiles .item {
 	animation: section-animation linear;
 	animation-timeline: view();
-	animation-range: entry 0% cover 40%;
+	animation-range: entry -20vh cover 40%;
 }
 
 article p img {
@@ -1213,7 +1213,7 @@ what are you even doing? */
 @keyframes section-animation {
 	from {
 		opacity: 0;
-		scale: 0.9;
+		scale: 0.8;
 	}
 	to {
 		opacity: 1;

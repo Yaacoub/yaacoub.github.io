@@ -56,8 +56,10 @@ jobs:
             git config user.name "github-actions[bot]"
             git config user.email "github-actions[bot]@users.noreply.github.com"
             git add _data/photography_repos.yml
-            git commit -m "Update photography repos"
+            git commit -m "Update photography_repos.yml [skip ci]"
             git push
+          else
+            echo "No changes to commit."
           fi
       - name: Setup Pages
         id: pages

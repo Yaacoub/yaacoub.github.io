@@ -4,9 +4,9 @@
   url: "https://github.com/Yaacoub-Organisation/photography-prague"
 
 - id: 2
-  name: "Miribel"
+  name: "Bucharest"
   date: "2025-08"
-  url: "https://github.com/Yaacoub-Organisation/photography-miribel"
+  url: "https://github.com/Yaacoub-Organisation/photography-bucharest"
 
 - id: 3
   name: "Lyon"
@@ -14,11 +14,17 @@
   url: "https://github.com/Yaacoub-Organisation/photography-lyon"
 
 - id: 4
-  name: "Bucharest"
+  name: "Miribel"
   date: "2025-08"
-  url: "https://github.com/Yaacoub-Organisation/photography-bucharest"
+  url: "https://github.com/Yaacoub-Organisation/photography-miribel"
 
 - id: 5
   name: "Peleş Castle"
   date: "2025-08"
   url: "https://github.com/Yaacoub-Organisation/photography-peles-castle"
+
+- id: 6
+  name: "Tibidabo"
+  date: "2026-02"
+  url: "https://github.com/Yaacoub-Organisation/photography-tibidabo"
+

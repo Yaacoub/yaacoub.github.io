@@ -8,6 +8,7 @@ source "https://rubygems.org"
 # https://pages.github.com/versions/
 
 gem "jekyll", "~> 3.9.2"
+gem "csv"  # Required for Ruby 3.4+
 
 
 

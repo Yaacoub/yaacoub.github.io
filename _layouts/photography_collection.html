@@ -1,0 +1,28 @@
+---
+layout: "default"
+nav_theme: "blurred"
+stylesheet: "photography-collection"
+type: "article"
+---
+
+<script defer src="/-scripts/photography-collection.js"></script>
+<script id="photography-repos-data" type="application/json">{{ site.data.photography_repos | jsonify }}</script>
+
+<section>
+    <article>
+        <header>
+            <h1 id="page-title"></h1>
+            <p class="style-detail-1">Peter Yaacoub • <time id="page-date" datetime=""></time></p>
+            <hr>
+            <div class="social">
+                {%- capture social-email -%}mailto:?subject={{ page.title }}&body={{ page.url | absolute_url }}{%- endcapture -%}
+                {%- capture social-facebook -%}https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url }}{%- endcapture -%}
+                {%- capture social-x -%}https://x.com/intent/tweet?text={{ page.title }}&url={{ page.url | absolute_url }}{%- endcapture -%}
+                <a class="animation-opacity social-email" href="{{ social-email }}" target="_blank"><figure aria-label="Send email"><img alt="" class="color-adjustable" src="/-assets/symbols/social/email.svg"></figure></a>
+                <a class="animation-opacity social-facebook" href="{{ social-facebook }}" target="_blank"><figure aria-label="Send Facebook post"><img alt="" class="color-adjustable" src="/-assets/symbols/social/facebook.svg"></figure></a>
+                <a class="animation-opacity social-x" href="{{ social-x }}" target="_blank"><figure aria-label="Send tweet"><img alt="" class="color-adjustable" src="/-assets/symbols/social/x.svg"></figure></a>
+            </div>
+        </header>
+        <div class="photo-grid wide"></div>
+    </article>
+</section>

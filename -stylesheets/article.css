@@ -12,6 +12,11 @@ article header .style-subheading-1 {
 	margin-bottom: calc(var(--padding-m) - var(--padding-s));
 }
 
+article .adsbygoogle {
+	min-width: 0 !important;
+	width: 100% !important;
+}
+
 article .body p img {
 	border-radius: var(--border-radius);
 }

@@ -1,0 +1,37 @@
+---
+layout: "default"
+stylesheet: "photography"
+type: "website"
+---
+
+{%- assign collections = site.data.photography_repos | reverse -%}
+{%- assign collections_count = collections.size -%}
+
+<script defer="" src="/-scripts/photography.js"></script>
+
+<section class="tiles">
+    <div>
+        <h1>Collections</h1>
+        {%- for collection in collections limit: 1 offset: continue %}
+        {%- assign date = collection.date | strip | append: '-01' -%}
+        <a class="item item-large-complex plain" href="/photography/collection/?collection={{ collection.id }}" data-index="{{ collection.id }}" data-repo-url="{{ collection.url }}">
+            <header>
+                <h2>{{ collection.name }}</h2>
+                <p class="style-detail-1"><time datetime="{{ date | date: '%Y-%m' }}">{{ date | date: '%B %Y' }}</time></p>
+            </header>
+            <figure aria-label="Hero image" class="large"><img alt="" src=""></figure>
+        </a>
+        {%- endfor %}
+        {%- assign limit = collections_count | minus: 1 -%}
+        {%- for collection in collections limit: limit offset: continue %}
+        {%- assign date = collection.date | strip | append: '-01' -%}
+        <a class="item item-small-complex plain" href="/photography/collection/?collection={{ collection.id }}" data-index="{{ collection.id }}" data-repo-url="{{ collection.url }}">
+            <figure aria-label="Hero image" class="large"><img alt="" src="" loading="lazy"></figure>
+            <header>
+                <p class="style-title-1">{{ collection.name }}</p>
+                <p class="style-detail-1"><time datetime="{{ date | date: '%Y-%m' }}">{{ date | date: '%B %Y' }}</time></p>
+            </header>
+        </a>
+        {%- endfor %}
+    </div>
+</section>

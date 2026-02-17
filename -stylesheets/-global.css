@@ -847,7 +847,6 @@ section.tiles .item-small-complex header {
 	color: var(--color-element-label-primary);
 	font-size: 0.75rem;
 	opacity: 0.75;
-	text-align: justify;
 }
 
 .style-link-1 {

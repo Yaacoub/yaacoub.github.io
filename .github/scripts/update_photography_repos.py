@@ -5,7 +5,8 @@ import urllib.request
 
 ORG = "Yaacoub-Organisation"
 REPO_PREFIX = "photography"
-OUTPUT_PATH = "_data/photography_repos.yml"
+REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+OUTPUT_PATH = os.path.join(REPO_ROOT, "_data", "photography_repos.yml")
 
 def api_get_json(url, token):
     headers = {
@@ -53,7 +54,7 @@ def main():
             }
         )
 
-    items.sort(key=lambda item: (item["date"], item["name"]), reverse=True)
+    items.sort(key=lambda item: (item["date"], item["name"]))
 
     with open(OUTPUT_PATH, "w", encoding="utf-8") as file:
         for index, item in enumerate(items, start=1):

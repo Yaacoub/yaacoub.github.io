@@ -18,7 +18,7 @@ on:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -39,7 +39,7 @@ jobs:
         # https://github.com/ruby/setup-ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.4.1'
+          ruby-version: '3.2.4'
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
           cache-version: 0 # Increment this number if you need to re-download cached gems
       - name: Setup Python
@@ -50,6 +50,15 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python .github/scripts/update_photography_repos.py
+      - name: Commit updated photography repos data
+        run: |
+          if [[ -n "$(git status --porcelain _data/photography_repos.yml)" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add _data/photography_repos.yml
+            git commit -m "Update photography repos"
+            git push
+          fi
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5

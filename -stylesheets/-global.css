@@ -453,6 +453,7 @@ body > nav {
 }
 
 nav {
+	align-items: center;
 	background-color: var(--color-element-background-primary-alternate);
 	display: flex;
 	height: var(--nav-height);

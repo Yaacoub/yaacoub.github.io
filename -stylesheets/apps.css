@@ -1,9 +1,20 @@
 /* Nav Picker */
 
+body:has(> nav .nav-item.has-submenu:is(:hover, :has(:focus-visible))) nav.picker {
+	height: 0;
+	opacity: 0;
+}
+
+body:has(> nav .nav-item.has-submenu.suppress-hover:hover) nav.picker {
+	height: calc(var(--nav-height, var(--nav-default-height)) * 2.5);
+	opacity: 1;
+}
+
 nav.picker {
 	background-color: var(--color-element-background-secondary-alternate);
-	height: calc(var(--nav-height) * 2.5);
+	height: calc(var(--nav-height, var(--nav-default-height)) * 2.5);
 	overflow: auto;
+	transition: height var(--transition-time), opacity var(--transition-time);
 }
 
 nav.picker > div {

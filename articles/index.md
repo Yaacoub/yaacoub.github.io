@@ -1,7 +1,5 @@
 ---
-description:
-    "Yaacoub Articles is the place for my posts about programming, my apps and more.
-    Read stories or Swift tips, view code samples and download images."
+description: "Read Peter Yaacoub's articles on Swift, Apple platforms, app development, books, and the ideas behind independent projects."
 layout: "articles"
 secret_message: "Gravity Falls: Grunkle Stan, is that legal?"
 title: "Articles"

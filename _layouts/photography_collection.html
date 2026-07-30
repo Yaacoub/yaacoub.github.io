@@ -5,8 +5,23 @@ stylesheet: "photography-collection"
 type: "article"
 ---
 
+{%- assign collections = site.data.photography_repos | reverse -%}
+{%- capture collections_json -%}
+[
+{%- for collection in collections %}
+    {%- assign id = collection.name | slugify | append: '-' | append: collection.date -%}
+    {
+        "id": {{ id | jsonify }},
+        "name": {{ collection.name | jsonify }},
+        "date": {{ collection.date | jsonify }},
+        "url": {{ collection.url | jsonify }}
+    }{%- unless forloop.last -%},{%- endunless -%}
+{%- endfor -%}
+]
+{%- endcapture -%}
+
+<script id="photography-repos-data" type="application/json">{{ collections_json }}</script>
 <script defer src="/-scripts/photography-collection.js"></script>
-<script id="photography-repos-data" type="application/json">{{ site.data.photography_repos | jsonify }}</script>
 
 <section>
     <article>

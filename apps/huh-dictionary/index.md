@@ -1,6 +1,6 @@
 ---
 app: "Huh? Dictionary"
-description: "Search for a word's definition using any dictionary you prefer, so you can learn more and waste less time."
+description: "Look up words faster with Huh? Dictionary, a flexible dictionary app that lets you search with the sources you prefer."
 layout: "app"
 image: "apps/huh-dictionary/social.webp"
 secret_message: "Roger et ses humains: Roger, tu es mieux qu'un fils!"

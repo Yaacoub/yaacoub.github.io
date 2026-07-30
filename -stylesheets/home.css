@@ -23,7 +23,7 @@
 /* Section Hero */
 
 section.hero {
-	min-height: calc(100dvh - var(--nav-height) - 2 * var(--padding-l));
+	min-height: calc(100dvh - var(--nav-height, var(--nav-default-height)) - 2 * var(--padding-l));
 }
 
 section.hero > div {
@@ -145,7 +145,7 @@ section.list .grid {
 	}
 
 	section.hero {
-		min-height: calc(100dvh - var(--nav-height) - 2 * var(--padding-l));
+		min-height: calc(100dvh - var(--nav-height, var(--nav-default-height)) - 2 * var(--padding-l));
 	}
 
 	section.hero > div {

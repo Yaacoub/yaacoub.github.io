@@ -98,6 +98,14 @@
   name: "Articles"
   mentions:
     -
+      author: "Majid Jabrayilov"
+      date: 2025-06-23
+      excerpt:
+        "This article is a quick post on what I took away from watching Apple's Platforms State of the Union at WWDC25.
+        The aim is to be neither overly objective nor overly subjective, but to cherry-pick the information that mattered most to me in a quick read."
+      title: "SwiftUI Weekly - Issue #218"
+      url: "https://weekly.swiftwithmajid.com/p/swiftui-weekly-issue-218"
+    -
       author: "Those Who Swift"
       date: 2024-10-24
       excerpt:

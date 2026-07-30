@@ -1,9 +1,14 @@
-{%- assign page_app = page.app | default:  -%}
-{%- assign page_url_last = page.url | slice: -1 -%}
-{%- assign app = site.data.apps | where: "name", page_app | first -%}
+{%- assign app = site.data.apps | where: "name", page.app | first -%}
 {%- assign theme_color_dark = "#141414" -%}
 {%- assign theme_color_light = "#fafefd" -%}
 {%- capture image -%}/-assets/images/{{ page.image }}{% endcapture %}
+
+{%- capture description -%}{{ page.description | default: page.excerpt | default: site.description | strip_html | normalize_whitespace | escape }}{%- endcapture -%}
+{%- capture page_title -%}{{ page.title }}{% if page.title != site.title %} - {{ site.title }}{% endif %}{%- endcapture -%}
+{%- assign canonical_url = page.url | absolute_url -%}
+
+{%- assign article_author = page.author | default: site.name.first -%}
+{%- unless page.author -%}{%- assign article_author = article_author | append: ' ' | append: site.name.last -%}{%- endunless -%}
 
 {% assign category = page.categories | last | slugify %}
 {% assign title = page.title | slugify %}
@@ -50,56 +55,65 @@
 	<meta name="msapplication-config" content="/-assets/favicons/browserconfig.xml?v=2021.1">
 	<meta name="msapplication-TileColor" content="{{ theme_color_light }}">
 	<meta name="theme-color" content="{{ theme_color_dark }}">
-	<meta name="viewport" content="width = device-width, initial-scale = 1, user-scalable = yes">
-	<meta property="article:author" content="{{ site.url_portfolio }}">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 
 
 	<!-- Page Specific -->
 
-	<meta name="apple-itunes-app" content="app-id={{ app.id }}, app-argument={{ app.argument }}">
-	<meta name="description" content="{{ page.description }}">
-	<link rel="canonical" href="{{ site.url }}{{ page.url }}{% if page_url_last != '/' %}/{%- endif -%}">
-	<title>{{ page.title | escape }}{% if page.title != site.title %} - {{ site.title | escape }}{%- endif -%}</title>
+	{% if app.id %}<meta name="apple-itunes-app" content="app-id={{ app.id }}, app-argument={{ app.argument }}">{% endif %}
+	<meta name="description" content="{{ description }}">
+	<link rel="canonical" href="{{ canonical_url }}">
+	{% if page.url == "/404.html" %}<meta name="robots" content="noindex, follow">{% endif %}
+	<title>{{ page_title | escape }}</title>
 
 
 
 	<!-- Page Specific (Open Graph) -->
 
-	<meta property="article:author" content="{{ page.author }}">
-	<meta property="article:published_time" content="{{ page.date | date: '%Y-%m-%d' }}">
-	<meta property="article:section" content="{{ page.categories | last | replace: '-', ' ' | capitalize }}">
-	<meta property="og:description" content="{{ page.description }}">
-	{% if image.size != 0 %}
+	{% if layout.type == "article" and page.date %}
+	<meta property="article:author" content="{{ article_author }}">
+	<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+	{% if page.categories %}<meta property="article:section" content="{{ page.categories | last | replace: '-', ' ' | capitalize }}">{% endif %}
+	{% endif %}
+	<meta property="og:description" content="{{ description }}">
+	{% if webp.size != 0 %}
 	<meta property="og:image" content="{{ pathWEBP | absolute_url }}">
-	{% else %}
+	{% elsif page.image %}
 	<meta property="og:image" content="{{ image | absolute_url }}">
 	{% endif %}
 	<meta property="og:locale" content="en-US">
 	<meta property="og:site_name" content="{{ site.title }}">
-	<meta property="og:title" content="{{ page.title }}">
+	<meta property="og:title" content="{{ page_title | escape }}">
 	<meta property="og:type" content="{{ layout.type }}">
+	<meta property="og:url" content="{{ canonical_url }}">
+	{% if layout.type == "profile" %}
 	<meta property="profile:first_name" content="{{ site.name.first }}">
 	<meta property="profile:last_name" content="{{ site.name.last }}">
+	{% endif %}
 
 
 
 	<!-- Page Specific (Twitter) -->
 
-	<meta property="twitter:app:id:ipad" content="{{ app.id }}">
-	<meta property="twitter:app:name:ipad" content="{{ app.name }}">
-	<meta property="twitter:app:url:ipad" content="{{ app.argument }}">
-	<meta property="twitter:app:id:iphone" content="{{ app.id }}">
-	<meta property="twitter:app:name:iphone" content="{{ app.name }}">
-	<meta property="twitter:app:url:iphone" content="{{ app.argument }}">
-	<meta property="twitter:card" content="{%- if app.id != nil -%}app{%- else -%}summary_large_image{%- endif -%}">
-	<meta property="twitter:creator" content="@{{ site.social_links.x }}">
-	{% if webp.size != 0 %}
-	<meta property="twitter:image:src" content="{{ pathWEBP | absolute_url }}">
-	{% else %}
-	<meta property="twitter:image:src" content="{{ image | absolute_url }}">
+	{% if app.id %}
+	<meta name="twitter:app:id:ipad" content="{{ app.id }}">
+	<meta name="twitter:app:name:ipad" content="{{ app.name }}">
+	<meta name="twitter:app:url:ipad" content="{{ app.argument }}">
+	<meta name="twitter:app:id:iphone" content="{{ app.id }}">
+	<meta name="twitter:app:name:iphone" content="{{ app.name }}">
+	<meta name="twitter:app:url:iphone" content="{{ app.argument }}">
 	{% endif %}
-	<meta property="twitter:site" content="@{{ site.social_links.x }}">
+	<meta name="twitter:card" content="{%- if app.id -%}app{%- else -%}summary_large_image{%- endif -%}">
+	<meta name="twitter:creator" content="@{{ site.social_links.x }}">
+	<meta name="twitter:description" content="{{ description }}">
+	<meta name="twitter:title" content="{{ page_title | escape }}">
+	{% if webp.size != 0 %}
+	<meta name="twitter:image" content="{{ pathWEBP | absolute_url }}">
+	{% else %}
+	<meta name="twitter:image" content="{{ image | absolute_url }}">
+	{% endif %}
+	<meta name="twitter:site" content="@{{ site.social_links.x }}">
 
 
 
@@ -107,6 +121,6 @@
 
 	<link rel="stylesheet" href="/-stylesheets/-global.css">
 	{% if layout.stylesheet != nil %}<link rel="stylesheet" href="/-stylesheets/{{ layout.stylesheet }}.css">{% endif %}
-	<script defer="" src="/-scripts/-global.js"></script>
+	<script defer src="/-scripts/-global.js"></script>
 
 </head>

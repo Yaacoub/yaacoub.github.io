@@ -1,5 +1,5 @@
 ---
-description: "Yaacoub Code Dome articles is the place for my posts about the programming, developer and software worlds!"
+description: "Programming articles, experiments, and practical software-development insights from Peter Yaacoub."
 layout: "article_category"
 title: "Code Dome"
 ---

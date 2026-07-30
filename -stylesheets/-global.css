@@ -47,6 +47,7 @@
 	--padding-m: 40px;
 	--padding-l: 80px;
 
+	--symbol-xs: 16px;
 	--symbol-s: 20px;
 	--symbol-m: 75px;
 	--symbol-l: 100px;
@@ -58,7 +59,8 @@
 	--border-radius: 10px;
 	--grid-item-height: 480px;
 	--hero-image-max-width: 200px;
-	--nav-height: 50px;
+	--nav-default-height: 50px;
+	--nav-submenu-default-height: 500px;
 
 	--transition-time: 0.25s;
 
@@ -249,6 +251,26 @@ body {
 	min-height: 100dvh;
 }
 
+body::before {
+	backdrop-filter: blur(var(--blur-radius));
+	-webkit-backdrop-filter: blur(var(--blur-radius));
+	content: "";
+	inset: 0;
+	opacity: 0;
+	pointer-events: none;
+	position: fixed;
+	transition: opacity var(--transition-time) ease;
+	z-index: 999;
+}
+
+body:has(> nav .nav-item.has-submenu:is(:hover, :has(:focus-visible)))::before {
+	opacity: 1;
+}
+
+body:has(> nav .nav-item.has-submenu.suppress-hover:hover)::before {
+	opacity: 0;
+}
+
 code {
 	font-family: var(--font-roboto-mono);
 }
@@ -406,12 +428,19 @@ footer > div {
 }
 
 footer hr {
+	display: none;
 	margin: var(--padding-xs) 0 var(--padding-xs) 0;
+}
+
+footer figure {
+	height: var(--symbol-xs);
+	width: var(--symbol-xs);
 }
 
 footer .directory {
 	column-gap: var(--padding-l);
-	display: grid;
+	display: none;
+	/* display: grid; */
 	grid-template-columns: repeat(auto-fit , minmax(120px, 1fr));
 	padding: var(--padding-m) 0 var(--padding-s) 0;
 	row-gap: var(--padding-s);
@@ -428,14 +457,29 @@ footer .legal {
 }
 
 footer .legal > div {
-	align-items: baseline;
+	align-items: center;
 	column-gap: var(--padding-s);
 	display: flex;
 }
 
-footer .legal > div p:first-of-type {
-	flex-grow: 1;
-	margin-right: var(--padding-s);
+footer .legal > div > p {
+	flex: 0 0 auto;
+	text-align: center;
+}
+
+footer .legal > div > div {
+	display: flex;
+	flex: 1 1 0;
+	gap: var(--padding-s);
+	min-width: 0;
+}
+
+footer .legal > div > div:first-of-type {
+	justify-content: flex-start;
+}
+
+footer .legal > div > div:last-of-type {
+	justify-content: flex-end;
 }
 
 footer .style-navigation-link-1, footer .style-navigation-link-2, footer .style-navigation-link-4 {
@@ -456,19 +500,21 @@ nav {
 	align-items: center;
 	background-color: var(--color-element-background-primary-alternate);
 	display: flex;
-	height: var(--nav-height);
+	flex-direction: column;
+	gap: var(--padding-s);
 	justify-content: center;
+	padding: var(--padding-xs);
 }
 
 nav a {
 	flex: 0 0 auto;
+	padding: var(--padding-xxs) 0;
 	white-space: nowrap;
 }
 
 nav > div {
 	align-content: center;
-	align-items: center;
-	column-gap: var(--padding-m);
+	align-items: flex-start;
 	display: flex;
 	justify-content: center;
 	width: min(100dvw - var(--padding-l), var(--content-width-normal));
@@ -492,10 +538,68 @@ nav.blurred {
 	backdrop-filter: blur(var(--blur-radius));
 	-webkit-backdrop-filter: blur(var(--blur-radius));
 	background-color: var(--color-element-background-primary);
+	transition: background-color var(--transition-time);
+}
+
+nav.blurred:has(.nav-item.has-submenu:not(.suppress-hover):hover, .nav-item.has-submenu :focus-visible) {
+	background-color: var(--color-element-background-primary);
 }
 
 nav.blurred .style-navigation-link-1 {
 	color: var(--color-element-label-primary);
+}
+
+nav .directory {
+	display: flex;
+	justify-content: flex-start;
+	width: max-content;
+}
+
+nav .directory > div {
+	display: grid;
+	gap: 0;
+	width: 100%;
+}
+
+nav .nav-item {
+	min-width: 0;
+}
+
+nav .nav-item.has-submenu:is(:hover, :has(:focus-visible)) .directory > div {
+	gap: var(--padding-xs);
+}
+
+nav .nav-item.has-submenu.suppress-hover:hover .directory > div {
+	gap: 0;
+}
+
+nav .nav-items {
+	display: grid;
+	grid-auto-flow: column;
+	grid-auto-columns: 1fr;
+	width: max-content;
+}
+
+nav .submenu {
+	display: grid;
+	max-height: 0;
+	opacity: 0;
+	overflow: hidden;
+	pointer-events: none;
+	row-gap: var(--padding-xs);
+	transition: opacity var(--transition-time);
+}
+
+nav .nav-item.has-submenu:is(:hover, :has(:focus-visible)) .submenu {
+	max-height: var(--nav-submenu-height, var(--nav-submenu-default-height));
+	opacity: 1;
+	pointer-events: auto;
+}
+
+nav .nav-item.has-submenu.suppress-hover:hover .submenu {
+	max-height: 0;
+	opacity: 0;
+	pointer-events: none;
 }
 
 
@@ -1009,6 +1113,7 @@ what are you even doing? */
 	}
 
 	nav > div {
+		align-items: center;
 		column-gap: var(--padding-s);
 		flex-wrap: wrap;
 		row-gap: var(--padding-xs);
@@ -1019,6 +1124,27 @@ what are you even doing? */
 	}
 
 	nav div.spacer {
+		display: none;
+	}
+
+	nav .directory {
+		width: auto;
+	}
+
+	nav .nav-item {
+		flex: 0 0 auto;
+	}
+
+	nav .nav-items {
+		column-gap: var(--padding-xs);
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		row-gap: var(--padding-xxs);
+		width: 100%;
+	}
+
+	nav .submenu {
 		display: none;
 	}
 
@@ -1224,6 +1350,22 @@ what are you even doing? */
 
 
 /* Support Queries */
+
+@media (any-hover: none) {
+
+	body::before {
+		display: none;
+	}
+
+	footer hr {
+		display: block;
+	}
+
+	footer .directory {
+		display: grid;
+	}
+
+}
 
 @supports (backdrop-filter: blur(0)) or (-webkit-backdrop-filter: blur(0)) {
 

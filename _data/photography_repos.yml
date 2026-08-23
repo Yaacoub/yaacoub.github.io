@@ -18,10 +18,6 @@
   date: "2025-08"
   url: "https://github.com/Yaacoub-Organisation/photography-peles-castle"
 
-- name: "Ciutat Vella"
-  date: "2026-02"
-  url: "https://github.com/Yaacoub-Organisation/photography-ciutat-vella"
-
 - name: "Sitges"
   date: "2026-02"
   url: "https://github.com/Yaacoub-Organisation/photography-sitges"
@@ -38,3 +34,22 @@
   date: "2026-03"
   url: "https://github.com/Yaacoub-Organisation/photography-montserrat"
 
+- name: "Sants-Montjuïc"
+  date: "2026-03"
+  url: "https://github.com/Yaacoub-Organisation/photography-sants-montjuic"
+
+- name: "Eixample"
+  date: "2026-04"
+  url: "https://github.com/Yaacoub-Organisation/photography-eixample"
+
+- name: "Gràcia"
+  date: "2026-04"
+  url: "https://github.com/Yaacoub-Organisation/photography-gracia"
+
+- name: "Ciutat Vella"
+  date: "2026-05"
+  url: "https://github.com/Yaacoub-Organisation/photography-ciutat-vella"
+
+- name: "Sant Martí"
+  date: "2026-05"
+  url: "https://github.com/Yaacoub-Organisation/photography-sant-marti"

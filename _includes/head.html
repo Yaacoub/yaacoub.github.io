@@ -25,6 +25,7 @@
 
 	<!-- Google Analytics -->
 
+	<link rel="preconnect" href="https://www.googletagmanager.com">
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-9VK8ESHQ7F"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
@@ -37,12 +38,11 @@
 
 	<!-- Favicon -->
 
-	<link rel="apple-touch-icon" sizes="180x180" href="/-assets/favicons/apple-touch-icon.png?v=2021.1">
-	<link rel="icon" type="image/png" sizes="16x16" href="/-assets/favicons/favicon-16x16.png?v=2021.1">
-	<link rel="icon" type="image/png" sizes="32x32" href="/-assets/favicons/favicon-32x32.png?v=2021.1">
-	<link rel="manifest" href="/-assets/favicons/site.webmanifest?v=2021.1">
-	<link rel="mask-icon" href="/-assets/favicons/safari-pinned-tab.svg?v=2021.1" color="{{ theme_color_dark }}">
-	<link rel="shortcut icon" href="/-assets/favicons/favicon.ico?v=2021.1">
+	<link rel="apple-touch-icon" sizes="180x180" href="/-assets/favicons/apple-touch-icon.png?v=2026.18" />
+	<link rel="icon" type="image/png" href="/-assets/favicons/favicon-96x96.png?v=2026.18" sizes="96x96" />
+	<link rel="icon" type="image/svg+xml" href="/-assets/favicons/favicon.svg?v=2026.18" />
+	<link rel="manifest" href="/-assets/favicons/site.webmanifest?v=2026.18" />
+	<link rel="shortcut icon" href="/-assets/favicons/favicon.ico?v=2026.18" />
 
 
 
@@ -66,6 +66,16 @@
 	<link rel="canonical" href="{{ canonical_url }}">
 	{% if page.url == "/404.html" %}<meta name="robots" content="noindex, follow">{% endif %}
 	<title>{{ page_title | escape }}</title>
+
+
+
+	<!-- Page Specific (Preloads) -->
+
+	{% if page.layout == "home" or page.layout == "about" %}<link rel="preload" as="image" href="/-assets/images/profile.webp" type="image/webp" fetchpriority="high">{% endif %}
+	{% if page.layout == "home" %}
+	<link rel="preload" as="font" href="/-assets/fonts/ClashDisplay-Variable.woff2" type="font/woff2" crossorigin>
+	<link rel="preload" as="font" href="/-assets/fonts/Montserrat-Variable.woff2" type="font/woff2" crossorigin>
+	{% endif %}
 
 
 

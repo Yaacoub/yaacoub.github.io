@@ -8,16 +8,37 @@ document.querySelectorAll("h1, h2, h3, h4, h5, h6").forEach((element) => {
 
 // Nav Height Calculation
 
-function updateNavHeight() {
-	document.querySelectorAll("nav").forEach((nav) => {
-		nav.style.setProperty("--nav-height", `${nav.scrollHeight}px`);
+let navHeightUpdatePending = false;
+
+function updateNavHeights() {
+	navHeightUpdatePending = false;
+
+	const navs = [...document.querySelectorAll("nav")];
+	const submenus = [...document.querySelectorAll("nav .submenu")];
+
+	const navHeights = navs.map((nav) => nav.scrollHeight);
+	const submenuHeights = submenus.map((submenu) => submenu.scrollHeight);
+
+	navs.forEach((nav, index) => {
+		nav.style.setProperty("--nav-height", `${navHeights[index]}px`);
+	});
+
+	submenus.forEach((submenu, index) => {
+		submenu.style.setProperty("--nav-submenu-height", `${submenuHeights[index]}px`);
 	});
 }
 
-document.addEventListener("DOMContentLoaded", updateNavHeight);
-window.addEventListener("resize", updateNavHeight);
+function scheduleNavHeightUpdate() {
+	if (navHeightUpdatePending) return;
 
-document.fonts?.ready.then(updateNavHeight);
+	navHeightUpdatePending = true;
+	requestAnimationFrame(updateNavHeights);
+}
+
+document.addEventListener("DOMContentLoaded", scheduleNavHeightUpdate);
+window.addEventListener("resize", scheduleNavHeightUpdate);
+
+document.fonts?.ready.then(scheduleNavHeightUpdate);
 
 
 
@@ -40,21 +61,3 @@ function suppressInitialNavHover() {
 }
 
 document.addEventListener("DOMContentLoaded", suppressInitialNavHover);
-
-
-
-// Nav Submenu Height Calculation
-
-function updateSubmenuHeights() {
-	document.querySelectorAll("nav .submenu").forEach((submenu) => {
-		submenu.style.setProperty(
-			"--nav-submenu-height",
-			`${submenu.scrollHeight}px`
-		);
-	});
-}
-
-document.addEventListener("DOMContentLoaded", updateSubmenuHeights);
-window.addEventListener("resize", updateSubmenuHeights);
-
-document.fonts?.ready.then(updateSubmenuHeights);

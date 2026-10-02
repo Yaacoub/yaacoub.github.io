@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000"><style>
+    #light-icon {
+      display: inline;
+    }
+    #dark-icon {
+      display: none;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      #light-icon {
+        display: none;
+      }
+      #dark-icon {
+        display: inline;
+      }
+    }
+  </style><g id="light-icon"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000"><g><g transform="matrix(3.9840637450199203,0,0,3.9840637450199203,1.9920318725099833,0)"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="250px" height="251px" viewBox="0 0 250 251"><title>yaacoub-logo-dark</title><g id="yaacoub-logo-dark" stroke="none" fill="none" transform="translate(0, 1)" fill-rule="evenodd" stroke-width="1">
+        <g id="Logo" transform="translate(15.6441, -0.1)" fill="#141414">
+            <g id="Slash" transform="translate(62.6942, 0)">
+                <polygon id="Path" points="93.362 0 155.862 0 62.112 250 0 250"></polygon>
+            </g>
+            <g id="Group">
+                <path d="M95.8871875,122.968437 C90.1803125,124.297188 84.2340625,125 78.125,125 C35.0065625,125 0,89.9934375 0,46.875 C0,21.0040625 21.0040625,0 46.875,0 C68.5025,0 86.7284375,14.6784375 92.1259375,34.608125 C93.185,38.51875 93.75,42.63125 93.75,46.875 C93.75,66.5825 81.561875,83.4659375 64.3184375,90.391875 C68.528125,105.93625 80.5421875,118.285937 95.8871875,122.968437 Z" id="Path"></path>
+            </g>
+        </g>
+    </g></svg></g></g></svg></g><g id="dark-icon"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000"><g><g transform="matrix(3.9840637450199203,0,0,3.9840637450199203,1.9920318725099833,0)"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="250px" height="251px" viewBox="0 0 250 251"><title>yaacoub-logo-light</title><g id="yaacoub-logo-light" stroke="none" fill="none" transform="translate(0, 1)" fill-rule="evenodd" stroke-width="1">
+        <g id="Logo" transform="translate(15.6441, -0.1)" fill="#FAFEFD">
+            <g id="Slash" transform="translate(62.6942, 0)">
+                <polygon id="Path" points="93.362 0 155.862 0 62.112 250 0 250"></polygon>
+            </g>
+            <g id="Group">
+                <path d="M95.8871875,122.968437 C90.1803125,124.297188 84.2340625,125 78.125,125 C35.0065625,125 0,89.9934375 0,46.875 C0,21.0040625 21.0040625,0 46.875,0 C68.5025,0 86.7284375,14.6784375 92.1259375,34.608125 C93.185,38.51875 93.75,42.63125 93.75,46.875 C93.75,66.5825 81.561875,83.4659375 64.3184375,90.391875 C68.528125,105.93625 80.5421875,118.285937 95.8871875,122.968437 Z" id="Path"></path>
+            </g>
+        </g>
+    </g></svg></g></g></svg></g></svg>

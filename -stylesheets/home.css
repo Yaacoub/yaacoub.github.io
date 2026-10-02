@@ -71,6 +71,30 @@ section.hero header {
 
 
 
+/* Section Newsletter */
+
+section.newsletter > div {
+	align-items: center;
+	background-color: var(--color-element-background-secondary);
+	column-gap: var(--padding-m);
+	grid-template-columns: auto;
+	justify-content: center;
+	text-align: center;
+}
+
+section.newsletter > div > div {
+	display: grid;
+	justify-items: center;
+	padding: var(--padding-m);
+	row-gap: var(--padding-xs);
+}
+
+section.newsletter iframe {
+	width: 100%;
+}
+
+
+
 /* Section List */
 
 section.list {
@@ -173,6 +197,11 @@ section.list .grid {
 	section.hero h1 {
 		font-size: 3.5rem;
 		line-height: 44px;
+	}
+
+	section.newsletter > div > div {
+		padding: var(--padding-s);
+		
 	}
 
 }

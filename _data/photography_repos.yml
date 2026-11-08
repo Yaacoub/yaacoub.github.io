@@ -2,10 +2,6 @@
   date: "2025-04"
   url: "https://github.com/Yaacoub-Organisation/photography-prague"
 
-- name: "Lyon"
-  date: "2025-08"
-  url: "https://github.com/Yaacoub-Organisation/photography-lyon"
-
 - name: "Miribel"
   date: "2025-08"
   url: "https://github.com/Yaacoub-Organisation/photography-miribel"
@@ -53,3 +49,7 @@
 - name: "Sant Martí"
   date: "2026-05"
   url: "https://github.com/Yaacoub-Organisation/photography-sant-marti"
+
+- name: "Lyon"
+  date: "2026-10"
+  url: "https://github.com/Yaacoub-Organisation/photography-lyon"
